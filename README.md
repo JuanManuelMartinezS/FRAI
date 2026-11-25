@@ -9,7 +9,22 @@ Proyecto Unity (AR / Android) del Frailejón con LLM local (LLMUnity) y reconoci
   - `Assets/StreamingAssets/LlamaLib-v2.0.5/android-arm64/native/libllamalib_android-arm64.so`
 - **No incluidos** (ignorados por tamaño; solo para PC): las librerías CUDA/tinyblas/Vulkan de
   `LlamaLib-v2.0.5/win-x64` y `linux-x64`. Se regeneran reimportando el paquete LLMUnity / LlamaLib v2.0.5.
+- **Modelo de IA (no incluido, ~770 MB)**: `llama-3.2-1b-instruct-q4_k_m.gguf` supera el límite de GitHub.
+  Hay que descargarlo una vez en cada PC (ver abajo).
+- **Nunca se suben** (están en `.gitignore`): `Assets/StreamingAssets/*.gguf` y `Assets/Plugins/Android/LLMUnity/`.
+  Son copias temporales que LLMUnity crea durante el build; si un build se cancela pueden quedar en el proyecto.
 - **APK de demo**: descárgalo desde la sección *Releases* del repositorio.
+
+## Primera vez en un PC nuevo
+
+1. `git lfs install` y luego `git clone` (así se descargan Whisper y la librería de Android).
+2. Abrir el proyecto en Unity **6000.6.10f1** y esperar a que importe los paquetes.
+3. Menú **Guia Frailejon > Armar escena completa**.
+4. Descargar el modelo de IA: seleccionar el objeto **Sistema** en la escena, ir al componente **LLM** del
+   Inspector, pulsar **Download model** y elegir **Llama 3.2 1B Instruct (Q4_K_M)**. Esperar a que termine.
+5. Volver a ejecutar **Guia Frailejon > Armar escena completa**: ahora el modelo queda asignado solo
+   (en la Console aparece `[ActivarIA] Modelo asignado: ...`).
+6. Sin el modelo la app funciona igual, pero solo con respuestas oficiales directas (sin redacción por IA).
 
 ## Interfaz
 

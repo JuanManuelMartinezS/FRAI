@@ -1,0 +1,808 @@
+{
+  "version": "1.0-fuentes-oficiales",
+  "fecha_actualizacion": "2026-11-22",
+  "nota": "Construida con la ficha oficial del PNN Los Nevados, el POE 2026-2030 (versión ejecutiva), la página institucional de Parques Nacionales y la Lista Roja UICN vía GBIF. Lo marcado [PENDIENTE] no tiene fuente oficial todavía. UTON/PNN deben validar antes de publicar.",
+  "estaciones": [
+    {
+      "id": "estacion_1",
+      "corto": "Aguacerales",
+      "lat": 5.05055,
+      "lon": -75.50368,
+      "radio_m": 5,
+      "nombre": "Estación 1 - Aguacerales",
+      "marcador": "estacion_1",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Bienvenido a Aguacerales, una zona de páramo con mucha humedad. Aquí el agua baja por la montaña y se filtra entre los musgos y la vegetación altoandina."
+    },
+    {
+      "id": "estacion_2",
+      "corto": "Arenales",
+      "lat": 5.05039,
+      "lon": -75.50364,
+      "radio_m": 5,
+      "nombre": "Estación 2 - Arenales",
+      "marcador": "estacion_2",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Llegaste a Arenales, a unos 4.225 metros de altura. Mira a tu alrededor: la arena y la ceniza volcánica muestran la actividad del volcán."
+    },
+    {
+      "id": "estacion_3",
+      "corto": "Valle Lunar",
+      "lat": 5.05039,
+      "lon": -75.50365,
+      "radio_m": 5,
+      "nombre": "Estación 3 - Valle Lunar",
+      "marcador": "estacion_3",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Estás en el Valle Lunar, a unos 4.350 metros. Es un terreno rocoso, con piedra pómez y minerales, de aspecto árido y volcánico."
+    },
+    {
+      "id": "estacion_4",
+      "corto": "V. Tumbas",
+      "lat": 5.05039,
+      "lon": -75.50366,
+      "radio_m": 5,
+      "nombre": "Estación 4 - Valle de las Tumbas",
+      "marcador": "estacion_4",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Llegaste al Valle de las Tumbas, a unos 4.450 metros. Este es el punto límite autorizado para los visitantes en este sector."
+    }
+  ],
+  "seguridad": [
+    {
+      "id": "seg_mal_altura",
+      "palabras_clave": [
+        "mal de altura",
+        "mal de montana",
+        "mal agudo",
+        "soroche",
+        "mareo",
+        "me mareo",
+        "mareado",
+        "dolor de cabeza",
+        "me duele la cabeza",
+        "falta de aire",
+        "no puedo respirar",
+        "ahogo",
+        "nauseas",
+        "vomito",
+        "desmayo",
+        "labios morados",
+        "unas moradas",
+        "confusion",
+        "tos seca"
+      ],
+      "respuesta": "Si tienes dolor de cabeza, cansancio, náuseas, vómito, dificultad para respirar, confusión, sensación de desmayo, tos seca, labios o uñas azulados, o caminas de forma inestable: avisa inmediatamente a tu guía y busca descender de manera segura cuanto antes. Estos síntomas se pueden confundir con resaca, agotamiento, migraña o una enfermedad viral. Algunos casos pueden ser mortales si no se tratan a tiempo.",
+      "fuente": "Infografía «¡Que el mal de altura no te arruine la aventura!», POE PNN Los Nevados 2026-2030, págs. 34-35"
+    },
+    {
+      "id": "seg_mal_altura_prevencion",
+      "palabras_clave": [
+        "prevenir el mal de altura",
+        "prevenir el soroche",
+        "evitar el soroche",
+        "evitar el mal de altura",
+        "prevenir el mal",
+        "aclimatacion",
+        "aclimatar",
+        "como evito el soroche",
+        "riesgo de altura",
+        "estoy en buen estado fisico"
+      ],
+      "respuesta": "El mal de altura aparece al subir rápido a gran altitud sin aclimatarse, porque el aire tiene menos oxígeno disponible. Los síntomas suelen aparecer entre 6 y 10 horas después del ascenso. El riesgo aumenta si ya has tenido mal de altura, si vives a menos de 2.000 metros sobre el nivel del mar o si subes muy rápido. Ojo: el buen estado físico no disminuye el riesgo. El bajo oxígeno también puede empeorar el asma, la hipertensión, la diabetes y enfermedades del corazón o los pulmones.",
+      "fuente": "Infografía «¡Que el mal de altura no te arruine la aventura!», POE PNN Los Nevados 2026-2030, págs. 34-35"
+    },
+    {
+      "id": "seg_emergencia",
+      "palabras_clave": [
+        "emergencia",
+        "auxilio",
+        "ayuda urgente",
+        "accidente",
+        "herido",
+        "herida",
+        "perdido",
+        "me perdi",
+        "perdimos",
+        "se perdio",
+        "rescate",
+        "socorro",
+        "sangre",
+        "caida",
+        "me cai",
+        "fractura"
+      ],
+      "respuesta": "Avisa de inmediato a tu guía o al personal del Parque. En el Parque el guía es obligatorio en todos los sectores. Ten en cuenta que en varias zonas lejanas no hay señal de celular y hay muy pocas viviendas cerca para pedir ayuda.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "seg_frio",
+      "palabras_clave": [
+        "hipotermia",
+        "mucho frio",
+        "temblando",
+        "congelado",
+        "frio extremo",
+        "mojado",
+        "estoy empapado"
+      ],
+      "respuesta": "El Parque pide ir con ropa y calzado para temperaturas bajo 0 °C y para lluvia. Si sientes frío intenso o estás mojado y temblando, avísale a tu guía o al personal del Parque.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "seg_clima",
+      "palabras_clave": [
+        "tormenta",
+        "rayos",
+        "relampago",
+        "granizo",
+        "neblina",
+        "niebla",
+        "nevando",
+        "clima peligroso"
+      ],
+      "respuesta": "[PENDIENTE: protocolo oficial ante tormenta eléctrica, granizo o niebla densa]",
+      "fuente": ""
+    },
+    {
+      "id": "seg_volcan",
+      "palabras_clave": [
+        "volcan",
+        "erupcion",
+        "ceniza",
+        "alerta volcanica",
+        "sismo",
+        "temblor",
+        "evacuacion",
+        "evacuar",
+        "riesgo volcanico"
+      ],
+      "respuesta": "El Parque tiene zonas restringidas por riesgo volcánico, como el camping Arenales en Brisas y el sitio de escalada Gazaperas. Esta app no conoce el nivel de alerta volcánica actual: confírmalo con el personal del Parque antes de tu recorrido y sigue siempre sus indicaciones.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "seg_rutas",
+      "palabras_clave": [
+        "ruta cerrada",
+        "sendero cerrado",
+        "esta permitido subir",
+        "salirme del sendero",
+        "subir al glaciar",
+        "subir al nevado",
+        "subir sin guia",
+        "ruta no permitida",
+        "raices"
+      ],
+      "respuesta": "En todos los sectores debes ir con un guía inscrito en el REPSE, y para subir a los glaciares el guía debe ser especializado en alta montaña. La ruta Raíces - Dulima cara sur NO está permitida: entrar por ahí es ilegal y pone en riesgo tu vida. Algunos senderos están sujetos a ordenamiento, así que confirma siempre con el personal del Parque cuáles están habilitados hoy.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "faq_que_es_frailejon",
+      "estacion": "*",
+      "preguntas": [
+        "que es un frailejon",
+        "que eres",
+        "quien eres",
+        "que planta eres",
+        "como se llama tu especie"
+      ],
+      "respuesta": "Soy un frailejón. En este Parque hay una sola especie de frailejón, Espeletia hartwegiana, de la familia de las margaritas y los girasoles (Asteraceae). Vivo en la mayoría de los páramos del Parque.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "faq_chivito",
+      "estacion": "*",
+      "preguntas": [
+        "quien te visita",
+        "hay colibries",
+        "que es el chivito de paramo"
+      ],
+      "respuesta": "Me visita el chivito de páramo, un colibrí que solo vive en Colombia y se alimenta del néctar de los frailejones. Según la Lista Roja de la UICN, es una especie vulnerable.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "faq_animales",
+      "estacion": "*",
+      "preguntas": [
+        "que animales viven aqui",
+        "que fauna hay",
+        "que pajaros hay",
+        "hay osos",
+        "hay pumas"
+      ],
+      "respuesta": "En el Parque viven el cóndor andino, el oso de anteojos, la danta de montaña, el puma, el águila crestada, el pato andino, el periquito de los nevados y el loro orejiamarillo, entre otros. También hay 20 especies de murciélagos que ayudan a polinizar.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_especies_amenazadas",
+      "estacion": "*",
+      "preguntas": [
+        "que especies estan en peligro",
+        "que animales estan amenazados",
+        "especies amenazadas",
+        "el condor esta en peligro"
+      ],
+      "respuesta": "Según la Lista Roja de la UICN, la palma de cera del Quindío está en peligro crítico; la danta de montaña está en peligro; y el cóndor andino, el oso de anteojos, el chivito de páramo, el loro orejiamarillo y el periquito de los nevados son vulnerables.",
+      "fuente": "Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "faq_ecosistemas",
+      "estacion": "*",
+      "preguntas": [
+        "que ecosistemas hay",
+        "que es el paramo",
+        "que hay en el parque"
+      ],
+      "respuesta": "El Parque tiene bosque altoandino, páramo, superpáramo, humedales altoandinos, glaciares y volcanes. El páramo es el ecosistema principal: ocupa el 84 % del área.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_agua",
+      "estacion": "*",
+      "preguntas": [
+        "por que es importante el parque",
+        "para que sirve el paramo",
+        "de donde sale el agua",
+        "que rios nacen aqui"
+      ],
+      "respuesta": "El Parque es una estrella hídrica: de aquí nacen ríos como el Otún, el Quindío, el Chinchiná y el Combeima, que abastecen a más de 3 millones de personas.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_nevados",
+      "estacion": "*",
+      "preguntas": [
+        "que nevados hay",
+        "cuales son los volcanes",
+        "como se llaman las montanas"
+      ],
+      "respuesta": "Las montañas principales son el Nevado del Ruiz o Kumanday, el Nevado de Santa Isabel o Poleka Kasue y el Nevado del Tolima o Dulima. Junto con los paramillos del Quindío y Santa Rosa superan los 5.000 metros sobre el nivel del mar.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_esencia",
+      "estacion": "*",
+      "preguntas": [
+        "que significa este parque",
+        "cual es la esencia del parque",
+        "por que es especial"
+      ],
+      "respuesta": "La esencia del Parque es esta: volcanes forjaron con hielo y fuego un lugar donde la biodiversidad y la cultura prosperan, simbolizando la resiliencia de la vida en un entorno que sigue transformándose.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_sectores",
+      "estacion": "*",
+      "preguntas": [
+        "cuantos sectores tiene el parque",
+        "cuales son los sectores",
+        "que sectores hay"
+      ],
+      "respuesta": "El Parque tiene cinco sectores ecoturísticos: Brisas - Kumanday, Cisne - Poleka Kasue, Otún - Paramillo Santa Rosa, Quindío - Dulima y Santa Isabel - Murillo.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_guia",
+      "estacion": "*",
+      "preguntas": [
+        "necesito guia",
+        "puedo entrar solo",
+        "es obligatorio el guia"
+      ],
+      "respuesta": "Sí. En todos los sectores del Parque el guía es obligatorio, y debe ser de un operador o guía inscrito en el REPSE.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_deportistas",
+      "estacion": "*",
+      "preguntas": [
+        "soy deportista necesito guia",
+        "puedo hacer trail running",
+        "puedo ir en bicicleta",
+        "montanismo sin guia"
+      ],
+      "respuesta": "Los deportistas de montañismo, ciclomontañismo o trail running no siempre necesitan guía, pero deben cumplir requisitos técnicos, logísticos y de seguridad del reglamento, por el riesgo de la alta montaña. Consulta el reglamento completo con el Parque antes de ir.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_seguro",
+      "estacion": "*",
+      "preguntas": [
+        "necesito seguro",
+        "es obligatorio el seguro"
+      ],
+      "respuesta": "Sí. Para entrar necesitas un seguro de accidentes de una aseguradora avalada por Parques Nacionales.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_edades",
+      "estacion": "*",
+      "preguntas": [
+        "que edad se necesita",
+        "pueden entrar ninos",
+        "edad minima",
+        "edad maxima"
+      ],
+      "respuesta": "Desde los 6 años se puede ir a Brisas, al centro El Cisne y a la Laguna del Otún por Potosí. Desde los 15 años, al resto de rutas, travesías y cumbres. La edad máxima es 69 años. Los menores deben ir con adultos que los cuiden.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_ropa",
+      "estacion": "*",
+      "preguntas": [
+        "que ropa llevo",
+        "como me visto",
+        "que debo llevar"
+      ],
+      "respuesta": "Lleva ropa y calzado para temperaturas bajo 0 °C y para lluvia.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_prohibido",
+      "estacion": "*",
+      "preguntas": [
+        "que esta prohibido",
+        "puedo llevar mi perro",
+        "puedo llevar mascota",
+        "puedo usar dron",
+        "puedo llevar plasticos",
+        "puedo llevar armas"
+      ],
+      "respuesta": "Al Parque no se puede ingresar con drones, armas, animales ni plásticos, entre otras restricciones del reglamento. Tampoco se permite entrar sin guía registrado.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_fotos",
+      "estacion": "*",
+      "preguntas": [
+        "puedo tomar fotos",
+        "puedo grabar video",
+        "fotos comerciales"
+      ],
+      "respuesta": "Puedes tomar fotos sin fines comerciales. Las fotos o grabaciones comerciales necesitan autorización de Parques Nacionales.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_acampar",
+      "estacion": "*",
+      "preguntas": [
+        "puedo acampar",
+        "donde acampo",
+        "zonas de camping"
+      ],
+      "respuesta": "Solo puedes acampar en zonas autorizadas y con equipo para bajas temperaturas. Las zonas de camping del Parque son El Cisne, Laguna del Otún y Arenales - Calvito Nevado del Tolima. El camping Arenales en Brisas está restringido por riesgo volcánico.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_sanciones",
+      "estacion": "*",
+      "preguntas": [
+        "que pasa si no cumplo las reglas",
+        "hay multas",
+        "sanciones"
+      ],
+      "respuesta": "Quien incumpla el reglamento puede recibir desde un llamado de atención o la expulsión inmediata del Parque, hasta un proceso sancionatorio ambiental o el reporte a las autoridades.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_capacidad",
+      "estacion": "*",
+      "preguntas": [
+        "cuantas personas pueden entrar",
+        "capacidad de carga",
+        "por que hay cupos"
+      ],
+      "respuesta": "Cada sendero tiene una capacidad de carga: el número de visitantes por día que el ecosistema soporta sin deteriorarse. Por eso hay cupos y se pide reserva.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_glaciar",
+      "estacion": "*",
+      "preguntas": [
+        "se esta acabando el glaciar",
+        "va a desaparecer el nevado",
+        "retroceso glaciar"
+      ],
+      "respuesta": "Sí. Los glaciares ocupan solo el 1,82 % del Parque y, según el IDEAM, el glaciar de Santa Isabel podría desaparecer hacia 2028.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_reservas",
+      "estacion": "*",
+      "preguntas": [
+        "como reservo",
+        "donde hago la reserva",
+        "hay que reservar"
+      ],
+      "respuesta": "En Brisas la reserva se recomienda con un día de anticipación y es obligatoria en fines de semana y festivos, en reservasnevados.com. En Cisne y Otún es obligatoria con 3 días hábiles de anticipación, a través de la agencia. En Quindío - Dulima, con 5 días hábiles.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_cierres",
+      "estacion": "*",
+      "preguntas": [
+        "cuando cierra el parque",
+        "hay cierres",
+        "dias de cierre"
+      ],
+      "respuesta": "El Parque cierra tres veces al año, cinco días cada vez: la semana después de Semana Santa, y desde el cuarto lunes de septiembre y el cuarto lunes de noviembre hasta el viernes de esa semana.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_parques_nacionales",
+      "estacion": "*",
+      "preguntas": [
+        "que es parques nacionales",
+        "quien administra el parque",
+        "quien cuida el parque"
+      ],
+      "respuesta": "El Parque lo administra Parques Nacionales Naturales de Colombia, una entidad del Estado creada en 2011 que maneja el sistema de parques nacionales y coordina el Sistema Nacional de Áreas Protegidas. Su misión es conservar la diversidad biológica y cultural del país.",
+      "fuente": "Parques Nacionales Naturales de Colombia - Acerca de la entidad (parquesnacionales.gov.co)"
+    },
+    {
+      "id": "faq_subir_a_lo_bien",
+      "estacion": "*",
+      "preguntas": [
+        "que es subir a lo bien",
+        "campana subir a lo bien"
+      ],
+      "respuesta": "«Subir a lo Bien» es una campaña para visibilizar la oferta ecoturística del Parque y promover visitas seguras y responsables.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_basura",
+      "estacion": "*",
+      "preguntas": [
+        "donde boto la basura",
+        "hay canecas",
+        "que hago con mis residuos"
+      ],
+      "respuesta": "El Parque promueve prácticas de mínimo impacto, como llevarte de vuelta tus propios residuos. Además, no se pueden ingresar plásticos.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_banos",
+      "estacion": "*",
+      "preguntas": [
+        "donde hay banos",
+        "hay bano",
+        "servicios sanitarios"
+      ],
+      "respuesta": "En el recorrido de Brisas hay baños y cafetería en Arenales, en el sector de control.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "faq_no_tocar",
+      "estacion": "*",
+      "preguntas": [
+        "puedo tocar los frailejones",
+        "puedo arrancar una hoja",
+        "puedo llevarme una planta"
+      ],
+      "respuesta": "[PENDIENTE: norma oficial sobre no tocar ni extraer flora]",
+      "fuente": ""
+    },
+    {
+      "id": "brisas_recorrido",
+      "estacion": "*",
+      "preguntas": [
+        "que recorrido es este",
+        "cuales son las estaciones",
+        "que estaciones hay",
+        "que voy a ver en el recorrido"
+      ],
+      "respuesta": "Este recorrido es el sector Brisas - Kumanday, por el carreteable del volcán Nevado del Ruiz. Tiene cuatro estaciones: Aguacerales, Arenales, Valle Lunar y Valle de las Tumbas, que es el punto límite autorizado para los visitantes.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "brisas_horario",
+      "estacion": "*",
+      "preguntas": [
+        "a que hora abre",
+        "horario",
+        "hasta que hora"
+      ],
+      "respuesta": "El sector Brisas atiende todos los días de 8:00 de la mañana a 2:00 de la tarde. La última charla de inducción es a la 1:30 de la tarde.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "brisas_duracion",
+      "estacion": "*",
+      "preguntas": [
+        "cuanto dura la visita",
+        "cuanto tiempo toma el recorrido"
+      ],
+      "respuesta": "La visita al sector Brisas dura aproximadamente 5 horas.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "brisas_motos",
+      "estacion": "*",
+      "preguntas": [
+        "puedo entrar en moto",
+        "se permiten motos",
+        "puedo entrar en carro"
+      ],
+      "respuesta": "A Brisas solo se entra en vehículo y las motos están prohibidas. Los fines de semana y festivos aplica pico y placa ambiental en la vía Brisas - Valle de las Tumbas, de 5:00 de la mañana a 4:00 de la tarde.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "brisas_capacidad",
+      "estacion": "*",
+      "preguntas": [
+        "cuantas personas caben",
+        "capacidad del recorrido"
+      ],
+      "respuesta": "El carreteable del volcán Nevado del Ruiz tiene una capacidad de carga efectiva de 1.036 visitantes por día.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "brisas_tarifa",
+      "estacion": "*",
+      "preguntas": [
+        "cuanto cuesta la entrada",
+        "cuanto vale entrar",
+        "precio"
+      ],
+      "respuesta": "Tarifas 2026 sin seguro: 12.500 pesos para menores de 25 años nacionales o residentes, 24.500 pesos para mayores de 25 y 68.000 pesos para extranjeros no residentes. La guianza de UTON en Brisas cuesta 22.000 pesos.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "brisas_actividades",
+      "estacion": "*",
+      "preguntas": [
+        "que actividades puedo hacer",
+        "que se puede hacer aqui"
+      ],
+      "respuesta": "En el sector Brisas se permite la observación geológica, la contemplación, la observación de fauna y flora, y la fotografía no comercial.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "e1_que_ver",
+      "estacion": "estacion_1",
+      "preguntas": [
+        "que puedo ver aqui",
+        "que hay aqui",
+        "que hay en esta estacion",
+        "que es aguacerales",
+        "por que se llama aguacerales"
+      ],
+      "respuesta": "Aguacerales es una zona de páramo con mucha humedad. El agua baja por la montaña y se filtra entre los musgos y la vegetación altoandina. Así el páramo ayuda a regular el agua que llega a los ríos.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "e2_que_ver",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "que puedo ver aqui",
+        "que hay aqui",
+        "que hay en esta estacion",
+        "que es arenales",
+        "por que hay tanta arena"
+      ],
+      "respuesta": "Arenales está a unos 4.225 metros de altura. Su paisaje de arena y ceniza volcánica muestra la actividad geológica del complejo volcánico.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "e2_servicios",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "donde hay banos",
+        "hay bano",
+        "hay cafeteria",
+        "donde puedo comprar algo"
+      ],
+      "respuesta": "En Arenales, en el sector de control, hay baños y cafetería.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "e2_camping",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "puedo acampar aqui",
+        "se puede acampar en arenales"
+      ],
+      "respuesta": "No. El camping Arenales de Brisas está restringido por riesgo volcánico.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "e2_altura",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "a que altura estamos",
+        "cuantos metros de altura"
+      ],
+      "respuesta": "Arenales está a unos 4.225 metros sobre el nivel del mar.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "e3_que_ver",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "que puedo ver aqui",
+        "que hay aqui",
+        "que hay en esta estacion",
+        "que es el valle lunar",
+        "por que se llama valle lunar"
+      ],
+      "respuesta": "El Valle Lunar es un terreno rocoso, con piedra pómez y minerales, de aspecto árido y volcánico, por eso parece la superficie de la Luna. Aquí hay vientos fuertes y el clima cambia rápido.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "e3_altura",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "a que altura estamos",
+        "cuantos metros de altura"
+      ],
+      "respuesta": "El Valle Lunar está a unos 4.350 metros sobre el nivel del mar.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    },
+    {
+      "id": "e3_viento",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "hace mucho viento",
+        "por que cambia tanto el clima",
+        "va a llover"
+      ],
+      "respuesta": "En el Valle Lunar hay vientos fuertes y el clima cambia rápido. Por eso el Parque pide ir con ropa y calzado para temperaturas bajo 0 °C y para lluvia.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "e4_que_ver",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "que puedo ver aqui",
+        "que hay aqui",
+        "que hay en esta estacion",
+        "que es el valle de las tumbas",
+        "por que se llama valle de las tumbas"
+      ],
+      "respuesta": "El Valle de las Tumbas, también llamado Valle del Silencio, tiene un paisaje de superpáramo, frío intenso y un vínculo cultural y espiritual. Es el punto límite autorizado para los visitantes en este sector.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "e4_limite",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "puedo seguir subiendo",
+        "puedo ir mas alla",
+        "puedo ir al crater",
+        "puedo subir al volcan"
+      ],
+      "respuesta": "No. El Valle de las Tumbas es el punto límite autorizado para los visitantes en este sector. Desde aquí se regresa.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "e4_altura",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "a que altura estamos",
+        "cuantos metros de altura"
+      ],
+      "respuesta": "El Valle de las Tumbas está a unos 4.450 metros sobre el nivel del mar.",
+      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+    }
+  ],
+  "documentos": [
+    {
+      "id": "doc_declaratoria",
+      "titulo": "Declaratoria y ubicación",
+      "texto": "El Parque Nacional Natural Los Nevados fue declarado el 30 de abril de 1974 para conservar su flora, fauna y ecosistemas. Está en la cordillera Central, en el corazón del Eje Cafetero, entre los ríos Magdalena y Cauca, y abarca Caldas, Quindío, Risaralda y Tolima.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_estrella_hidrica",
+      "titulo": "Estrella hídrica",
+      "texto": "El Parque es una estrella hídrica fundamental de Colombia. De él nacen ríos como el Otún, el Quindío, el Chinchiná y el Combeima, que abastecen a más de 3 millones de personas. Sus ecosistemas también regulan el clima.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_glaciares",
+      "titulo": "Glaciares",
+      "texto": "Los glaciares ocupan el 1,82 % del área del Parque. Según el IDEAM, el glaciar de Santa Isabel podría desaparecer hacia 2028, según la variabilidad climática, los fenómenos de El Niño y La Niña y la actividad del volcán Ruiz. El retroceso glaciar obliga a reinterpretar este atractivo turístico.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_paramo",
+      "titulo": "Páramo y superpáramo",
+      "texto": "El páramo es el ecosistema más representativo del Parque: ocupa el 84 % del área e incluye pajonales, turberas, arbustales, pantanos y lagunas. El superpáramo tiene condiciones extremas, con rocas, cenizas y organismos extremófilos.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_flora",
+      "titulo": "Flora",
+      "texto": "Además del frailejón Espeletia hartwegiana, en el páramo hay romeros, pajonales y Senecio. En el superpáramo vive el cacho de venado, una planta endémica. En los bosques altoandinos está la palma de cera del Quindío, árbol nacional de Colombia, que según la Lista Roja de la UICN está en peligro crítico. El siete cueros de páramo es un árbol raro, amenazado por la agricultura y la ganadería.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "doc_fauna",
+      "titulo": "Fauna",
+      "texto": "En el Parque viven el chivito de páramo, el tororoi de Miller, el águila crestada, el cóndor andino, el pato andino, el periquito de los nevados, la danta de montaña, la guagua loba, el puma y el oso de anteojos. Hay 20 especies de murciélagos que son polinizadores. El cóndor andino es el ave nacional y su envergadura supera los 3 metros.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_uicn",
+      "titulo": "Estado de conservación (UICN)",
+      "texto": "Según la Lista Roja de la UICN: la palma de cera del Quindío está en peligro crítico; la danta de montaña, en peligro; y el cóndor andino, el oso de anteojos, el chivito de páramo, el loro orejiamarillo y el periquito de los nevados son vulnerables. El frailejón Espeletia hartwegiana no ha sido evaluado por la UICN.",
+      "fuente": "Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "doc_nombres",
+      "titulo": "Nombres indígenas y cultura",
+      "texto": "El territorio fue habitado por pueblos quimbayas, pijaos, pantágoras y muiscas, que consideraban los nevados sitios sagrados. Kumanday significa cerro blanco; Poleka Kasue, doncella de la montaña; y Dulima, río de nieve o nube. Después, la colonización antioqueña y cundiboyacense formó el poblamiento actual, basado en café, papa y ganadería.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_historia",
+      "titulo": "Historia",
+      "texto": "El 13 de noviembre de 1985 hizo erupción el Nevado del Ruiz; los flujos de lodo bajaron por los ríos Lagunilla, Gualí y Chinchiná y la avalancha sepultó Armero. En 2020 la Sentencia STL 10716 declaró al Parque sujeto de derechos, y en 2025 el Nevado del Ruiz fue declarado Patrimonio Natural de la Nación.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_poe",
+      "titulo": "Plan de Ordenamiento Ecoturístico",
+      "texto": "El Plan de Ordenamiento Ecoturístico 2026-2030 organiza el ecoturismo del Parque como estrategia de conservación. Tiene cinco líneas estratégicas con 27 acciones y 38 metas para cinco años. Su visión es que al 2030 el Parque consolide un ecoturismo ordenado, sostenible, seguro e incluyente.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_senderos",
+      "titulo": "Senderos y atractivos",
+      "texto": "El Parque es un parque de senderos. Se inventariaron 26 rutas, caminos o senderos, y 15 tuvieron evaluación favorable. Las zonas de camping son Arenales en Brisas (restringida por riesgo volcánico), El Cisne, Laguna del Otún y Arenales - Calvito Nevado del Tolima.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_reglamento",
+      "titulo": "Reglamento de ecoturismo",
+      "texto": "El reglamento de ecoturismo es obligatorio y tiene seis bloques: condiciones previas al ingreso, ingreso al área protegida, comportamiento al interior del Parque, obligaciones de los prestadores de servicios, régimen de sanciones y requisitos para actividades deportivas. Al ingresar hay registro obligatorio y charla informativa. Se complementa con un manual voluntario de buenas prácticas.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_experiencias",
+      "titulo": "Experiencias de visita",
+      "texto": "El Parque ofrece tres experiencias de visita: Descubre los ecosistemas de alta montaña, para naturalistas y visitantes ocasionales; Entre volcanes y paramillos, una travesía en alta montaña para naturalistas y montañistas; y Altitud retadora y adrenalina, para eventos deportivos como montañismo, ciclomontañismo y trail running por encima de los 4.000 metros.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_desafios",
+      "titulo": "Desafíos del territorio",
+      "texto": "Gran parte del Parque está en propiedad privada, lo que genera tensiones entre conservación y sustento campesino. Hay presión por turismo no regulado en zonas de ingreso no permitido, como la vía Murillo - La Esperanza, con basuras, senderos no autorizados y sobrecarga.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_tarifas",
+      "titulo": "Tarifas 2026",
+      "texto": "Tarifas 2026 sin seguro en Brisas, Cisne y Laguna del Otún: 12.500 pesos para menores de 25 años nacionales, residentes o de la CAN; 24.500 pesos para mayores de 25; 68.000 pesos para extranjeros no residentes. El sector Quindío - Dulima no cobra ingreso. La guianza de UTON en Brisas cuesta 22.000 pesos.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_uton",
+      "titulo": "UTON",
+      "texto": "UTON, la Unión Temporal Operación Nevados, es el concesionario del sector Brisas (reservas, ingreso, guianza, transporte, alojamiento y tienda) y del alojamiento e ingreso en El Cisne. Sus oficinas están en Manizales.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_sector_cisne",
+      "titulo": "Sector Cisne - Poleka Kasue",
+      "texto": "En el sector Cisne - Poleka Kasue están el centro de visitantes El Cisne y los senderos Refugio El Cisne, Laguna Verde, Paramillo El Cisne y Conejeras del cambio climático. La visita dura de 2 a 3 días. El registro es en la cabaña Potosí o en el alto de Santa Bárbara, de 7:30 a 10:00 de la mañana.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_sector_otun",
+      "titulo": "Sector Otún - Paramillo Santa Rosa",
+      "texto": "En el sector Otún está la Laguna del Otún, la más grande del Parque, con humedales que son Zona Ramsar. Tiene mirador para pasadía, zona de camping y senderos como el Complejo Lagunar Alsacia - Otún. La visita dura de 2 a 4 días y el ingreso por la cabaña Potosí es de 7:00 de la mañana a 12:00 del mediodía.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_sector_quindio",
+      "titulo": "Sector Quindío - Dulima",
+      "texto": "Al sector Quindío - Dulima se llega desde Salento por Cocora, desde Ibagué por Juntas o desde Anzoátegui por Palomar. La actividad principal es el montañismo hacia el Nevado del Tolima. Las travesías duran unos 5 días y este sector no cobra derecho de ingreso.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_entidad",
+      "titulo": "Parques Nacionales Naturales de Colombia",
+      "texto": "Parques Nacionales Naturales de Colombia es una unidad administrativa especial creada en 2011 que administra el Sistema de Parques Nacionales Naturales y coordina el Sistema Nacional de Áreas Protegidas. Su misión es conservar la diversidad biológica y cultural del país.",
+      "fuente": "Parques Nacionales Naturales de Colombia - Acerca de la entidad (parquesnacionales.gov.co)"
+    }
+  ]
+}

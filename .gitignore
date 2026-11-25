@@ -1,0 +1,61 @@
+# Carpetas generadas por Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Caché de memoria y paquetes locales
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Aa]ssets/AssetStoreTools*
+
+# Archivos de entornos de desarrollo (Visual Studio, Rider, VS Code)
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Archivos de compilación y reportes
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics y analíticas generadas
+crashlytics-build.properties
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Model and native runtime binaries kept locally
+/Assets/StreamingAssets/Whisper/ggml-base.bin
+/Assets/StreamingAssets/LlamaLib-v2.0.5/android-arm64/native/libllamalib_android-arm64.so
+/Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64/native/libllamalib_linux-x64_cublas.so
+/Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64/native/libllamalib_linux-x64_tinyblas.so
+/Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64/native/libllamalib_linux-x64_vulkan.so
+/Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/cublas64_12.dll
+/Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/cublasLt64_12.dll
+/Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/llamalib_win-x64_cublas.dll
+/Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/llamalib_win-x64_tinyblas.dll
+/Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/llamalib_win-x64_vulkan.dll

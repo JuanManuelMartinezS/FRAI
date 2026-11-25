@@ -49,8 +49,6 @@ crashlytics-build.properties
 Thumbs.db
 
 # Model and native runtime binaries kept locally
-/Assets/StreamingAssets/Whisper/ggml-base.bin
-/Assets/StreamingAssets/LlamaLib-v2.0.5/android-arm64/native/libllamalib_android-arm64.so
 /Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64/native/libllamalib_linux-x64_cublas.so
 /Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64/native/libllamalib_linux-x64_tinyblas.so
 /Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64/native/libllamalib_linux-x64_vulkan.so

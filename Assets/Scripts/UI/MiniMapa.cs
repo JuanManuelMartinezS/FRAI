@@ -60,7 +60,7 @@ namespace GuiaFrailejon
             {
                 float x = PosX(i, n);
                 var nodo = Imagen("Estacion" + (i + 1), circulo, colorPendiente);
-                Anclar(nodo.rectTransform, x, YLinea, 48, 48);
+                Anclar(nodo.rectTransform, x, YLinea, 54, 54);
                 var btn = nodo.gameObject.AddComponent<Button>();
                 int idx = i;
                 btn.onClick.AddListener(() => AlTocarEstacion?.Invoke(idx));
@@ -72,8 +72,8 @@ namespace GuiaFrailejon
                 num.rectTransform.sizeDelta = Vector2.zero;
 
                 string nombre = string.IsNullOrEmpty(est[i].corto) ? est[i].nombre : est[i].corto;
-                var et = Texto(transform, nombre, 22, Color.white);
-                Anclar(et.rectTransform, x, 0.16f, 230, 36);
+                var et = Texto(transform, nombre, 25, Color.white);
+                Anclar(et.rectTransform, x, 0.17f, 240, 38);
                 etiquetas.Add(et);
             }
 
@@ -104,7 +104,7 @@ namespace GuiaFrailejon
             {
                 bool esActual = i == actual;
                 nodos[i].color = esActual ? colorActual : visitadas.Contains(i) ? colorVisitada : colorPendiente;
-                nodos[i].rectTransform.localScale = Vector3.one * (esActual ? 1.35f : 1f);
+                nodos[i].rectTransform.localScale = Vector3.one * (esActual ? 1.2f : 1f);
                 etiquetas[i].fontStyle = esActual ? FontStyles.Bold : FontStyles.Normal;
                 etiquetas[i].color = esActual ? colorActual : Color.white;
             }
@@ -204,7 +204,7 @@ namespace GuiaFrailejon
             t.color = color;
             t.alignment = TextAlignmentOptions.Center;
             t.textWrappingMode = TextWrappingModes.NoWrap;
-            t.overflowMode = TextOverflowModes.Ellipsis;
+            t.overflowMode = TextOverflowModes.Truncate;
             t.raycastTarget = false;
             return t;
         }

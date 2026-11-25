@@ -51,9 +51,21 @@ namespace GuiaFrailejon
                 while (!Permission.HasUserAuthorizedPermission(Permission.FineLocation) && t < 30f) { t += 0.5f; yield return new WaitForSeconds(0.5f); }
             }
 #endif
-            if (!Input.location.isEnabledByUser) { Estado = "Ubicación desactivada en el celular"; yield break; }
+            // Input.location no tiene equivalente en el Input System nuevo; se protege por si la plataforma lo bloquea.
+            bool habilitado;
+            try
+            {
+                habilitado = Input.location.isEnabledByUser;
+                if (habilitado) Input.location.Start(precisionDeseadaM, distanciaActualizacionM);
+            }
+            catch (Exception ex)
+            {
+                Estado = "GPS no disponible";
+                Debug.LogWarning("[GPS] No se pudo iniciar la ubicación: " + ex.Message);
+                yield break;
+            }
+            if (!habilitado) { Estado = "Ubicación desactivada en el celular"; yield break; }
 
-            Input.location.Start(precisionDeseadaM, distanciaActualizacionM);
             int espera = 30;
             Estado = "Buscando satélites...";
             while (Input.location.status == LocationServiceStatus.Initializing && espera-- > 0)

@@ -21,6 +21,7 @@ namespace GuiaFrailejon
     public class Retriever
     {
         const float k1 = 1.2f, b = 0.75f;
+        const float PesoDesconocida = 0.25f;
         readonly List<Pasaje> pasajes = new List<Pasaje>();
         readonly Dictionary<string, int> df = new Dictionary<string, int>();
         float largoPromedio;
@@ -56,8 +57,10 @@ namespace GuiaFrailejon
             if (q.Count == 0) return res;
 
             int N = pasajes.Count;
+            // Las palabras que no aparecen en ninguna parte de la base (relleno, errores de la voz) pesan poco:
+            // si contaran completo, una pregunta larga y natural nunca alcanzaria el umbral.
             float maxPosible = 0;
-            foreach (var t in q) maxPosible += Idf(t, N) * (k1 + 1);
+            foreach (var t in q) maxPosible += Idf(t, N) * (k1 + 1) * (df.ContainsKey(t) ? 1f : PesoDesconocida);
 
             foreach (var p in pasajes)
             {

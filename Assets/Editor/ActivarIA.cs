@@ -70,6 +70,7 @@ namespace GuiaFrailejon.EditorTools
             Component agente = sistema.GetComponent(tAgente);
             if (agente == null) agente = sistema.AddComponent(tAgente);
 
+            bool conModelo = ReusarModelo(llm, tLLM);
             AsignarMiembro(agente, "llm", llm);
             AsignarMiembro(agente, "systemPrompt", PromptSistema);
 
@@ -85,12 +86,45 @@ namespace GuiaFrailejon.EditorTools
             EditorSceneManager.SaveScene(sistema.scene);
             Selection.activeGameObject = sistema;
 
+            if (conModelo)
+            {
+                Debug.Log("[ActivarIA] IA conectada con el modelo ya descargado.");
+                return;
+            }
             EditorUtility.DisplayDialog("Activar IA — paso 2 de 2",
                 "IA conectada al objeto Sistema.\n\nFALTA UNA COSA (a mano): descargar el modelo.\n" +
                 "1. En el Inspector de 'Sistema', busquen el componente LLM.\n" +
                 "2. Denle 'Download model' y elijan un modelo de la sección de modelos pequeños (1–2B parámetros).\n" +
                 "3. Esperen a que termine la descarga.\n\n" +
                 "Luego denle Play y pregunten algo que no esté literal en las preguntas frecuentes.", "OK");
+        }
+
+        /// <summary>
+        /// Si el LLM no tiene modelo, le asigna el primero ya descargado en LLMUnity (lo mismo que elegirlo en el Inspector).
+        /// Asi, al volver a "Armar escena completa", no se pierde el modelo. Devuelve true si queda con modelo.
+        /// </summary>
+        static bool ReusarModelo(Component llm, Type tLLM)
+        {
+            try
+            {
+                var actual = tLLM.GetProperty("model")?.GetValue(llm) as string;
+                if (!string.IsNullOrEmpty(actual)) return true;
+
+                var tGestor = BuscarTipo("LLMUnity.LLMManager");
+                var entradas = tGestor?.GetField("modelEntries", BindingFlags.Static | BindingFlags.Public)?.GetValue(null) as System.Collections.IEnumerable;
+                if (entradas == null) return false;
+                foreach (var e in entradas)
+                {
+                    var t = e.GetType();
+                    if (t.GetField("lora")?.GetValue(e) is bool lora && lora) continue;
+                    if (!(t.GetField("filename")?.GetValue(e) is string archivo) || string.IsNullOrEmpty(archivo)) continue;
+                    tLLM.GetMethod("SetModel", new[] { typeof(string) })?.Invoke(llm, new object[] { archivo });
+                    Debug.Log("[ActivarIA] Modelo asignado: " + archivo);
+                    return !string.IsNullOrEmpty(tLLM.GetProperty("model")?.GetValue(llm) as string);
+                }
+            }
+            catch (Exception ex) { Debug.LogWarning("[ActivarIA] No se pudo reusar el modelo: " + ex.Message); }
+            return false;
         }
 
         internal static Type BuscarTipo(string nombreCompleto) =>

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
   m_Name: LibreriaEstaciones
   m_EditorClassIdentifier: Unity.XR.ARSubsystems::UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary
-  m_GuidLow: 4697370129844428000
-  m_GuidHigh: 8309043502163074488
+  m_GuidLow: 5326733614262045543
+  m_GuidHigh: 17962557000249970083
   m_DataStore:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5032730317648869790
-      m_GuidHigh: 12608670746226113943
+      m_GuidLow: 5331867659025240662
+      m_GuidHigh: 9561277020216010907
     m_SerializedTextureGuid:
       m_GuidLow: 4252782907468930792
       m_GuidHigh: 2133045428869872218
@@ -28,8 +28,8 @@ MonoBehaviour:
     m_Name: estacion_1
     m_Texture: {fileID: 2800000, guid: aa89dee8eb853b045a3a8f2584199a1d, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 5390806474529702260
-      m_GuidHigh: 1425610953615402628
+      m_GuidLow: 5293668554510570215
+      m_GuidHigh: 17493948697710444445
     m_SerializedTextureGuid:
       m_GuidLow: 8972362010377791881
       m_GuidHigh: 15935815213377432041
@@ -38,8 +38,8 @@ MonoBehaviour:
     m_Name: estacion_2
     m_Texture: {fileID: 2800000, guid: f8c729893bb57c84e9a9a047816327dd, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 5008931543415319685
-      m_GuidHigh: 10549765353959669408
+      m_GuidLow: 5753188013476033230
+      m_GuidHigh: 12238147968317035949
     m_SerializedTextureGuid:
       m_GuidLow: 9999364387334337536
       m_GuidHigh: 16812025603109852619
@@ -48,8 +48,8 @@ MonoBehaviour:
     m_Name: estacion_3
     m_Texture: {fileID: 2800000, guid: 6ec13400e0ee8ac4cb95224c365050e9, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 4704488315979402981
-      m_GuidHigh: 1437228112819251599
+      m_GuidLow: 4927563148827991594
+      m_GuidHigh: 13640936718951000224
     m_SerializedTextureGuid:
       m_GuidLow: 11525942637394584029
       m_GuidHigh: 17830585715751996250

@@ -39,13 +39,18 @@ namespace GuiaFrailejon
         public TMP_InputField campoPregunta;
         public Button botonEnviar;
         public BotonMantener botonMic;
+        [Tooltip("Texto de estado de la voz (Escuchando..., Entendiendo...). Se oculta cuando esta vacio.")]
         public TMP_Text textoMic;
+        [Tooltip("Pastilla que contiene textoMic (opcional).")]
+        public GameObject estadoVoz;
 
         [Header("Plegar el panel (para ver mejor a Frai en AR)")]
         public RectTransform panelInferior;
         public GameObject[] ocultablesAlPlegar;
         public Button botonPlegar;
-        public float altoPanelAbierto = 820, altoPanelPlegado = 360;
+        [Tooltip("Flecha que gira al plegar (opcional).")]
+        public RectTransform iconoPlegar;
+        public float altoPanelAbierto = 780, altoPanelPlegado = 330;
         bool plegado;
 
         [Header("Botones flotantes")]
@@ -63,7 +68,8 @@ namespace GuiaFrailejon
         ITextToSpeech voz;
         ISpeechToText stt;
 
-        const string MicNormal = "Mantén\npara hablar";
+        const string MicNormal = "";
+        const string TituloInicial = "<size=72%><color=#C2DBFF>Guía del páramo</color></size>\nFrai";
 
         void Start()
         {
@@ -86,8 +92,9 @@ namespace GuiaFrailejon
             if (mapa) mapa.AlTocarEstacion += i => { if (kb.Datos != null && i < kb.Datos.estaciones.Length) SeleccionarEstacion(kb.Datos.estaciones[i].id); };
             if (geo) geo.AlEntrarEstacion += AlLlegarPorGPS;
 
-            textoEstacion.text = "Guía Frailejón";
-            textoProgreso.text = "";
+            textoEstacion.text = TituloInicial;
+            textoProgreso.text = "Funciona sin internet";
+            EstadoMic(MicNormal);
             Invoke(nameof(MensajeInicial), 1.5f);   // espera a saber si hay AR
         }
 
@@ -111,7 +118,7 @@ namespace GuiaFrailejon
             {
                 bool hayVoz = stt != null && (stt.Disponible || stt.Cargando);
                 botonMic.gameObject.SetActive(hayVoz);
-                if (hayVoz && !stt.Grabando && !transcribiendo && textoMic) textoMic.text = stt.Cargando ? "Cargando\nvoz..." : MicNormal;
+                if (hayVoz && !stt.Grabando && !transcribiendo) EstadoMic(stt.Cargando ? "Cargando la voz…" : MicNormal);
             }
 
             // Boton acompañar: solo con AR y despues de ver un letrero.
@@ -136,7 +143,9 @@ namespace GuiaFrailejon
             if (est == null || id == estacionId) return;
             estacionId = id;
 
-            textoEstacion.text = KnowledgeBase.EsPendiente(est.nombre) ? id : est.nombre;
+            int num = Array.IndexOf(kb.Datos.estaciones, est) + 1;
+            string corto = !string.IsNullOrEmpty(est.corto) ? est.corto : KnowledgeBase.EsPendiente(est.nombre) ? id : est.nombre;
+            textoEstacion.text = $"<size=72%><color=#C2DBFF>Estación {num}</color></size>\n{corto}";
             if (mapa) mapa.MarcarActual(id);
             if (modoSinAR) modoSinAR.MostrarEstacion(id);
             AlCambiarEstacion?.Invoke(id);
@@ -158,9 +167,9 @@ namespace GuiaFrailejon
         {
             if (kb == null || kb.Datos == null || string.IsNullOrEmpty(estacionId)) return;
             int i = Array.FindIndex(kb.Datos.estaciones, e => e.id == estacionId);
-            string t = $"Estación {i + 1} de {kb.Datos.estaciones.Length}";
+            string t = $"Estación {i + 1} de {kb.Datos.estaciones.Length}  ·  Sin internet";
             if (mapa && !string.IsNullOrEmpty(mapa.TextoDistancia)) t += "  ·  " + mapa.TextoDistancia;
-            if (cerebro && cerebro.NivelActual == Nivel.Completo) t += "  ·  IA";
+            if (cerebro && cerebro.NivelActual == Nivel.Completo) t += "  ·  IA local";
             textoProgreso.text = t;
         }
 
@@ -189,6 +198,13 @@ namespace GuiaFrailejon
         // ------------------------------------------------------------------
         // Preguntas
         // ------------------------------------------------------------------
+        /// <summary>Hace una pregunta a Frai desde otra pantalla (Explorar, Clima...).</summary>
+        public void Preguntar(string pregunta) => Enviar(pregunta);
+
+        /// <summary>Agrega un aviso al chat sin preguntar nada.</summary>
+        public void Nota(string texto, bool seguridad = false) =>
+            chat.Agregar(texto, seguridad ? ChatUI.Estilo.Seguridad : ChatUI.Estilo.Nota);
+
         async void Enviar(string pregunta)
         {
             if (ocupado || string.IsNullOrWhiteSpace(pregunta)) return;
@@ -230,21 +246,27 @@ namespace GuiaFrailejon
             if (stt == null || !stt.Disponible || ocupado) return;
             voz.Detener();
             stt.Empezar();
-            if (textoMic) textoMic.text = stt.Grabando ? "Escuchando..." : "Permite el\nmicrófono";
+            EstadoMic(stt.Grabando ? "Escuchando… suelta para enviar" : "Permite el uso del micrófono");
         }
 
         async void TerminarVoz()
         {
             if (stt == null || !stt.Grabando) return;
             transcribiendo = true;
-            if (textoMic) textoMic.text = "Entendiendo...";
+            EstadoMic("Entendiendo…");
             string texto = await stt.Terminar();
             transcribiendo = false;
-            if (textoMic) textoMic.text = MicNormal;
+            EstadoMic(MicNormal);
             if (string.IsNullOrWhiteSpace(texto))
                 chat.Agregar("No te escuché bien. Mantén presionado el botón mientras hablas, cerca del celular.", ChatUI.Estilo.Nota);
             else
                 Enviar(texto);
+        }
+
+        void EstadoMic(string t)
+        {
+            if (textoMic) textoMic.text = t;
+            if (estadoVoz) estadoVoz.SetActive(!string.IsNullOrEmpty(t));
         }
 
         void AlternarPanel()
@@ -254,6 +276,7 @@ namespace GuiaFrailejon
             if (ocultablesAlPlegar != null) foreach (var go in ocultablesAlPlegar) if (go) go.SetActive(!plegado);
             var t = botonPlegar ? botonPlegar.GetComponentInChildren<TMP_Text>() : null;
             if (t) t.text = plegado ? "Ver chat" : "Ocultar chat";
+            if (iconoPlegar) iconoPlegar.localEulerAngles = new Vector3(0, 0, plegado ? 180 : 0);
         }
 
         // ------------------------------------------------------------------
@@ -272,7 +295,7 @@ namespace GuiaFrailejon
             {
                 acompanante.Activar(spawner != null ? spawner.UltimaPosicion : null);
                 if (spawner) spawner.OcultarMarcadores();
-                if (textoAcompanar) textoAcompanar.text = "Quédate aquí";
+                if (textoAcompanar) textoAcompanar.text = "Quédate";
                 chat.Agregar("¡Vamos juntos! Me quedo a tu lado mientras caminas. Si me pierdes de vista, sigue la flecha del borde o toca «Ven aquí».", ChatUI.Estilo.Nota);
             }
         }

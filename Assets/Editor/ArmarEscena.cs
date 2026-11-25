@@ -61,6 +61,7 @@ namespace GuiaFrailejon.EditorTools
                 CrearCarpeta(CarpetaPrefabs);
                 CrearCarpeta("Assets/Scenes");
                 CrearCarpeta("Assets/Materiales");
+                CrearCarpeta(EstiloUI.Carpeta);
 
                 GameObject prefabFrailejon = CrearPrefabFrailejon();
                 Button prefabChip = CrearPrefabChip();
@@ -97,10 +98,20 @@ namespace GuiaFrailejon.EditorTools
                 disponibilidad.raizAR = raizAR;
                 disponibilidad.raizSinAR = raizSinAR;
 
+                // ---- Vision artificial y clima ----
+                var clasificador = sistema.AddComponent<ClasificadorEspecies>();
+                clasificador.metadatos = AssetDatabase.LoadAssetAtPath<TextAsset>(ActivarVision.Carpeta + "/vision.json");
+                clasificador.fichas = AssetDatabase.LoadAssetAtPath<TextAsset>(ActivarVision.Carpeta + "/especies_info.json");
+                var captura = sistema.AddComponent<CapturaCamara>();
+                captura.camaraAR = UnityEngine.Object.FindAnyObjectByType<ARCameraManager>(FindObjectsInactive.Include);
+                captura.disponibilidadAR = disponibilidad;
+                var fuenteClima = sistema.AddComponent<FuenteClima>();
+
                 // ---- Interfaz ----
                 EditorUtility.DisplayProgressBar("Guia Frailejon", "Creando la interfaz...", 0.7f);
                 CrearEventSystem();
-                CrearInterfaz(cerebro, kb, spawner, acompanante, disponibilidad, modoSinAR, geo, prefabChip);
+                CrearInterfaz(cerebro, kb, spawner, acompanante, disponibilidad, modoSinAR, geo, prefabChip, clasificador, captura, fuenteClima);
+                if (ActivarVision.TieneSimbolo()) ActivarVision.Conectar(clasificador);
 
                 // ---- Guardar ----
                 EditorUtility.DisplayProgressBar("Guia Frailejon", "Guardando...", 0.9f);
@@ -114,7 +125,7 @@ namespace GuiaFrailejon.EditorTools
                              "Si es la primera vez: marquen Google ARCore en XR Plug-in Management (pestaña Android) y denle Fix All en Project Validation.\n\n" +
                              "Luego: Play para probar en el computador, o Build para el celular.";
                 if (reiniciar)
-                    msg += "\n\nIMPORTANTE: se cambió 'Active Input Handling' a 'Both' (necesario para GPS e inclinación). CIERREN Y VUELVAN A ABRIR UNITY antes de compilar.";
+                    msg += "\n\nIMPORTANTE: se cambió 'Active Input Handling' a 'Input System Package (New)' ('Both' no está soportado en Android). CIERREN Y VUELVAN A ABRIR UNITY antes de compilar.";
                 if (!arOk)
                     msg += "\n\nAVISO: no se pudo crear el XR Origin automaticamente. Revisen la Console.";
                 EditorUtility.DisplayDialog("Guia Frailejon", msg, "OK");
@@ -332,52 +343,24 @@ namespace GuiaFrailejon.EditorTools
         }
 
         // =====================================================================
-        // UI
+        // UI  (estilo "cristal" azul noche; sprites e iconos en EstiloUI)
         // =====================================================================
-        // ---- Paleta moderna: azul noche translucido ("glass") + acentos azul / ambar ----
-        static readonly Color Cristal = new Color(0.04f, 0.12f, 0.27f, 0.80f);
-        static readonly Color CristalClaro = new Color(1f, 1f, 1f, 0.14f);
-        static readonly Color Azul = new Color(0.13f, 0.50f, 0.98f);
-        static readonly Color Ambar = new Color(1f, 0.80f, 0.15f);
-        static readonly Color Turquesa = new Color(0.10f, 0.62f, 0.50f);
-        static readonly Color TextoSuave = new Color(0.78f, 0.88f, 1f);
+        static Sprite SpRed => EstiloUI.Redondeado();
+        static Sprite SpPil => EstiloUI.Pildora();
+        static Sprite Ico(string n) => EstiloUI.Icono(n);
 
-        /// <summary>Rectangulo de esquinas redondeadas (9-slice) generado por codigo, sin depender de arte externo.</summary>
-        static Sprite Redondeado()
+        static readonly string[] NombresIconos =
         {
-            const string ruta = "Assets/Materiales/UIRedondeado.png";
-            if (!File.Exists(ruta))
-            {
-                const int N = 128; const float R = 40f;
-                var tex = new Texture2D(N, N, TextureFormat.RGBA32, false);
-                for (int y = 0; y < N; y++)
-                    for (int x = 0; x < N; x++)
-                    {
-                        float px = x + 0.5f, py = y + 0.5f;
-                        float cx = Mathf.Clamp(px, R, N - R), cy = Mathf.Clamp(py, R, N - R);
-                        float d = Mathf.Sqrt((px - cx) * (px - cx) + (py - cy) * (py - cy));
-                        tex.SetPixel(x, y, new Color(1, 1, 1, Mathf.Clamp01(R - d + 0.5f)));
-                    }
-                File.WriteAllBytes(ruta, tex.EncodeToPNG());
-                UnityEngine.Object.DestroyImmediate(tex);
-                AssetDatabase.ImportAsset(ruta, ImportAssetOptions.ForceUpdate);
-                var imp = (TextureImporter)AssetImporter.GetAtPath(ruta);
-                imp.textureType = TextureImporterType.Sprite;
-                imp.spriteImportMode = SpriteImportMode.Single;
-                imp.spriteBorder = new Vector4(44, 44, 44, 44);
-                imp.mipmapEnabled = false;
-                imp.alphaIsTransparency = true;
-                imp.textureCompression = TextureImporterCompression.Uncompressed;
-                imp.SaveAndReimport();
-            }
-            return AssetDatabase.LoadAssetAtPath<Sprite>(ruta);
-        }
+            "mic", "enviar", "silencio", "camara", "chat", "nube", "sol", "solnube", "lluvia", "niebla", "gota", "viento",
+            "presion", "termometro", "antena", "pin", "alerta", "cerrar", "atras", "chevron", "hoja", "huella", "objetivo",
+            "check", "info", "montana", "esquina",
+        };
 
         static TMP_DefaultControls.Resources RecursosUI() => new TMP_DefaultControls.Resources
         {
-            standard = Redondeado(),
+            standard = SpPil,
             background = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Background.psd"),
-            inputField = Redondeado(),
+            inputField = SpPil,
             knob = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Knob.psd"),
             checkmark = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Checkmark.psd"),
             dropdown = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/DropdownArrow.psd"),
@@ -406,7 +389,7 @@ namespace GuiaFrailejon.EditorTools
             return canvas;
         }
 
-        enum Ancla { ArribaCentro, ArribaIzq, ArribaDer, AbajoCentro, AbajoIzq, AbajoDer }
+        enum Ancla { ArribaCentro, ArribaIzq, ArribaDer, AbajoCentro, AbajoIzq, AbajoDer, Centro }
 
         static void Ubicar(GameObject go, Ancla a, float x, float y, float w, float h)
         {
@@ -415,11 +398,63 @@ namespace GuiaFrailejon.EditorTools
             Vector2 p = a switch
             {
                 Ancla.ArribaCentro => new Vector2(0.5f, 1), Ancla.ArribaIzq => new Vector2(0, 1), Ancla.ArribaDer => new Vector2(1, 1),
-                Ancla.AbajoCentro => new Vector2(0.5f, 0), Ancla.AbajoIzq => new Vector2(0, 0), _ => new Vector2(1, 0),
+                Ancla.AbajoCentro => new Vector2(0.5f, 0), Ancla.AbajoIzq => new Vector2(0, 0), Ancla.AbajoDer => new Vector2(1, 0),
+                _ => new Vector2(0.5f, 0.5f),
             };
             rt.anchorMin = rt.anchorMax = rt.pivot = p;
             rt.anchoredPosition = new Vector2(x, y);
             rt.sizeDelta = new Vector2(w, h);
+        }
+
+        static void Rect(GameObject go, Vector2 anchorMin, Vector2 anchorMax, Vector2 pivot, Vector2 pos, Vector2 size)
+        {
+            var rt = go.GetComponent<RectTransform>();
+            rt.anchorMin = anchorMin; rt.anchorMax = anchorMax; rt.pivot = pivot;
+            rt.anchoredPosition = pos; rt.sizeDelta = size;
+        }
+
+        /// <summary>Ocupa todo el padre, con margenes (positivos hacia adentro).</summary>
+        static RectTransform Estirar(GameObject go, float izq = 0, float abajo = 0, float der = 0, float arriba = 0)
+        {
+            var rt = (RectTransform)go.transform;
+            rt.anchorMin = Vector2.zero; rt.anchorMax = Vector2.one; rt.pivot = new Vector2(0.5f, 0.5f);
+            rt.offsetMin = new Vector2(izq, abajo); rt.offsetMax = new Vector2(-der, -arriba);
+            return rt;
+        }
+
+        /// <summary>Fila de ancho completo anclada arriba: x desde la izquierda, margen derecho 'der'.</summary>
+        static void FilaArriba(GameObject go, float x, float y, float der, float h)
+        {
+            var rt = (RectTransform)go.transform;
+            rt.anchorMin = new Vector2(0, 1); rt.anchorMax = new Vector2(1, 1); rt.pivot = new Vector2(0, 1);
+            rt.anchoredPosition = new Vector2(x, y);
+            rt.sizeDelta = new Vector2(-(x + der), h);
+        }
+
+        static GameObject Nodo(string nombre, Transform padre)
+        {
+            var go = new GameObject(nombre, typeof(RectTransform));
+            go.transform.SetParent(padre, false);
+            return go;
+        }
+
+        static Image Img(string nombre, Transform padre, Sprite sp, Color c, bool raycast = false)
+        {
+            var go = new GameObject(nombre, typeof(RectTransform), typeof(Image));
+            go.transform.SetParent(padre, false);
+            var img = go.GetComponent<Image>();
+            img.sprite = sp;
+            img.type = sp != null && sp.border != Vector4.zero ? Image.Type.Sliced : Image.Type.Simple;
+            img.color = c;
+            img.raycastTarget = raycast;
+            return img;
+        }
+
+        static Image Icono(Transform padre, string icono, Color c, Ancla a, float x, float y, float tam)
+        {
+            var img = Img("Icono", padre, Ico(icono), c);
+            Ubicar(img.gameObject, a, x, y, tam, tam);
+            return img;
         }
 
         static TMP_Text Texto(Transform padre, string nombre, string contenido, float tam, Ancla a, float x, float y, float w, float h,
@@ -434,126 +469,181 @@ namespace GuiaFrailejon.EditorTools
             t.color = Color.white;
             t.alignment = alin;
             t.textWrappingMode = TextWrappingModes.Normal;
-            t.overflowMode = TextOverflowModes.Ellipsis;
+            t.overflowMode = TextOverflowModes.Truncate;
+            t.raycastTarget = false;
             return t;
         }
 
-        static Button Boton(Transform padre, string nombre, string texto, float tam, Color fondo, Color colorTexto)
+        /// <summary>Tarjeta con sombra suave. El contenido se agrega como hijo del objeto devuelto.</summary>
+        static GameObject Tarjeta(string nombre, Transform padre, Color color, bool sombra = true, bool bloquear = true)
         {
-            var go = TMP_DefaultControls.CreateButton(RecursosUI());
-            go.name = nombre;
-            go.transform.SetParent(padre, false);
-            go.GetComponent<Image>().color = fondo;
-            var t = go.GetComponentInChildren<TMP_Text>();
-            t.text = texto;
-            t.fontSize = tam;
-            t.color = colorTexto;
-            return go.GetComponent<Button>();
-        }
-
-        static void Rect(GameObject go, Vector2 anchorMin, Vector2 anchorMax, Vector2 pivot, Vector2 pos, Vector2 size)
-        {
-            var rt = go.GetComponent<RectTransform>();
-            rt.anchorMin = anchorMin; rt.anchorMax = anchorMax; rt.pivot = pivot;
-            rt.anchoredPosition = pos; rt.sizeDelta = size;
-        }
-
-        static GameObject Panel(string nombre, Transform padre, Color color)
-        {
-            var go = new GameObject(nombre, typeof(RectTransform), typeof(Image));
-            go.transform.SetParent(padre, false);
-            var img = go.GetComponent<Image>();
-            img.sprite = Redondeado();
-            img.type = Image.Type.Sliced;
-            img.color = color;
+            var go = Nodo(nombre, padre);
+            if (sombra)
+            {
+                var s = Img("Sombra", go.transform, EstiloUI.Sombra(), new Color(0, 0, 0, 0.9f));
+                Estirar(s.gameObject, -26, -34, -26, -18);
+            }
+            var f = Img("Fondo", go.transform, SpRed, color, bloquear);
+            Estirar(f.gameObject);
             return go;
         }
 
-        static readonly Color Verde = new Color(0.20f, 0.45f, 0.25f);
-        static readonly Color Rojo = new Color(0.86f, 0.18f, 0.20f);
-        static readonly Color Oscuro = new Color(0.12f, 0.12f, 0.12f);
+        static Button BotonCircular(Transform padre, string nombre, string icono, string texto, Color fondo, Color frente, float diam)
+        {
+            var img = Img(nombre, padre, SpPil, fondo, true);
+            ((RectTransform)img.transform).sizeDelta = new Vector2(diam, diam);
+            var b = img.gameObject.AddComponent<Button>();
+            b.targetGraphic = img;
+            if (icono != null) Icono(img.transform, icono, frente, Ancla.Centro, 0, 0, diam * 0.5f);
+            if (texto != null)
+            {
+                var t = Texto(img.transform, "Texto", texto, diam * 0.3f, Ancla.Centro, 0, 0, diam, diam);
+                t.color = frente; t.fontStyle = FontStyles.Bold;
+            }
+            return b;
+        }
+
+        static Button BotonPildora(Transform padre, string nombre, string texto, string icono, Color fondo, Color frente, float tam)
+        {
+            var img = Img(nombre, padre, SpPil, fondo, true);
+            var b = img.gameObject.AddComponent<Button>();
+            b.targetGraphic = img;
+            var h = img.gameObject.AddComponent<HorizontalLayoutGroup>();
+            h.padding = new RectOffset(32, 32, 0, 0); h.spacing = 14;
+            h.childAlignment = TextAnchor.MiddleCenter;
+            h.childControlWidth = true; h.childControlHeight = true;
+            h.childForceExpandWidth = false; h.childForceExpandHeight = false;
+            if (icono != null)
+            {
+                var ic = Img("Icono", img.transform, Ico(icono), frente);
+                var le = ic.gameObject.AddComponent<LayoutElement>();
+                le.minWidth = le.preferredWidth = le.minHeight = le.preferredHeight = tam * 1.4f;
+            }
+            var t = Texto(img.transform, "Texto", texto, tam, Ancla.Centro, 0, 0, 10, 10);
+            t.color = frente; t.fontStyle = FontStyles.Bold;
+            t.textWrappingMode = TextWrappingModes.NoWrap; t.overflowMode = TextOverflowModes.Overflow;
+            return b;
+        }
+
+        /// <summary>Boton flotante redondo con etiqueta debajo (Silenciar, Acompañame...).</summary>
+        static Button Fab(Transform padre, string nombre, string icono, string etiqueta, Color fondo, out TMP_Text texto)
+        {
+            var go = new GameObject(nombre, typeof(RectTransform), typeof(Image), typeof(Button));
+            go.transform.SetParent(padre, false);
+            ((RectTransform)go.transform).sizeDelta = new Vector2(150, 156);
+            go.GetComponent<Image>().color = new Color(0, 0, 0, 0);   // area tactil
+            var circ = Img("Circulo", go.transform, SpPil, fondo);
+            Ubicar(circ.gameObject, Ancla.ArribaCentro, 0, 0, 108, 108);
+            Icono(circ.transform, icono, Color.white, Ancla.Centro, 0, 0, 54);
+            var pil = Img("FondoEtiqueta", go.transform, SpPil, new Color(0.02f, 0.06f, 0.14f, 0.55f));
+            Ubicar(pil.gameObject, Ancla.AbajoCentro, 0, 0, 148, 38);
+            texto = Texto(pil.transform, "Etiqueta", etiqueta, 21, Ancla.Centro, 0, 0, 144, 38);
+            texto.fontStyle = FontStyles.Bold;
+            texto.enableAutoSizing = true; texto.fontSizeMin = 16; texto.fontSizeMax = 21;
+            var b = go.GetComponent<Button>();
+            b.targetGraphic = circ;
+            return b;
+        }
 
         static GuideUI CrearInterfaz(GuideBrain cerebro, KnowledgeBase kb, FrailejonSpawner spawner, FraiAcompanante acompanante,
-                                     ARAvailability disponibilidad, ModoSinAR modoSinAR, GeoLocalizador geo, Button prefabChip)
+                                     ARAvailability disponibilidad, ModoSinAR modoSinAR, GeoLocalizador geo, Button prefabChip,
+                                     ClasificadorEspecies clasificador, CapturaCamara captura, FuenteClima fuenteClima)
         {
             var canvas = CrearCanvas("Canvas", null, 0);
-            var t = canvas.transform;
-            var spriteRedondo = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/UISprite.psd");
-            var spriteCirculo = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Knob.psd");
+            var c = canvas.transform;
+            Color blanco = Color.white;
 
-            // ---------------- Barra superior ----------------
-            // Tarjeta flotante de cristal azul con esquinas redondeadas.
-            var barra = Panel("BarraSuperior", t, Cristal);
-            Rect(barra, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -16), new Vector2(-32, 320));
-            barra.GetComponent<Image>().raycastTarget = false;
+            // ---------------- Fondos que llegan al borde de la pantalla ----------------
+            var fondoCam = new GameObject("FondoCamara", typeof(RectTransform), typeof(RawImage));
+            fondoCam.transform.SetParent(c, false);
+            Ubicar(fondoCam, Ancla.Centro, 0, 0, 1080, 1920);
+            fondoCam.GetComponent<RawImage>().raycastTarget = false;
+            fondoCam.SetActive(false);
+            if (captura) captura.fondoCamara = fondoCam.GetComponent<RawImage>();
 
-            var marca = Texto(barra.transform, "TextoParque", "Parque Nacional\nLos Nevados", 27, Ancla.ArribaIzq, 28, -22, 330, 76, TextAlignmentOptions.Left);
-            marca.fontStyle = FontStyles.Bold;
+            var colorDeg = new Color(0.02f, 0.07f, 0.16f, 0.80f);
+            var degArriba = Img("DegradadoSuperior", c, EstiloUI.Degradado(), colorDeg);
+            Rect(degArriba.gameObject, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), Vector2.zero, new Vector2(0, 560));
+            var degAbajo = Img("DegradadoInferior", c, EstiloUI.Degradado(), colorDeg);
+            Rect(degAbajo.gameObject, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0.5f), new Vector2(0, 200), new Vector2(0, 400));
+            degAbajo.transform.localEulerAngles = new Vector3(0, 0, 180);
+
+            // ---------------- Zona segura (sin notch ni barra de gestos) ----------------
+            var segura = Nodo("ZonaSegura", c);
+            Estirar(segura);
+            segura.AddComponent<AreaSegura>();
+            var s = segura.transform;
+
+            var pGuia = Nodo("PestanaGuia", s); Estirar(pGuia);
+            var pExplorar = Nodo("PestanaExplorar", s); Estirar(pExplorar);
+            var pClima = Nodo("PestanaClima", s); Estirar(pClima);
+
+            // =================================================================
+            // PESTANA GUIA
+            // =================================================================
+            var g = pGuia.transform;
+
+            // ---- Encabezado: marca + estacion + SOS ----
+            Icono(g, "montana", blanco, Ancla.ArribaIzq, 26, -22, 96);
+            var marca = Texto(g, "TextoParque", "Parque Nacional\n<b>Los Nevados</b>", 29, Ancla.ArribaIzq, 132, -20, 300, 100, TextAlignmentOptions.Left);
             marca.textWrappingMode = TextWrappingModes.NoWrap;
+            marca.lineSpacing = -8;
 
-            // "Pastilla" con la estacion actual
-            var pastilla = Panel("PastillaEstacion", barra.transform, CristalClaro);
-            Ubicar(pastilla, Ancla.ArribaIzq, 372, -22, 440, 76);
-            pastilla.GetComponent<Image>().raycastTarget = false;
-            var punto = Panel("Punto", pastilla.transform, Ambar);
-            punto.GetComponent<Image>().sprite = spriteCirculo;
-            Ubicar(punto, Ancla.ArribaIzq, 22, -26, 24, 24);
-            var estacion = Texto(pastilla.transform, "TextoEstacion", "Guía Frailejón", 32, Ancla.ArribaIzq, 58, 0, 370, 76, TextAlignmentOptions.Left);
+            var emergencia = BotonCircular(g, "BtnEmergencia", null, "SOS", EstiloUI.Rojo, blanco, 100);
+            Ubicar(emergencia.gameObject, Ancla.ArribaDer, -26, -20, 100, 100);
+
+            var pastilla = Img("PastillaEstacion", g, SpPil, EstiloUI.Noche);
+            Ubicar(pastilla.gameObject, Ancla.ArribaDer, -142, -20, 360, 100);
+            Icono(pastilla.transform, "pin", EstiloUI.Ambar, Ancla.ArribaIzq, 26, -24, 52);
+            var estacion = Texto(pastilla.transform, "TextoEstacion", "", 30, Ancla.ArribaIzq, 90, 0, 250, 100, TextAlignmentOptions.Left);
             estacion.fontStyle = FontStyles.Bold;
-            estacion.enableAutoSizing = true; estacion.fontSizeMin = 22; estacion.fontSizeMax = 32;
-            var progreso = Texto(barra.transform, "TextoProgreso", "", 24, Ancla.ArribaIzq, 36, -108, 980, 36, TextAlignmentOptions.Left);
-            progreso.color = TextoSuave;
+            estacion.lineSpacing = -12;
+            estacion.enableAutoSizing = true; estacion.fontSizeMin = 20; estacion.fontSizeMax = 30;
 
-            var emergencia = Boton(barra.transform, "BtnEmergencia", "SOS", 34, Rojo, Color.white);
-            emergencia.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Bold;
-            Ubicar(emergencia.gameObject, Ancla.ArribaDer, -22, -22, 190, 76);
-
-            var mapaGo = new GameObject("Mapa", typeof(RectTransform));
-            mapaGo.transform.SetParent(barra.transform, false);
-            Rect(mapaGo, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -146), new Vector2(-40, 160));
+            // ---- Recorrido (stepper de estaciones) ----
+            var recorrido = Tarjeta("Recorrido", g, new Color(0.035f, 0.10f, 0.22f, 0.70f), sombra: false, bloquear: false);
+            Rect(recorrido, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0.5f, 1), new Vector2(0, -138), new Vector2(-52, 150));
+            var mapaGo = Nodo("Mapa", recorrido.transform);
+            Estirar(mapaGo, 6, 2, 6, 2);
             var mapa = mapaGo.AddComponent<MiniMapa>();
             mapa.kb = kb;
             mapa.geo = geo;
-            mapa.circulo = spriteCirculo;
+            mapa.circulo = SpPil;
 
-            // ---------------- Diagnostico de AR (texto amarillo) ----------------
-            var dbg = Texto(t, "TextoDebug", "", 20, Ancla.ArribaCentro, 0, -346, 1040, 56);
-            dbg.color = new Color(1f, 0.9f, 0.4f);
-            if (spawner) spawner.textoDebug = dbg;
+            var progPil = Img("PastillaProgreso", g, SpPil, new Color(0.02f, 0.06f, 0.14f, 0.55f));
+            Ubicar(progPil.gameObject, Ancla.ArribaIzq, 26, -304, 640, 54);
+            var progreso = Texto(progPil.transform, "TextoProgreso", "", 24, Ancla.Centro, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            Estirar(progreso.gameObject, 26, 0, 20, 0);
+            progreso.color = EstiloUI.TextoSuave;
+            progreso.enableAutoSizing = true; progreso.fontSizeMin = 17; progreso.fontSizeMax = 24;
+            progreso.textWrappingMode = TextWrappingModes.NoWrap;
 
-            // ---------------- Botones flotantes (cristal) ----------------
-            var silenciar = Boton(t, "BtnSilenciar", "Silenciar", 26, Cristal, Color.white);
-            Ubicar(silenciar.gameObject, Ancla.ArribaIzq, 28, -410, 220, 80);
-            var acompanar = Boton(t, "BtnAcompanar", "Acompáñame", 28, Turquesa, Color.white);
-            Ubicar(acompanar.gameObject, Ancla.ArribaDer, -28, -410, 300, 80);
-            var venAqui = Boton(t, "BtnVenAqui", "Ven aquí", 26, Cristal, Color.white);
-            Ubicar(venAqui.gameObject, Ancla.ArribaDer, -340, -410, 200, 80);
+            // ---- Botones flotantes (columna derecha; los ocultos no dejan hueco) ----
+            var flot = Nodo("Flotantes", g);
+            Ubicar(flot, Ancla.ArribaDer, -16, -300, 152, 560);
+            var vf = flot.AddComponent<VerticalLayoutGroup>();
+            vf.spacing = 14; vf.childAlignment = TextAnchor.UpperCenter;
+            vf.childControlWidth = false; vf.childControlHeight = false;
+            vf.childForceExpandWidth = false; vf.childForceExpandHeight = false;
+            var silenciar = Fab(flot.transform, "BtnSilenciar", "silencio", "Silenciar", EstiloUI.Noche, out _);
+            var acompanar = Fab(flot.transform, "BtnAcompanar", "huella", "Acompáñame", EstiloUI.Turquesa, out var textoAcompanar);
+            var venAqui = Fab(flot.transform, "BtnVenAqui", "objetivo", "Ven aquí", EstiloUI.Noche, out _);
 
-            // Indicador de borde: "Frai >" cuando Frai queda fuera de la pantalla
-            var indicador = Panel("IndicadorFrai", t, new Color(0.13f, 0.50f, 0.98f, 0.92f));
-            indicador.GetComponent<Image>().raycastTarget = false;
-            var irt = (RectTransform)indicador.transform;
-            irt.sizeDelta = new Vector2(190, 70);
-            var textoInd = Texto(indicador.transform, "Texto", "Frai  >", 28, Ancla.ArribaCentro, 0, 0, 190, 70);
-            textoInd.rectTransform.anchorMin = Vector2.zero; textoInd.rectTransform.anchorMax = Vector2.one;
-            textoInd.rectTransform.pivot = new Vector2(0.5f, 0.5f);
-            textoInd.rectTransform.sizeDelta = Vector2.zero; textoInd.rectTransform.anchoredPosition = Vector2.zero;
-            if (acompanante) { acompanante.indicador = irt; acompanante.textoIndicador = textoInd; }
-            indicador.SetActive(false);
+            // ---- Panel de conversacion (plegable) ----
+            var panel = Tarjeta("PanelInferior", g, EstiloUI.Noche);
+            Rect(panel, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 168), new Vector2(-40, 780));
+            var pt = panel.transform;
 
-            // ---------------- Panel inferior ----------------
-            var panel = Panel("PanelInferior", t, Cristal);
-            Rect(panel, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 16), new Vector2(-32, 820));
-
-            var plegar = Boton(panel.transform, "BtnPlegar", "Ocultar chat", 22, CristalClaro, Color.white);
-            Ubicar(plegar.gameObject, Ancla.ArribaCentro, 0, -12, 240, 50);
+            var plegarImg = Img("BtnPlegar", pt, null, new Color(0, 0, 0, 0), true);
+            Ubicar(plegarImg.gameObject, Ancla.ArribaCentro, 0, 0, 260, 56);
+            var plegar = plegarImg.gameObject.AddComponent<Button>();
+            plegar.targetGraphic = plegarImg;
+            var chevron = Icono(plegarImg.transform, "chevron", new Color(1, 1, 1, 0.75f), Ancla.Centro, 0, -2, 46);
 
             // Conversacion (ScrollRect vertical)
             var chatGo = new GameObject("Chat", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
-            chatGo.transform.SetParent(panel.transform, false);
-            var chatRt = (RectTransform)chatGo.transform;
-            chatRt.anchorMin = Vector2.zero; chatRt.anchorMax = Vector2.one;
-            chatRt.offsetMin = new Vector2(16, 310); chatRt.offsetMax = new Vector2(-16, -70);
+            chatGo.transform.SetParent(pt, false);
+            var chatRt = Estirar(chatGo, 12, 280, 12, 52);
             chatGo.GetComponent<Image>().color = new Color(0, 0, 0, 0);   // invisible, pero permite arrastrar
 
             var contGo = new GameObject("Contenido", typeof(RectTransform), typeof(VerticalLayoutGroup), typeof(ContentSizeFitter));
@@ -562,7 +652,7 @@ namespace GuiaFrailejon.EditorTools
             contRt.anchorMin = new Vector2(0, 1); contRt.anchorMax = new Vector2(1, 1); contRt.pivot = new Vector2(0.5f, 1);
             contRt.anchoredPosition = Vector2.zero; contRt.sizeDelta = Vector2.zero;
             var vlg = contGo.GetComponent<VerticalLayoutGroup>();
-            vlg.padding = new RectOffset(8, 8, 8, 8); vlg.spacing = 14;
+            vlg.padding = new RectOffset(8, 8, 8, 8); vlg.spacing = 16;
             vlg.childControlWidth = true; vlg.childControlHeight = true;
             vlg.childForceExpandWidth = true; vlg.childForceExpandHeight = false;
             contGo.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
@@ -576,12 +666,17 @@ namespace GuiaFrailejon.EditorTools
             var chat = chatGo.AddComponent<ChatUI>();
             chat.scroll = sr;
             chat.contenido = contRt;
-            chat.spriteBurbuja = Redondeado();
+            chat.spriteBurbuja = SpRed;
+            chat.anchoBurbuja = 860;
+            chat.colorUsuario = EstiloUI.Azul;
+            chat.spriteAvatarFondo = SpPil;
+            chat.spriteAvatarIcono = Ico("hoja");
+            chat.colorAvatar = EstiloUI.Turquesa;
 
             // Preguntas sugeridas (ScrollRect horizontal)
             var chipsGo = new GameObject("Sugeridas", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
-            chipsGo.transform.SetParent(panel.transform, false);
-            Rect(chipsGo, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 180), new Vector2(-32, 110));
+            chipsGo.transform.SetParent(pt, false);
+            Rect(chipsGo, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 148), new Vector2(-28, 104));
             chipsGo.GetComponent<Image>().color = new Color(0, 0, 0, 0);
 
             var chipsCont = new GameObject("Chips", typeof(RectTransform), typeof(HorizontalLayoutGroup), typeof(ContentSizeFitter));
@@ -590,7 +685,7 @@ namespace GuiaFrailejon.EditorTools
             ccRt.anchorMin = new Vector2(0, 0); ccRt.anchorMax = new Vector2(0, 1); ccRt.pivot = new Vector2(0, 0.5f);
             ccRt.anchoredPosition = Vector2.zero; ccRt.sizeDelta = Vector2.zero;
             var hlg = chipsCont.GetComponent<HorizontalLayoutGroup>();
-            hlg.spacing = 14; hlg.padding = new RectOffset(4, 4, 14, 14);
+            hlg.spacing = 12; hlg.padding = new RectOffset(4, 4, 16, 16);
             hlg.childAlignment = TextAnchor.MiddleLeft;
             hlg.childControlWidth = true; hlg.childControlHeight = true;
             hlg.childForceExpandWidth = false; hlg.childForceExpandHeight = false;
@@ -601,24 +696,294 @@ namespace GuiaFrailejon.EditorTools
             csr.horizontal = true; csr.vertical = false;
             csr.movementType = ScrollRect.MovementType.Clamped;
 
+            // Estado de la voz ("Escuchando..."), flotando sobre el panel
+            var estadoVoz = Img("EstadoVoz", pt, SpPil, EstiloUI.Ambar);
+            Ubicar(estadoVoz.gameObject, Ancla.ArribaCentro, 0, 78, 600, 62);
+            Icono(estadoVoz.transform, "mic", EstiloUI.TextoOscuro, Ancla.ArribaIzq, 24, -11, 40);
+            var textoVoz = Texto(estadoVoz.transform, "Texto", "", 26, Ancla.Centro, 0, 0, 10, 10);
+            Estirar(textoVoz.gameObject, 70, 0, 24, 0);
+            textoVoz.color = EstiloUI.TextoOscuro; textoVoz.fontStyle = FontStyles.Bold;
+            estadoVoz.gameObject.SetActive(false);
+
             // Fila de entrada: texto + enviar + microfono
+            var fila = Nodo("FilaEntrada", pt);
+            Rect(fila, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 24), new Vector2(-32, 112));
+            var hf = fila.AddComponent<HorizontalLayoutGroup>();
+            hf.spacing = 14; hf.childAlignment = TextAnchor.MiddleLeft;
+            hf.childControlWidth = true; hf.childControlHeight = true;
+            hf.childForceExpandWidth = false; hf.childForceExpandHeight = true;
+
             var campoGo = TMP_DefaultControls.CreateInputField(RecursosUI());
             campoGo.name = "CampoPregunta";
-            campoGo.transform.SetParent(panel.transform, false);
-            Ubicar(campoGo, Ancla.AbajoIzq, 16, 36, 540, 120);
-            campoGo.GetComponent<Image>().color = CristalClaro;
+            campoGo.transform.SetParent(fila.transform, false);
+            campoGo.AddComponent<LayoutElement>().flexibleWidth = 1;
+            var campoImg = campoGo.GetComponent<Image>();
+            campoImg.color = EstiloUI.Cristal; campoImg.type = Image.Type.Sliced;
             var campo = campoGo.GetComponent<TMP_InputField>();
-            campo.textComponent.fontSize = 34;
-            campo.textComponent.color = Color.white;
-            if (campo.placeholder is TMP_Text ph) { ph.text = "Escribe tu pregunta..."; ph.fontSize = 34; ph.color = new Color(1, 1, 1, 0.5f); }
+            var area = campo.textViewport;
+            if (area) { area.offsetMin = new Vector2(36, 10); area.offsetMax = new Vector2(-28, -10); }
+            campo.textComponent.fontSize = 30;
+            campo.textComponent.color = blanco;
+            campo.textComponent.alignment = TextAlignmentOptions.MidlineLeft;
+            campo.caretColor = EstiloUI.Ambar;
+            campo.customCaretColor = true;
+            campo.selectionColor = new Color(0.16f, 0.52f, 1f, 0.5f);
+            if (campo.placeholder is TMP_Text ph)
+            {
+                ph.text = "Pregúntale a Frai…"; ph.fontSize = 30; ph.fontStyle = FontStyles.Normal;
+                ph.color = new Color(1, 1, 1, 0.5f); ph.alignment = TextAlignmentOptions.MidlineLeft;
+            }
 
-            var enviar = Boton(panel.transform, "BtnEnviar", "Enviar", 30, Azul, Color.white);
-            enviar.GetComponentInChildren<TMP_Text>().fontStyle = FontStyles.Bold;
-            Ubicar(enviar.gameObject, Ancla.AbajoIzq, 568, 36, 170, 120);
-
-            var mic = Boton(panel.transform, "BtnMic", "Mantén\npara hablar", 26, Ambar, Oscuro);
-            Ubicar(mic.gameObject, Ancla.AbajoDer, -16, 36, 270, 120);
+            var enviar = BotonCircular(fila.transform, "BtnEnviar", "enviar", null, EstiloUI.Azul, blanco, 112);
+            var le1 = enviar.gameObject.AddComponent<LayoutElement>(); le1.preferredWidth = le1.minWidth = 112;
+            var mic = BotonCircular(fila.transform, "BtnMic", "mic", null, EstiloUI.Ambar, EstiloUI.TextoOscuro, 112);
+            var le2 = mic.gameObject.AddComponent<LayoutElement>(); le2.preferredWidth = le2.minWidth = 112;
             var mantener = mic.gameObject.AddComponent<BotonMantener>();
+
+            // =================================================================
+            // PESTANA EXPLORAR (vision artificial)
+            // =================================================================
+            var e = pExplorar.transform;
+            var volverE = BotonCircular(e, "BtnVolver", "atras", null, EstiloUI.Noche, blanco, 96);
+            Ubicar(volverE.gameObject, Ancla.ArribaIzq, 26, -22, 96, 96);
+            var tituloE = Texto(e, "Titulo", "Explorar", 42, Ancla.ArribaCentro, 0, -22, 620, 96);
+            tituloE.fontStyle = FontStyles.Bold;
+            var ayuda = Texto(e, "TextoAyuda", "Apunta la cámara a una planta o animal", 27, Ancla.ArribaCentro, 0, -122, 900, 44);
+            ayuda.color = EstiloUI.TextoSuave;
+
+            var aviso = Img("Aviso", e, SpPil, new Color(1f, 0.79f, 0.16f, 0.94f));
+            Ubicar(aviso.gameObject, Ancla.ArribaCentro, 0, -178, 940, 70);
+            Icono(aviso.transform, "alerta", EstiloUI.TextoOscuro, Ancla.ArribaIzq, 26, -15, 40);
+            var textoAviso = Texto(aviso.transform, "Texto", "", 23, Ancla.Centro, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            Estirar(textoAviso.gameObject, 82, 4, 30, 4);
+            textoAviso.color = EstiloUI.TextoOscuro;
+            textoAviso.enableAutoSizing = true; textoAviso.fontSizeMin = 16; textoAviso.fontSizeMax = 23;
+            aviso.gameObject.SetActive(false);
+
+            // Marco de escaneo
+            const float Marco = 620;
+            var marco = Nodo("MarcoEscaneo", e);
+            Ubicar(marco, Ancla.Centro, 0, 190, Marco, Marco);
+            var esquinas = new Image[4];
+            Vector2[] anclas = { new Vector2(0, 1), new Vector2(1, 1), new Vector2(1, 0), new Vector2(0, 0) };
+            float[] giros = { 0, -90, 180, 90 };
+            for (int i = 0; i < 4; i++)
+            {
+                var es = Img("Esquina" + i, marco.transform, Ico("esquina"), blanco);
+                var ert = (RectTransform)es.transform;
+                ert.anchorMin = ert.anchorMax = anclas[i];
+                ert.pivot = new Vector2(0.5f, 0.5f);
+                ert.sizeDelta = new Vector2(150, 150);
+                ert.anchoredPosition = new Vector2(anclas[i].x > 0 ? -75 : 75, anclas[i].y > 0 ? -75 : 75);
+                ert.localEulerAngles = new Vector3(0, 0, giros[i]);
+                esquinas[i] = es;
+            }
+            var linea = Img("LineaEscaneo", marco.transform, EstiloUI.Brillo(), new Color(0.35f, 0.95f, 0.75f, 0.85f));
+            Ubicar(linea.gameObject, Ancla.Centro, 0, 0, Marco * 0.85f, 36);
+
+            var etiqueta = Img("EtiquetaEspecie", marco.transform, SpPil, new Color(0.08f, 0.42f, 0.24f, 0.94f));
+            var etRt = (RectTransform)etiqueta.transform;
+            etRt.anchorMin = etRt.anchorMax = new Vector2(0.5f, 1); etRt.pivot = new Vector2(0.5f, 0);
+            etRt.anchoredPosition = new Vector2(0, 22); etRt.sizeDelta = new Vector2(560, 108);
+            var hojaCirc = Img("CirculoHoja", etiqueta.transform, SpPil, new Color(1, 1, 1, 0.2f));
+            Ubicar(hojaCirc.gameObject, Ancla.ArribaIzq, 16, -14, 80, 80);
+            Icono(hojaCirc.transform, "hoja", blanco, Ancla.Centro, 0, 0, 46);
+            var textoEt = Texto(etiqueta.transform, "Texto", "", 34, Ancla.Centro, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            Estirar(textoEt.gameObject, 112, 6, 24, 6);
+            textoEt.enableAutoSizing = true; textoEt.fontSizeMin = 22; textoEt.fontSizeMax = 34;
+            textoEt.lineSpacing = -10;
+            etiqueta.gameObject.SetActive(false);
+
+            // Tarjeta de resultado
+            var res = Tarjeta("TarjetaResultado", e, EstiloUI.Noche);
+            Rect(res, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 168), new Vector2(-40, 420));
+            var rt = res.transform;
+            var mascara = Img("Miniatura", rt, SpRed, blanco);
+            Ubicar(mascara.gameObject, Ancla.ArribaIzq, 24, -24, 200, 200);
+            mascara.gameObject.AddComponent<Mask>().showMaskGraphic = false;
+            var fondoMini = Img("FondoMini", mascara.transform, null, new Color(1, 1, 1, 0.08f));
+            Estirar(fondoMini.gameObject);
+            Icono(mascara.transform, "camara", new Color(1, 1, 1, 0.3f), Ancla.Centro, 0, 0, 80);
+            var mini = new GameObject("Imagen", typeof(RectTransform), typeof(RawImage));
+            mini.transform.SetParent(mascara.transform, false);
+            Estirar(mini);
+            var miniImg = mini.GetComponent<RawImage>();
+            miniImg.color = new Color(1, 1, 1, 0); miniImg.raycastTarget = false;
+
+            var tipoPil = Img("Tipo", rt, SpPil, new Color(0.16f, 0.52f, 1f, 0.35f));
+            Ubicar(tipoPil.gameObject, Ancla.ArribaIzq, 248, -24, 250, 46);
+            var textoTipo = Texto(tipoPil.transform, "Texto", "BUSCANDO", 21, Ancla.Centro, 0, 0, 250, 46);
+            textoTipo.fontStyle = FontStyles.Bold; textoTipo.characterSpacing = 4;
+            textoTipo.enableAutoSizing = true; textoTipo.fontSizeMin = 14; textoTipo.fontSizeMax = 21;
+
+            var nombre = Texto(rt, "Nombre", "Buscando especies…", 40, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            FilaArriba(nombre.gameObject, 248, -80, 24, 56);
+            nombre.fontStyle = FontStyles.Bold; nombre.textWrappingMode = TextWrappingModes.NoWrap;
+            nombre.enableAutoSizing = true; nombre.fontSizeMin = 26; nombre.fontSizeMax = 40;
+            var cientifico = Texto(rt, "Cientifico", "", 26, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            FilaArriba(cientifico.gameObject, 248, -136, 24, 38);
+            cientifico.color = EstiloUI.TextoSuave;
+
+            var barra = Img("Barra", rt, SpPil, new Color(1, 1, 1, 0.15f));
+            FilaArriba(barra.gameObject, 248, -188, 150, 14);
+            var relleno = Img("Relleno", barra.transform, SpPil, EstiloUI.Azul);
+            var rRt = Estirar(relleno.gameObject);
+            rRt.anchorMax = new Vector2(0.5f, 1);
+            var confianza = Texto(rt, "Confianza", "", 27, Ancla.ArribaDer, -24, -174, 120, 42, TextAlignmentOptions.Right);
+            confianza.fontStyle = FontStyles.Bold;
+            barra.gameObject.SetActive(false);
+
+            var descripcion = Texto(rt, "Descripcion", "", 25, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.TopLeft);
+            FilaArriba(descripcion.gameObject, 248, -216, 24, 104);
+            descripcion.color = new Color(1, 1, 1, 0.9f);
+            descripcion.enableAutoSizing = true; descripcion.fontSizeMin = 19; descripcion.fontSizeMax = 25;
+
+            var preguntar = BotonPildora(rt, "BtnPreguntar", "Preguntar a Frai", "chat", EstiloUI.Azul, blanco, 28);
+            Ubicar(preguntar.gameObject, Ancla.AbajoDer, -24, 22, 380, 84);
+            preguntar.gameObject.SetActive(false);
+
+            // =================================================================
+            // PESTANA CLIMA Y ALERTAS
+            // =================================================================
+            var k = pClima.transform;
+            var oscuro = Img("Oscurecer", k, null, new Color(0.02f, 0.06f, 0.14f, 0.74f), true);
+            Estirar(oscuro.gameObject, -400, -400, -400, -400);
+            var volverC = BotonCircular(k, "BtnVolver", "atras", null, EstiloUI.Noche, blanco, 96);
+            Ubicar(volverC.gameObject, Ancla.ArribaIzq, 26, -22, 96, 96);
+            var tituloC = Texto(k, "Titulo", "Clima y alertas", 42, Ancla.ArribaCentro, 0, -22, 640, 96);
+            tituloC.fontStyle = FontStyles.Bold;
+            var antenaCirc = Img("EstadoLoRa", k, SpPil, EstiloUI.Noche);
+            Ubicar(antenaCirc.gameObject, Ancla.ArribaDer, -26, -22, 96, 96);
+            var antenaBarra = Icono(antenaCirc.transform, "antena", EstiloUI.Verde, Ancla.Centro, 0, 0, 54);
+
+            var scrollC = new GameObject("Contenido", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
+            scrollC.transform.SetParent(k, false);
+            var scRt = Estirar(scrollC, 20, 168, 20, 136);
+            scrollC.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            var listaC = new GameObject("Lista", typeof(RectTransform), typeof(VerticalLayoutGroup), typeof(ContentSizeFitter));
+            listaC.transform.SetParent(scrollC.transform, false);
+            var lRt = (RectTransform)listaC.transform;
+            lRt.anchorMin = new Vector2(0, 1); lRt.anchorMax = new Vector2(1, 1); lRt.pivot = new Vector2(0.5f, 1);
+            lRt.anchoredPosition = Vector2.zero; lRt.sizeDelta = Vector2.zero;
+            var vc = listaC.GetComponent<VerticalLayoutGroup>();
+            vc.padding = new RectOffset(0, 0, 6, 30); vc.spacing = 22;
+            vc.childControlWidth = true; vc.childControlHeight = true;
+            vc.childForceExpandWidth = true; vc.childForceExpandHeight = false;
+            listaC.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            var scC = scrollC.GetComponent<ScrollRect>();
+            scC.content = lRt; scC.viewport = scRt; scC.horizontal = false; scC.vertical = true;
+            scC.movementType = ScrollRect.MovementType.Elastic; scC.scrollSensitivity = 30;
+            var lc = listaC.transform;
+
+            // 1. Lectura actual
+            var actual = Tarjeta("Actual", lc, EstiloUI.Noche, sombra: false, bloquear: false);
+            actual.AddComponent<LayoutElement>().preferredHeight = 330;
+            var at = actual.transform;
+            var iconoCond = Icono(at, "nube", blanco, Ancla.ArribaIzq, 34, -36, 150);
+            var temp = Texto(at, "Temperatura", "--°", 118, Ancla.ArribaIzq, 196, -26, 340, 160, TextAlignmentOptions.Left);
+            temp.fontStyle = FontStyles.Bold; temp.textWrappingMode = TextWrappingModes.NoWrap;
+            var cond = Texto(at, "Condicion", "Sin datos", 34, Ancla.ArribaIzq, 36, -206, 500, 56, TextAlignmentOptions.Left);
+            cond.enableAutoSizing = true; cond.fontSizeMin = 24; cond.fontSizeMax = 34;
+            var divisor = Img("Divisor", at, null, new Color(1, 1, 1, 0.18f));
+            Ubicar(divisor.gameObject, Ancla.ArribaIzq, 560, -40, 3, 250);
+            TMP_Text Dato(string icono, string etiquetaDato, float y)
+            {
+                Icono(at, icono, EstiloUI.TextoSuave, Ancla.ArribaIzq, 600, y - 14, 50);
+                var et = Texto(at, "Etiqueta", etiquetaDato, 22, Ancla.ArribaIzq, 670, y, 330, 32, TextAlignmentOptions.Left);
+                et.color = EstiloUI.TextoSuave;
+                var v = Texto(at, "Valor", "--", 34, Ancla.ArribaIzq, 670, y - 30, 330, 46, TextAlignmentOptions.Left);
+                v.fontStyle = FontStyles.Bold;
+                return v;
+            }
+            var hum = Dato("gota", "Humedad", -36);
+            var vie = Dato("viento", "Viento", -128);
+            var pre = Dato("presion", "Presión", -220);
+
+            // 2. Estado del enlace LoRa
+            var est = Tarjeta("EstadoEnlace", lc, EstiloUI.Noche, sombra: false, bloquear: false);
+            est.AddComponent<LayoutElement>().preferredHeight = 124;
+            var iconoEst = Icono(est.transform, "antena", EstiloUI.Verde, Ancla.ArribaIzq, 30, -30, 64);
+            var textoEst = Texto(est.transform, "Titulo", "", 28, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            FilaArriba(textoEst.gameObject, 120, -20, 24, 44);
+            textoEst.fontStyle = FontStyles.Bold;
+            var detalleEst = Texto(est.transform, "Detalle", "", 23, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            FilaArriba(detalleEst.gameObject, 120, -66, 24, 38);
+            detalleEst.color = EstiloUI.TextoSuave;
+
+            // 3. Alertas
+            var tAl = Texto(lc, "TituloAlertas", "Alertas", 34, Ancla.ArribaIzq, 0, 0, 10, 56, TextAlignmentOptions.BottomLeft);
+            tAl.fontStyle = FontStyles.Bold;
+            tAl.margin = new Vector4(8, 0, 0, 0);
+            var alertas = Nodo("Alertas", lc);
+            var va = alertas.AddComponent<VerticalLayoutGroup>();
+            va.spacing = 16; va.childControlWidth = true; va.childControlHeight = true;
+            va.childForceExpandWidth = true; va.childForceExpandHeight = false;
+
+            // 4. Recomendaciones
+            var recs = Img("Recomendaciones", lc, SpRed, EstiloUI.Noche);
+            var vr = recs.gameObject.AddComponent<VerticalLayoutGroup>();
+            vr.padding = new RectOffset(32, 32, 28, 30); vr.spacing = 18;
+            vr.childControlWidth = true; vr.childControlHeight = true;
+            vr.childForceExpandWidth = true; vr.childForceExpandHeight = false;
+            var tRec = Texto(recs.transform, "Titulo", "Recomendaciones", 32, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.Left);
+            tRec.fontStyle = FontStyles.Bold;
+
+            // 5. Emergencia + nota
+            var sosC = BotonPildora(lc, "BtnEmergencia", "¿Qué hago en una emergencia?", "alerta", EstiloUI.Rojo, blanco, 30);
+            sosC.gameObject.AddComponent<LayoutElement>().preferredHeight = 100;
+            var nota = Texto(lc, "Nota", "Los datos vienen del sensor meteorológico de la estación (LoRa). Las alertas son orientativas: " +
+                                         "sigue siempre las indicaciones del guardaparque.", 22, Ancla.ArribaIzq, 0, 0, 10, 10, TextAlignmentOptions.Center);
+            nota.color = new Color(0.76f, 0.86f, 1f, 0.7f);
+            nota.margin = new Vector4(24, 0, 24, 0);
+
+            // =================================================================
+            // ELEMENTOS COMUNES
+            // =================================================================
+            // Diagnostico de AR (texto amarillo)
+            var dbg = Texto(s, "TextoDebug", "", 20, Ancla.ArribaCentro, 0, -372, 1040, 56);
+            dbg.color = new Color(1f, 0.9f, 0.4f);
+            if (spawner) spawner.textoDebug = dbg;
+
+            // Indicador de borde: "Frai >" cuando Frai queda fuera de la pantalla
+            var indicador = Img("IndicadorFrai", s, SpPil, new Color(0.16f, 0.52f, 1f, 0.94f));
+            var irt = (RectTransform)indicador.transform;
+            irt.sizeDelta = new Vector2(200, 72);
+            var textoInd = Texto(indicador.transform, "Texto", "Frai  >", 28, Ancla.Centro, 0, 0, 200, 72);
+            textoInd.fontStyle = FontStyles.Bold;
+            if (acompanante) { acompanante.indicador = irt; acompanante.textoIndicador = textoInd; }
+            indicador.gameObject.SetActive(false);
+
+            // Barra de navegacion inferior
+            var nav = Tarjeta("Navegacion", s, EstiloUI.NocheSolida);
+            Rect(nav, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 14), new Vector2(-40, 140));
+            var tabs = Nodo("Pestanas", nav.transform);
+            Estirar(tabs, 10, 0, 10, 0);
+            var ht = tabs.AddComponent<HorizontalLayoutGroup>();
+            ht.childControlWidth = true; ht.childControlHeight = true;
+            ht.childForceExpandWidth = true; ht.childForceExpandHeight = true;
+            NavegacionUI.Pestana Tab(string titulo, string icono, GameObject contenido)
+            {
+                var hit = Img("Tab" + titulo, tabs.transform, null, new Color(0, 0, 0, 0), true);
+                var b = hit.gameObject.AddComponent<Button>();
+                b.transition = Selectable.Transition.None;
+                var res2 = Img("Resaltado", hit.transform, SpPil, new Color(0.16f, 0.52f, 1f, 0.38f));
+                Ubicar(res2.gameObject, Ancla.ArribaCentro, 0, -14, 136, 66);
+                var ic = Icono(hit.transform, icono, blanco, Ancla.ArribaCentro, 0, -20, 54);
+                var tx = Texto(hit.transform, "Texto", titulo, 24, Ancla.AbajoCentro, 0, 14, 300, 36);
+                var badge = Img("Insignia", hit.transform, SpPil, EstiloUI.Rojo);
+                Ubicar(badge.gameObject, Ancla.ArribaCentro, 40, -12, 24, 24);
+                return new NavegacionUI.Pestana { nombre = titulo, boton = b, icono = ic, texto = tx, resaltado = res2, insignia = badge.gameObject, contenido = new[] { contenido } };
+            }
+            var navUI = canvas.gameObject.AddComponent<NavegacionUI>();
+            navUI.pestanas = new[]
+            {
+                Tab("Guía", "chat", pGuia),
+                Tab("Explorar", "camara", pExplorar),
+                Tab("Clima", "nube", pClima),
+            };
+            navUI.colorInactivo = new Color(0.76f, 0.86f, 1f, 0.6f);
+            pExplorar.SetActive(false);
+            pClima.SetActive(false);
 
             // ---------------- Conexiones ----------------
             var ui = canvas.gameObject.AddComponent<GuideUI>();
@@ -639,14 +1004,65 @@ namespace GuiaFrailejon.EditorTools
             ui.campoPregunta = campo;
             ui.botonEnviar = enviar;
             ui.botonMic = mantener;
-            ui.textoMic = mic.GetComponentInChildren<TMP_Text>();
+            ui.textoMic = textoVoz;
+            ui.estadoVoz = estadoVoz.gameObject;
             ui.botonSilenciar = silenciar;
             ui.botonAcompanar = acompanar;
-            ui.textoAcompanar = acompanar.GetComponentInChildren<TMP_Text>();
+            ui.textoAcompanar = textoAcompanar;
             ui.botonVenAqui = venAqui;
             ui.panelInferior = (RectTransform)panel.transform;
             ui.ocultablesAlPlegar = new[] { chatGo };
             ui.botonPlegar = plegar;
+            ui.iconoPlegar = chevron.rectTransform;
+            ui.altoPanelAbierto = 780; ui.altoPanelPlegado = 330;
+
+            var exp = canvas.gameObject.AddComponent<ExplorarUI>();
+            exp.clasificador = clasificador;
+            exp.captura = captura;
+            exp.navegacion = navUI;
+            exp.guia = ui;
+            exp.esquinas = esquinas;
+            exp.lineaEscaneo = (RectTransform)linea.transform;
+            exp.altoMarco = Marco;
+            exp.textoAyuda = ayuda;
+            exp.aviso = aviso.gameObject;
+            exp.textoAviso = textoAviso;
+            exp.etiqueta = etiqueta.gameObject;
+            exp.textoEtiqueta = textoEt;
+            exp.miniatura = miniImg;
+            exp.textoTipo = textoTipo;
+            exp.textoNombre = nombre;
+            exp.textoCientifico = cientifico;
+            exp.barra = barra.gameObject;
+            exp.rellenoBarra = rRt;
+            exp.imagenRelleno = relleno;
+            exp.textoConfianza = confianza;
+            exp.textoDescripcion = descripcion;
+            exp.botonPreguntar = preguntar;
+            exp.botonVolver = volverE;
+
+            var cli = canvas.gameObject.AddComponent<ClimaUI>();
+            cli.fuente = fuenteClima;
+            cli.navegacion = navUI;
+            cli.guia = ui;
+            cli.iconoCondicion = iconoCond;
+            cli.textoTemperatura = temp;
+            cli.textoCondicion = cond;
+            cli.textoHumedad = hum;
+            cli.textoViento = vie;
+            cli.textoPresion = pre;
+            cli.iconoEstado = iconoEst;
+            cli.iconoEstadoBarra = antenaBarra;
+            cli.textoEstado = textoEst;
+            cli.textoEstadoDetalle = detalleEst;
+            cli.contenedorAlertas = (RectTransform)alertas.transform;
+            cli.contenedorRecomendaciones = (RectTransform)recs.transform;
+            cli.botonEmergencia = sosC;
+            cli.botonVolver = volverC;
+            cli.spriteTarjeta = SpRed;
+            cli.spritePildora = SpPil;
+            cli.iconos = NombresIconos.Select(Ico).ToArray();
+
             EditorUtility.SetDirty(ui);
             return ui;
         }
@@ -655,17 +1071,17 @@ namespace GuiaFrailejon.EditorTools
         {
             var go = new GameObject("Chip", typeof(RectTransform), typeof(Image), typeof(Button), typeof(HorizontalLayoutGroup), typeof(LayoutElement));
             var img = go.GetComponent<Image>();
-            img.sprite = Redondeado();
+            img.sprite = SpPil;
             img.type = Image.Type.Sliced;
-            img.color = new Color(0.13f, 0.40f, 0.85f, 0.92f);   // azul "glass"
+            img.color = new Color(1f, 1f, 1f, 0.15f);
             go.GetComponent<Button>().targetGraphic = img;
             var h = go.GetComponent<HorizontalLayoutGroup>();
-            h.padding = new RectOffset(26, 26, 10, 10);
+            h.padding = new RectOffset(30, 30, 10, 10);
             h.childAlignment = TextAnchor.MiddleCenter;
             h.childControlWidth = true; h.childControlHeight = true;
             h.childForceExpandWidth = false; h.childForceExpandHeight = false;
             var le = go.GetComponent<LayoutElement>();
-            le.minHeight = 76; le.preferredHeight = 76;
+            le.minHeight = 72; le.preferredHeight = 72;
 
             var txt = new GameObject("Text", typeof(RectTransform), typeof(TextMeshProUGUI));
             txt.transform.SetParent(go.transform, false);
@@ -751,16 +1167,16 @@ namespace GuiaFrailejon.EditorTools
             if ((int)PlayerSettings.Android.minSdkVersion < 24)
                 PlayerSettings.Android.minSdkVersion = (AndroidSdkVersions)24;
 
-            // GPS (Input.location) e inclinacion (Input.acceleration) necesitan el sistema de entrada clasico.
-            // 'Both' deja funcionando tambien el nuevo Input System (lo usa la interfaz).
+            // Solo el Input System nuevo: 'Both' no esta soportado en Android (Unity 6.6).
+            // La inclinacion usa Accelerometer (Input System) y el GPS usa Input.location, que no depende de esto.
             var ajustes = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/ProjectSettings.asset").FirstOrDefault();
             if (ajustes != null)
             {
                 var so = new SerializedObject(ajustes);
                 var p = so.FindProperty("activeInputHandler");
-                if (p != null && p.intValue != 2)
+                if (p != null && p.intValue != 1)
                 {
-                    p.intValue = 2;   // 0 = clasico, 1 = nuevo, 2 = ambos
+                    p.intValue = 1;   // 0 = clasico, 1 = nuevo (Input System), 2 = ambos
                     so.ApplyModifiedProperties();
                     return true;
                 }

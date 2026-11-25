@@ -1,0 +1,52 @@
+{
+  "especies": [
+    {
+      "cientifico": "Espeletia hartwegiana",
+      "comun": "Frailejón",
+      "tipo": "Planta",
+      "descripcion": "Planta emblemática del páramo. Sus hojas peludas la protegen del frío y ayudan a captar el agua de la niebla, que luego alimenta quebradas y ríos.",
+      "cuidado": "Crece muy despacio: no lo toques ni arranques sus hojas.",
+      "fuente": "Ficha general (pendiente de validar con el PNN)"
+    },
+    {
+      "cientifico": "Espeletia",
+      "comun": "Frailejón",
+      "tipo": "Planta",
+      "descripcion": "Los frailejones son plantas típicas del páramo que ayudan a regular el agua de la montaña.",
+      "cuidado": "No lo toques ni arranques sus hojas.",
+      "fuente": "Ficha general (pendiente de validar con el PNN)"
+    },
+    {
+      "cientifico": "Oxypogon stuebelii",
+      "comun": "Chivito de los nevados",
+      "tipo": "Ave",
+      "descripcion": "Colibrí de alta montaña que solo vive en los páramos de la Cordillera Central de Colombia. Los machos tienen una cresta y una 'barbita' de plumas.",
+      "cuidado": "Obsérvalo en silencio y a distancia.",
+      "fuente": "Ficha general (pendiente de validar con el PNN)"
+    },
+    {
+      "cientifico": "Tremarctos ornatus",
+      "comun": "Oso andino",
+      "tipo": "Mamífero",
+      "descripcion": "Único oso de Suramérica, también llamado oso de anteojos por las manchas claras de su cara. Es tímido y se alimenta sobre todo de plantas.",
+      "cuidado": "Si lo ves, no te acerques ni le des comida. Avisa al guardaparque.",
+      "fuente": "Ficha general (pendiente de validar con el PNN)"
+    },
+    {
+      "cientifico": "Uropsalis segmentata",
+      "comun": "Guardacaminos colitijereta",
+      "tipo": "Ave",
+      "descripcion": "Ave nocturna de los Andes. Los machos tienen dos plumas de la cola muy largas, en forma de tijera.",
+      "cuidado": "No la ilumines directamente con linterna.",
+      "fuente": "Ficha general (pendiente de validar con el PNN)"
+    },
+    {
+      "cientifico": "Vultur gryphus",
+      "comun": "Cóndor de los Andes",
+      "tipo": "Ave",
+      "descripcion": "Una de las aves voladoras más grandes del mundo y símbolo nacional de Colombia. Planea aprovechando las corrientes de aire de la montaña.",
+      "cuidado": "Obsérvalo a distancia, sin perseguirlo.",
+      "fuente": "Ficha general (pendiente de validar con el PNN)"
+    }
+  ]
+}

@@ -57,3 +57,17 @@ Thumbs.db
 /Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/llamalib_win-x64_cublas.dll
 /Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/llamalib_win-x64_tinyblas.dll
 /Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64/native/llamalib_win-x64_vulkan.dll
+# Temporales de builds nativos (CMake/Ninja) y de paquetes
+/.utmp/
+/LLMUnityBuild/
+
+# Esquemas que Unity regenera solo (UI Builder)
+/UIElementsSchema/
+
+# Copias temporales que LLMUnity crea durante el build (el original esta en su cache).
+# Si un build se cancela pueden quedar aqui; nunca se suben (pesan cientos de MB).
+/Assets/Plugins/Android/LLMUnity/
+/Assets/Plugins/Android/LLMUnity.meta
+/Assets/StreamingAssets/*.gguf
+/Assets/StreamingAssets/*.gguf.meta
+*.gguf

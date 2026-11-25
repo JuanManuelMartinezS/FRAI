@@ -1,0 +1,84 @@
+{
+ "schema": 1,
+ "demo": true,
+ "createdAt": "2026-11-20T00:22:35Z",
+ "architecture": "demo-random-conv",
+ "teacher": null,
+ "input": {
+  "name": "pixels",
+  "layout": "NCHW",
+  "size": 224,
+  "range": [
+   0,
+   1
+  ],
+  "normalization": "en el grafo",
+  "resize": "lado corto + recorte central 95 %"
+ },
+ "output": {
+  "name": "logits"
+ },
+ "temperature": 1.0,
+ "rejectThreshold": 0.99,
+ "rejectCoverage": 0.0,
+ "metrics": {},
+ "files": {
+  "int8": {
+   "path": "vision/student_int8.onnx",
+   "bytes": 2475,
+   "sha256": "e24500d498c89b0c12d29b5444a5c8d49b934700bbdd19bc5e394e2cd6e5d437"
+  }
+ },
+ "labels": [
+  {
+   "index": 0,
+   "taxonKey": 9000001,
+   "scientificName": "Espeletia hartwegiana",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Espeletia"
+  },
+  {
+   "index": 1,
+   "taxonKey": 9000003,
+   "scientificName": "Oxypogon stuebelii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Oxypogon"
+  },
+  {
+   "index": 2,
+   "taxonKey": 9000004,
+   "scientificName": "Tremarctos ornatus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Ursidae",
+   "genus": "Tremarctos"
+  },
+  {
+   "index": 3,
+   "taxonKey": 2497078,
+   "scientificName": "Uropsalis segmentata",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Caprimulgiformes",
+   "family": "Caprimulgidae",
+   "genus": "Uropsalis"
+  },
+  {
+   "index": 4,
+   "taxonKey": 9000002,
+   "scientificName": "Vultur gryphus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Accipitriformes",
+   "family": "Cathartidae",
+   "genus": "Vultur"
+  }
+ ]
+}

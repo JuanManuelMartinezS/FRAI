@@ -32,6 +32,8 @@ namespace GuiaFrailejon
 
         [Range(0, 1)] public float umbralRespuestaDirecta = 0.55f;
         [Range(0, 1)] public float umbralMinimo = 0.15f;
+        [Tooltip("Sin IA (o si la IA dice NO_SE), solo se da la respuesta oficial mas cercana si pasa este puntaje.")]
+        [Range(0, 1)] public float umbralRespaldo = 0.35f;
         public float tiempoMaxLLM = 30f;
         [Tooltip("SOLO PARA PRUEBAS: usa la IA aunque el celular tenga menos de 6 GB de RAM.")]
         public bool forzarIAParaPruebas = false;
@@ -96,14 +98,19 @@ namespace GuiaFrailejon
                         string txt = (await tarea)?.Trim();
                         if (!string.IsNullOrEmpty(txt) && !txt.Contains("NO_SE") && CifrasRespaldadas(txt, contexto))
                             return new RespuestaGuia { tipo = TipoRespuesta.GeneradaConFuente, texto = txt, fuente = utiles[0].pasaje.fuente };
-                        if (txt != null && txt.Contains("NO_SE")) return Sin();
+                        // El modelo pequeno a veces dice NO_SE aunque el pasaje si responde: se confia en la busqueda si es buena.
+                        if (txt != null && txt.Contains("NO_SE"))
+                            return mejor.pasaje.esPregunta && mejor.puntaje >= umbralRespaldo
+                                ? Validar(TipoRespuesta.Oficial, mejor.pasaje.respuesta, mejor.pasaje.fuente)
+                                : Sin();
                     }
                     else llm.Cancelar();
                 }
                 catch (Exception e) { Debug.LogWarning("[Guia] LLM fallo, se usa respuesta oficial: " + e.Message); }
             }
 
-            // 4) Respaldo: la respuesta oficial mas cercana
+            // 4) Respaldo: la respuesta oficial mas cercana, solo si se parece lo suficiente
+            if (mejor.puntaje < umbralRespaldo) return Sin();
             return Validar(TipoRespuesta.Oficial, mejor.pasaje.respuesta, mejor.pasaje.fuente);
         }
 

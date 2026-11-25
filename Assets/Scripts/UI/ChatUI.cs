@@ -22,6 +22,13 @@ namespace GuiaFrailejon
         public Color colorSeguridad = new Color(0.80f, 0.16f, 0.18f, 0.97f);
         public Color colorNota = new Color(1f, 1f, 1f, 0.14f);
 
+        [Header("Avatar de Frai (opcional)")]
+        public Sprite spriteAvatarFondo;
+        public Sprite spriteAvatarIcono;
+        public Color colorAvatar = new Color(0.09f, 0.64f, 0.52f);
+        public float tamAvatar = 72;
+        public float tamTexto = 32;
+
         public class Burbuja { public GameObject fila; public Image fondo; public TMP_Text texto; public TMP_Text fuente; public bool claro; }
 
         public enum Estilo { Frai, Usuario, Seguridad, Nota }
@@ -35,28 +42,34 @@ namespace GuiaFrailejon
             h.childAlignment = usuario ? TextAnchor.UpperRight : TextAnchor.UpperLeft;
             h.childControlWidth = false; h.childControlHeight = true;
             h.childForceExpandWidth = false; h.childForceExpandHeight = false;
+            h.spacing = 14;
+
+            bool avatar = spriteAvatarFondo && (estilo == Estilo.Frai || estilo == Estilo.Seguridad);
+            if (avatar) CrearAvatar(fila.transform);
 
             var go = new GameObject("Burbuja", typeof(RectTransform), typeof(Image), typeof(VerticalLayoutGroup));
             go.transform.SetParent(fila.transform, false);
-            ((RectTransform)go.transform).sizeDelta = new Vector2(estilo == Estilo.Nota ? anchoBurbuja * 0.85f : anchoBurbuja, 100);
+            float ancho = estilo == Estilo.Nota ? anchoBurbuja * 0.9f : estilo == Estilo.Usuario ? anchoBurbuja * 0.85f : anchoBurbuja;
+            if (avatar) ancho -= tamAvatar + h.spacing;
+            ((RectTransform)go.transform).sizeDelta = new Vector2(ancho, 100);
             var img = go.GetComponent<Image>();
             img.sprite = spriteBurbuja;
             img.type = Image.Type.Sliced;
             img.raycastTarget = false;
             img.color = ColorDe(estilo);
             var v = go.GetComponent<VerticalLayoutGroup>();
-            v.padding = new RectOffset(28, 28, 20, 20);
+            v.padding = new RectOffset(28, 28, 18, 18);
             v.spacing = 6;
             v.childControlWidth = true; v.childControlHeight = true;
             v.childForceExpandWidth = true; v.childForceExpandHeight = false;
 
             bool claro = estilo != Estilo.Frai;   // texto blanco sobre fondo oscuro
             var b = new Burbuja { fila = fila, fondo = img, claro = claro };
-            b.texto = CrearTexto(go.transform, texto, estilo == Estilo.Nota ? 26 : 34, claro ? Color.white : new Color(0.12f, 0.12f, 0.12f));
+            b.texto = CrearTexto(go.transform, texto, estilo == Estilo.Nota ? tamTexto * 0.8f : tamTexto, claro ? Color.white : new Color(0.10f, 0.12f, 0.16f));
             if (!string.IsNullOrEmpty(fuente)) b.fuente = CrearFuente(go.transform, fuente, claro);
 
             Limitar();
-            StartCoroutine(BajarAlFinal());
+            Bajar();
             return b;
         }
 
@@ -75,12 +88,44 @@ namespace GuiaFrailejon
                 if (b.fuente == null) b.fuente = CrearFuente(b.fondo.transform, fuente, b.claro);
                 else b.fuente.text = fuente;
             }
+            Bajar();
+        }
+
+        // Si el chat esta oculto (plegado u otra pestana) no se pueden iniciar corrutinas: se baja al volver a mostrarse.
+        bool bajarPendiente;
+        void Bajar()
+        {
+            if (isActiveAndEnabled) StartCoroutine(BajarAlFinal());
+            else bajarPendiente = true;
+        }
+
+        void OnEnable()
+        {
+            if (!bajarPendiente) return;
+            bajarPendiente = false;
             StartCoroutine(BajarAlFinal());
         }
 
         public void Limpiar()
         {
             for (int i = contenido.childCount - 1; i >= 0; i--) Destroy(contenido.GetChild(i).gameObject);
+        }
+
+        void CrearAvatar(Transform fila)
+        {
+            var go = new GameObject("Avatar", typeof(RectTransform), typeof(Image), typeof(LayoutElement));
+            go.transform.SetParent(fila, false);
+            ((RectTransform)go.transform).sizeDelta = new Vector2(tamAvatar, tamAvatar);
+            var le = go.GetComponent<LayoutElement>();
+            le.preferredHeight = le.minHeight = tamAvatar;
+            var img = go.GetComponent<Image>();
+            img.sprite = spriteAvatarFondo; img.color = colorAvatar; img.raycastTarget = false;
+            if (spriteAvatarIcono == null) return;
+            var ico = new GameObject("Icono", typeof(RectTransform), typeof(Image));
+            ico.transform.SetParent(go.transform, false);
+            ((RectTransform)ico.transform).sizeDelta = new Vector2(tamAvatar * 0.6f, tamAvatar * 0.6f);
+            var ii = ico.GetComponent<Image>();
+            ii.sprite = spriteAvatarIcono; ii.raycastTarget = false;
         }
 
         Color ColorDe(Estilo e) => e switch

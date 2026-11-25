@@ -1,58 +1,136 @@
 {
  "schema": 1,
- "demo": true,
- "createdAt": "2026-11-20T00:22:35Z",
- "architecture": "demo-random-conv",
- "teacher": null,
+ "demo": false,
+ "architecture": "efficientnet_b0",
  "input": {
-  "name": "pixels",
+  "name": "image",
   "layout": "NCHW",
   "size": 224,
-  "range": [
-   0,
-   1
+  "mean": [
+   0.485,
+   0.456,
+   0.406
   ],
-  "normalization": "en el grafo",
-  "resize": "lado corto + recorte central 95 %"
+  "std": [
+   0.229,
+   0.224,
+   0.225
+  ],
+  "cropPct": 0.878431
  },
  "output": {
   "name": "logits"
  },
  "temperature": 1.0,
- "rejectThreshold": 0.99,
- "rejectCoverage": 0.0,
- "metrics": {},
- "files": {
-  "int8": {
-   "path": "vision/student_int8.onnx",
-   "bytes": 2475,
-   "sha256": "e24500d498c89b0c12d29b5444a5c8d49b934700bbdd19bc5e394e2cd6e5d437"
-  }
+ "rejectThreshold": 0.5,
+ "metrics": {
+  "val_top1": 0.6947,
+  "val_top3": 0.8476
  },
  "labels": [
   {
    "index": 0,
-   "taxonKey": 9000001,
-   "scientificName": "Espeletia hartwegiana",
-   "kingdom": "Plantae",
-   "class": "Magnoliopsida",
-   "order": "Asterales",
-   "family": "Asteraceae",
-   "genus": "Espeletia"
+   "taxonKey": 2432352,
+   "scientificName": "Eptesicus fuscus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Vespertilionidae",
+   "genus": "Eptesicus"
   },
   {
    "index": 1,
-   "taxonKey": 9000003,
-   "scientificName": "Oxypogon stuebelii",
+   "taxonKey": 2432448,
+   "scientificName": "Myotis nigricans",
    "kingdom": "Animalia",
-   "class": "Aves",
-   "order": "Apodiformes",
-   "family": "Trochilidae",
-   "genus": "Oxypogon"
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Vespertilionidae",
+   "genus": "Myotis"
   },
   {
    "index": 2,
-   "taxonKey": 9000004,
+   "taxonKey": 2433011,
+   "scientificName": "Tadarida brasiliensis",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Molossidae",
+   "genus": "Tadarida"
+  },
+  {
+   "index": 3,
+   "taxonKey": 2433176,
+   "scientificName": "Carollia perspicillata",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Carollia"
+  },
+  {
+   "index": 4,
+   "taxonKey": 2433270,
+   "scientificName": "Artibeus lituratus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Artibeus"
+  },
+  {
+   "index": 5,
+   "taxonKey": 2433272,
+   "scientificName": "Artibeus jamaicensis",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Artibeus"
+  },
+  {
+   "index": 6,
+   "taxonKey": 2433298,
+   "scientificName": "Desmodus rotundus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Desmodus"
+  },
+  {
+   "index": 7,
+   "taxonKey": 2433302,
+   "scientificName": "Sphaeronycteris toxophyllum",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Sphaeronycteris"
+  },
+  {
+   "index": 8,
+   "taxonKey": 2433332,
+   "scientificName": "Sturnira ludovici",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Sturnira"
+  },
+  {
+   "index": 9,
+   "taxonKey": 2433341,
+   "scientificName": "Vampyrum spectrum",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Chiroptera",
+   "family": "Phyllostomidae",
+   "genus": "Vampyrum"
+  },
+  {
+   "index": 10,
+   "taxonKey": 2433401,
    "scientificName": "Tremarctos ornatus",
    "kingdom": "Animalia",
    "class": "Mammalia",
@@ -61,24 +139,2394 @@
    "genus": "Tremarctos"
   },
   {
-   "index": 3,
-   "taxonKey": 2497078,
-   "scientificName": "Uropsalis segmentata",
+   "index": 11,
+   "taxonKey": 2433536,
+   "scientificName": "Nasua nasua",
    "kingdom": "Animalia",
-   "class": "Aves",
-   "order": "Caprimulgiformes",
-   "family": "Caprimulgidae",
-   "genus": "Uropsalis"
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Procyonidae",
+   "genus": "Nasua"
   },
   {
-   "index": 4,
-   "taxonKey": 9000002,
+   "index": 12,
+   "taxonKey": 2433573,
+   "scientificName": "Potos flavus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Procyonidae",
+   "genus": "Potos"
+  },
+  {
+   "index": 13,
+   "taxonKey": 2433585,
+   "scientificName": "Bassaricyon gabbii",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Procyonidae",
+   "genus": "Bassaricyon"
+  },
+  {
+   "index": 14,
+   "taxonKey": 2433716,
+   "scientificName": "Eira barbara",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Mustelidae",
+   "genus": "Eira"
+  },
+  {
+   "index": 15,
+   "taxonKey": 2434340,
+   "scientificName": "Lycalopex culpaeus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Canidae",
+   "genus": "Lycalopex"
+  },
+  {
+   "index": 16,
+   "taxonKey": 2434584,
+   "scientificName": "Cerdocyon thous",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Canidae",
+   "genus": "Cerdocyon"
+  },
+  {
+   "index": 17,
+   "taxonKey": 2435099,
+   "scientificName": "Puma concolor",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Felidae",
+   "genus": "Puma"
+  },
+  {
+   "index": 18,
+   "taxonKey": 2437576,
+   "scientificName": "Dasyprocta punctata",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Dasyproctidae",
+   "genus": "Dasyprocta"
+  },
+  {
+   "index": 19,
+   "taxonKey": 2437596,
+   "scientificName": "Echinoprocta rufescens",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Erethizontidae",
+   "genus": "Echinoprocta"
+  },
+  {
+   "index": 20,
+   "taxonKey": 2437612,
+   "scientificName": "Dinomys branickii",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Dinomyidae",
+   "genus": "Dinomys"
+  },
+  {
+   "index": 21,
+   "taxonKey": 2439568,
+   "scientificName": "Heteromys australis",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Heteromyidae",
+   "genus": "Heteromys"
+  },
+  {
+   "index": 22,
+   "taxonKey": 2439919,
+   "scientificName": "Didelphis pernigra",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Didelphimorphia",
+   "family": "Didelphidae",
+   "genus": "Didelphis"
+  },
+  {
+   "index": 23,
+   "taxonKey": 2440779,
+   "scientificName": "Dasypus novemcinctus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Cingulata",
+   "family": "Dasypodidae",
+   "genus": "Dasypus"
+  },
+  {
+   "index": 24,
+   "taxonKey": 2440899,
+   "scientificName": "Tapirus pinchaque",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Perissodactyla",
+   "family": "Tapiridae",
+   "genus": "Tapirus"
+  },
+  {
+   "index": 25,
+   "taxonKey": 2440965,
+   "scientificName": "Odocoileus virginianus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Artiodactyla",
+   "family": "Cervidae",
+   "genus": "Odocoileus"
+  },
+  {
+   "index": 26,
+   "taxonKey": 2440995,
+   "scientificName": "Pecari tajacu",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Artiodactyla",
+   "family": "Tayassuidae",
+   "genus": "Pecari"
+  },
+  {
+   "index": 27,
+   "taxonKey": 2474393,
+   "scientificName": "Fulica americana",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Gruiformes",
+   "family": "Rallidae",
+   "genus": "Fulica"
+  },
+  {
+   "index": 28,
+   "taxonKey": 2475290,
+   "scientificName": "Momotus momota",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Coraciiformes",
+   "family": "Momotidae",
+   "genus": "Momotus"
+  },
+  {
+   "index": 29,
+   "taxonKey": 2476159,
+   "scientificName": "Pterophanes cyanopterus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Pterophanes"
+  },
+  {
+   "index": 30,
+   "taxonKey": 2476168,
+   "scientificName": "Adelomyia melanogenys",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Adelomyia"
+  },
+  {
+   "index": 31,
+   "taxonKey": 2476308,
+   "scientificName": "Aglaeactis cupripennis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Aglaeactis"
+  },
+  {
+   "index": 32,
+   "taxonKey": 2476351,
+   "scientificName": "Ocreatus underwoodii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Ocreatus"
+  },
+  {
+   "index": 33,
+   "taxonKey": 2476388,
+   "scientificName": "Aglaiocercus kingii subsp. emmae",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Aglaiocercus"
+  },
+  {
+   "index": 34,
+   "taxonKey": 2476708,
+   "scientificName": "Heliangelus exortis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Heliangelus"
+  },
+  {
+   "index": 35,
+   "taxonKey": 2476787,
+   "scientificName": "Boissonneaua flavescens",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Boissonneaua"
+  },
+  {
+   "index": 36,
+   "taxonKey": 2476860,
+   "scientificName": "Metallura tyrianthina",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Metallura"
+  },
+  {
+   "index": 37,
+   "taxonKey": 2476884,
+   "scientificName": "Ensifera ensifera",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Ensifera"
+  },
+  {
+   "index": 38,
+   "taxonKey": 2477053,
+   "scientificName": "Coeligena torquata",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Coeligena"
+  },
+  {
+   "index": 39,
+   "taxonKey": 2477062,
+   "scientificName": "Coeligena coeligena",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Coeligena"
+  },
+  {
+   "index": 40,
+   "taxonKey": 2478133,
+   "scientificName": "Melanerpes formicivorus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Picidae",
+   "genus": "Melanerpes"
+  },
+  {
+   "index": 41,
+   "taxonKey": 2478237,
+   "scientificName": "Colaptes punctigula",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Picidae",
+   "genus": "Colaptes"
+  },
+  {
+   "index": 42,
+   "taxonKey": 2478564,
+   "scientificName": "Campephilus melanoleucos",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Picidae",
+   "genus": "Campephilus"
+  },
+  {
+   "index": 43,
+   "taxonKey": 2478854,
+   "scientificName": "Andigena nigrirostris",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Ramphastidae",
+   "genus": "Andigena"
+  },
+  {
+   "index": 44,
+   "taxonKey": 2478858,
+   "scientificName": "Andigena hypoglauca",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Ramphastidae",
+   "genus": "Andigena"
+  },
+  {
+   "index": 45,
+   "taxonKey": 2479071,
+   "scientificName": "Forpus conspicillatus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Psittaciformes",
+   "family": "Psittacidae",
+   "genus": "Forpus"
+  },
+  {
+   "index": 46,
+   "taxonKey": 2480538,
+   "scientificName": "Buteo platypterus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Accipitriformes",
+   "family": "Accipitridae",
+   "genus": "Buteo"
+  },
+  {
+   "index": 47,
+   "taxonKey": 2480726,
+   "scientificName": "Pandion haliaetus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Accipitriformes",
+   "family": "Pandionidae",
+   "genus": "Pandion"
+  },
+  {
+   "index": 48,
+   "taxonKey": 2480824,
+   "scientificName": "Butorides striata",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Pelecaniformes",
+   "family": "Ardeidae",
+   "genus": "Butorides"
+  },
+  {
+   "index": 49,
+   "taxonKey": 2481710,
+   "scientificName": "Tringa solitaria",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Charadriiformes",
+   "family": "Scolopacidae",
+   "genus": "Tringa"
+  },
+  {
+   "index": 50,
+   "taxonKey": 2481798,
+   "scientificName": "Actitis macularius",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Charadriiformes",
+   "family": "Scolopacidae",
+   "genus": "Actitis"
+  },
+  {
+   "index": 51,
+   "taxonKey": 2481907,
    "scientificName": "Vultur gryphus",
    "kingdom": "Animalia",
    "class": "Aves",
    "order": "Accipitriformes",
    "family": "Cathartidae",
    "genus": "Vultur"
+  },
+  {
+   "index": 52,
+   "taxonKey": 2481930,
+   "scientificName": "Cathartes aura",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Accipitriformes",
+   "family": "Cathartidae",
+   "genus": "Cathartes"
+  },
+  {
+   "index": 53,
+   "taxonKey": 2481942,
+   "scientificName": "Coragyps atratus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Accipitriformes",
+   "family": "Cathartidae",
+   "genus": "Coragyps"
+  },
+  {
+   "index": 54,
+   "taxonKey": 2482183,
+   "scientificName": "Chamaepetes goudotii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Galliformes",
+   "family": "Cracidae",
+   "genus": "Chamaepetes"
+  },
+  {
+   "index": 55,
+   "taxonKey": 2482198,
+   "scientificName": "Penelope montagnii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Galliformes",
+   "family": "Cracidae",
+   "genus": "Penelope"
+  },
+  {
+   "index": 56,
+   "taxonKey": 2482565,
+   "scientificName": "Cyanocorax yncas",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Corvidae",
+   "genus": "Cyanocorax"
+  },
+  {
+   "index": 57,
+   "taxonKey": 2483612,
+   "scientificName": "Sayornis nigricans",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Sayornis"
+  },
+  {
+   "index": 58,
+   "taxonKey": 2483822,
+   "scientificName": "Mecocerculus leucophrys",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Mecocerculus"
+  },
+  {
+   "index": 59,
+   "taxonKey": 2483914,
+   "scientificName": "Pyrrhomyias cinnamomeus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Pyrrhomyias"
+  },
+  {
+   "index": 60,
+   "taxonKey": 2483936,
+   "scientificName": "Zimmerius chrysops",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Zimmerius"
+  },
+  {
+   "index": 61,
+   "taxonKey": 2483963,
+   "scientificName": "Serpophaga cinerea",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Serpophaga"
+  },
+  {
+   "index": 62,
+   "taxonKey": 2484217,
+   "scientificName": "Psarocolius decumanus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Icteridae",
+   "genus": "Psarocolius"
+  },
+  {
+   "index": 63,
+   "taxonKey": 2484222,
+   "scientificName": "Psarocolius angustifrons",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Icteridae",
+   "genus": "Psarocolius"
+  },
+  {
+   "index": 64,
+   "taxonKey": 2484281,
+   "scientificName": "Hypopyrrhus pyrohypogaster",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Icteridae",
+   "genus": "Hypopyrrhus"
+  },
+  {
+   "index": 65,
+   "taxonKey": 2484396,
+   "scientificName": "Molothrus bonariensis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Icteridae",
+   "genus": "Molothrus"
+  },
+  {
+   "index": 66,
+   "taxonKey": 2486371,
+   "scientificName": "Pipreola riefferii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Cotingidae",
+   "genus": "Pipreola"
+  },
+  {
+   "index": 67,
+   "taxonKey": 2487430,
+   "scientificName": "Vireo olivaceus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Vireonidae",
+   "genus": "Vireo"
+  },
+  {
+   "index": 68,
+   "taxonKey": 2488011,
+   "scientificName": "Euphonia xanthogaster",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Fringillidae",
+   "genus": "Euphonia"
+  },
+  {
+   "index": 69,
+   "taxonKey": 2488315,
+   "scientificName": "Chlorophonia cyanea",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Fringillidae",
+   "genus": "Chlorophonia"
+  },
+  {
+   "index": 70,
+   "taxonKey": 2488424,
+   "scientificName": "Ramphocelus dimidiatus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Ramphocelus"
+  },
+  {
+   "index": 71,
+   "taxonKey": 2488439,
+   "scientificName": "Ramphocelus flammigerus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Ramphocelus"
+  },
+  {
+   "index": 72,
+   "taxonKey": 2488485,
+   "scientificName": "Piranga rubra",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Cardinalidae",
+   "genus": "Piranga"
+  },
+  {
+   "index": 73,
+   "taxonKey": 2488517,
+   "scientificName": "Piranga olivacea",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Cardinalidae",
+   "genus": "Piranga"
+  },
+  {
+   "index": 74,
+   "taxonKey": 2488583,
+   "scientificName": "Tachyphonus rufus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Tachyphonus"
+  },
+  {
+   "index": 75,
+   "taxonKey": 2488602,
+   "scientificName": "Thraupis episcopus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Thraupis"
+  },
+  {
+   "index": 76,
+   "taxonKey": 2489203,
+   "scientificName": "Stelgidopteryx ruficollis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Hirundinidae",
+   "genus": "Stelgidopteryx"
+  },
+  {
+   "index": 77,
+   "taxonKey": 2489207,
+   "scientificName": "Pygochelidon cyanoleuca",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Hirundinidae",
+   "genus": "Pygochelidon"
+  },
+  {
+   "index": 78,
+   "taxonKey": 2489837,
+   "scientificName": "Myioborus miniatus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Parulidae",
+   "genus": "Myioborus"
+  },
+  {
+   "index": 79,
+   "taxonKey": 2489859,
+   "scientificName": "Myioborus ornatus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Parulidae",
+   "genus": "Myioborus"
+  },
+  {
+   "index": 80,
+   "taxonKey": 2489985,
+   "scientificName": "Setophaga ruticilla",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Parulidae",
+   "genus": "Setophaga"
+  },
+  {
+   "index": 81,
+   "taxonKey": 2490523,
+   "scientificName": "Grallaria ruficapilla",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Grallariidae",
+   "genus": "Grallaria"
+  },
+  {
+   "index": 82,
+   "taxonKey": 2490717,
+   "scientificName": "Turdus fuscater",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Turdidae",
+   "genus": "Turdus"
+  },
+  {
+   "index": 83,
+   "taxonKey": 2490722,
+   "scientificName": "Turdus ignobilis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Turdidae",
+   "genus": "Turdus"
+  },
+  {
+   "index": 84,
+   "taxonKey": 2490821,
+   "scientificName": "Catharus ustulatus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Turdidae",
+   "genus": "Catharus"
+  },
+  {
+   "index": 85,
+   "taxonKey": 2490848,
+   "scientificName": "Myadestes ralloides",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Turdidae",
+   "genus": "Myadestes"
+  },
+  {
+   "index": 86,
+   "taxonKey": 2491335,
+   "scientificName": "Sporophila nigricollis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Sporophila"
+  },
+  {
+   "index": 87,
+   "taxonKey": 2491392,
+   "scientificName": "Atlapetes schistaceus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Emberizidae",
+   "genus": "Atlapetes"
+  },
+  {
+   "index": 88,
+   "taxonKey": 2491445,
+   "scientificName": "Atlapetes pallidinucha",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Emberizidae",
+   "genus": "Atlapetes"
+  },
+  {
+   "index": 89,
+   "taxonKey": 2493957,
+   "scientificName": "Henicorhina leucophrys",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Troglodytidae",
+   "genus": "Henicorhina"
+  },
+  {
+   "index": 90,
+   "taxonKey": 2495266,
+   "scientificName": "Patagioenas fasciata",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Columbiformes",
+   "family": "Columbidae",
+   "genus": "Patagioenas"
+  },
+  {
+   "index": 91,
+   "taxonKey": 2496060,
+   "scientificName": "Leptotila verreauxi",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Columbiformes",
+   "family": "Columbidae",
+   "genus": "Leptotila"
+  },
+  {
+   "index": 92,
+   "taxonKey": 2496209,
+   "scientificName": "Crotophaga ani",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Cuculiformes",
+   "family": "Cuculidae",
+   "genus": "Crotophaga"
+  },
+  {
+   "index": 93,
+   "taxonKey": 2496287,
+   "scientificName": "Coccyzus americanus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Cuculiformes",
+   "family": "Cuculidae",
+   "genus": "Coccyzus"
+  },
+  {
+   "index": 94,
+   "taxonKey": 2496432,
+   "scientificName": "Piaya cayana",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Cuculiformes",
+   "family": "Cuculidae",
+   "genus": "Piaya"
+  },
+  {
+   "index": 95,
+   "taxonKey": 2496673,
+   "scientificName": "Trogon personatus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Trogoniformes",
+   "family": "Trogonidae",
+   "genus": "Trogon"
+  },
+  {
+   "index": 96,
+   "taxonKey": 2496700,
+   "scientificName": "Trogon collaris",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Trogoniformes",
+   "family": "Trogonidae",
+   "genus": "Trogon"
+  },
+  {
+   "index": 97,
+   "taxonKey": 2496719,
+   "scientificName": "Pharomachrus antisianus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Trogoniformes",
+   "family": "Trogonidae",
+   "genus": "Pharomachrus"
+  },
+  {
+   "index": 98,
+   "taxonKey": 2496720,
+   "scientificName": "Pharomachrus auriceps",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Trogoniformes",
+   "family": "Trogonidae",
+   "genus": "Pharomachrus"
+  },
+  {
+   "index": 99,
+   "taxonKey": 2497311,
+   "scientificName": "Asio stygius",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Strigiformes",
+   "family": "Strigidae",
+   "genus": "Asio"
+  },
+  {
+   "index": 100,
+   "taxonKey": 2497365,
+   "scientificName": "Megascops choliba",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Strigiformes",
+   "family": "Strigidae",
+   "genus": "Megascops"
+  },
+  {
+   "index": 101,
+   "taxonKey": 2549834,
+   "scientificName": "Ganoderma applanatum",
+   "kingdom": "Fungi",
+   "class": "Agaricomycetes",
+   "order": "Polyporales",
+   "family": "Ganodermataceae",
+   "genus": "Ganoderma"
+  },
+  {
+   "index": 102,
+   "taxonKey": 2609981,
+   "scientificName": "Teloschistes flavicans",
+   "kingdom": "Fungi",
+   "class": "Lecanoromycetes",
+   "order": "Teloschistales",
+   "family": "Teloschistaceae",
+   "genus": "Teloschistes"
+  },
+  {
+   "index": 103,
+   "taxonKey": 2651583,
+   "scientificName": "Lophosoria quadripinnata",
+   "kingdom": "Plantae",
+   "class": "Polypodiopsida",
+   "order": "Cyatheales",
+   "family": "Dicksoniaceae",
+   "genus": "Lophosoria"
+  },
+  {
+   "index": 104,
+   "taxonKey": 2704179,
+   "scientificName": "Poa annua",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Poales",
+   "family": "Poaceae",
+   "genus": "Poa"
+  },
+  {
+   "index": 105,
+   "taxonKey": 2705308,
+   "scientificName": "Dactylis glomerata",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Poales",
+   "family": "Poaceae",
+   "genus": "Dactylis"
+  },
+  {
+   "index": 106,
+   "taxonKey": 2731822,
+   "scientificName": "Ceroxylon alpinum",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Arecales",
+   "family": "Arecaceae",
+   "genus": "Ceroxylon"
+  },
+  {
+   "index": 107,
+   "taxonKey": 2731831,
+   "scientificName": "Ceroxylon quindiuense",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Arecales",
+   "family": "Arecaceae",
+   "genus": "Ceroxylon"
+  },
+  {
+   "index": 108,
+   "taxonKey": 2753936,
+   "scientificName": "Bomarea patinii",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Liliales",
+   "family": "Alstroemeriaceae",
+   "genus": "Bomarea"
+  },
+  {
+   "index": 109,
+   "taxonKey": 2754207,
+   "scientificName": "Bomarea multiflora",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Liliales",
+   "family": "Alstroemeriaceae",
+   "genus": "Bomarea"
+  },
+  {
+   "index": 110,
+   "taxonKey": 2765134,
+   "scientificName": "Tradescantia zanonia",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Commelinales",
+   "family": "Commelinaceae",
+   "genus": "Tradescantia"
+  },
+  {
+   "index": 111,
+   "taxonKey": 2839230,
+   "scientificName": "Elleanthus aurantiacus",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Asparagales",
+   "family": "Orchidaceae",
+   "genus": "Elleanthus"
+  },
+  {
+   "index": 112,
+   "taxonKey": 2860922,
+   "scientificName": "Carludovica palmata",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Pandanales",
+   "family": "Cyclanthaceae",
+   "genus": "Carludovica"
+  },
+  {
+   "index": 113,
+   "taxonKey": 2874185,
+   "scientificName": "Passiflora manicata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Malpighiales",
+   "family": "Passifloraceae",
+   "genus": "Passiflora"
+  },
+  {
+   "index": 114,
+   "taxonKey": 2874711,
+   "scientificName": "Begonia foliosa",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Cucurbitales",
+   "family": "Begoniaceae",
+   "genus": "Begonia"
+  },
+  {
+   "index": 115,
+   "taxonKey": 2880642,
+   "scientificName": "Quercus humboldtii",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Fagales",
+   "family": "Fagaceae",
+   "genus": "Quercus"
+  },
+  {
+   "index": 116,
+   "taxonKey": 2882720,
+   "scientificName": "Bejaria aestuans",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Bejaria"
+  },
+  {
+   "index": 117,
+   "taxonKey": 2888374,
+   "scientificName": "Bocconia frutescens",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ranunculales",
+   "family": "Papaveraceae",
+   "genus": "Bocconia"
+  },
+  {
+   "index": 118,
+   "taxonKey": 2888995,
+   "scientificName": "Rumex acetosella",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Polygonaceae",
+   "genus": "Rumex"
+  },
+  {
+   "index": 119,
+   "taxonKey": 2892716,
+   "scientificName": "Arcytophyllum nitidum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Rubiaceae",
+   "genus": "Arcytophyllum"
+  },
+  {
+   "index": 120,
+   "taxonKey": 2892794,
+   "scientificName": "Arcytophyllum muticum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Rubiaceae",
+   "genus": "Arcytophyllum"
+  },
+  {
+   "index": 121,
+   "taxonKey": 2911624,
+   "scientificName": "Nertera granadensis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Rubiaceae",
+   "genus": "Nertera"
+  },
+  {
+   "index": 122,
+   "taxonKey": 2914207,
+   "scientificName": "Galium hypocarpium",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Rubiaceae",
+   "genus": "Galium"
+  },
+  {
+   "index": 123,
+   "taxonKey": 2928598,
+   "scientificName": "Ipomoea indica",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Solanales",
+   "family": "Convolvulaceae",
+   "genus": "Ipomoea"
+  },
+  {
+   "index": 124,
+   "taxonKey": 2930222,
+   "scientificName": "Solanum americanum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Solanales",
+   "family": "Solanaceae",
+   "genus": "Solanum"
+  },
+  {
+   "index": 125,
+   "taxonKey": 2930262,
+   "scientificName": "Solanum tuberosum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Solanales",
+   "family": "Solanaceae",
+   "genus": "Solanum"
+  },
+  {
+   "index": 126,
+   "taxonKey": 2932832,
+   "scientificName": "Solanum caripense",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Solanales",
+   "family": "Solanaceae",
+   "genus": "Solanum"
+  },
+  {
+   "index": 127,
+   "taxonKey": 2989746,
+   "scientificName": "Rubus glaucus",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Rosales",
+   "family": "Rosaceae",
+   "genus": "Rubus"
+  },
+  {
+   "index": 128,
+   "taxonKey": 3084023,
+   "scientificName": "Phytolacca icosandra",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Phytolaccaceae",
+   "genus": "Phytolacca"
+  },
+  {
+   "index": 129,
+   "taxonKey": 3085038,
+   "scientificName": "Iresine diffusa",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Amaranthaceae",
+   "genus": "Iresine"
+  },
+  {
+   "index": 130,
+   "taxonKey": 3086364,
+   "scientificName": "Piper umbellatum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Piperales",
+   "family": "Piperaceae",
+   "genus": "Piper"
+  },
+  {
+   "index": 131,
+   "taxonKey": 3093832,
+   "scientificName": "Hypochaeris sessiliflora",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Hypochaeris"
+  },
+  {
+   "index": 132,
+   "taxonKey": 3099401,
+   "scientificName": "Munnozia senecionidis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Munnozia"
+  },
+  {
+   "index": 133,
+   "taxonKey": 3101285,
+   "scientificName": "Alloispermum caracasanum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Alloispermum"
+  },
+  {
+   "index": 134,
+   "taxonKey": 3129202,
+   "scientificName": "Baccharis tricuneata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Baccharis"
+  },
+  {
+   "index": 135,
+   "taxonKey": 3129805,
+   "scientificName": "Baccharis latifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Baccharis"
+  },
+  {
+   "index": 136,
+   "taxonKey": 3129820,
+   "scientificName": "Baccharis macrantha",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Baccharis"
+  },
+  {
+   "index": 137,
+   "taxonKey": 3135221,
+   "scientificName": "Hieracium avilae",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Hieracium"
+  },
+  {
+   "index": 138,
+   "taxonKey": 3169446,
+   "scientificName": "Myrsine guianensis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Primulaceae",
+   "genus": "Myrsine"
+  },
+  {
+   "index": 139,
+   "taxonKey": 3172057,
+   "scientificName": "Veronica serpyllifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Plantaginaceae",
+   "genus": "Veronica"
+  },
+  {
+   "index": 140,
+   "taxonKey": 3672305,
+   "scientificName": "Billia rosea",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Sapindales",
+   "family": "Sapindaceae",
+   "genus": "Billia"
+  },
+  {
+   "index": 141,
+   "taxonKey": 3721831,
+   "scientificName": "Myrsine dependens",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Primulaceae",
+   "genus": "Myrsine"
+  },
+  {
+   "index": 142,
+   "taxonKey": 3819057,
+   "scientificName": "Glossoloma ichthyoderma",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Gesneriaceae",
+   "genus": "Glossoloma"
+  },
+  {
+   "index": 143,
+   "taxonKey": 3840383,
+   "scientificName": "Macrocarpaea macrophylla",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Gentianaceae",
+   "genus": "Macrocarpaea"
+  },
+  {
+   "index": 144,
+   "taxonKey": 3843335,
+   "scientificName": "Gentianella corymbosa",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Gentianaceae",
+   "genus": "Gentianella"
+  },
+  {
+   "index": 145,
+   "taxonKey": 3858307,
+   "scientificName": "Monochaetum multiflorum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Melastomataceae",
+   "genus": "Monochaetum"
+  },
+  {
+   "index": 146,
+   "taxonKey": 3862377,
+   "scientificName": "Miconia ligustrina",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Melastomataceae",
+   "genus": "Miconia"
+  },
+  {
+   "index": 147,
+   "taxonKey": 3867922,
+   "scientificName": "Miconia salicifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Melastomataceae",
+   "genus": "Miconia"
+  },
+  {
+   "index": 148,
+   "taxonKey": 3870899,
+   "scientificName": "Miconia caudata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Melastomataceae",
+   "genus": "Miconia"
+  },
+  {
+   "index": 149,
+   "taxonKey": 4034001,
+   "scientificName": "Persicaria nepalensis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Polygonaceae",
+   "genus": "Persicaria"
+  },
+  {
+   "index": 150,
+   "taxonKey": 4068775,
+   "scientificName": "Dendrophthora clavata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Santalales",
+   "family": "Santalaceae",
+   "genus": "Dendrophthora"
+  },
+  {
+   "index": 151,
+   "taxonKey": 4093319,
+   "scientificName": "Delostoma integrifolium",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Bignoniaceae",
+   "genus": "Delostoma"
+  },
+  {
+   "index": 152,
+   "taxonKey": 4130186,
+   "scientificName": "Chusquea scandens",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Poales",
+   "family": "Poaceae",
+   "genus": "Chusquea"
+  },
+  {
+   "index": 153,
+   "taxonKey": 4158425,
+   "scientificName": "Begonia umbellata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Cucurbitales",
+   "family": "Begoniaceae",
+   "genus": "Begonia"
+  },
+  {
+   "index": 154,
+   "taxonKey": 4170327,
+   "scientificName": "Macleania rupestris",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Macleania"
+  },
+  {
+   "index": 155,
+   "taxonKey": 4170522,
+   "scientificName": "Gaultheria myrsinoides",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Gaultheria"
+  },
+  {
+   "index": 156,
+   "taxonKey": 4171081,
+   "scientificName": "Disterigma empetrifolium",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Disterigma"
+  },
+  {
+   "index": 157,
+   "taxonKey": 4192814,
+   "scientificName": "Phytolacca rugosa",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Phytolaccaceae",
+   "genus": "Phytolacca"
+  },
+  {
+   "index": 158,
+   "taxonKey": 5219426,
+   "scientificName": "Panthera onca",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Carnivora",
+   "family": "Felidae",
+   "genus": "Panthera"
+  },
+  {
+   "index": 159,
+   "taxonKey": 5219498,
+   "scientificName": "Cryptotis thomasi",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Soricomorpha",
+   "family": "Soricidae",
+   "genus": "Cryptotis"
+  },
+  {
+   "index": 160,
+   "taxonKey": 5219520,
+   "scientificName": "Choloepus hoffmanni",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Pilosa",
+   "family": "Megalonychidae",
+   "genus": "Choloepus"
+  },
+  {
+   "index": 161,
+   "taxonKey": 5219591,
+   "scientificName": "Aotus lemurinus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Primates",
+   "family": "Aotidae",
+   "genus": "Aotus"
+  },
+  {
+   "index": 162,
+   "taxonKey": 5219688,
+   "scientificName": "Sciurus pucheranii",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Sciuridae",
+   "genus": "Sciurus"
+  },
+  {
+   "index": 163,
+   "taxonKey": 5219852,
+   "scientificName": "Melanomys caliginosus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Cricetidae",
+   "genus": "Melanomys"
+  },
+  {
+   "index": 164,
+   "taxonKey": 5228136,
+   "scientificName": "Porphyrio martinica",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Gruiformes",
+   "family": "Rallidae",
+   "genus": "Porphyrio"
+  },
+  {
+   "index": 165,
+   "taxonKey": 5228199,
+   "scientificName": "Gallinula chloropus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Gruiformes",
+   "family": "Rallidae",
+   "genus": "Gallinula"
+  },
+  {
+   "index": 166,
+   "taxonKey": 5228474,
+   "scientificName": "Colibri coruscans",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Colibri"
+  },
+  {
+   "index": 167,
+   "taxonKey": 5228485,
+   "scientificName": "Colibri delphinae",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Colibri"
+  },
+  {
+   "index": 168,
+   "taxonKey": 5228524,
+   "scientificName": "Eriocnemis vestita",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Eriocnemis"
+  },
+  {
+   "index": 169,
+   "taxonKey": 5228550,
+   "scientificName": "Oxypogon guerinii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Oxypogon"
+  },
+  {
+   "index": 170,
+   "taxonKey": 5228575,
+   "scientificName": "Chaetocercus heliodor",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Chaetocercus"
+  },
+  {
+   "index": 171,
+   "taxonKey": 5229012,
+   "scientificName": "Aulacorhynchus prasinus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Ramphastidae",
+   "genus": "Aulacorhynchus"
+  },
+  {
+   "index": 172,
+   "taxonKey": 5229146,
+   "scientificName": "Vanellus chilensis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Charadriiformes",
+   "family": "Charadriidae",
+   "genus": "Vanellus"
+  },
+  {
+   "index": 173,
+   "taxonKey": 5229622,
+   "scientificName": "Elaenia frantzii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Elaenia"
+  },
+  {
+   "index": 174,
+   "taxonKey": 5229662,
+   "scientificName": "Tyrannus melancholicus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Tyrannus"
+  },
+  {
+   "index": 175,
+   "taxonKey": 5229688,
+   "scientificName": "Tyrannus tyrannus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Tyrannidae",
+   "genus": "Tyrannus"
+  },
+  {
+   "index": 176,
+   "taxonKey": 5229924,
+   "scientificName": "Icterus chrysater",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Icteridae",
+   "genus": "Icterus"
+  },
+  {
+   "index": 177,
+   "taxonKey": 5230374,
+   "scientificName": "Rupicola peruvianus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Cotingidae",
+   "genus": "Rupicola"
+  },
+  {
+   "index": 178,
+   "taxonKey": 5230541,
+   "scientificName": "Anisognathus igniventris",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Anisognathus"
+  },
+  {
+   "index": 179,
+   "taxonKey": 5230558,
+   "scientificName": "Anisognathus lacrymosus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Anisognathus"
+  },
+  {
+   "index": 180,
+   "taxonKey": 5230649,
+   "scientificName": "Diglossa albilatera",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Diglossa"
+  },
+  {
+   "index": 181,
+   "taxonKey": 5230689,
+   "scientificName": "Diglossa sittoides",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Diglossa"
+  },
+  {
+   "index": 182,
+   "taxonKey": 5231103,
+   "scientificName": "Zonotrichia capensis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Emberizidae",
+   "genus": "Zonotrichia"
+  },
+  {
+   "index": 183,
+   "taxonKey": 5231647,
+   "scientificName": "Spinus psaltria",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Fringillidae",
+   "genus": "Spinus"
+  },
+  {
+   "index": 184,
+   "taxonKey": 5231776,
+   "scientificName": "Cinclus leucocephalus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Cinclidae",
+   "genus": "Cinclus"
+  },
+  {
+   "index": 185,
+   "taxonKey": 5286006,
+   "scientificName": "Podocarpus oleifolius",
+   "kingdom": "Plantae",
+   "class": "Pinopsida",
+   "order": "Pinales",
+   "family": "Podocarpaceae",
+   "genus": "Podocarpus"
+  },
+  {
+   "index": 186,
+   "taxonKey": 5314559,
+   "scientificName": "Epidendrum fimbriatum",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Asparagales",
+   "family": "Orchidaceae",
+   "genus": "Epidendrum"
+  },
+  {
+   "index": 187,
+   "taxonKey": 5320873,
+   "scientificName": "Epidendrum ibaguense",
+   "kingdom": "Plantae",
+   "class": "Liliopsida",
+   "order": "Asparagales",
+   "family": "Orchidaceae",
+   "genus": "Epidendrum"
+  },
+  {
+   "index": 188,
+   "taxonKey": 5341297,
+   "scientificName": "Prunella vulgaris",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Lamiaceae",
+   "genus": "Prunella"
+  },
+  {
+   "index": 189,
+   "taxonKey": 5349620,
+   "scientificName": "Erythrina fusca",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Fabales",
+   "family": "Fabaceae",
+   "genus": "Erythrina"
+  },
+  {
+   "index": 190,
+   "taxonKey": 5358748,
+   "scientificName": "Trifolium repens",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Fabales",
+   "family": "Fabaceae",
+   "genus": "Trifolium"
+  },
+  {
+   "index": 191,
+   "taxonKey": 5370573,
+   "scientificName": "Polylepis sericea",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Rosales",
+   "family": "Rosaceae",
+   "genus": "Polylepis"
+  },
+  {
+   "index": 192,
+   "taxonKey": 5370941,
+   "scientificName": "Acaena elongata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Rosales",
+   "family": "Rosaceae",
+   "genus": "Acaena"
+  },
+  {
+   "index": 193,
+   "taxonKey": 5381107,
+   "scientificName": "Phyllanthus salviifolius",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Malpighiales",
+   "family": "Phyllanthaceae",
+   "genus": "Phyllanthus"
+  },
+  {
+   "index": 194,
+   "taxonKey": 5400009,
+   "scientificName": "Erato vulcanica",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Erato"
+  },
+  {
+   "index": 195,
+   "taxonKey": 5400407,
+   "scientificName": "Ageratina gracilis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Ageratina"
+  },
+  {
+   "index": 196,
+   "taxonKey": 5400672,
+   "scientificName": "Ageratina tinifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Ageratina"
+  },
+  {
+   "index": 197,
+   "taxonKey": 5592044,
+   "scientificName": "Columnea strigosa",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Gesneriaceae",
+   "genus": "Columnea"
+  },
+  {
+   "index": 198,
+   "taxonKey": 5592197,
+   "scientificName": "Kohleria tigridia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Gesneriaceae",
+   "genus": "Kohleria"
+  },
+  {
+   "index": 199,
+   "taxonKey": 5599684,
+   "scientificName": "Meriania nobilis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Melastomataceae",
+   "genus": "Meriania"
+  },
+  {
+   "index": 200,
+   "taxonKey": 5682931,
+   "scientificName": "Cavendishia nitida",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Cavendishia"
+  },
+  {
+   "index": 201,
+   "taxonKey": 5706515,
+   "scientificName": "Cuniculus taczanowskii",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Rodentia",
+   "family": "Cuniculidae",
+   "genus": "Cuniculus"
+  },
+  {
+   "index": 202,
+   "taxonKey": 5788533,
+   "scientificName": "Chaetocercus mulsant",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Apodiformes",
+   "family": "Trochilidae",
+   "genus": "Chaetocercus"
+  },
+  {
+   "index": 203,
+   "taxonKey": 5844398,
+   "scientificName": "Rupornis magnirostris",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Accipitriformes",
+   "family": "Accipitridae",
+   "genus": "Rupornis"
+  },
+  {
+   "index": 204,
+   "taxonKey": 6026440,
+   "scientificName": "Eryngium humile",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Apiales",
+   "family": "Apiaceae",
+   "genus": "Eryngium"
+  },
+  {
+   "index": 205,
+   "taxonKey": 6028761,
+   "scientificName": "Fuchsia nigricans",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Onagraceae",
+   "genus": "Fuchsia"
+  },
+  {
+   "index": 206,
+   "taxonKey": 6093199,
+   "scientificName": "Setophaga fusca",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Parulidae",
+   "genus": "Setophaga"
+  },
+  {
+   "index": 207,
+   "taxonKey": 6093856,
+   "scientificName": "Parkesia noveboracensis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Parulidae",
+   "genus": "Parkesia"
+  },
+  {
+   "index": 208,
+   "taxonKey": 6365052,
+   "scientificName": "Kohleria spicata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Gesneriaceae",
+   "genus": "Kohleria"
+  },
+  {
+   "index": 209,
+   "taxonKey": 6365157,
+   "scientificName": "Kohleria hirsuta",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Gesneriaceae",
+   "genus": "Kohleria"
+  },
+  {
+   "index": 210,
+   "taxonKey": 6390957,
+   "scientificName": "Persicaria punctata",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Polygonaceae",
+   "genus": "Persicaria"
+  },
+  {
+   "index": 211,
+   "taxonKey": 7262057,
+   "scientificName": "Alouatta seniculus seniculus",
+   "kingdom": "Animalia",
+   "class": "Mammalia",
+   "order": "Primates",
+   "family": "Atelidae",
+   "genus": "Alouatta"
+  },
+  {
+   "index": 212,
+   "taxonKey": 7269933,
+   "scientificName": "Gentiana sedifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Gentianales",
+   "family": "Gentianaceae",
+   "genus": "Gentiana"
+  },
+  {
+   "index": 213,
+   "taxonKey": 7271324,
+   "scientificName": "Cedrela montana",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Sapindales",
+   "family": "Meliaceae",
+   "genus": "Cedrela"
+  },
+  {
+   "index": 214,
+   "taxonKey": 7287803,
+   "scientificName": "Equisetum bogotense",
+   "kingdom": "Plantae",
+   "class": "Equisetopsida",
+   "order": "Equisetales",
+   "family": "Equisetaceae",
+   "genus": "Equisetum"
+  },
+  {
+   "index": 215,
+   "taxonKey": 7287808,
+   "scientificName": "Equisetum giganteum",
+   "kingdom": "Plantae",
+   "class": "Equisetopsida",
+   "order": "Equisetales",
+   "family": "Equisetaceae",
+   "genus": "Equisetum"
+  },
+  {
+   "index": 216,
+   "taxonKey": 7288046,
+   "scientificName": "Gaiadendron punctatum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Santalales",
+   "family": "Loranthaceae",
+   "genus": "Gaiadendron"
+  },
+  {
+   "index": 217,
+   "taxonKey": 7289787,
+   "scientificName": "Nasa triphylla",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Cornales",
+   "family": "Loasaceae",
+   "genus": "Nasa"
+  },
+  {
+   "index": 218,
+   "taxonKey": 7291112,
+   "scientificName": "Muehlenbeckia tamnifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Caryophyllales",
+   "family": "Polygonaceae",
+   "genus": "Muehlenbeckia"
+  },
+  {
+   "index": 219,
+   "taxonKey": 7293678,
+   "scientificName": "Monnina aestuans",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Fabales",
+   "family": "Polygalaceae",
+   "genus": "Monnina"
+  },
+  {
+   "index": 220,
+   "taxonKey": 7297463,
+   "scientificName": "Citharexylum sulcatum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Verbenaceae",
+   "genus": "Citharexylum"
+  },
+  {
+   "index": 221,
+   "taxonKey": 7303371,
+   "scientificName": "Begonia urticae",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Cucurbitales",
+   "family": "Begoniaceae",
+   "genus": "Begonia"
+  },
+  {
+   "index": 222,
+   "taxonKey": 7313381,
+   "scientificName": "Passiflora cumbalensis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Malpighiales",
+   "family": "Passifloraceae",
+   "genus": "Passiflora"
+  },
+  {
+   "index": 223,
+   "taxonKey": 7322867,
+   "scientificName": "Fuchsia petiolaris",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Myrtales",
+   "family": "Onagraceae",
+   "genus": "Fuchsia"
+  },
+  {
+   "index": 224,
+   "taxonKey": 7329877,
+   "scientificName": "Hypericum laricifolium",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Malpighiales",
+   "family": "Hypericaceae",
+   "genus": "Hypericum"
+  },
+  {
+   "index": 225,
+   "taxonKey": 7333892,
+   "scientificName": "Weinmannia pubescens",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Oxalidales",
+   "family": "Cunoniaceae",
+   "genus": "Weinmannia"
+  },
+  {
+   "index": 226,
+   "taxonKey": 7340159,
+   "scientificName": "Colaptes rivolii",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Picidae",
+   "genus": "Colaptes"
+  },
+  {
+   "index": 227,
+   "taxonKey": 7340161,
+   "scientificName": "Colaptes rubiginosus",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Piciformes",
+   "family": "Picidae",
+   "genus": "Colaptes"
+  },
+  {
+   "index": 228,
+   "taxonKey": 7341772,
+   "scientificName": "Spinus spinescens",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Fringillidae",
+   "genus": "Spinus"
+  },
+  {
+   "index": 229,
+   "taxonKey": 7341896,
+   "scientificName": "Arremon assimilis",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Emberizidae",
+   "genus": "Arremon"
+  },
+  {
+   "index": 230,
+   "taxonKey": 7341947,
+   "scientificName": "Arremon brunneinucha",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Emberizidae",
+   "genus": "Arremon"
+  },
+  {
+   "index": 231,
+   "taxonKey": 7342077,
+   "scientificName": "Diglossa cyanea",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Thraupidae",
+   "genus": "Diglossa"
+  },
+  {
+   "index": 232,
+   "taxonKey": 7411905,
+   "scientificName": "Urera baccifera",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Rosales",
+   "family": "Urticaceae",
+   "genus": "Urera"
+  },
+  {
+   "index": 233,
+   "taxonKey": 7415507,
+   "scientificName": "Leiothlypis peregrina",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Passeriformes",
+   "family": "Parulidae",
+   "genus": "Leiothlypis"
+  },
+  {
+   "index": 234,
+   "taxonKey": 7551909,
+   "scientificName": "Espeletia hartwegiana",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Espeletia"
+  },
+  {
+   "index": 235,
+   "taxonKey": 7634300,
+   "scientificName": "Psittacara wagleri",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Psittaciformes",
+   "family": "Psittacidae",
+   "genus": "Psittacara"
+  },
+  {
+   "index": 236,
+   "taxonKey": 7637773,
+   "scientificName": "Passiflora adulterina",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Malpighiales",
+   "family": "Passifloraceae",
+   "genus": "Passiflora"
+  },
+  {
+   "index": 237,
+   "taxonKey": 7721174,
+   "scientificName": "Vallea stipularis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Oxalidales",
+   "family": "Elaeocarpaceae",
+   "genus": "Vallea"
+  },
+  {
+   "index": 238,
+   "taxonKey": 7749255,
+   "scientificName": "Plantago rigida",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Plantaginaceae",
+   "genus": "Plantago"
+  },
+  {
+   "index": 239,
+   "taxonKey": 7827774,
+   "scientificName": "Drimys granadensis",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Canellales",
+   "family": "Winteraceae",
+   "genus": "Drimys"
+  },
+  {
+   "index": 240,
+   "taxonKey": 7961073,
+   "scientificName": "Barnadesia spinosa",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Asterales",
+   "family": "Asteraceae",
+   "genus": "Barnadesia"
+  },
+  {
+   "index": 241,
+   "taxonKey": 7971787,
+   "scientificName": "Vaccinium floribundum",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Vaccinium"
+  },
+  {
+   "index": 242,
+   "taxonKey": 7978544,
+   "scientificName": "Hydrocotyle ranunculoides",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Apiales",
+   "family": "Araliaceae",
+   "genus": "Hydrocotyle"
+  },
+  {
+   "index": 243,
+   "taxonKey": 7980642,
+   "scientificName": "Cavendishia pubescens",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Ericales",
+   "family": "Ericaceae",
+   "genus": "Cavendishia"
+  },
+  {
+   "index": 244,
+   "taxonKey": 8125741,
+   "scientificName": "Salvia palifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Lamiaceae",
+   "genus": "Salvia"
+  },
+  {
+   "index": 245,
+   "taxonKey": 8130967,
+   "scientificName": "Castilleja fissifolia",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Lamiales",
+   "family": "Orobanchaceae",
+   "genus": "Castilleja"
+  },
+  {
+   "index": 246,
+   "taxonKey": 8324121,
+   "scientificName": "Trifolium pratense",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Fabales",
+   "family": "Fabaceae",
+   "genus": "Trifolium"
+  },
+  {
+   "index": 247,
+   "taxonKey": 8368994,
+   "scientificName": "Passiflora mixta",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Malpighiales",
+   "family": "Passifloraceae",
+   "genus": "Passiflora"
+  },
+  {
+   "index": 248,
+   "taxonKey": 8376201,
+   "scientificName": "Escallonia myrtilloides",
+   "kingdom": "Plantae",
+   "class": "Magnoliopsida",
+   "order": "Escalloniales",
+   "family": "Escalloniaceae",
+   "genus": "Escallonia"
+  },
+  {
+   "index": 249,
+   "taxonKey": 9685907,
+   "scientificName": "Falco sparverius",
+   "kingdom": "Animalia",
+   "class": "Aves",
+   "order": "Falconiformes",
+   "family": "Falconidae",
+   "genus": "Falco"
   }
  ]
 }

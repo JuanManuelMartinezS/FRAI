@@ -9,7 +9,17 @@ using Unity.InferenceEngine;
 namespace GuiaFrailejon
 {
     // ---- vision.json (mismo formato que genera packages/ml-vision-pipeline) ----
-    [Serializable] public class EntradaModelo { public string name = "pixels"; public int size = 224; }
+    [Serializable]
+    public class EntradaModelo
+    {
+        public string name = "pixels";
+        public int size = 224;
+        // Opcionales: si 'mean'/'std' vienen, la normalizacion (px-mean)/std se hace aqui y no en el grafo.
+        public float[] mean;
+        public float[] std;
+        // Fraccion del lado corto que se recorta (size/resize). 0 = usar CropPct por defecto (0.95).
+        public float cropPct;
+    }
     [Serializable] public class SalidaModelo { public string name = "logits"; }
     [Serializable]
     public class EtiquetaEspecie
@@ -217,14 +227,17 @@ namespace GuiaFrailejon
         /// Convierte un cuadro de camara en el tensor del modelo y, opcionalmente, en una miniatura para mostrar.
         /// 'giro' = grados (multiplo de 90, horario) para dejar la imagen derecha.
         /// </summary>
-        public static float[] Preprocesar(Color32[] px, int w, int h, int giro, int s, Color32[] miniatura = null)
+        public static float[] Preprocesar(Color32[] px, int w, int h, int giro, int s, Color32[] miniatura = null,
+                                          float[] mean = null, float[] std = null, float cropPct = 0f)
         {
+            if (cropPct <= 0f) cropPct = CropPct;
+            bool norm = mean != null && std != null && mean.Length >= 3 && std.Length >= 3;
             giro = ((giro % 360) + 360) % 360;
             bool rota = giro == 90 || giro == 270;
             int wr = rota ? h : w, hr = rota ? w : h;      // tamano de la imagen ya derecha
 
             // Region que, re-escalada a s, equivale a Resize(lado corto) + CenterCrop(s)
-            int resizeTo = Mathf.FloorToInt(s / CropPct);
+            int resizeTo = Mathf.FloorToInt(s / cropPct);
             float escala = resizeTo / (float)Mathf.Min(wr, hr);
             float lado = s / escala;
             float sx = (wr - lado) / 2f, sy = (hr - lado) / 2f;
@@ -250,9 +263,11 @@ namespace GuiaFrailejon
                     }
                     Color32 c = Bilineal(px, w, h, ox * w - 0.5f, oy * h - 0.5f);
                     int i = y * s + x;
-                    salida[i] = c.r / 255f;
-                    salida[plano + i] = c.g / 255f;
-                    salida[2 * plano + i] = c.b / 255f;
+                    float r = c.r / 255f, g = c.g / 255f, b = c.b / 255f;
+                    if (norm) { r = (r - mean[0]) / std[0]; g = (g - mean[1]) / std[1]; b = (b - mean[2]) / std[2]; }
+                    salida[i] = r;
+                    salida[plano + i] = g;
+                    salida[2 * plano + i] = b;
                     if (miniatura != null) miniatura[(s - 1 - y) * s + x] = c;
                 }
             }

@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "ai.undream.llm": "https://github.com/undreamai/LLMUnity.git",
+    "com.unity.ai.inference": "2.6.1",
+    "com.yasirkula.nativegallery": "https://github.com/yasirkula/UnityNativeGallery.git",
     "com.unity.cloud.gltfast": "6.21.0",
     "com.unity.collab-proxy": "2.14.0",
     "com.unity.ide.rider": "3.1.0",

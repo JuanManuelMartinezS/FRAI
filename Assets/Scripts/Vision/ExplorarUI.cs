@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +7,8 @@ using UnityEngine.UI;
 namespace GuiaFrailejon
 {
     /// <summary>
-    /// Pestana "Explorar": escaneo continuo con la camara e identificacion de especies.
+    /// Pestana "Explorar": identifica una especie SOLO cuando el usuario toma una foto o sube una de la galeria
+    /// (no hay deteccion continua: ahorra bateria y evita resultados que parpadean).
     /// - Marco de escaneo con linea animada; se pone verde cuando identifica.
     /// - Tarjeta inferior con miniatura (lo que ve el modelo), nombre, confianza y descripcion.
     /// - "Preguntar a Frai" lleva la especie a la conversacion.
@@ -19,10 +21,8 @@ namespace GuiaFrailejon
         public CapturaCamara captura;
         public NavegacionUI navegacion;
         public GuideUI guia;
-        [Tooltip("Segundos entre inferencias.")]
-        public float intervalo = 0.5f;
-        [Tooltip("Suavizado temporal: peso del cuadro nuevo (como TemporalSmoother de la PWA).")]
-        [Range(0.05f, 1f)] public float alfa = 0.45f;
+        [Tooltip("Lado mayor (px) al que se reduce una foto subida de la galeria.")]
+        public int tamanoMaxFoto = 1024;
 
         [Header("Escaneo")]
         public Image[] esquinas;
@@ -53,25 +53,54 @@ namespace GuiaFrailejon
         public Color colorIdentificado = new Color(0.30f, 0.90f, 0.50f);
         public Color colorDuda = new Color(1f, 0.79f, 0.16f);
 
-        float[] acumulado;
         Texture2D texMini;
         Color32[] pxMini;
         DecisionVision ultima;
         string ultimaHablada;
-        Coroutine bucle;
+        Coroutine analisis;
         float fase;
+        bool procesando;
+        Button botonFoto, botonSubir;
 
         void Start()
         {
             if (navegacion) navegacion.AlCambiar += i => { if (i == NavegacionUI.Explorar) Abrir(); else Cerrar(); };
             if (botonPreguntar) botonPreguntar.onClick.AddListener(Preguntar);
             if (botonVolver) botonVolver.onClick.AddListener(() => navegacion.Ir(NavegacionUI.Guia));
+            CrearBotonesFoto();
+        }
+
+        /// <summary>Crea "Tomar foto" y "Subir foto" clonando el estilo de "Preguntar a Frai".</summary>
+        void CrearBotonesFoto()
+        {
+            if (botonPreguntar == null) return;
+            var padre = botonPreguntar.transform.parent.parent;   // la pestana Explorar (no la tarjeta)
+            Button Clonar(string nombre, string texto, float x)
+            {
+                var b = Instantiate(botonPreguntar, padre);
+                b.name = nombre;
+                b.onClick.RemoveAllListeners();
+                var ic = b.transform.Find("Icono");
+                if (ic) Destroy(ic.gameObject);
+                var t = b.GetComponentInChildren<TMP_Text>(true);
+                if (t) t.text = texto;
+                var rt = (RectTransform)b.transform;
+                rt.anchorMin = rt.anchorMax = rt.pivot = new Vector2(0.5f, 0);
+                rt.anchoredPosition = new Vector2(x, 620);
+                rt.sizeDelta = new Vector2(400, 96);
+                b.gameObject.SetActive(true);
+                return b;
+            }
+            botonFoto = Clonar("BtnTomarFoto", "Tomar foto", -215);
+            botonSubir = Clonar("BtnSubirFoto", "Subir foto", 215);
+            botonFoto.onClick.AddListener(TomarFoto);
+            botonSubir.onClick.AddListener(SubirFoto);
         }
 
         void Abrir()
         {
-            acumulado = null;
             ultima = null;
+            procesando = false;
             MostrarBuscando();
             if (clasificador == null || !clasificador.Disponible)
             {
@@ -82,13 +111,13 @@ namespace GuiaFrailejon
 
             if (captura) captura.Iniciar();
             if (captura && !string.IsNullOrEmpty(captura.Error)) MostrarAviso(captura.Error);
-            if (bucle != null) StopCoroutine(bucle);
-            bucle = StartCoroutine(Escanear());
+            FijarBotones(true);
         }
 
         void Cerrar()
         {
-            if (bucle != null) { StopCoroutine(bucle); bucle = null; }
+            if (analisis != null) { StopCoroutine(analisis); analisis = null; }
+            procesando = false;
             if (captura) captura.Detener();
         }
 
@@ -102,31 +131,103 @@ namespace GuiaFrailejon
             lineaEscaneo.anchoredPosition = new Vector2(0, Mathf.Lerp(-altoMarco * 0.42f, altoMarco * 0.42f, t));
         }
 
-        IEnumerator Escanear()
+        void FijarBotones(bool activos)
         {
-            var espera = new WaitForSeconds(intervalo);
-            while (true)
+            if (botonFoto) botonFoto.interactable = activos;
+            if (botonSubir) botonSubir.interactable = activos;
+        }
+
+        // ------------------------------------------------------------------
+        // Una sola identificacion por foto
+        // ------------------------------------------------------------------
+        void TomarFoto()
+        {
+            if (procesando) return;
+            if (clasificador == null || !clasificador.Disponible)
             {
-                yield return espera;
-                if (clasificador == null || !clasificador.Disponible || captura == null) continue;
-                if (!captura.TomarCuadro(out var px, out int w, out int h, out int giro)) continue;
-
-                int s = clasificador.Tamano;
-                if (pxMini == null || pxMini.Length != s * s) pxMini = new Color32[s * s];
-                var tensor = ClasificadorEspecies.Preprocesar(px, w, h, giro, s, pxMini);
-                ActualizarMiniatura(s);
-
-                var tarea = clasificador.Inferir(tensor);
-                while (!tarea.IsCompleted) yield return null;
-                var logits = tarea.Result;
-                if (logits == null) continue;
-
-                var p = ClasificadorEspecies.Softmax(logits, clasificador.Meta.temperature);
-                if (acumulado == null || acumulado.Length != p.Length) acumulado = p;
-                else for (int i = 0; i < p.Length; i++) acumulado[i] = alfa * p[i] + (1 - alfa) * acumulado[i];
-
-                Mostrar(clasificador.Decidir(acumulado));
+                MostrarAviso(clasificador ? clasificador.Motivo : "Falta el clasificador de especies.");
+                return;
             }
+            if (captura == null || !captura.TomarCuadro(out var px, out int w, out int h, out int giro))
+            {
+                MostrarAviso("La cámara aún no está lista. Espera un segundo e inténtalo de nuevo.");
+                return;
+            }
+            MostrarAviso("");
+            Analizar(px, w, h, giro);
+        }
+
+        void SubirFoto()
+        {
+            if (procesando) return;
+            if (clasificador == null || !clasificador.Disponible)
+            {
+                MostrarAviso(clasificador ? clasificador.Motivo : "Falta el clasificador de especies.");
+                return;
+            }
+#if UNITY_EDITOR
+            string ruta = UnityEditor.EditorUtility.OpenFilePanel("Elige una foto", "", "jpg,jpeg,png");
+            if (string.IsNullOrEmpty(ruta)) return;
+            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+            if (!tex.LoadImage(File.ReadAllBytes(ruta))) { Destroy(tex); MostrarAviso("No pude leer esa imagen."); return; }
+            AnalizarTextura(tex);
+#elif GUIA_GALERIA
+            NativeGallery.GetImageFromGallery(ruta =>
+            {
+                if (string.IsNullOrEmpty(ruta)) return;
+                var tex = NativeGallery.LoadImageAtPath(ruta, tamanoMaxFoto, false, false);
+                if (tex == null) { MostrarAviso("No pude leer esa imagen."); return; }
+                AnalizarTextura(tex);
+            }, "Elige una foto", "image/*");
+#else
+            MostrarAviso("Subir foto no está disponible: falta el paquete NativeGallery.");
+#endif
+        }
+
+        void AnalizarTextura(Texture2D tex)
+        {
+            MostrarAviso("");
+            var px = tex.GetPixels32();
+            int w = tex.width, h = tex.height;
+            Destroy(tex);
+            Analizar(px, w, h, 0);   // LoadImageAtPath ya aplica la orientacion EXIF
+        }
+
+        void Analizar(Color32[] px, int w, int h, int giro)
+        {
+            if (analisis != null) StopCoroutine(analisis);
+            analisis = StartCoroutine(Clasificar(px, w, h, giro));
+        }
+
+        IEnumerator Clasificar(Color32[] px, int w, int h, int giro)
+        {
+            procesando = true;
+            FijarBotones(false);
+            if (textoTipo) textoTipo.text = "ANALIZANDO";
+            if (textoNombre) textoNombre.text = "Analizando…";
+            if (textoCientifico) textoCientifico.text = "";
+            if (barra) barra.SetActive(false);
+            if (botonPreguntar) botonPreguntar.gameObject.SetActive(false);
+            if (etiqueta) etiqueta.SetActive(false);
+            yield return null;   // deja pintar el "Analizando…"
+
+            int s = clasificador.Tamano;
+            if (pxMini == null || pxMini.Length != s * s) pxMini = new Color32[s * s];
+            var tensor = ClasificadorEspecies.Preprocesar(px, w, h, giro, s, pxMini,
+                clasificador.Meta.input.mean, clasificador.Meta.input.std, clasificador.Meta.input.cropPct);
+            ActualizarMiniatura(s);
+
+            var tarea = clasificador.Inferir(tensor);
+            while (!tarea.IsCompleted) yield return null;
+            var logits = tarea.Result;
+
+            procesando = false;
+            analisis = null;
+            FijarBotones(true);
+            if (logits == null) { MostrarNoReconocido("No pude analizar la foto. Inténtalo otra vez."); yield break; }
+
+            var p = ClasificadorEspecies.Softmax(logits, clasificador.Meta.temperature);
+            Mostrar(clasificador.Decidir(p));
         }
 
         void ActualizarMiniatura(int s)
@@ -157,7 +258,7 @@ namespace GuiaFrailejon
 
             if (d.tipo == TipoDecision.Incierta && m.prob < 0.35f)
             {
-                MostrarBuscando();
+                MostrarNoReconocido("Acércate más, busca buena luz y toma otra foto, o sube una más clara.");
                 return;
             }
 
@@ -183,7 +284,7 @@ namespace GuiaFrailejon
                         var ci = d.candidatas[i];
                         alt.Append($"{(ci.ficha != null ? ci.ficha.comun : ci.etiqueta.scientificName)} ({Mathf.RoundToInt(ci.prob * 100)} %)");
                     }
-                    alt.Append(". Acércate un poco más y mantén el celular quieto.");
+                    alt.Append(". Prueba con otra foto más cerca y con buena luz.");
                     textoDescripcion.text = alt.ToString();
                 }
             }
@@ -191,7 +292,7 @@ namespace GuiaFrailejon
 
             if (etiqueta) etiqueta.SetActive(ok);
             if (textoEtiqueta && ok) textoEtiqueta.text = $"<b>{nombre}</b>\n<size=70%><i>{m.etiqueta.scientificName}</i></size>";
-            if (textoAyuda) textoAyuda.text = ok ? "¡Identificado!" : "Apunta la cámara a una planta o animal";
+            if (textoAyuda) textoAyuda.text = ok ? "¡Identificado!" : "Toca «Tomar foto» para intentar de nuevo";
 
             // Frai lo dice en voz alta una sola vez por especie
             if (ok && ultimaHablada != m.etiqueta.scientificName)
@@ -217,15 +318,23 @@ namespace GuiaFrailejon
 
         void MostrarBuscando()
         {
-            if (textoTipo) textoTipo.text = "BUSCANDO";
-            if (textoNombre) textoNombre.text = "Buscando especies…";
+            if (textoTipo) textoTipo.text = "LISTO";
+            if (textoNombre) textoNombre.text = "Toma o sube una foto";
             if (textoCientifico) textoCientifico.text = "";
             if (barra) barra.SetActive(false);
-            if (textoDescripcion) textoDescripcion.text = "Acerca la cámara a una planta, ave o animal y mantén el celular quieto.";
+            if (textoDescripcion) textoDescripcion.text = "Apunta a una planta, ave o animal y toca «Tomar foto», o sube una foto de tu galería.";
             if (botonPreguntar) botonPreguntar.gameObject.SetActive(false);
             if (etiqueta) etiqueta.SetActive(false);
             if (textoAyuda) textoAyuda.text = "Apunta la cámara a una planta o animal";
             foreach (var e in esquinas) if (e) e.color = colorNormal;
+        }
+
+        void MostrarNoReconocido(string consejo)
+        {
+            MostrarBuscando();
+            if (textoTipo) textoTipo.text = "SIN RESULTADO";
+            if (textoNombre) textoNombre.text = "No pude identificarlo";
+            if (textoDescripcion) textoDescripcion.text = consejo;
         }
 
         void MostrarSinModelo()

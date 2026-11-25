@@ -798,7 +798,7 @@ PlayerSettings:
   webEnableSubmoduleStrippingCompatibility: 0
   webProgressiveAssetLoading: 0
   scriptingDefineSymbols:
-    Android: GUIA_LLMUNITY;GUIA_WHISPER
+    Android: GUIA_LLMUNITY;GUIA_WHISPER;SENTIS_ANALYTICS_ENABLED;GUIA_VISION;APP_UI_EDITOR_ONLY
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

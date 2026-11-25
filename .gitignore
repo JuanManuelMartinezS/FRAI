@@ -71,3 +71,11 @@ Thumbs.db
 /Assets/StreamingAssets/*.gguf
 /Assets/StreamingAssets/*.gguf.meta
 *.gguf
+
+# LlamaLib: solo se usa Android, las demas plataformas pesan GBs
+/Assets/StreamingAssets/LlamaLib-v2.0.5/linux-x64*
+/Assets/StreamingAssets/LlamaLib-v2.0.5/win-x64*
+/Assets/StreamingAssets/LlamaLib-v2.0.5/osx-*
+/Assets/StreamingAssets/LlamaLib-v2.0.5/ios-*
+/Assets/StreamingAssets/LlamaLib-v2.0.5/visionos-*
+/Assets/StreamingAssets/LlamaLib-v2.0.5/setup*

@@ -1,0 +1,10 @@
+{
+  "lat": 5.065556,
+  "lon": -75.504722,
+  "radio_m": 5000,
+  "horas": 24,
+  "lecturas_fuera": 3,
+  "precision_max_m": 100,
+  "intervalo_s": 10,
+  "dias_max_sin_activar": 7
+}

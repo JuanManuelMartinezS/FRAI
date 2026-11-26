@@ -803,6 +803,168 @@
       "titulo": "Parques Nacionales Naturales de Colombia",
       "texto": "Parques Nacionales Naturales de Colombia es una unidad administrativa especial creada en 2011 que administra el Sistema de Parques Nacionales Naturales y coordina el Sistema Nacional de Áreas Protegidas. Su misión es conservar la diversidad biológica y cultural del país.",
       "fuente": "Parques Nacionales Naturales de Colombia - Acerca de la entidad (parquesnacionales.gov.co)"
+    },
+    {
+      "id": "doc_rag_general_historia",
+      "titulo": "Datos generales, extensión e historia del PNN Los Nevados",
+      "texto": "El Parque Nacional Natural Los Nevados fue declarado el 30 de abril de 1974 en los Andes Occidentales (Cordillera Central). Tiene una extensión alrededor de 61.400 hectáreas (la cifra precisada en 2023 es 61.376,22 ha) distribuidas en 10 municipios de 4 departamentos: Caldas (Villamaría), Risaralda (Pereira, Santa Rosa de Cabal), Quindío (Salento) y Tolima (Murillo, Anzoátegui, Ibagué, Santa Isabel, Casabianca, Herveo). Protege los volcanes Nevado del Ruiz (Kumanday, 'cerro blanco'), Nevado de Santa Isabel (Poleka Kasue, 'doncella de la montaña') y Nevado del Tolima (Dulima, 'río de nieve'). En 1985 ocurrió la erupción del Ruiz que sepultó a Armero. En 2020 fue declarado sujeto de derechos (Sentencia STL 10716) y en 2025 el Nevado del Ruiz fue declarado Patrimonio Natural de la Nación.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_ecosistemas_clima",
+      "titulo": "Ecosistemas, glaciares y clima",
+      "texto": "El Parque abarca bosque altoandino, subpáramo, páramo (84% del área, con pajonales, turberas y lagunas), superpáramo (paisaje lunar con rocas, cenizas y organismos extremófilos), humedales altoandinos y glaciares (1,82% del área). Abastece de agua a millones de habitantes del Eje Cafetero y las cuencas del Magdalena y Cauca (ríos Chinchiná, Otún, Lagunilla, Gualí). Según el IDEAM, el glaciar Santa Isabel podría extinguirse hacia 2028. Tiene un régimen de lluvias bimodal (dos periodos secos y dos lluviosos al año) con temperaturas bajo 0 °C en zonas altas.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_conservacion_ramsar",
+      "titulo": "Conservación, Zona Ramsar e investigación",
+      "texto": "El Parque protege valores objeto de conservación como páramos, humedales, glaciares y especies endémicas o amenazadas (oso de anteojos, chivito de páramo, cóndor de los Andes, danta de páramo, venado conejo, loro orejiamarillo y frailejón). Los humedales de la Laguna del Otún están declarados Zona Ramsar (humedal de importancia mundial). Para realizar investigación científica o tomas audiovisuales comerciales se requiere permiso previo de Parques Nacionales.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_fauna_emblematica",
+      "titulo": "Fauna emblemática del PNN Los Nevados",
+      "texto": "En aves destacan el colibrí chivito de páramo (Oxypogon stuebelii, endémico que se alimenta del frailejón), el tororoi de Miller (Grallaria milleri, endémico de sotobosque), el águila crestada (Spizaetus isidori), el cóndor andino (Vultur gryphus), el pato andino (Oxyura ferruginea), el periquito de los nevados (Bolborhynchus ferrugineifrons) y el águila de páramo (Geranoaetus melanoleucus). En mamíferos habitan la danta de montaña (Tapirus pinchaque), la guagua loba (Dinomys branickii), el puma (Puma concolor), el oso de anteojos y 20 especies de murciélagos polinizadores.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_flora_emblematica",
+      "titulo": "Flora emblemática del PNN Los Nevados",
+      "texto": "La única especie de frailejón en el parque es Espeletia hartwegiana. También hay romeros (Diplostephium spp.), pajonales, herbáceas Senecio y el cacho de venado (Andicolea colombiana, endémica del superpáramo). En humedales destacan los colchones de agua (Plantago rigida). En bosques altoandinos se encuentran la palma de cera del Quindío (Ceroxylon quindiuense, árbol nacional), velillos (Hypericum) y el siete cueros de páramo (Polylepis sericea), árbol amenazado que crece sobre los 3.000 m s. n. m.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_brisas",
+      "titulo": "Sector Brisas - Kumanday (Valle de las Tumbas)",
+      "texto": "Recorrido carreteable ideal para visitas cortas, observación geológica y de flora/fauna frente al Nevado del Ruiz (Kumanday). Inicia en el centro de inducción Brisas (4.100 m s. n. m.) y llega por Arenales hasta el Valle del Silencio o Valle de las Tumbas (superpáramo). Se llega por la vía Manizales-Bogotá (Letras) o desde Murillo (Tolima) por el corredor La Esperanza-Murillo. No se permite el ingreso de motos; debe hacerse en vehículo cubierto. Operado por la Unión Temporal Operación Nevados (UTON, www.operacionnevados.co).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_cisne",
+      "titulo": "Sector Cisne - Poleka Kasue (Nevado Santa Isabel)",
+      "texto": "Sector de páramo y borde glaciar para senderismo, montañismo y observación de aves. Se observan los nevados del Ruiz, Santa Isabel y paramillo del Cisne. Permite caminar a Laguna Verde o ascender a la cumbre del Nevado Santa Isabel (sendero Conejeras, requiere guía especializado de alta montaña). Acceso por el centro de visitantes El Cisne (4.100 m s. n. m.), cabaña Potosí o alto de Santa Bárbara, llegando por carreteras destapadas desde Villamaría (Caldas) o Santa Rosa de Cabal (Risaralda).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_otun",
+      "titulo": "Sector Laguna del Otún",
+      "texto": "Alberga la Laguna del Otún (la más grande del parque, Zona Ramsar), rodeada por los paramillos del Quindío y Santa Rosa, con páramos y colchones de agua. Se accede por carretera hasta la cabaña Potosí (3.920 m s. n. m.) desde Villamaría o Santa Rosa, o caminando desde Pereira vía La Florida - El Cedral (7,5 km al límite del parque y 18 km a la laguna). Ofrece estadía en casas tradicionales de la vereda El Bosque.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_quindio_dulima",
+      "titulo": "Sector Quindío - Dulima (Nevado del Tolima)",
+      "texto": "Sector exigente orientado al montañismo y travesías de varios días en inmediaciones del Nevado del Tolima (Dulima), atravesando bosque altoandino, subpáramo, páramo, superpáramo y glaciar. Se accede caminando desde Salento (Quindío) por Valle del Cocora (14 km al límite), desde Ibagué (Tolima) por vereda Juntas (15 km) o desde Anzoátegui (Tolima) por vereda Palomar (11 km).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_brisas",
+      "titulo": "Horario del sector Brisas-Kumanday",
+      "texto": "Sector Brisas-Kumanday (ingreso por el centro de visitantes Brisas): abierto todos los días del año de 8:00 a. m. a 2:00 p. m. La última charla de inducción obligatoria se realiza a la 1:30 p. m.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_cisne",
+      "titulo": "Horario del sector Cisne-Poleka Kasue",
+      "texto": "Sector Cisne-Poleka Kasue (Nevado Santa Isabel y paramillo del Cisne): se puede llegar a los puntos de registro del Parque (cabaña Potosí y alto de Santa Bárbara) de 7:30 a. m. a 10:00 a. m. El sendero Laguna Verde tiene horario de 8:00 a. m. a 2:00 p. m. Para el sendero Conejeras (cumbre del Nevado Santa Isabel), el registro o paso por los sitios de control se hace el día anterior al ingreso programado a la cima.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_otun",
+      "titulo": "Horario del sector Laguna del Otún",
+      "texto": "Sector Laguna del Otún: el horario de atención en la cabaña Potosí es de 7:00 a. m. a 12:00 p. m.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_quindio_dulima",
+      "titulo": "Horario del sector Quindío-Dulima",
+      "texto": "Sector Quindío-Dulima (Nevado del Tolima): en el punto de atención Valle del Cocora el horario es de 6:00 a. m. a 10:00 a. m.; en Juntas y Anzoátegui es de 6:00 a. m. a 11:00 a. m., bajo reserva previa.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_cierres_pico_placa",
+      "titulo": "Cierres anuales del Parque y Pico y Placa Ambiental",
+      "texto": "El Parque tiene tres cierres al año, de cinco días (de lunes a viernes), para liberar de carga los lugares naturales y hacer monitoreo: la semana posterior a Semana Santa, la semana del cuarto lunes de septiembre y la semana del cuarto lunes de noviembre. En noviembre, los fines de semana y festivos de 5:00 a. m. a 4:00 p. m., rige el Pico y Placa Ambiental en la vía a Brisas-Valle de las Tumbas (Resolución 1815 de 2026).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_tarifas_ingreso",
+      "titulo": "Tarifas de ingreso 2026",
+      "texto": "Tarifas de ingreso 2026 a Brisas-Kumanday, Cisne-Poleka Kasue y Laguna del Otún (COP, sin incluir el seguro obligatorio de accidentes): nacionales, CAN y extranjeros residentes menores de 25 años pagan $12.500; mayores de 25 años pagan $24.500; extranjeros no residentes pagan $68.000. En Quindío-Dulima el ingreso cuesta $0.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_tarifas_brisas_servicios",
+      "titulo": "Brisas: guianza UTON y tarifas de vehículos",
+      "texto": "En Brisas-Kumanday, el servicio de interpretación y guianza de UTON cuesta $22.000. Ingreso de vehículos: automóvil $10.000, colectivo o microbús $27.500, bus o buseta $56.000 (máximo 30 pasajeros). Las motos están prohibidas.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_guia_seguro_reservas",
+      "titulo": "Guía obligatoria, seguro, reservas y contactos",
+      "texto": "Es obligatorio ingresar con guía o agencia registrada en REPSE y comprar póliza de seguro de accidentes. Reservas: Brisas en www.reservasnevados.com (mínimo 1 día antes en fines de semana y festivos); Cisne y Otún con 3 días hábiles de anticipación; Quindío-Dulima con 5 días hábiles. Contacto del Parque: nevados@parquesnacionales.gov.co. UTON Manizales: 321 506 6031 y 322 360 3637.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_salud_edades_equipamiento",
+      "titulo": "Requisitos de edad y equipamiento para alta montaña",
+      "texto": "Edades permitidas: mínimo 6 años para los atractivos del carreteable Brisas-Kumanday, el centro El Cisne y la Laguna del Otún por la cabaña Potosí; mínimo 15 años para el resto de rutas, travesías y cumbres. Todos los menores de edad van acompañados de adultos cuidadores. Edad máxima permitida: 69 años para todo el Parque. Equipamiento y cuidados: ropa y calzado apropiados para clima frío inferior a 0 °C y lluvioso; si acampas en zonas permitidas, carpa, sleeping, material de cocina y alimentación apropiada para bajas temperaturas; buena hidratación antes, durante y después de la actividad; alimentarse bien y llevar snacks energéticos; paradas periódicas de 10 minutos al ascender para lograr una aclimatación adecuada; bloqueador solar cada dos horas y gafas con protección UV. Evita ingresar si presentas alguna de las condiciones de salud indicadas por Parques Nacionales.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_salud_contraindicaciones",
+      "titulo": "Cuida tu salud: cuándo evitar subir al Parque",
+      "texto": "Parques Nacionales indica evitar subir al Parque si: tienes trastornos psiquiátricos médicamente determinados que comprometen tu capacidad de autocuidado y de cuidado hacia otras personas; tienes enfermedades cardiovasculares no controladas, incluidas hipertensión arterial, cardiopatía isquémica e insuficiencia cardíaca, entre otras; tienes desórdenes metabólicos o hematológicos no compensados, como diabetes mellitus, obesidad mórbida o anemia severa, entre otras; tienes enfermedades respiratorias crónicas descompensadas, tales como EPOC, asma o fibrosis pulmonar, entre otras; te encuentras en periodo postoperatorio que implica riesgo de complicaciones en altitud; o te encuentras en estado de gestación.",
+      "fuente": "Infografía oficial 'Cuida tu salud, evita subir si...' (Parques Nacionales)"
+    },
+    {
+      "id": "doc_rag_mal_altura_causas_riesgo",
+      "titulo": "Mal de altura: qué es y factores de riesgo",
+      "texto": "Al subir, la presión atmosférica baja y el aire se vuelve más liviano: el porcentaje de oxígeno es el mismo, pero está más disperso y el cuerpo recibe menos con cada respiración. A 5.000 m s. n. m. solo hay la mitad del oxígeno que se respira al nivel del mar. La mayoría de personas puede subir a 1.500-2.000 m s. n. m. en un día sin síntomas; quienes llegan a 2.500 m s. n. m. o más tienen mayor probabilidad de sufrirlos. Los síntomas suelen aparecer entre 6 y 10 horas después del ascenso. Factores de riesgo: antecedentes de mal de altura, vivir a nivel del mar o por debajo de 2.000 m s. n. m., y alcanzar rápidamente gran altitud. El bajo nivel de oxígeno puede empeorar los síntomas de enfermedades como asma, hipertensión, diabetes, arteriopatía coronaria y EPOC leve. El buen estado físico no disminuye el riesgo de que aparezcan síntomas.",
+      "fuente": "Infografía oficial '¿Qué es el mal de altura?' (Parques Nacionales)"
+    },
+    {
+      "id": "doc_rag_mal_altura_sintomas_accion",
+      "titulo": "Mal de altura: síntomas de alerta y qué hacer",
+      "texto": "No ignores los síntomas: dolor de cabeza, cansancio, náuseas o pérdida de apetito, irritabilidad, vómito, dificultad respiratoria, confusión, pérdida del conocimiento, sensación de desmayo, hinchazón en manos, pies o rostro; tos seca, ahogo, coloración azulada en uñas, piel y labios, secreciones y ruidos gorgoteantes al respirar; marcha inestable y descoordinada. El edema cerebral de las alturas es potencialmente mortal si no se trata en etapa temprana. Los síntomas del mal agudo de montaña se pueden confundir con una resaca, agotamiento físico, una migraña o una enfermedad viral. Si presentas alguno de estos síntomas: avisa inmediatamente al guía y busca descender de manera segura cuanto antes.",
+      "fuente": "Infografía oficial '¿Qué es el mal de altura?' (Parques Nacionales)"
+    },
+    {
+      "id": "doc_rag_riesgos_parque",
+      "titulo": "Principales riesgos del Parque (informe de necesidades de asistencia 2024)",
+      "texto": "Según el informe de 2024 del PNN Los Nevados, las principales situaciones de riesgo son: actividad y emisiones volcánicas del Nevado del Ruiz (nivel medio; es un volcán explosivo, referente mundial por la erupción de 1985); incendios forestales (medio; la mayoría son intencionales y el combate es difícil por la altitud); crecientes súbitas de ríos y quebradas por lluvias fuertes y deshielo (medio); sismos (medio); movimientos en masa (medio); tormentas de nieve (bajo); tormentas eléctricas (bajo); y emergencias de montaña, que el Parque es el único del país en contemplar como situación crítica porque sus sedes operativas están por encima de 3.800 m s. n. m. Las emergencias de montaña incluyen extraviados, enfermedades de montaña, ahogados, caídas de semovientes con personas lesionadas y lesionados en general.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024"
+    },
+    {
+      "id": "doc_rag_seguridad_guia_senderos",
+      "titulo": "Por qué la guía es obligatoria y solo se usan senderos autorizados",
+      "texto": "Según el informe de 2024, las emergencias de montaña en Los Nevados se presentan en general por negligencia, impericia, imprudencia y desconocimiento de los senderos autorizados, incluido el ingreso ilegal evadiendo los puestos de control. Solo se permite usar los senderos autorizados del Plan de Ordenamiento Ecoturístico; usar otros senderos conlleva procesos sancionatorios. Los guías y operadores registrados en REPSE deben usar equipos básicos de alta montaña, equipo médico de respuesta y radios con la frecuencia requerida.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024"
+    },
+    {
+      "id": "doc_rag_atencion_en_el_parque",
+      "titulo": "Atención y servicios dentro del Parque (según informe 2024)",
+      "texto": "Según el informe de 2024: en el sector norte la concesión UTON presta taquilla, seguro obligatorio de montaña, guianza y suministro de alimentos hasta el Valle de las Tumbas. Las cabañas de Brisas y Arenales prestan servicios de alimentos, baños y enfermería. El centro de visitantes El Cisne está pensado para alojamiento (32 personas), educación ambiental y primeros auxilios. En los puntos de atención de El Cedral, Valle del Cocora, Juntas, Anzoátegui, Santa Isabel y Murillo, el informe indica que el área protegida no cuenta con infraestructura para primeros auxilios y plantea construirla. La zona de camping de Arenales no está habilitada por la actividad volcánica y la cabaña El Refugio no está habilitada.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024"
+    },
+    {
+      "id": "doc_rag_senderos_autorizados",
+      "titulo": "Senderos autorizados del Parque y su longitud",
+      "texto": "Solo se permite usar estos 12 senderos (Plan de Ordenamiento Ecoturístico 2017-2022): 1) Refugio-borde glaciar del Ruiz, 1,2 km, restringido según el nivel de actividad del volcán; 2) Cisne-Mirador Laguna Verde, 2,1 km; 3) Cisne-Conejeras-borde del glaciar Santa Isabel, 3,2 km; 4) Cisne-objetos de conservación, 0,8 km; 5) Potosí-Asomadera-Mirador-Laguna de Víctor y Laguna de Mariposa, 6,5 km; 6) Potosí-Corraleja-Asomadera-Muelle Laguna del Otún, 11 km; 7) Laguna del Otún-Alsacia-borde glaciar Santa Isabel cara sur, 7,4 km; 8) Laguna del Otún-Azufrera-laguna El Mosquito-vereda El Bosque-Peña Bonita-La Pastora-Cedral, 22,2 km; 9) Laguna del Otún-Azufrera-laguna del Mosquito-Cuchilla de Berlín-Mojón de Cárdenas-Valle del Cocora, 36,7 km; 10) Juntas-Perlas-La Pradera-Estambul-Alto Nieves-Escuela El Salto-Termales Cañón-Laguna El Encanto-Valle de Placer-Aquilino-La Primavera-Estrella de Agua-Valle del Cocora, 50 km; 11) Los Chilcos, 7,2 km; 12) Arenales-Cumbre, 13,8 km.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024 (POE 2017-2022)"
+    },
+    {
+      "id": "doc_rag_transporte_operadores",
+      "titulo": "Transporte y operadores de servicios por sector",
+      "texto": "El Parque no cuenta con servicio de transporte al interior. El transporte, el porteo y el acceso al área protegida deben gestionarse de manera propia o coordinada con guías o agencias operadoras registradas y autorizadas, según el sector de ingreso. En el sector Brisas-Kumanday el operador autorizado es la Unión Temporal Operación Nevados (UTON), que gestiona directamente reservas, ingreso, guianza, transporte, alojamiento y tienda (www.operacionnevados.co). En el sector Cisne-Poleka Kasue, UTON gestiona solo el alojamiento en el centro de visitantes El Cisne y el ingreso al área; la reserva, la guianza y el transporte se gestionan con la agencia operadora registrada que elijas.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_actividades_por_sector",
+      "titulo": "Actividades permitidas en cada sector del Parque",
+      "texto": "En el sector Brisas-Kumanday se puede hacer observación geológica, observación de fauna y flora y fotografía no comercial. En los sectores Cisne-Poleka Kasue y Laguna del Otún se puede hacer senderismo, montañismo, observación de aves, observación geológica y observación de fauna y flora. En el sector Quindío-Dulima se pueden hacer las actividades anteriores, pero el terreno es más exigente y la actividad principal es el montañismo. Para tomas audiovisuales o fotografías con fines comerciales, eventos, actividades deportivas, investigación o educación ambiental se debe solicitar autorización; el requisito aplica a todos los sectores.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
     }
   ]
 }

@@ -1,52 +1,2028 @@
 {
-  "especies": [
-    {
-      "cientifico": "Espeletia hartwegiana",
-      "comun": "Frailejón",
-      "tipo": "Planta",
-      "descripcion": "Planta emblemática del páramo. Sus hojas peludas la protegen del frío y ayudan a captar el agua de la niebla, que luego alimenta quebradas y ríos.",
-      "cuidado": "Crece muy despacio: no lo toques ni arranques sus hojas.",
-      "fuente": "Ficha general (pendiente de validar con el PNN)"
-    },
-    {
-      "cientifico": "Espeletia",
-      "comun": "Frailejón",
-      "tipo": "Planta",
-      "descripcion": "Los frailejones son plantas típicas del páramo que ayudan a regular el agua de la montaña.",
-      "cuidado": "No lo toques ni arranques sus hojas.",
-      "fuente": "Ficha general (pendiente de validar con el PNN)"
-    },
-    {
-      "cientifico": "Oxypogon stuebelii",
-      "comun": "Chivito de los nevados",
-      "tipo": "Ave",
-      "descripcion": "Colibrí de alta montaña que solo vive en los páramos de la Cordillera Central de Colombia. Los machos tienen una cresta y una 'barbita' de plumas.",
-      "cuidado": "Obsérvalo en silencio y a distancia.",
-      "fuente": "Ficha general (pendiente de validar con el PNN)"
-    },
-    {
-      "cientifico": "Tremarctos ornatus",
-      "comun": "Oso andino",
-      "tipo": "Mamífero",
-      "descripcion": "Único oso de Suramérica, también llamado oso de anteojos por las manchas claras de su cara. Es tímido y se alimenta sobre todo de plantas.",
-      "cuidado": "Si lo ves, no te acerques ni le des comida. Avisa al guardaparque.",
-      "fuente": "Ficha general (pendiente de validar con el PNN)"
-    },
-    {
-      "cientifico": "Uropsalis segmentata",
-      "comun": "Guardacaminos colitijereta",
-      "tipo": "Ave",
-      "descripcion": "Ave nocturna de los Andes. Los machos tienen dos plumas de la cola muy largas, en forma de tijera.",
-      "cuidado": "No la ilumines directamente con linterna.",
-      "fuente": "Ficha general (pendiente de validar con el PNN)"
-    },
-    {
-      "cientifico": "Vultur gryphus",
-      "comun": "Cóndor de los Andes",
-      "tipo": "Ave",
-      "descripcion": "Una de las aves voladoras más grandes del mundo y símbolo nacional de Colombia. Planea aprovechando las corrientes de aire de la montaña.",
-      "cuidado": "Obsérvalo a distancia, sin perseguirlo.",
-      "fuente": "Ficha general (pendiente de validar con el PNN)"
-    }
-  ]
+ "especies": [
+  {
+   "cientifico": "Eptesicus fuscus",
+   "comun": "Murciélago moreno",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago pequeño que caza insectos de noche.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Myotis nigricans",
+   "comun": "Murcielaguito negruzco común",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago pequeño que caza insectos de noche.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tadarida brasiliensis",
+   "comun": "Moloso común",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de vuelo rápido que caza insectos en el aire.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Carollia perspicillata",
+   "comun": "Murciélago cola corta de Sebas",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Artibeus lituratus",
+   "comun": "Murciélago frugívoro común",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Artibeus jamaicensis",
+   "comun": "Murciélago frugívoro común",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Desmodus rotundus",
+   "comun": "Desmodus rotundus",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Sphaeronycteris toxophyllum",
+   "comun": "Murciélago con rodela nasal",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Sturnira ludovici",
+   "comun": "Murciélago de charreteras mayor",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Vampyrum spectrum",
+   "comun": "Falso vampiro",
+   "tipo": "Mamífero",
+   "descripcion": "Murciélago de hoja nasal: muchos comen frutos y néctar, y así dispersan semillas y polinizan flores.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tremarctos ornatus",
+   "comun": "Oso andino",
+   "tipo": "Mamífero",
+   "descripcion": "Único oso de Suramérica, también llamado oso de anteojos por las manchas claras de su cara. Es tímido y se alimenta sobre todo de plantas.",
+   "cuidado": "Si lo ves, no te acerques ni le des comida. Avisa al guardaparque.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Nasua nasua",
+   "comun": "Achuni",
+   "tipo": "Mamífero",
+   "descripcion": "Coatíes, olingos y afines: animales trepadores que comen frutos, insectos y pequeños animales.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Potos flavus",
+   "comun": "Chosna",
+   "tipo": "Mamífero",
+   "descripcion": "Coatíes, olingos y afines: animales trepadores que comen frutos, insectos y pequeños animales.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Bassaricyon gabbii",
+   "comun": "Bassaricyon gabbii",
+   "tipo": "Mamífero",
+   "descripcion": "Coatíes, olingos y afines: animales trepadores que comen frutos, insectos y pequeños animales.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Eira barbara",
+   "comun": "Amingo",
+   "tipo": "Mamífero",
+   "descripcion": "Tayra: animal ágil y rápido, buen trepador, que come frutos y pequeños animales.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Lycalopex culpaeus",
+   "comun": "Lobo",
+   "tipo": "Mamífero",
+   "descripcion": "Zorro o perro de monte: animal esquivo que come frutos, pequeños animales e insectos.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cerdocyon thous",
+   "comun": "Perro Sabanero",
+   "tipo": "Mamífero",
+   "descripcion": "Zorro o perro de monte: animal esquivo que come frutos, pequeños animales e insectos.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Puma concolor",
+   "comun": "Gato Monte",
+   "tipo": "Mamífero",
+   "descripcion": "Felino: cazador solitario y sigiloso que ayuda a mantener el equilibrio del ecosistema.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Dasyprocta punctata",
+   "comun": "Agoutí Rojizo",
+   "tipo": "Mamífero",
+   "descripcion": "Ñeque o agutí: roedor de día que entierra semillas y así ayuda a que nazcan nuevos árboles.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Echinoprocta rufescens",
+   "comun": "Echinoprocta rufescens",
+   "tipo": "Mamífero",
+   "descripcion": "Puercoespín: tiene el cuerpo cubierto de espinas que usa para defenderse.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Dinomys branickii",
+   "comun": "Guagua Loba | Pacarana",
+   "tipo": "Mamífero",
+   "descripcion": "Roedor grande, lento y nocturno del bosque de montaña, poco conocido y muy difícil de ver.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Heteromys australis",
+   "comun": "Ratón Chácaro Chocoano",
+   "tipo": "Mamífero",
+   "descripcion": "Ratón espinoso de bolsas: pequeño roedor que guarda semillas en sus mejillas.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Didelphis pernigra",
+   "comun": "Chucha común",
+   "tipo": "Mamífero",
+   "descripcion": "Chucha o zarigüeya: marsupial nocturno; las hembras llevan a sus crías en una bolsa.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Dasypus novemcinctus",
+   "comun": "Armadillo Común | Armadillo (generalizado)",
+   "tipo": "Mamífero",
+   "descripcion": "Armadillo: su cuerpo está cubierto de placas duras y excava para buscar insectos.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tapirus pinchaque",
+   "comun": "Danta Cordillerana",
+   "tipo": "Mamífero",
+   "descripcion": "Danta: herbívoro grande que, al moverse por el bosque, dispersa muchas semillas.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Odocoileus virginianus",
+   "comun": "Capasurí",
+   "tipo": "Mamífero",
+   "descripcion": "Venado: herbívoro de bosque y páramo, de movimientos silenciosos.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pecari tajacu",
+   "comun": "Báquiro Cinchado",
+   "tipo": "Mamífero",
+   "descripcion": "Zaino o saíno: animal parecido a un cerdo de monte que vive en manadas.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Fulica americana",
+   "comun": "\"Focha Americana, Gallareta Americana\"",
+   "tipo": "Ave",
+   "descripcion": "Fochas y gallinetas: aves de lagunas y humedales que nadan y caminan entre la vegetación.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Momotus momota",
+   "comun": "Burgo",
+   "tipo": "Ave",
+   "descripcion": "Barranquero: ave de cola larga con plumas en forma de raqueta y colores verdes y azules.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pterophanes cyanopterus",
+   "comun": "Ala-Zafiro Grande",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Adelomyia melanogenys",
+   "comun": "Colibrí Jaspeado",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Aglaeactis cupripennis",
+   "comun": "Colibrí cobrizo",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ocreatus underwoodii",
+   "comun": "Colaespátula Zamarrito (Colibrí Colaraqueta)",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Aglaiocercus kingii subsp. emmae",
+   "comun": "Silfo Colilargo",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Heliangelus exortis",
+   "comun": "Colibrí turmalina",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Boissonneaua flavescens",
+   "comun": "Colibrí chupasavia",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Metallura tyrianthina",
+   "comun": "Colibrí Tirio",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ensifera ensifera",
+   "comun": "Colibrí Pico-Espada",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Coeligena torquata",
+   "comun": "Inca Collarejo (de Collar)",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Coeligena coeligena",
+   "comun": "Inca Bronceado",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Melanerpes formicivorus",
+   "comun": "Carpintero Careto",
+   "tipo": "Ave",
+   "descripcion": "Carpintero: golpea los troncos para buscar insectos y hacer su nido.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Colaptes punctigula",
+   "comun": "Carpintero Pechipunteado",
+   "tipo": "Ave",
+   "descripcion": "Carpintero: golpea los troncos para buscar insectos y hacer su nido.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Campephilus melanoleucos",
+   "comun": "Carpintero Cresticarmesí",
+   "tipo": "Ave",
+   "descripcion": "Carpintero: golpea los troncos para buscar insectos y hacer su nido.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Andigena nigrirostris",
+   "comun": "Terlaque Pechiazul",
+   "tipo": "Ave",
+   "descripcion": "Tucanes y tucanetes: aves de pico grande y colorido que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Andigena hypoglauca",
+   "comun": "Terlaque Andino",
+   "tipo": "Ave",
+   "descripcion": "Tucanes y tucanetes: aves de pico grande y colorido que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Forpus conspicillatus",
+   "comun": "Cotorrita de anteojos",
+   "tipo": "Ave",
+   "descripcion": "Loros y pericos: aves de grupo, ruidosas, que comen frutos y semillas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Buteo platypterus",
+   "comun": "Aguililla Alas Anchas",
+   "tipo": "Ave",
+   "descripcion": "Gavilanes y águilas: aves rapaces de día, con pico curvo y garras fuertes, que cazan desde las alturas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pandion haliaetus",
+   "comun": "Aguila Pescadora",
+   "tipo": "Ave",
+   "descripcion": "Águila pescadora: rapaz que se alimenta de peces y que migra desde el norte del continente.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Butorides striata",
+   "comun": "Garcilla Estriada",
+   "tipo": "Ave",
+   "descripcion": "Garza: ave zancuda de cuello largo que pesca con paciencia en las orillas de ríos y lagunas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tringa solitaria",
+   "comun": "\"Andarríos Solitario, Playero Solitario\"",
+   "tipo": "Ave",
+   "descripcion": "Andarríos y playeros: aves de orillas de agua, muchas de ellas migratorias.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Actitis macularius",
+   "comun": "\"Andarríos Coleador, Correlino\"",
+   "tipo": "Ave",
+   "descripcion": "Andarríos y playeros: aves de orillas de agua, muchas de ellas migratorias.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Vultur gryphus",
+   "comun": "Cóndor de los Andes",
+   "tipo": "Ave",
+   "descripcion": "Una de las aves voladoras más grandes del mundo y símbolo nacional de Colombia. Planea aprovechando las corrientes de aire de la montaña.",
+   "cuidado": "Obsérvalo a distancia, sin perseguirlo.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cathartes aura",
+   "comun": "Aura gallipavo",
+   "tipo": "Ave",
+   "descripcion": "Gallinazos y cóndores: aves que limpian el ambiente porque se alimentan de animales muertos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Coragyps atratus",
+   "comun": "Buitre negro americano",
+   "tipo": "Ave",
+   "descripcion": "Gallinazos y cóndores: aves que limpian el ambiente porque se alimentan de animales muertos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Chamaepetes goudotii",
+   "comun": "Pava Ala de Hoz",
+   "tipo": "Ave",
+   "descripcion": "Pavas y guacharacas: aves grandes del bosque que comen frutos y ayudan a dispersar semillas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Penelope montagnii",
+   "comun": "Pava Andina",
+   "tipo": "Ave",
+   "descripcion": "Pavas y guacharacas: aves grandes del bosque que comen frutos y ayudan a dispersar semillas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cyanocorax yncas",
+   "comun": "Arrendajo americano verde",
+   "tipo": "Ave",
+   "descripcion": "Urracas y cuervos: aves inteligentes y ruidosas que suelen moverse en grupo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Sayornis nigricans",
+   "comun": "Atrapamoscas cuidapuentes",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Mecocerculus leucophrys",
+   "comun": "Piojito gargantilla",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pyrrhomyias cinnamomeus",
+   "comun": "Birro chico",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Zimmerius chrysops",
+   "comun": "Mosquerito caridorado",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Serpophaga cinerea",
+   "comun": "Mosquerito Guardarrios",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Psarocolius decumanus",
+   "comun": "Cacique crestado",
+   "tipo": "Ave",
+   "descripcion": "Turpiales, caciques y afines: aves de pico puntiagudo y, muchas veces, plumaje negro con amarillo o naranja.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Psarocolius angustifrons",
+   "comun": "Cacique dorsirrufo",
+   "tipo": "Ave",
+   "descripcion": "Turpiales, caciques y afines: aves de pico puntiagudo y, muchas veces, plumaje negro con amarillo o naranja.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Hypopyrrhus pyrohypogaster",
+   "comun": "Cacique candela",
+   "tipo": "Ave",
+   "descripcion": "Turpiales, caciques y afines: aves de pico puntiagudo y, muchas veces, plumaje negro con amarillo o naranja.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Molothrus bonariensis",
+   "comun": "Chamón común",
+   "tipo": "Ave",
+   "descripcion": "Turpiales, caciques y afines: aves de pico puntiagudo y, muchas veces, plumaje negro con amarillo o naranja.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pipreola riefferii",
+   "comun": "Frutero Verdinegro",
+   "tipo": "Ave",
+   "descripcion": "Ave del bosque de niebla, algunas de colores muy llamativos, que se alimenta de frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Vireo olivaceus",
+   "comun": "Vireo Ojirrojo",
+   "tipo": "Ave",
+   "descripcion": "Vireo: ave pequeña y verdosa que busca insectos entre las hojas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Euphonia xanthogaster",
+   "comun": "Eufonia Ventrinaranja",
+   "tipo": "Ave",
+   "descripcion": "Eufonias y clorofonias: pequeñas aves de colores brillantes que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Chlorophonia cyanea",
+   "comun": "Clorofonia Nuquiazul",
+   "tipo": "Ave",
+   "descripcion": "Eufonias y clorofonias: pequeñas aves de colores brillantes que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ramphocelus dimidiatus",
+   "comun": "Asoma Terciopelo",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ramphocelus flammigerus",
+   "comun": "Tangara Lomiflama",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Piranga rubra",
+   "comun": "\"Piranga Roja, Cardenal Migratorio Colorado \"",
+   "tipo": "Ave",
+   "descripcion": "Ave de colores vistosos y pico grueso que se alimenta de frutos e insectos en el bosque.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Piranga olivacea",
+   "comun": "Piranga Escarlata",
+   "tipo": "Ave",
+   "descripcion": "Ave de colores vistosos y pico grueso que se alimenta de frutos e insectos en el bosque.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tachyphonus rufus",
+   "comun": "Chocolatero",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Thraupis episcopus",
+   "comun": "Azulejo",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Stelgidopteryx ruficollis",
+   "comun": "Golondrina Alirasposa Sureña",
+   "tipo": "Ave",
+   "descripcion": "Golondrina: ave ágil que caza insectos mientras vuela.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pygochelidon cyanoleuca",
+   "comun": "Golondrina Albiazul",
+   "tipo": "Ave",
+   "descripcion": "Golondrina: ave ágil que caza insectos mientras vuela.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Myioborus miniatus",
+   "comun": "Abanico pechinegro",
+   "tipo": "Ave",
+   "descripcion": "Reinita: ave pequeña e inquieta que caza insectos entre el follaje; algunas migran desde Norteamérica.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Myioborus ornatus",
+   "comun": "Abanico Cariblanco",
+   "tipo": "Ave",
+   "descripcion": "Reinita: ave pequeña e inquieta que caza insectos entre el follaje; algunas migran desde Norteamérica.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Setophaga ruticilla",
+   "comun": "\"Candelita Norteña, Candelita Americana\"",
+   "tipo": "Ave",
+   "descripcion": "Reinita: ave pequeña e inquieta que caza insectos entre el follaje; algunas migran desde Norteamérica.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Grallaria ruficapilla",
+   "comun": "Comprapán",
+   "tipo": "Ave",
+   "descripcion": "Gralaria: ave tímida que vive en el suelo del bosque; se escucha mucho más de lo que se ve.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Turdus fuscater",
+   "comun": "Mirla negra",
+   "tipo": "Ave",
+   "descripcion": "Mirlas y zorzales: aves de buen canto que comen frutos y lombrices.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Turdus ignobilis",
+   "comun": "Mayo",
+   "tipo": "Ave",
+   "descripcion": "Mirlas y zorzales: aves de buen canto que comen frutos y lombrices.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Catharus ustulatus",
+   "comun": "Zorzal Buchipecoso",
+   "tipo": "Ave",
+   "descripcion": "Mirlas y zorzales: aves de buen canto que comen frutos y lombrices.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Myadestes ralloides",
+   "comun": "Solitario Andino",
+   "tipo": "Ave",
+   "descripcion": "Mirlas y zorzales: aves de buen canto que comen frutos y lombrices.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Sporophila nigricollis",
+   "comun": "Corbatita amarillo",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Atlapetes schistaceus",
+   "comun": "Atlapetes pizarroso",
+   "tipo": "Ave",
+   "descripcion": "Gorrión o semillero: ave pequeña que busca semillas e insectos entre arbustos y en el suelo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Atlapetes pallidinucha",
+   "comun": "Atlapetes Cabeciblanco",
+   "tipo": "Ave",
+   "descripcion": "Gorrión o semillero: ave pequeña que busca semillas e insectos entre arbustos y en el suelo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Henicorhina leucophrys",
+   "comun": "Chivirín pecho gris",
+   "tipo": "Ave",
+   "descripcion": "Cucarachero: ave pequeña y activa, de cola corta y erguida, con un canto potente.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Patagioenas fasciata",
+   "comun": "Paloma (Torcaza) Collareja",
+   "tipo": "Ave",
+   "descripcion": "Palomas y tórtolas: aves de cuerpo redondeado que comen semillas y frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Leptotila verreauxi",
+   "comun": "Paloma Apical",
+   "tipo": "Ave",
+   "descripcion": "Palomas y tórtolas: aves de cuerpo redondeado que comen semillas y frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Crotophaga ani",
+   "comun": "\"Garrapatero Piquiliso, Garrapatero\"",
+   "tipo": "Ave",
+   "descripcion": "Cucos y garrapateros: aves de cola larga que comen insectos y orugas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Coccyzus americanus",
+   "comun": "Cuclillo Piquiamarillo",
+   "tipo": "Ave",
+   "descripcion": "Cucos y garrapateros: aves de cola larga que comen insectos y orugas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Piaya cayana",
+   "comun": "Bobo Chiso",
+   "tipo": "Ave",
+   "descripcion": "Cucos y garrapateros: aves de cola larga que comen insectos y orugas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Trogon personatus",
+   "comun": "Trogón Enmascarado",
+   "tipo": "Ave",
+   "descripcion": "Quetzales y trogones: aves de colores brillantes del bosque que anidan en huecos de troncos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Trogon collaris",
+   "comun": "Coa de Collar",
+   "tipo": "Ave",
+   "descripcion": "Quetzales y trogones: aves de colores brillantes del bosque que anidan en huecos de troncos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pharomachrus antisianus",
+   "comun": "Quetzal Crestado",
+   "tipo": "Ave",
+   "descripcion": "Quetzales y trogones: aves de colores brillantes del bosque que anidan en huecos de troncos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Pharomachrus auriceps",
+   "comun": "Quetzal Cabecidorado",
+   "tipo": "Ave",
+   "descripcion": "Quetzales y trogones: aves de colores brillantes del bosque que anidan en huecos de troncos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Asio stygius",
+   "comun": "Búho Estigio",
+   "tipo": "Ave",
+   "descripcion": "Búho: ave rapaz nocturna, de vuelo silencioso y gran oído.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Megascops choliba",
+   "comun": "Alilicucú común",
+   "tipo": "Ave",
+   "descripcion": "Búho: ave rapaz nocturna, de vuelo silencioso y gran oído.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ganoderma applanatum",
+   "comun": "Hongo del Artista",
+   "tipo": "Hongo",
+   "descripcion": "Hongo de repisa que crece sobre troncos y ayuda a descomponer la madera.",
+   "cuidado": "No lo arranques ni lo recojas.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Teloschistes flavicans",
+   "comun": "Teloschistes flavicans",
+   "tipo": "Hongo",
+   "descripcion": "Liquen de colores anaranjados que crece sobre ramas y rocas; suele indicar aire limpio.",
+   "cuidado": "No lo arranques ni lo recojas.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Lophosoria quadripinnata",
+   "comun": "Ampe",
+   "tipo": "Planta",
+   "descripcion": "Helecho arborescente: puede crecer como un pequeño árbol de hojas muy divididas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Poa annua",
+   "comun": "espiguilla",
+   "tipo": "Planta",
+   "descripcion": "Pasto o chusque: planta de la familia de las gramíneas, que cubre el suelo o forma matas altas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Dactylis glomerata",
+   "comun": "Pasto Ovillo",
+   "tipo": "Planta",
+   "descripcion": "Pasto o chusque: planta de la familia de las gramíneas, que cubre el suelo o forma matas altas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ceroxylon alpinum",
+   "comun": "Chonta",
+   "tipo": "Planta",
+   "descripcion": "Palma de bosque de montaña; las palmas de cera figuran entre las más altas del mundo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ceroxylon quindiuense",
+   "comun": "Palma de cera del Quindio",
+   "tipo": "Planta",
+   "descripcion": "Palma de bosque de montaña; las palmas de cera figuran entre las más altas del mundo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Bomarea patinii",
+   "comun": "Cimarrona",
+   "tipo": "Planta",
+   "descripcion": "Enredadera de flores colgantes y coloridas que suelen visitar los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Bomarea multiflora",
+   "comun": "Achiotillo",
+   "tipo": "Planta",
+   "descripcion": "Enredadera de flores colgantes y coloridas que suelen visitar los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tradescantia zanonia",
+   "comun": "Cañagua",
+   "tipo": "Planta",
+   "descripcion": "Hierba rastrera de hojas carnosas que crece en lugares húmedos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Elleanthus aurantiacus",
+   "comun": "Elleanthus aurantiacus",
+   "tipo": "Planta",
+   "descripcion": "Orquídea: planta de flores delicadas y formas muy variadas; muchas crecen sobre los árboles.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Carludovica palmata",
+   "comun": "Bombonaje",
+   "tipo": "Planta",
+   "descripcion": "Planta de hojas grandes en forma de abanico, parecida a una palma.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Passiflora manicata",
+   "comun": "Auka taksu",
+   "tipo": "Planta",
+   "descripcion": "Pasiflora o curuba: enredadera de flores complejas y muy llamativas, que dan frutos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Begonia foliosa",
+   "comun": "Patatiya",
+   "tipo": "Planta",
+   "descripcion": "Begonia: hierba de lugares húmedos y sombreados, de hojas asimétricas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Quercus humboldtii",
+   "comun": "Quercus humboldtii",
+   "tipo": "Planta",
+   "descripcion": "Roble: árbol grande de bosque de montaña que da frutos con cáscara dura.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Bejaria aestuans",
+   "comun": "Pegamosco",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Bocconia frutescens",
+   "comun": "Enguambo (Región del Bajío)",
+   "tipo": "Planta",
+   "descripcion": "Arbusto de hojas grandes y flores pequeñas en racimos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Rumex acetosella",
+   "comun": "Rumex acetosella",
+   "tipo": "Planta",
+   "descripcion": "Planta enredadera o hierba de tallos con nudos marcados.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Arcytophyllum nitidum",
+   "comun": "Sanalotodo",
+   "tipo": "Planta",
+   "descripcion": "Familia del café: arbustos y hierbas de hojas opuestas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Arcytophyllum muticum",
+   "comun": "Piojo",
+   "tipo": "Planta",
+   "descripcion": "Familia del café: arbustos y hierbas de hojas opuestas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Nertera granadensis",
+   "comun": "Coral de Agua",
+   "tipo": "Planta",
+   "descripcion": "Familia del café: arbustos y hierbas de hojas opuestas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Galium hypocarpium",
+   "comun": "Achotillo",
+   "tipo": "Planta",
+   "descripcion": "Familia del café: arbustos y hierbas de hojas opuestas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ipomoea indica",
+   "comun": "Bejuco de gloria",
+   "tipo": "Planta",
+   "descripcion": "Enredadera de flores en forma de embudo, parecidas a una campanilla.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Solanum americanum",
+   "comun": "Ají Montesino",
+   "tipo": "Planta",
+   "descripcion": "Familia de la papa y el tomate; muchas de sus especies son tóxicas.",
+   "cuidado": "Algunas partes son tóxicas: no las comas.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Solanum tuberosum",
+   "comun": "Chinpalu",
+   "tipo": "Planta",
+   "descripcion": "Familia de la papa y el tomate; muchas de sus especies son tóxicas.",
+   "cuidado": "Algunas partes son tóxicas: no las comas.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Solanum caripense",
+   "comun": "Chinpalu",
+   "tipo": "Planta",
+   "descripcion": "Familia de la papa y el tomate; muchas de sus especies son tóxicas.",
+   "cuidado": "Algunas partes son tóxicas: no las comas.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Rubus glaucus",
+   "comun": "Ashpa mora",
+   "tipo": "Planta",
+   "descripcion": "Familia de las rosas: incluye hierbas y árboles como el colorado, de corteza roja que se desprende en láminas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Phytolacca icosandra",
+   "comun": "Quelite de amor",
+   "tipo": "Planta",
+   "descripcion": "Planta de frutos oscuros que comen las aves; para las personas no son comestibles.",
+   "cuidado": "No comas sus frutos: no son comestibles.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Iresine diffusa",
+   "comun": "Canoa panka",
+   "tipo": "Planta",
+   "descripcion": "Hierba o arbusto de hojas coloridas y flores muy pequeñas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Piper umbellatum",
+   "comun": "Acuya",
+   "tipo": "Planta",
+   "descripcion": "Cordoncillo: arbusto de hojas aromáticas y flores en espiga.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Hypochaeris sessiliflora",
+   "comun": "Achicoria",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Munnozia senecionidis",
+   "comun": "Munnozia senecionidis",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Alloispermum caracasanum",
+   "comun": "Alloispermum caracasanum",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Baccharis tricuneata",
+   "comun": "Chiquito yadan",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Baccharis latifolia",
+   "comun": "Azul chilca",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Baccharis macrantha",
+   "comun": "Camiseto",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Hieracium avilae",
+   "comun": "Lengua de Cierva",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Myrsine guianensis",
+   "comun": "Cucharo",
+   "tipo": "Planta",
+   "descripcion": "Árbol o arbusto del bosque altoandino de frutos pequeños que comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Veronica serpyllifolia",
+   "comun": "Verónica",
+   "tipo": "Planta",
+   "descripcion": "Hierba pequeña que crece pegada al suelo, en zonas abiertas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Billia rosea",
+   "comun": "Achotillo",
+   "tipo": "Planta",
+   "descripcion": "Árbol de bosque de montaña.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Myrsine dependens",
+   "comun": "Cucharo de Páramo",
+   "tipo": "Planta",
+   "descripcion": "Árbol o arbusto del bosque altoandino de frutos pequeños que comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Glossoloma ichthyoderma",
+   "comun": "vergüenza",
+   "tipo": "Planta",
+   "descripcion": "Planta de flores tubulares y coloridas, muchas veces epífita, polinizada por colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Macrocarpaea macrophylla",
+   "comun": "Genciana lunar de Medellín",
+   "tipo": "Planta",
+   "descripcion": "Genciana: hierba de montaña de flores vistosas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Gentianella corymbosa",
+   "comun": "Gentianella corymbosa",
+   "tipo": "Planta",
+   "descripcion": "Genciana: hierba de montaña de flores vistosas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Monochaetum multiflorum",
+   "comun": "Sanjuanito",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol de hojas con nervios muy marcados, cuyos frutos comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Miconia ligustrina",
+   "comun": "Esmeraldo",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol de hojas con nervios muy marcados, cuyos frutos comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Miconia salicifolia",
+   "comun": "Miconia salicifolia",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol de hojas con nervios muy marcados, cuyos frutos comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Miconia caudata",
+   "comun": "Miconia caudata",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol de hojas con nervios muy marcados, cuyos frutos comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Persicaria nepalensis",
+   "comun": "Persicaria nepalensis",
+   "tipo": "Planta",
+   "descripcion": "Planta enredadera o hierba de tallos con nudos marcados.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Dendrophthora clavata",
+   "comun": "Suelda",
+   "tipo": "Planta",
+   "descripcion": "Muérdago pequeño que vive sobre las ramas de los árboles.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Delostoma integrifolium",
+   "comun": "Curapín",
+   "tipo": "Planta",
+   "descripcion": "Familia de árboles y enredaderas de flores en forma de trompeta.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Chusquea scandens",
+   "comun": "Bambú andino",
+   "tipo": "Planta",
+   "descripcion": "Pasto o chusque: planta de la familia de las gramíneas, que cubre el suelo o forma matas altas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Begonia umbellata",
+   "comun": "Begonia umbellata",
+   "tipo": "Planta",
+   "descripcion": "Begonia: hierba de lugares húmedos y sombreados, de hojas asimétricas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Macleania rupestris",
+   "comun": "Chaki lulun",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Gaultheria myrsinoides",
+   "comun": "Capulincillo",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Disterigma empetrifolium",
+   "comun": "Disterigma empetrifolium",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Phytolacca rugosa",
+   "comun": "Phytolacca rugosa",
+   "tipo": "Planta",
+   "descripcion": "Planta de frutos oscuros que comen las aves; para las personas no son comestibles.",
+   "cuidado": "No comas sus frutos: no son comestibles.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Panthera onca",
+   "comun": "Anítina",
+   "tipo": "Mamífero",
+   "descripcion": "Felino: cazador solitario y sigiloso que ayuda a mantener el equilibrio del ecosistema.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cryptotis thomasi",
+   "comun": "Musaraña de Thomas",
+   "tipo": "Mamífero",
+   "descripcion": "Musaraña: mamífero diminuto que come insectos y casi nunca se deja ver.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Choloepus hoffmanni",
+   "comun": "Camaleón",
+   "tipo": "Mamífero",
+   "descripcion": "Perezoso: se mueve muy despacio, vive en los árboles y come hojas.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Aotus lemurinus",
+   "comun": "Maca cagao",
+   "tipo": "Mamífero",
+   "descripcion": "Mono nocturno: primate de ojos grandes que está activo de noche.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Sciurus pucheranii",
+   "comun": "Ardilla de las Yungas",
+   "tipo": "Mamífero",
+   "descripcion": "Ardilla: roedor de día que trepa árboles y come frutos y semillas.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Melanomys caliginosus",
+   "comun": "Ratón Arrocero Prieto",
+   "tipo": "Mamífero",
+   "descripcion": "Ratón de campo: pequeño roedor que se alimenta de semillas y frutos.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Porphyrio martinica",
+   "comun": "\"Gallareta Púrpura, Gallinula Púrpura\"",
+   "tipo": "Ave",
+   "descripcion": "Fochas y gallinetas: aves de lagunas y humedales que nadan y caminan entre la vegetación.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Gallinula chloropus",
+   "comun": "Gallineta Común",
+   "tipo": "Ave",
+   "descripcion": "Fochas y gallinetas: aves de lagunas y humedales que nadan y caminan entre la vegetación.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Colibri coruscans",
+   "comun": "Colibrí Orejivioleta Ventriazul",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Colibri delphinae",
+   "comun": "Colibrí Orejivioláceo Pardo",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Eriocnemis vestita",
+   "comun": "Zamarrito Luciente",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Oxypogon guerinii",
+   "comun": "Barbudito paramuno",
+   "tipo": "Ave",
+   "descripcion": "Colibrí de alta montaña que vive en el páramo. Los machos tienen una cresta y una \"barbita\" de plumas.",
+   "cuidado": "Obsérvalo en silencio y a distancia.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Chaetocercus heliodor",
+   "comun": "Colibrí de Heliodoro",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Aulacorhynchus prasinus",
+   "comun": "Curré",
+   "tipo": "Ave",
+   "descripcion": "Tucanes y tucanetes: aves de pico grande y colorido que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Vanellus chilensis",
+   "comun": "Alcaraván",
+   "tipo": "Ave",
+   "descripcion": "Ave de orillas y potreros, de patas largas, que corre y se detiene para buscar insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Elaenia frantzii",
+   "comun": "Elainia Montañera",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tyrannus melancholicus",
+   "comun": "Benteveo real",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Tyrannus tyrannus",
+   "comun": "Benteveo blanco y negro",
+   "tipo": "Ave",
+   "descripcion": "Atrapamoscas: aves que cazan insectos al vuelo desde una percha.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Icterus chrysater",
+   "comun": "Bolsero Dorsiamarillo",
+   "tipo": "Ave",
+   "descripcion": "Turpiales, caciques y afines: aves de pico puntiagudo y, muchas veces, plumaje negro con amarillo o naranja.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Rupicola peruvianus",
+   "comun": "Gallito de las rocas peruano",
+   "tipo": "Ave",
+   "descripcion": "Ave del bosque de niebla, algunas de colores muy llamativos, que se alimenta de frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Anisognathus igniventris",
+   "comun": "Clarinero escarlata",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Anisognathus lacrymosus",
+   "comun": "Tangara Montana Lagrimosa",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Diglossa albilatera",
+   "comun": "Picaflor Lustroso",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Diglossa sittoides",
+   "comun": "Payador canela",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Zonotrichia capensis",
+   "comun": "Afrechito",
+   "tipo": "Ave",
+   "descripcion": "Gorrión o semillero: ave pequeña que busca semillas e insectos entre arbustos y en el suelo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Spinus psaltria",
+   "comun": "Capita negra",
+   "tipo": "Ave",
+   "descripcion": "Eufonias y clorofonias: pequeñas aves de colores brillantes que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cinclus leucocephalus",
+   "comun": "Cinclo Gorriblanco",
+   "tipo": "Ave",
+   "descripcion": "Mirla de agua: vive junto a quebradas de aguas limpias y rápidas, y se zambulle para buscar insectos acuáticos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Podocarpus oleifolius",
+   "comun": "Guabesan",
+   "tipo": "Planta",
+   "descripcion": "Conífera nativa de los bosques andinos, de hojas alargadas y semillas sobre una pequeña carnosidad.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Epidendrum fimbriatum",
+   "comun": "Pajarito Blanco",
+   "tipo": "Planta",
+   "descripcion": "Orquídea: planta de flores delicadas y formas muy variadas; muchas crecen sobre los árboles.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Epidendrum ibaguense",
+   "comun": "Banderita",
+   "tipo": "Planta",
+   "descripcion": "Orquídea: planta de flores delicadas y formas muy variadas; muchas crecen sobre los árboles.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Prunella vulgaris",
+   "comun": "Bretónica",
+   "tipo": "Planta",
+   "descripcion": "Familia de la menta y la salvia: plantas aromáticas de tallo cuadrado.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Erythrina fusca",
+   "comun": "Búcaro",
+   "tipo": "Planta",
+   "descripcion": "Familia del fríjol y las arvejas: sus raíces ayudan a fertilizar el suelo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Trifolium repens",
+   "comun": "Carretón blanco",
+   "tipo": "Planta",
+   "descripcion": "Familia del fríjol y las arvejas: sus raíces ayudan a fertilizar el suelo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Polylepis sericea",
+   "comun": "Polylepis sericea",
+   "tipo": "Planta",
+   "descripcion": "Familia de las rosas: incluye hierbas y árboles como el colorado, de corteza roja que se desprende en láminas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Acaena elongata",
+   "comun": "Abrojo",
+   "tipo": "Planta",
+   "descripcion": "Familia de las rosas: incluye hierbas y árboles como el colorado, de corteza roja que se desprende en láminas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Phyllanthus salviifolius",
+   "comun": "Cedrillo",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o hierba de hojas pequeñas y flores diminutas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Erato vulcanica",
+   "comun": "Erato vulcanica",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ageratina gracilis",
+   "comun": "Amargoso",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Ageratina tinifolia",
+   "comun": "pegajosa",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Columnea strigosa",
+   "comun": "Huevo de perro",
+   "tipo": "Planta",
+   "descripcion": "Planta de flores tubulares y coloridas, muchas veces epífita, polinizada por colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Kohleria tigridia",
+   "comun": "Calzón de búho",
+   "tipo": "Planta",
+   "descripcion": "Planta de flores tubulares y coloridas, muchas veces epífita, polinizada por colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Meriania nobilis",
+   "comun": "Amarrabollo",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol de hojas con nervios muy marcados, cuyos frutos comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cavendishia nitida",
+   "comun": "Uva camarona",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cuniculus taczanowskii",
+   "comun": "Boruga de páramo | Borugo | Guaga | Mountain Paca",
+   "tipo": "Mamífero",
+   "descripcion": "Boruga o guagua: roedor grande y nocturno del bosque que ayuda a dispersar semillas.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Chaetocercus mulsant",
+   "comun": "Colibrí de Mulsant",
+   "tipo": "Ave",
+   "descripcion": "Colibrí: ave diminuta que aletea rapidísimo y se alimenta de néctar; al visitar las flores las poliniza.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Rupornis magnirostris",
+   "comun": "Aguililla caminera",
+   "tipo": "Ave",
+   "descripcion": "Gavilanes y águilas: aves rapaces de día, con pico curvo y garras fuertes, que cazan desde las alturas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Eryngium humile",
+   "comun": "Almohadilla",
+   "tipo": "Planta",
+   "descripcion": "Planta de hojas rígidas, a veces con espinas, que crece en zonas abiertas de montaña.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Fuchsia nigricans",
+   "comun": "Fuchsia nigricans",
+   "tipo": "Planta",
+   "descripcion": "Fucsia: arbusto de flores colgantes y coloridas que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Setophaga fusca",
+   "comun": "Chipe garganta naranja",
+   "tipo": "Ave",
+   "descripcion": "Reinita: ave pequeña e inquieta que caza insectos entre el follaje; algunas migran desde Norteamérica.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Parkesia noveboracensis",
+   "comun": "Chipe charquero",
+   "tipo": "Ave",
+   "descripcion": "Reinita: ave pequeña e inquieta que caza insectos entre el follaje; algunas migran desde Norteamérica.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Kohleria spicata",
+   "comun": "Jelen molo",
+   "tipo": "Planta",
+   "descripcion": "Planta de flores tubulares y coloridas, muchas veces epífita, polinizada por colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Kohleria hirsuta",
+   "comun": "Kohleria hirsuta",
+   "tipo": "Planta",
+   "descripcion": "Planta de flores tubulares y coloridas, muchas veces epífita, polinizada por colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Persicaria punctata",
+   "comun": "Barbasco",
+   "tipo": "Planta",
+   "descripcion": "Planta enredadera o hierba de tallos con nudos marcados.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Alouatta seniculus seniculus",
+   "comun": "Alouatta seniculus seniculus",
+   "tipo": "Mamífero",
+   "descripcion": "Mono aullador: su rugido se oye a kilómetros; come hojas y frutos.",
+   "cuidado": "Obsérvalo a distancia, en silencio, y nunca le des comida.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Gentiana sedifolia",
+   "comun": "Amor sacha",
+   "tipo": "Planta",
+   "descripcion": "Genciana: hierba de montaña de flores vistosas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cedrela montana",
+   "comun": "Cedrillo",
+   "tipo": "Planta",
+   "descripcion": "Cedro: árbol de madera valiosa que ha sido muy talado.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Equisetum bogotense",
+   "comun": "Caballo chupa",
+   "tipo": "Planta",
+   "descripcion": "Cola de caballo: planta sin flores, de tallos articulados, que existe desde hace millones de años.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Equisetum giganteum",
+   "comun": "Caballo chupa",
+   "tipo": "Planta",
+   "descripcion": "Cola de caballo: planta sin flores, de tallos articulados, que existe desde hace millones de años.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Gaiadendron punctatum",
+   "comun": "Achan",
+   "tipo": "Planta",
+   "descripcion": "Muérdago: planta que crece sobre las ramas de otros árboles y es alimento de aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Nasa triphylla",
+   "comun": "Jelen pini",
+   "tipo": "Planta",
+   "descripcion": "Planta cubierta de pelos que pican al tocarla.",
+   "cuidado": "Tiene pelos que pican: no la toques.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Muehlenbeckia tamnifolia",
+   "comun": "Anku yuyu lutu yuyu",
+   "tipo": "Planta",
+   "descripcion": "Planta enredadera o hierba de tallos con nudos marcados.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Monnina aestuans",
+   "comun": "Tintillo",
+   "tipo": "Planta",
+   "descripcion": "Arbusto de flores moradas o azules y pequeños frutos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Citharexylum sulcatum",
+   "comun": "Citharexylum sulcatum",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol de flores en espiga, cuyos frutos comen las aves.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Begonia urticae",
+   "comun": "Boneta",
+   "tipo": "Planta",
+   "descripcion": "Begonia: hierba de lugares húmedos y sombreados, de hojas asimétricas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Passiflora cumbalensis",
+   "comun": "Gullán",
+   "tipo": "Planta",
+   "descripcion": "Pasiflora o curuba: enredadera de flores complejas y muy llamativas, que dan frutos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Fuchsia petiolaris",
+   "comun": "Zarcillejo Fucsia",
+   "tipo": "Planta",
+   "descripcion": "Fucsia: arbusto de flores colgantes y coloridas que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Hypericum laricifolium",
+   "comun": "Bura bura del llano",
+   "tipo": "Planta",
+   "descripcion": "Arbusto de flores amarillas que crece en el páramo y el borde del bosque.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Weinmannia pubescens",
+   "comun": "Weinmannia pubescens",
+   "tipo": "Planta",
+   "descripcion": "Árbol del bosque altoandino de hojas compuestas, muy común en las zonas altas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Colaptes rivolii",
+   "comun": "Carpintero Dorsicarmesí",
+   "tipo": "Ave",
+   "descripcion": "Carpintero: golpea los troncos para buscar insectos y hacer su nido.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Colaptes rubiginosus",
+   "comun": "Carpintero Olividorado",
+   "tipo": "Ave",
+   "descripcion": "Carpintero: golpea los troncos para buscar insectos y hacer su nido.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Spinus spinescens",
+   "comun": "Jilguero Andino",
+   "tipo": "Ave",
+   "descripcion": "Eufonias y clorofonias: pequeñas aves de colores brillantes que comen frutos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Arremon assimilis",
+   "comun": "Cerquero picofino",
+   "tipo": "Ave",
+   "descripcion": "Gorrión o semillero: ave pequeña que busca semillas e insectos entre arbustos y en el suelo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Arremon brunneinucha",
+   "comun": "Atlapetes gorra castaña",
+   "tipo": "Ave",
+   "descripcion": "Gorrión o semillero: ave pequeña que busca semillas e insectos entre arbustos y en el suelo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Diglossa cyanea",
+   "comun": "Picaflor Enmascarado",
+   "tipo": "Ave",
+   "descripcion": "Tangaras, azulejos y mieleros: aves de colores que comen frutos, néctar e insectos.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Urera baccifera",
+   "comun": "Ortiga",
+   "tipo": "Planta",
+   "descripcion": "Ortiga: planta con pelos que pican al tocarla.",
+   "cuidado": "Tiene pelos que pican: no la toques.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Leiothlypis peregrina",
+   "comun": "Chipe peregrino",
+   "tipo": "Ave",
+   "descripcion": "Reinita: ave pequeña e inquieta que caza insectos entre el follaje; algunas migran desde Norteamérica.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Espeletia hartwegiana",
+   "comun": "Frailejón",
+   "tipo": "Planta",
+   "descripcion": "Planta emblemática del páramo. Sus hojas peludas la protegen del frío y ayudan a captar el agua de la niebla, que luego alimenta quebradas y ríos.",
+   "cuidado": "Crece muy despacio: no lo toques ni arranques sus hojas.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Psittacara wagleri",
+   "comun": "Aratinga de Wagler",
+   "tipo": "Ave",
+   "descripcion": "Loros y pericos: aves de grupo, ruidosas, que comen frutos y semillas.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Passiflora adulterina",
+   "comun": "Curubito",
+   "tipo": "Planta",
+   "descripcion": "Pasiflora o curuba: enredadera de flores complejas y muy llamativas, que dan frutos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Vallea stipularis",
+   "comun": "Caléndula",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol del bosque altoandino, de flores llamativas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Plantago rigida",
+   "comun": "Plantago rigida",
+   "tipo": "Planta",
+   "descripcion": "Hierba pequeña que crece pegada al suelo, en zonas abiertas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Drimys granadensis",
+   "comun": "Ajicillo",
+   "tipo": "Planta",
+   "descripcion": "Canelo de páramo: árbol de hojas aromáticas, de una familia muy antigua.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Barnadesia spinosa",
+   "comun": "espina",
+   "tipo": "Planta",
+   "descripcion": "Pertenece a la familia de los frailejones, las margaritas y los girasoles; muchas especies son típicas del páramo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Vaccinium floribundum",
+   "comun": "Joyapa chiquito",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Hydrocotyle ranunculoides",
+   "comun": "Hydrocotyle ranunculoides",
+   "tipo": "Planta",
+   "descripcion": "Hierba rastrera de hojas redondas que crece en suelos muy húmedos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Cavendishia pubescens",
+   "comun": "Camerona",
+   "tipo": "Planta",
+   "descripcion": "Arbusto del páramo y del bosque de niebla, de flores tubulares que visitan los colibríes.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Salvia palifolia",
+   "comun": "Contrafuego",
+   "tipo": "Planta",
+   "descripcion": "Familia de la menta y la salvia: plantas aromáticas de tallo cuadrado.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Castilleja fissifolia",
+   "comun": "Allpa wantuk",
+   "tipo": "Planta",
+   "descripcion": "Hierba de brácteas rojizas o anaranjadas que vive parcialmente de las raíces de otras plantas.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Trifolium pratense",
+   "comun": "Carretón rosado",
+   "tipo": "Planta",
+   "descripcion": "Familia del fríjol y las arvejas: sus raíces ayudan a fertilizar el suelo.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Passiflora mixta",
+   "comun": "Castilla taxo",
+   "tipo": "Planta",
+   "descripcion": "Pasiflora o curuba: enredadera de flores complejas y muy llamativas, que dan frutos.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Escallonia myrtilloides",
+   "comun": "Atallpa pichu",
+   "tipo": "Planta",
+   "descripcion": "Arbusto o árbol que crece en zonas altas y húmedas de la montaña.",
+   "cuidado": "No la arranques ni la pises: el páramo se recupera muy lentamente.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Falco sparverius",
+   "comun": "Cernícalo",
+   "tipo": "Ave",
+   "descripcion": "Halcón: ave rapaz veloz que caza en vuelo.",
+   "cuidado": "Obsérvala en silencio y a distancia. No uses flash ni sonidos para atraerla.",
+   "fuente": "Descripción general de la familia (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Espeletia",
+   "comun": "Frailejón",
+   "tipo": "Planta",
+   "descripcion": "Los frailejones son plantas típicas del páramo que ayudan a regular el agua de la montaña.",
+   "cuidado": "No lo toques ni arranques sus hojas.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Oxypogon stuebelii",
+   "comun": "Chivito de los nevados",
+   "tipo": "Ave",
+   "descripcion": "Colibrí de alta montaña que solo vive en los páramos de la Cordillera Central de Colombia. Los machos tienen una cresta y una 'barbita' de plumas.",
+   "cuidado": "Obsérvalo en silencio y a distancia.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  },
+  {
+   "cientifico": "Uropsalis segmentata",
+   "comun": "Guardacaminos colitijereta",
+   "tipo": "Ave",
+   "descripcion": "Ave nocturna de los Andes. Los machos tienen dos plumas de la cola muy largas, en forma de tijera.",
+   "cuidado": "No la ilumines directamente con linterna.",
+   "fuente": "Ficha general (pendiente de validar con el PNN)"
+  }
+ ]
 }

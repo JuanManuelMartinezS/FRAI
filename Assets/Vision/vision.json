@@ -22,7 +22,7 @@
   "name": "logits"
  },
  "temperature": 1.0,
- "rejectThreshold": 0.5,
+ "rejectThreshold": 0.35,
  "metrics": {
   "val_top1": 0.6947,
   "val_top3": 0.8476
@@ -2528,5 +2528,6 @@
    "family": "Falconidae",
    "genus": "Falco"
   }
- ]
+ ],
+ "rejectCoverage": 0.7
 }

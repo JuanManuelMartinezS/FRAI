@@ -1,0 +1,1776 @@
+{
+  "version": "1.1-guiones-uton",
+  "fecha_actualizacion": "2026-11-26",
+  "nota": "Construida con la ficha oficial del PNN Los Nevados, el POE 2026-2030 (versión ejecutiva), la página institucional de Parques Nacionales y la Lista Roja UICN vía GBIF. Lo marcado [PENDIENTE] no tiene fuente oficial todavía. UTON/PNN deben validar antes de publicar. Se agregaron fragmentos del Guion Ecoturístico UTON 2024 y del Guion turístico zona norte, con guion y página en cada fuente.",
+  "estaciones": [
+    {
+      "id": "estacion_1",
+      "corto": "Aguacerales",
+      "lat": 5.05055,
+      "lon": -75.50368,
+      "radio_m": 5,
+      "nombre": "Estación 1 - Aguacerales",
+      "marcador": "estacion_1",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Bienvenido a Aguacerales, una zona de páramo con mucha humedad. Aquí el agua baja por la montaña y se filtra entre los musgos y la vegetación altoandina."
+    },
+    {
+      "id": "estacion_2",
+      "corto": "Arenales",
+      "lat": 5.05039,
+      "lon": -75.50364,
+      "radio_m": 5,
+      "nombre": "Estación 2 - Arenales",
+      "marcador": "estacion_2",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Llegaste a Arenales, a unos 4.225 metros de altura. Mira a tu alrededor: la arena y la ceniza volcánica muestran la actividad del volcán."
+    },
+    {
+      "id": "estacion_3",
+      "corto": "Valle Lunar",
+      "lat": 5.05039,
+      "lon": -75.50365,
+      "radio_m": 5,
+      "nombre": "Estación 3 - Valle Lunar",
+      "marcador": "estacion_3",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Estás en el Valle Lunar, a unos 4.350 metros. Es un terreno rocoso, con piedra pómez y minerales, de aspecto árido y volcánico."
+    },
+    {
+      "id": "estacion_4",
+      "corto": "V. Tumbas",
+      "lat": 5.05039,
+      "lon": -75.50366,
+      "radio_m": 5,
+      "nombre": "Estación 4 - Valle de las Tumbas",
+      "marcador": "estacion_4",
+      "saludo": "Hola, soy Frai, un frailejón del Parque Nacional Natural Los Nevados. Llegaste al Valle de las Tumbas, a unos 4.450 metros. Este es el punto límite autorizado para los visitantes en este sector."
+    }
+  ],
+  "seguridad": [
+    {
+      "id": "seg_mal_altura",
+      "palabras_clave": [
+        "mal de altura",
+        "mal de montana",
+        "mal agudo",
+        "soroche",
+        "mareo",
+        "me mareo",
+        "mareado",
+        "dolor de cabeza",
+        "me duele la cabeza",
+        "falta de aire",
+        "no puedo respirar",
+        "ahogo",
+        "nauseas",
+        "vomito",
+        "desmayo",
+        "labios morados",
+        "unas moradas",
+        "confusion",
+        "tos seca"
+      ],
+      "respuesta": "Si tienes dolor de cabeza, cansancio, náuseas, vómito, dificultad para respirar, confusión, sensación de desmayo, tos seca, labios o uñas azulados, o caminas de forma inestable: avisa inmediatamente a tu guía y busca descender de manera segura cuanto antes. Estos síntomas se pueden confundir con resaca, agotamiento, migraña o una enfermedad viral. Algunos casos pueden ser mortales si no se tratan a tiempo.",
+      "fuente": "Infografía «¡Que el mal de altura no te arruine la aventura!», POE PNN Los Nevados 2026-2030, págs. 34-35"
+    },
+    {
+      "id": "seg_mal_altura_prevencion",
+      "palabras_clave": [
+        "prevenir el mal de altura",
+        "prevenir el soroche",
+        "evitar el soroche",
+        "evitar el mal de altura",
+        "prevenir el mal",
+        "aclimatacion",
+        "aclimatar",
+        "como evito el soroche",
+        "riesgo de altura",
+        "estoy en buen estado fisico"
+      ],
+      "respuesta": "El mal de altura aparece al subir rápido a gran altitud sin aclimatarse, porque el aire tiene menos oxígeno disponible. Los síntomas suelen aparecer entre 6 y 10 horas después del ascenso. El riesgo aumenta si ya has tenido mal de altura, si vives a menos de 2.000 metros sobre el nivel del mar o si subes muy rápido. Ojo: el buen estado físico no disminuye el riesgo. El bajo oxígeno también puede empeorar el asma, la hipertensión, la diabetes y enfermedades del corazón o los pulmones.",
+      "fuente": "Infografía «¡Que el mal de altura no te arruine la aventura!», POE PNN Los Nevados 2026-2030, págs. 34-35"
+    },
+    {
+      "id": "seg_emergencia",
+      "palabras_clave": [
+        "emergencia",
+        "auxilio",
+        "ayuda urgente",
+        "accidente",
+        "herido",
+        "herida",
+        "perdido",
+        "me perdi",
+        "perdimos",
+        "se perdio",
+        "rescate",
+        "socorro",
+        "sangre",
+        "caida",
+        "me cai",
+        "fractura"
+      ],
+      "respuesta": "Avisa de inmediato a tu guía o al personal del Parque. En el Parque el guía es obligatorio en todos los sectores. Ten en cuenta que en varias zonas lejanas no hay señal de celular y hay muy pocas viviendas cerca para pedir ayuda.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "seg_frio",
+      "palabras_clave": [
+        "hipotermia",
+        "mucho frio",
+        "temblando",
+        "congelado",
+        "frio extremo",
+        "mojado",
+        "estoy empapado"
+      ],
+      "respuesta": "El Parque pide ir con ropa y calzado para temperaturas bajo 0 °C y para lluvia. Si sientes frío intenso o estás mojado y temblando, avísale a tu guía o al personal del Parque.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "seg_clima",
+      "palabras_clave": [
+        "tormenta",
+        "rayos",
+        "relampago",
+        "granizo",
+        "neblina",
+        "niebla",
+        "nevando",
+        "clima peligroso"
+      ],
+      "respuesta": "[PENDIENTE: protocolo oficial ante tormenta eléctrica, granizo o niebla densa]",
+      "fuente": ""
+    },
+    {
+      "id": "seg_volcan",
+      "palabras_clave": [
+        "volcan",
+        "erupcion",
+        "ceniza",
+        "alerta volcanica",
+        "sismo",
+        "temblor",
+        "evacuacion",
+        "evacuar",
+        "riesgo volcanico"
+      ],
+      "respuesta": "El Parque tiene zonas restringidas por riesgo volcánico, como el camping Arenales en Brisas y el sitio de escalada Gazaperas. Esta app no conoce el nivel de alerta volcánica actual: confírmalo con el personal del Parque antes de tu recorrido y sigue siempre sus indicaciones.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "seg_rutas",
+      "palabras_clave": [
+        "ruta cerrada",
+        "sendero cerrado",
+        "esta permitido subir",
+        "salirme del sendero",
+        "subir al glaciar",
+        "subir al nevado",
+        "subir sin guia",
+        "ruta no permitida",
+        "raices"
+      ],
+      "respuesta": "En todos los sectores debes ir con un guía inscrito en el REPSE, y para subir a los glaciares el guía debe ser especializado en alta montaña. La ruta Raíces - Dulima cara sur NO está permitida: entrar por ahí es ilegal y pone en riesgo tu vida. Algunos senderos están sujetos a ordenamiento, así que confirma siempre con el personal del Parque cuáles están habilitados hoy.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "faq_que_es_frailejon",
+      "estacion": "*",
+      "preguntas": [
+        "que es un frailejon",
+        "que eres",
+        "quien eres",
+        "que planta eres",
+        "como se llama tu especie"
+      ],
+      "respuesta": "Soy un frailejón. En este Parque hay una sola especie de frailejón, Espeletia hartwegiana, de la familia de las margaritas y los girasoles (Asteraceae). Vivo en la mayoría de los páramos del Parque.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "faq_chivito",
+      "estacion": "*",
+      "preguntas": [
+        "quien te visita",
+        "hay colibries",
+        "que es el chivito de paramo"
+      ],
+      "respuesta": "Me visita el chivito de páramo, un colibrí que solo vive en Colombia y se alimenta del néctar de los frailejones. Según la Lista Roja de la UICN, es una especie vulnerable.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "faq_animales",
+      "estacion": "*",
+      "preguntas": [
+        "que animales viven aqui",
+        "que fauna hay",
+        "que pajaros hay",
+        "hay osos",
+        "hay pumas"
+      ],
+      "respuesta": "En el Parque viven el cóndor andino, el oso de anteojos, la danta de montaña, el puma, el águila crestada, el pato andino, el periquito de los nevados y el loro orejiamarillo, entre otros. También hay 20 especies de murciélagos que ayudan a polinizar.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_especies_amenazadas",
+      "estacion": "*",
+      "preguntas": [
+        "que especies estan en peligro",
+        "que animales estan amenazados",
+        "especies amenazadas",
+        "el condor esta en peligro"
+      ],
+      "respuesta": "Según la Lista Roja de la UICN, la palma de cera del Quindío está en peligro crítico; la danta de montaña está en peligro; y el cóndor andino, el oso de anteojos, el chivito de páramo, el loro orejiamarillo y el periquito de los nevados son vulnerables.",
+      "fuente": "Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "faq_ecosistemas",
+      "estacion": "*",
+      "preguntas": [
+        "que ecosistemas hay",
+        "que es el paramo",
+        "que hay en el parque"
+      ],
+      "respuesta": "El Parque tiene bosque altoandino, páramo, superpáramo, humedales altoandinos, glaciares y volcanes. El páramo es el ecosistema principal: ocupa el 84 % del área.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_agua",
+      "estacion": "*",
+      "preguntas": [
+        "por que es importante el parque",
+        "para que sirve el paramo",
+        "de donde sale el agua",
+        "que rios nacen aqui"
+      ],
+      "respuesta": "El Parque es una estrella hídrica: de aquí nacen ríos como el Otún, el Quindío, el Chinchiná y el Combeima, que abastecen a más de 3 millones de personas.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_nevados",
+      "estacion": "*",
+      "preguntas": [
+        "que nevados hay",
+        "cuales son los volcanes",
+        "como se llaman las montanas"
+      ],
+      "respuesta": "Las montañas principales son el Nevado del Ruiz o Kumanday, el Nevado de Santa Isabel o Poleka Kasue y el Nevado del Tolima o Dulima. Junto con los paramillos del Quindío y Santa Rosa superan los 5.000 metros sobre el nivel del mar.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_esencia",
+      "estacion": "*",
+      "preguntas": [
+        "que significa este parque",
+        "cual es la esencia del parque",
+        "por que es especial"
+      ],
+      "respuesta": "La esencia del Parque es esta: volcanes forjaron con hielo y fuego un lugar donde la biodiversidad y la cultura prosperan, simbolizando la resiliencia de la vida en un entorno que sigue transformándose.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_sectores",
+      "estacion": "*",
+      "preguntas": [
+        "cuantos sectores tiene el parque",
+        "cuales son los sectores",
+        "que sectores hay"
+      ],
+      "respuesta": "El Parque tiene cinco sectores ecoturísticos: Brisas - Kumanday, Cisne - Poleka Kasue, Otún - Paramillo Santa Rosa, Quindío - Dulima y Santa Isabel - Murillo.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_guia",
+      "estacion": "*",
+      "preguntas": [
+        "necesito guia",
+        "puedo entrar solo",
+        "es obligatorio el guia"
+      ],
+      "respuesta": "Sí. En todos los sectores del Parque el guía es obligatorio, y debe ser de un operador o guía inscrito en el REPSE.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_deportistas",
+      "estacion": "*",
+      "preguntas": [
+        "soy deportista necesito guia",
+        "puedo hacer trail running",
+        "puedo ir en bicicleta",
+        "montanismo sin guia"
+      ],
+      "respuesta": "Los deportistas de montañismo, ciclomontañismo o trail running no siempre necesitan guía, pero deben cumplir requisitos técnicos, logísticos y de seguridad del reglamento, por el riesgo de la alta montaña. Consulta el reglamento completo con el Parque antes de ir.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_seguro",
+      "estacion": "*",
+      "preguntas": [
+        "necesito seguro",
+        "es obligatorio el seguro"
+      ],
+      "respuesta": "Sí. Para entrar necesitas un seguro de accidentes de una aseguradora avalada por Parques Nacionales.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_edades",
+      "estacion": "*",
+      "preguntas": [
+        "que edad se necesita",
+        "pueden entrar ninos",
+        "edad minima",
+        "edad maxima"
+      ],
+      "respuesta": "Desde los 6 años se puede ir a Brisas, al centro El Cisne y a la Laguna del Otún por Potosí. Desde los 15 años, al resto de rutas, travesías y cumbres. La edad máxima es 69 años. Los menores deben ir con adultos que los cuiden.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_ropa",
+      "estacion": "*",
+      "preguntas": [
+        "que ropa llevo",
+        "como me visto",
+        "que debo llevar"
+      ],
+      "respuesta": "Lleva ropa y calzado para temperaturas bajo 0 °C y para lluvia.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_prohibido",
+      "estacion": "*",
+      "preguntas": [
+        "que esta prohibido",
+        "puedo llevar mi perro",
+        "puedo llevar mascota",
+        "puedo usar dron",
+        "puedo llevar plasticos",
+        "puedo llevar armas"
+      ],
+      "respuesta": "Al Parque no se puede ingresar con drones, armas, animales ni plásticos, entre otras restricciones del reglamento. Tampoco se permite entrar sin guía registrado.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_fotos",
+      "estacion": "*",
+      "preguntas": [
+        "puedo tomar fotos",
+        "puedo grabar video",
+        "fotos comerciales"
+      ],
+      "respuesta": "Puedes tomar fotos sin fines comerciales. Las fotos o grabaciones comerciales necesitan autorización de Parques Nacionales.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_acampar",
+      "estacion": "*",
+      "preguntas": [
+        "puedo acampar",
+        "donde acampo",
+        "zonas de camping"
+      ],
+      "respuesta": "Solo puedes acampar en zonas autorizadas y con equipo para bajas temperaturas. Las zonas de camping del Parque son El Cisne, Laguna del Otún y Arenales - Calvito Nevado del Tolima. El camping Arenales en Brisas está restringido por riesgo volcánico.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_sanciones",
+      "estacion": "*",
+      "preguntas": [
+        "que pasa si no cumplo las reglas",
+        "hay multas",
+        "sanciones"
+      ],
+      "respuesta": "Quien incumpla el reglamento puede recibir desde un llamado de atención o la expulsión inmediata del Parque, hasta un proceso sancionatorio ambiental o el reporte a las autoridades.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_capacidad",
+      "estacion": "*",
+      "preguntas": [
+        "cuantas personas pueden entrar",
+        "capacidad de carga",
+        "por que hay cupos"
+      ],
+      "respuesta": "Cada sendero tiene una capacidad de carga: el número de visitantes por día que el ecosistema soporta sin deteriorarse. Por eso hay cupos y se pide reserva.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_glaciar",
+      "estacion": "*",
+      "preguntas": [
+        "se esta acabando el glaciar",
+        "va a desaparecer el nevado",
+        "retroceso glaciar"
+      ],
+      "respuesta": "Sí. Los glaciares ocupan solo el 1,82 % del Parque y, según el IDEAM, el glaciar de Santa Isabel podría desaparecer hacia 2028.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_reservas",
+      "estacion": "*",
+      "preguntas": [
+        "como reservo",
+        "donde hago la reserva",
+        "hay que reservar"
+      ],
+      "respuesta": "En Brisas la reserva se recomienda con un día de anticipación y es obligatoria en fines de semana y festivos, en reservasnevados.com. En Cisne y Otún es obligatoria con 3 días hábiles de anticipación, a través de la agencia. En Quindío - Dulima, con 5 días hábiles.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_cierres",
+      "estacion": "*",
+      "preguntas": [
+        "cuando cierra el parque",
+        "hay cierres",
+        "dias de cierre"
+      ],
+      "respuesta": "El Parque cierra tres veces al año, cinco días cada vez: la semana después de Semana Santa, y desde el cuarto lunes de septiembre y el cuarto lunes de noviembre hasta el viernes de esa semana.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "faq_parques_nacionales",
+      "estacion": "*",
+      "preguntas": [
+        "que es parques nacionales",
+        "quien administra el parque",
+        "quien cuida el parque"
+      ],
+      "respuesta": "El Parque lo administra Parques Nacionales Naturales de Colombia, una entidad del Estado creada en 2011 que maneja el sistema de parques nacionales y coordina el Sistema Nacional de Áreas Protegidas. Su misión es conservar la diversidad biológica y cultural del país.",
+      "fuente": "Parques Nacionales Naturales de Colombia - Acerca de la entidad (parquesnacionales.gov.co)"
+    },
+    {
+      "id": "faq_subir_a_lo_bien",
+      "estacion": "*",
+      "preguntas": [
+        "que es subir a lo bien",
+        "campana subir a lo bien"
+      ],
+      "respuesta": "«Subir a lo Bien» es una campaña para visibilizar la oferta ecoturística del Parque y promover visitas seguras y responsables.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_basura",
+      "estacion": "*",
+      "preguntas": [
+        "donde boto la basura",
+        "hay canecas",
+        "que hago con mis residuos"
+      ],
+      "respuesta": "El Parque promueve prácticas de mínimo impacto, como llevarte de vuelta tus propios residuos. Además, no se pueden ingresar plásticos.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "faq_no_tocar",
+      "estacion": "*",
+      "preguntas": [
+        "puedo tocar los frailejones",
+        "puedo arrancar una hoja",
+        "puedo llevarme una planta"
+      ],
+      "respuesta": "[PENDIENTE: norma oficial sobre no tocar ni extraer flora]",
+      "fuente": ""
+    },
+    {
+      "id": "brisas_horario",
+      "estacion": "*",
+      "preguntas": [
+        "a que hora abre",
+        "horario",
+        "hasta que hora"
+      ],
+      "respuesta": "El sector Brisas atiende todos los días de 8:00 de la mañana a 2:00 de la tarde. La última charla de inducción es a la 1:30 de la tarde.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "brisas_duracion",
+      "estacion": "*",
+      "preguntas": [
+        "cuanto dura la visita",
+        "cuanto tiempo toma el recorrido"
+      ],
+      "respuesta": "La visita al sector Brisas dura aproximadamente 5 horas.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "brisas_motos",
+      "estacion": "*",
+      "preguntas": [
+        "puedo entrar en moto",
+        "se permiten motos",
+        "puedo entrar en carro"
+      ],
+      "respuesta": "A Brisas solo se entra en vehículo y las motos están prohibidas. Los fines de semana y festivos aplica pico y placa ambiental en la vía Brisas - Valle de las Tumbas, de 5:00 de la mañana a 4:00 de la tarde.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "brisas_capacidad",
+      "estacion": "*",
+      "preguntas": [
+        "cuantas personas caben",
+        "capacidad del recorrido"
+      ],
+      "respuesta": "El carreteable del volcán Nevado del Ruiz tiene una capacidad de carga efectiva de 1.036 visitantes por día.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "brisas_tarifa",
+      "estacion": "*",
+      "preguntas": [
+        "cuanto cuesta la entrada",
+        "cuanto vale entrar",
+        "precio"
+      ],
+      "respuesta": "Tarifas 2026 sin seguro: 12.500 pesos para menores de 25 años nacionales o residentes, 24.500 pesos para mayores de 25 y 68.000 pesos para extranjeros no residentes. La guianza de UTON en Brisas cuesta 22.000 pesos.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "brisas_actividades",
+      "estacion": "*",
+      "preguntas": [
+        "que actividades puedo hacer",
+        "que se puede hacer aqui"
+      ],
+      "respuesta": "En el sector Brisas se permite la observación geológica, la contemplación, la observación de fauna y flora, y la fotografía no comercial.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "e2_camping",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "puedo acampar aqui",
+        "se puede acampar en arenales"
+      ],
+      "respuesta": "No. El camping Arenales de Brisas está restringido por riesgo volcánico.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "e2_altura",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "a que altura estamos",
+        "cuantos metros de altura"
+      ],
+      "respuesta": "Arenales está a unos 4.290 metros sobre el nivel del mar, en la transición de páramo a superpáramo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 6; Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "e3_altura",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "a que altura estamos",
+        "cuantos metros de altura"
+      ],
+      "respuesta": "El Valle Lunar está a unos 4.350 metros sobre el nivel del mar, en el superpáramo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8; Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "e4_altura",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "a que altura estamos",
+        "cuantos metros de altura"
+      ],
+      "respuesta": "El Valle de las Tumbas está a unos 4.460 metros sobre el nivel del mar, entre el superpáramo y la zona nival.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 9; Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gq_nombre_aguacerales",
+      "estacion": "estacion_1",
+      "preguntas": [
+        "por que se llama aguacerales",
+        "de donde sale el agua",
+        "como se forma el agua aqui",
+        "que es la condensacion",
+        "por que cae agua todo el tiempo"
+      ],
+      "respuesta": "En Aguacerales la vegetación captura el agua de las nubes por condensación. Las gotas llegan a los musgos sobre la roca, se juntan en hilos de agua y forman un riachuelo que alimenta la cuenca del río Chinchiná. Esa caída de agua no para nunca, de ahí el nombre Aguacerales.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, Aguacerales, p. 5"
+    },
+    {
+      "id": "gq_papel_frailejon",
+      "estacion": "*",
+      "preguntas": [
+        "que papel cumple el frailejon",
+        "para que sirve el frailejon",
+        "por que es importante el frailejon",
+        "para que sirven los pelos del frailejon",
+        "por que el frailejon tiene hojas peludas",
+        "que es la necromasa"
+      ],
+      "respuesta": "El frailejón es como un ingeniero del agua. Sus hojas gruesas y peludas atrapan la humedad de la niebla y lo protegen de la radiación y del frío, y su chaqueta de hojas muertas, la necromasa, lo aísla para que no se congele. Así ayuda a captar y regular el agua que baja a los ríos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, pp. 2 y 5"
+    },
+    {
+      "id": "gq_especies_frailejon",
+      "estacion": "*",
+      "preguntas": [
+        "cuantas especies de frailejon hay",
+        "que especie de frailejon hay en el parque",
+        "como se llama este frailejon",
+        "por que se llama espeletia"
+      ],
+      "respuesta": "Existen más de 100 especies de frailejones y en Colombia cerca de 60. En este parque solo está reportada una, Espeletia hartwegiana. El nombre Espeletia honra a José Manuel de Ezpeleta, virrey del Nuevo Reino de Granada.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, pp. 5-6"
+    },
+    {
+      "id": "gq_pisar_dunas",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "por que debemos evitar pisar las dunas",
+        "puedo pisar las dunas",
+        "puedo caminar sobre las dunas",
+        "puedo subirme a las dunas",
+        "por que no se pueden pisar las dunas"
+      ],
+      "respuesta": "No se deben pisar. Las dunas están en zonas de carácter intangible del parque y son patrimonio geológico. Como a veces tienen mucha humedad, las huellas pueden durar meses, y por su forma particular de formación no deben ser intervenidas. Se contemplan sin caminar sobre ellas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "gq_origen_dunas",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "como se formaron las dunas",
+        "de donde sale tanta arena",
+        "de donde viene la arena",
+        "que edad tienen las dunas"
+      ],
+      "respuesta": "La arena viene del viento que desgasta las rocas, de partículas que el viento trae de otros lugares, de la meteorización de la roca y de la ceniza del complejo volcánico. El viento la lleva hasta una barrera de rocas detrás de la cabaña y allí se acumula. Se estima que las dunas tienen entre 200 y 400 años, aunque el guion aclara que se requieren estudios.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "gq_esqui_chalet",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "que paso con el chalet",
+        "habia esqui aqui",
+        "historia del esqui",
+        "que es la cabana de arenales",
+        "quien diseno el chalet"
+      ],
+      "respuesta": "En Arenales hubo desde una bodega de papa en 1937 hasta el Chalet Arenales, diseñado por Simón Vélez, que se incendió en 2010. En los años 50 y 60 se hicieron campeonatos sudamericanos de esquí que llevaron a crear el Club de Ski de Manizales. El esquí se detuvo por el deshielo del glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7; Guion turístico zona norte, p. 6"
+    },
+    {
+      "id": "gq_nina_fantasma",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "quien es la nina fantasma",
+        "hay fantasmas",
+        "hay una leyenda aqui",
+        "hay algun mito de arenales"
+      ],
+      "respuesta": "Es un relato popular, no un hecho científico: desde los años 80 se cuenta que una niña fantasma vive en Arenales y que guías, guardaparques, montañistas y rescatistas la han visto.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "gq_fracturas_rocas",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "por que se fracturan las rocas",
+        "por que las rocas tienen grietas",
+        "que es la gelifraccion",
+        "por que hay tantas grietas en las rocas",
+        "que proceso explica las fracturas"
+      ],
+      "respuesta": "Por gelifracción. El agua entra en pequeñas grietas de la roca y, cuando se congela, aumenta de volumen y las ensancha hasta fracturarla. Es un cambio físico, un tipo de meteorización, y por eso las rocas de Lunares están llenas de grietas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8; Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gq_color_rocas",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "por que las rocas son rojas",
+        "por que hay rocas rojizas",
+        "que es la oxidacion",
+        "que proceso explica el color de las rocas",
+        "de donde viene el color rojo"
+      ],
+      "respuesta": "Por oxidación, que es un cambio químico. El hierro de minerales como las hornblendas reacciona con el oxígeno y la humedad y deja tonos rojizos en la roca.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8; Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gq_fisico_quimico",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "cual es la diferencia entre gelifraccion y oxidacion",
+        "que proceso explica las fracturas y cual explica el color",
+        "cambio fisico o quimico en las rocas"
+      ],
+      "respuesta": "Son dos procesos distintos. Las fracturas se deben a la gelifracción, un cambio físico: el agua se congela en las grietas y rompe la roca. El color rojizo se debe a la oxidación, un cambio químico: el hierro de los minerales reacciona con el oxígeno.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "gq_nombre_lunares",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "por que se llama valle lunar",
+        "por que parece la luna",
+        "que son las estrias",
+        "que es una loricaria",
+        "que es el coral de paramo"
+      ],
+      "respuesta": "El Valle Lunar se llama así por su aspecto estéril y desolado, que evoca la superficie de otros planetas. Las marcas que parecen arañazos en las rocas son estrías glaciares, dejadas por el movimiento del glaciar. Y la loricaria, también llamada cacho de venado o coral de páramo, es de las pocas plantas que resisten aquí.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, pp. 8-9; Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gq_nombre_tumbas",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "por que se llama valle de las tumbas",
+        "que son las lajas",
+        "que es el desierto de la soledad",
+        "hay tumbas aqui"
+      ],
+      "respuesta": "Se llama así por rocas largas y planas, lajas, que se parecen a ataúdes. Algunas comunidades cercanas usaban rocas así para construir tumbas, pero el guion aclara que eso no significa que fueran extraídas del Ruiz: es solo una similitud. El nombre se heredó por tradición oral y ya se usaba en los años 80. También se conoce como Desierto de la Soledad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, pp. 9-10"
+    },
+    {
+      "id": "gq_limite_ascenso",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "por que no se puede subir mas",
+        "por que hay un limite de ascenso",
+        "por que esta restringido el ascenso",
+        "por que no puedo seguir hacia el crater",
+        "que pasa si subo mas"
+      ],
+      "respuesta": "El ascenso a la parte alta del Nevado del Ruiz está restringido por seguridad, principalmente por el alto riesgo de lahares, flujos de lodo y escombros volcánicos que dificultarían una evacuación si hay una erupción. También se protege la fragilidad del superpáramo. Sigue siempre las indicaciones de tu guía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10; Guion turístico zona norte, p. 6"
+    },
+    {
+      "id": "gq_kumanday",
+      "estacion": "*",
+      "preguntas": [
+        "que significa kumanday",
+        "que es kumanday",
+        "como se llamaba el volcan antes",
+        "que significa cumanday",
+        "nombre indigena del nevado del ruiz"
+      ],
+      "respuesta": "Kumanday es el nombre indígena del Nevado del Ruiz. Sobre su significado los guiones no coinciden del todo: el guion turístico de la zona norte dice 'Cerro Blanco', 'El de la Nariz Humeante' o 'Padre Blanco'; el guion ecoturístico UTON 2024 menciona 'banco hermoso' (IDEAM) y 'gran padre de barbas blancas' (tradición oral de guías), y advierte que no hay investigación suficiente para saber de dónde viene la palabra. Son atribuciones y tradición oral, no un dato confirmado.",
+      "fuente": "Guion turístico zona norte, p. 1; Guion Ecoturístico UTON 2024, p. 34"
+    },
+    {
+      "id": "gq_1985",
+      "estacion": "*",
+      "preguntas": [
+        "que paso en 1985",
+        "que paso en armero",
+        "cuando fue la erupcion del ruiz",
+        "cuantos murieron en armero",
+        "tragedia de armero"
+      ],
+      "respuesta": "El 13 de noviembre de 1985 el Nevado del Ruiz entró en erupción y derritió parte de su glaciar. Los lahares, flujos de lodo volcánico, bajaron por los ríos Gualí, Azufrado, Lagunillas y Molinos y devastaron Armero, Villamaría y Chinchiná. El guion da más de 23.000 muertos en un lugar y más de 25.000 en otro, así que la cifra exacta no es consistente. Murió el 94 % de la población de Armero.",
+      "fuente": "Guion Ecoturístico UTON 2024, pp. 10 y 26"
+    },
+    {
+      "id": "gq_lahares",
+      "estacion": "*",
+      "preguntas": [
+        "que son los lahares",
+        "que es un lahar",
+        "por que hay riesgo de lahares"
+      ],
+      "respuesta": "Los lahares son flujos de lodo y escombros volcánicos. Se forman, por ejemplo, cuando el calor de una erupción derrite el glaciar y el agua baja arrastrando material por los cañones de los ríos. Por ese riesgo se restringe el ascenso desde el Valle de las Tumbas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "gq_volcan_activo",
+      "estacion": "*",
+      "preguntas": [
+        "el volcan esta apagado",
+        "el ruiz esta activo",
+        "esta dormido el volcan",
+        "puede hacer erupcion",
+        "el volcan esta muerto"
+      ],
+      "respuesta": "No, el Nevado del Ruiz es un volcán activo. No está apagado ni extinto: tiene períodos de reposo y de actividad constante, y el Servicio Geológico Colombiano lo vigila las 24 horas. No conozco el nivel de alerta de hoy: pregúntalo al personal del parque.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gq_glaciar_hoy",
+      "estacion": "*",
+      "preguntas": [
+        "cuanto glaciar queda",
+        "se esta derritiendo el glaciar",
+        "cuanto mide el glaciar",
+        "cuanto ha retrocedido el glaciar",
+        "por que se esta acabando el hielo"
+      ],
+      "respuesta": "Sí, retrocede. Según el informe del IDEAM citado en el guion, el glaciar del Ruiz pasó de 7,96 km² en 2021 a 7,68 km² en 2022, un 3,5 % menos. Los glaciares colombianos han retrocedido más de 84 % desde 1850 y hoy pierden entre 1 y 3 % de su área al año. Son datos con fecha: no son medidas de hoy.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 29-31"
+    },
+    {
+      "id": "gq_ceniza_nieve",
+      "estacion": "*",
+      "preguntas": [
+        "por que no hay nieve",
+        "eso gris es nieve",
+        "donde esta la nieve",
+        "por que el nevado es gris",
+        "eso blanco es hielo"
+      ],
+      "respuesta": "Lo gris que cubre gran parte del sector norte es ceniza volcánica reciente y depósitos piroclásticos, no nieve escondida debajo. La nieve y el glaciar están en franco retroceso.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gq_andesita",
+      "estacion": "*",
+      "preguntas": [
+        "que roca es esta",
+        "que es la andesita",
+        "de que son las rocas",
+        "que edad tienen las rocas",
+        "que minerales tienen las rocas"
+      ],
+      "respuesta": "Son andesitas, la roca volcánica más común de los Andes. Las que rodean Aguacerales tienen cerca de 100 mil años. En ellas se ven fácilmente dos minerales: las plagioclasas, claras o incoloras, y las hornblendas, negras.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6 y Lunares, p. 9"
+    },
+    {
+      "id": "gq_cuatro_volcanes",
+      "estacion": "*",
+      "preguntas": [
+        "de cuantos volcanes esta compuesto el ruiz",
+        "que es el complejo volcanico",
+        "que son nereidas olleta y pirana",
+        "cuantos volcanes hay"
+      ],
+      "respuesta": "El Nevado del Ruiz es un complejo volcánico de cuatro estructuras: Nereidas, La Olleta, Piraña y Arenas. Comúnmente se le llama Nevado del Ruiz al edificio que tiene el cráter Arenas, el cráter activo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10; Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gq_paramo_agua",
+      "estacion": "*",
+      "preguntas": [
+        "por que es importante el paramo",
+        "por que el paramo es una esponja",
+        "cuanta agua retiene el suelo",
+        "para que sirve el paramo",
+        "por que cuidar el paramo"
+      ],
+      "respuesta": "El páramo funciona como una esponja gigante: su suelo de ceniza volcánica y materia orgánica retiene el agua y la libera poco a poco hacia los ríos. El parque abastece a 37 municipios y a cerca de 3 millones de personas del Eje Cafetero, y los páramos además capturan carbono. El guion de zona norte dice que el suelo retiene hasta 40 veces su peso en agua.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, pp. 2 y 5"
+    },
+    {
+      "id": "gq_condor_danta",
+      "estacion": "*",
+      "preguntas": [
+        "que es el condor",
+        "hay condores",
+        "que es la danta",
+        "que hacen los colibries",
+        "que animales hay en lunares",
+        "que animales hay en el valle de las tumbas"
+      ],
+      "respuesta": "El cóndor de los Andes usa las corrientes térmicas del volcán para planear sin esfuerzo; en Lunares y el Valle de las Tumbas es zona de paso. La danta de montaña es un mamífero lanudo y gran dispersor de semillas. Los colibríes entran en hibernación nocturna para sobrevivir al frío.",
+      "fuente": "Guion turístico zona norte, p. 2; Guion Ecoturístico UTON 2024, Lunares, p. 8 y Valle de las Tumbas, p. 9"
+    },
+    {
+      "id": "gq_palabra_paramo",
+      "estacion": "*",
+      "preguntas": [
+        "de donde viene la palabra paramo",
+        "que significa paramo",
+        "que es un paramo"
+      ],
+      "respuesta": "La palabra páramo viene del latín paramus y ya existía en España antes de los romanos: un lugar yermo, desértico y árido. En Colombia es un ecosistema de alta montaña que actúa como esponja y regula el agua.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6 y Glosario, pp. 12-13"
+    },
+    {
+      "id": "gq_mohan_guacas",
+      "estacion": "*",
+      "preguntas": [
+        "que es un mohan",
+        "quien fue juan diaz",
+        "que son las guacas",
+        "hay tesoros aqui",
+        "que es el mohan"
+      ],
+      "respuesta": "Es un relato popular, no un hecho científico. En el conocimiento campesino del norte del Tolima el mohán es un encantado que gobierna ríos, avalanchas y volcanes; la historia cuenta a Juan Díaz Jaramillo, un español que buscó oro y perdió su riqueza en una avalancha. Las guacas son antiguos entierros indígenas, por lo general con oro, y se dice que alumbran de rojo o azul el Viernes Santo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 35-36"
+    },
+    {
+      "id": "gq_historia_indigena",
+      "estacion": "*",
+      "preguntas": [
+        "quienes vivian aqui antes",
+        "que comunidades indigenas habitaban",
+        "quienes eran los quimbayas",
+        "para quien era sagrado este lugar"
+      ],
+      "respuesta": "Cerca del Cumanday vivieron comunidades como los quimbayas, pijaos, pantágoras y ansermas, y el guion también nombra a carrapas, gualíes y panches. Para ellos el lugar era sagrado y hacían peregrinaciones. Hoy algunas comunidades indígenas siguen haciendo rituales. El registro arqueológico no permite saber en qué consistía su relación ritual con el volcán.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10 y Aspectos antropológicos, p. 34"
+    }
+  ],
+  "documentos": [
+    {
+      "id": "doc_declaratoria",
+      "titulo": "Declaratoria y ubicación",
+      "texto": "El Parque Nacional Natural Los Nevados fue declarado el 30 de abril de 1974 para conservar su flora, fauna y ecosistemas. Está en la cordillera Central, en el corazón del Eje Cafetero, entre los ríos Magdalena y Cauca, y abarca Caldas, Quindío, Risaralda y Tolima.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_estrella_hidrica",
+      "titulo": "Estrella hídrica",
+      "texto": "El Parque es una estrella hídrica fundamental de Colombia. De él nacen ríos como el Otún, el Quindío, el Chinchiná y el Combeima, que abastecen a más de 3 millones de personas. Sus ecosistemas también regulan el clima.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_glaciares",
+      "titulo": "Glaciares",
+      "texto": "Los glaciares ocupan el 1,82 % del área del Parque. Según el IDEAM, el glaciar de Santa Isabel podría desaparecer hacia 2028, según la variabilidad climática, los fenómenos de El Niño y La Niña y la actividad del volcán Ruiz. El retroceso glaciar obliga a reinterpretar este atractivo turístico.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_paramo",
+      "titulo": "Páramo y superpáramo",
+      "texto": "El páramo es el ecosistema más representativo del Parque: ocupa el 84 % del área e incluye pajonales, turberas, arbustales, pantanos y lagunas. El superpáramo tiene condiciones extremas, con rocas, cenizas y organismos extremófilos.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_flora",
+      "titulo": "Flora",
+      "texto": "Además del frailejón Espeletia hartwegiana, en el páramo hay romeros, pajonales y Senecio. En el superpáramo vive el cacho de venado, una planta endémica. En los bosques altoandinos está la palma de cera del Quindío, árbol nacional de Colombia, que según la Lista Roja de la UICN está en peligro crítico. El siete cueros de páramo es un árbol raro, amenazado por la agricultura y la ganadería.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "doc_fauna",
+      "titulo": "Fauna",
+      "texto": "En el Parque viven el chivito de páramo, el tororoi de Miller, el águila crestada, el cóndor andino, el pato andino, el periquito de los nevados, la danta de montaña, la guagua loba, el puma y el oso de anteojos. Hay 20 especies de murciélagos que son polinizadores. El cóndor andino es el ave nacional y su envergadura supera los 3 metros.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_uicn",
+      "titulo": "Estado de conservación (UICN)",
+      "texto": "Según la Lista Roja de la UICN: la palma de cera del Quindío está en peligro crítico; la danta de montaña, en peligro; y el cóndor andino, el oso de anteojos, el chivito de páramo, el loro orejiamarillo y el periquito de los nevados son vulnerables. El frailejón Espeletia hartwegiana no ha sido evaluado por la UICN.",
+      "fuente": "Lista Roja UICN consultada en la API de GBIF (api.gbif.org), 2026-11-22"
+    },
+    {
+      "id": "doc_nombres",
+      "titulo": "Nombres indígenas y cultura",
+      "texto": "El territorio fue habitado por pueblos quimbayas, pijaos, pantágoras y muiscas, que consideraban los nevados sitios sagrados. Kumanday significa cerro blanco; Poleka Kasue, doncella de la montaña; y Dulima, río de nieve o nube. Después, la colonización antioqueña y cundiboyacense formó el poblamiento actual, basado en café, papa y ganadería.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_historia",
+      "titulo": "Historia",
+      "texto": "El 13 de noviembre de 1985 hizo erupción el Nevado del Ruiz; los flujos de lodo bajaron por los ríos Lagunilla, Gualí y Chinchiná y la avalancha sepultó Armero. En 2020 la Sentencia STL 10716 declaró al Parque sujeto de derechos, y en 2025 el Nevado del Ruiz fue declarado Patrimonio Natural de la Nación.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_poe",
+      "titulo": "Plan de Ordenamiento Ecoturístico",
+      "texto": "El Plan de Ordenamiento Ecoturístico 2026-2030 organiza el ecoturismo del Parque como estrategia de conservación. Tiene cinco líneas estratégicas con 27 acciones y 38 metas para cinco años. Su visión es que al 2030 el Parque consolide un ecoturismo ordenado, sostenible, seguro e incluyente.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_senderos",
+      "titulo": "Senderos y atractivos",
+      "texto": "El Parque es un parque de senderos. Se inventariaron 26 rutas, caminos o senderos, y 15 tuvieron evaluación favorable. Las zonas de camping son Arenales en Brisas (restringida por riesgo volcánico), El Cisne, Laguna del Otún y Arenales - Calvito Nevado del Tolima.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_reglamento",
+      "titulo": "Reglamento de ecoturismo",
+      "texto": "El reglamento de ecoturismo es obligatorio y tiene seis bloques: condiciones previas al ingreso, ingreso al área protegida, comportamiento al interior del Parque, obligaciones de los prestadores de servicios, régimen de sanciones y requisitos para actividades deportivas. Al ingresar hay registro obligatorio y charla informativa. Se complementa con un manual voluntario de buenas prácticas.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_experiencias",
+      "titulo": "Experiencias de visita",
+      "texto": "El Parque ofrece tres experiencias de visita: Descubre los ecosistemas de alta montaña, para naturalistas y visitantes ocasionales; Entre volcanes y paramillos, una travesía en alta montaña para naturalistas y montañistas; y Altitud retadora y adrenalina, para eventos deportivos como montañismo, ciclomontañismo y trail running por encima de los 4.000 metros.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_desafios",
+      "titulo": "Desafíos del territorio",
+      "texto": "Gran parte del Parque está en propiedad privada, lo que genera tensiones entre conservación y sustento campesino. Hay presión por turismo no regulado en zonas de ingreso no permitido, como la vía Murillo - La Esperanza, con basuras, senderos no autorizados y sobrecarga.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
+    },
+    {
+      "id": "doc_tarifas",
+      "titulo": "Tarifas 2026",
+      "texto": "Tarifas 2026 sin seguro en Brisas, Cisne y Laguna del Otún: 12.500 pesos para menores de 25 años nacionales, residentes o de la CAN; 24.500 pesos para mayores de 25; 68.000 pesos para extranjeros no residentes. El sector Quindío - Dulima no cobra ingreso. La guianza de UTON en Brisas cuesta 22.000 pesos.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_uton",
+      "titulo": "UTON",
+      "texto": "UTON, la Unión Temporal Operación Nevados, es el concesionario del sector Brisas (reservas, ingreso, guianza, transporte, alojamiento y tienda) y del alojamiento e ingreso en El Cisne. Sus oficinas están en Manizales.",
+      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_sector_cisne",
+      "titulo": "Sector Cisne - Poleka Kasue",
+      "texto": "En el sector Cisne - Poleka Kasue están el centro de visitantes El Cisne y los senderos Refugio El Cisne, Laguna Verde, Paramillo El Cisne y Conejeras del cambio climático. La visita dura de 2 a 3 días. El registro es en la cabaña Potosí o en el alto de Santa Bárbara, de 7:30 a 10:00 de la mañana.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_sector_otun",
+      "titulo": "Sector Otún - Paramillo Santa Rosa",
+      "texto": "En el sector Otún está la Laguna del Otún, la más grande del Parque, con humedales que son Zona Ramsar. Tiene mirador para pasadía, zona de camping y senderos como el Complejo Lagunar Alsacia - Otún. La visita dura de 2 a 4 días y el ingreso por la cabaña Potosí es de 7:00 de la mañana a 12:00 del mediodía.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_sector_quindio",
+      "titulo": "Sector Quindío - Dulima",
+      "texto": "Al sector Quindío - Dulima se llega desde Salento por Cocora, desde Ibagué por Juntas o desde Anzoátegui por Palomar. La actividad principal es el montañismo hacia el Nevado del Tolima. Las travesías duran unos 5 días y este sector no cobra derecho de ingreso.",
+      "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+    },
+    {
+      "id": "doc_entidad",
+      "titulo": "Parques Nacionales Naturales de Colombia",
+      "texto": "Parques Nacionales Naturales de Colombia es una unidad administrativa especial creada en 2011 que administra el Sistema de Parques Nacionales Naturales y coordina el Sistema Nacional de Áreas Protegidas. Su misión es conservar la diversidad biológica y cultural del país.",
+      "fuente": "Parques Nacionales Naturales de Colombia - Acerca de la entidad (parquesnacionales.gov.co)"
+    },
+    {
+      "id": "doc_rag_general_historia",
+      "titulo": "Datos generales, extensión e historia del PNN Los Nevados",
+      "texto": "El Parque Nacional Natural Los Nevados fue declarado el 30 de abril de 1974 en los Andes Occidentales (Cordillera Central). Tiene una extensión alrededor de 61.400 hectáreas (la cifra precisada en 2023 es 61.376,22 ha) distribuidas en 10 municipios de 4 departamentos: Caldas (Villamaría), Risaralda (Pereira, Santa Rosa de Cabal), Quindío (Salento) y Tolima (Murillo, Anzoátegui, Ibagué, Santa Isabel, Casabianca, Herveo). Protege los volcanes Nevado del Ruiz (Kumanday, 'cerro blanco'), Nevado de Santa Isabel (Poleka Kasue, 'doncella de la montaña') y Nevado del Tolima (Dulima, 'río de nieve'). En 1985 ocurrió la erupción del Ruiz que sepultó a Armero. En 2020 fue declarado sujeto de derechos (Sentencia STL 10716) y en 2025 el Nevado del Ruiz fue declarado Patrimonio Natural de la Nación.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_ecosistemas_clima",
+      "titulo": "Ecosistemas, glaciares y clima",
+      "texto": "El Parque abarca bosque altoandino, subpáramo, páramo (84% del área, con pajonales, turberas y lagunas), superpáramo (paisaje lunar con rocas, cenizas y organismos extremófilos), humedales altoandinos y glaciares (1,82% del área). Abastece de agua a millones de habitantes del Eje Cafetero y las cuencas del Magdalena y Cauca (ríos Chinchiná, Otún, Lagunilla, Gualí). Según el IDEAM, el glaciar Santa Isabel podría extinguirse hacia 2028. Tiene un régimen de lluvias bimodal (dos periodos secos y dos lluviosos al año) con temperaturas bajo 0 °C en zonas altas.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_conservacion_ramsar",
+      "titulo": "Conservación, Zona Ramsar e investigación",
+      "texto": "El Parque protege valores objeto de conservación como páramos, humedales, glaciares y especies endémicas o amenazadas (oso de anteojos, chivito de páramo, cóndor de los Andes, danta de páramo, venado conejo, loro orejiamarillo y frailejón). Los humedales de la Laguna del Otún están declarados Zona Ramsar (humedal de importancia mundial). Para realizar investigación científica o tomas audiovisuales comerciales se requiere permiso previo de Parques Nacionales.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_fauna_emblematica",
+      "titulo": "Fauna emblemática del PNN Los Nevados",
+      "texto": "En aves destacan el colibrí chivito de páramo (Oxypogon stuebelii, endémico que se alimenta del frailejón), el tororoi de Miller (Grallaria milleri, endémico de sotobosque), el águila crestada (Spizaetus isidori), el cóndor andino (Vultur gryphus), el pato andino (Oxyura ferruginea), el periquito de los nevados (Bolborhynchus ferrugineifrons) y el águila de páramo (Geranoaetus melanoleucus). En mamíferos habitan la danta de montaña (Tapirus pinchaque), la guagua loba (Dinomys branickii), el puma (Puma concolor), el oso de anteojos y 20 especies de murciélagos polinizadores.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_flora_emblematica",
+      "titulo": "Flora emblemática del PNN Los Nevados",
+      "texto": "La única especie de frailejón en el parque es Espeletia hartwegiana. También hay romeros (Diplostephium spp.), pajonales, herbáceas Senecio y el cacho de venado (Andicolea colombiana, endémica del superpáramo). En humedales destacan los colchones de agua (Plantago rigida). En bosques altoandinos se encuentran la palma de cera del Quindío (Ceroxylon quindiuense, árbol nacional), velillos (Hypericum) y el siete cueros de páramo (Polylepis sericea), árbol amenazado que crece sobre los 3.000 m s. n. m.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_brisas",
+      "titulo": "Sector Brisas - Kumanday (Valle de las Tumbas)",
+      "texto": "Recorrido carreteable ideal para visitas cortas, observación geológica y de flora/fauna frente al Nevado del Ruiz (Kumanday). Inicia en el centro de inducción Brisas (4.100 m s. n. m.) y llega por Arenales hasta el Valle del Silencio o Valle de las Tumbas (superpáramo). Se llega por la vía Manizales-Bogotá (Letras) o desde Murillo (Tolima) por el corredor La Esperanza-Murillo. No se permite el ingreso de motos; debe hacerse en vehículo cubierto. Operado por la Unión Temporal Operación Nevados (UTON, www.operacionnevados.co).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_cisne",
+      "titulo": "Sector Cisne - Poleka Kasue (Nevado Santa Isabel)",
+      "texto": "Sector de páramo y borde glaciar para senderismo, montañismo y observación de aves. Se observan los nevados del Ruiz, Santa Isabel y paramillo del Cisne. Permite caminar a Laguna Verde o ascender a la cumbre del Nevado Santa Isabel (sendero Conejeras, requiere guía especializado de alta montaña). Acceso por el centro de visitantes El Cisne (4.100 m s. n. m.), cabaña Potosí o alto de Santa Bárbara, llegando por carreteras destapadas desde Villamaría (Caldas) o Santa Rosa de Cabal (Risaralda).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_otun",
+      "titulo": "Sector Laguna del Otún",
+      "texto": "Alberga la Laguna del Otún (la más grande del parque, Zona Ramsar), rodeada por los paramillos del Quindío y Santa Rosa, con páramos y colchones de agua. Se accede por carretera hasta la cabaña Potosí (3.920 m s. n. m.) desde Villamaría o Santa Rosa, o caminando desde Pereira vía La Florida - El Cedral (7,5 km al límite del parque y 18 km a la laguna). Ofrece estadía en casas tradicionales de la vereda El Bosque.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_sector_quindio_dulima",
+      "titulo": "Sector Quindío - Dulima (Nevado del Tolima)",
+      "texto": "Sector exigente orientado al montañismo y travesías de varios días en inmediaciones del Nevado del Tolima (Dulima), atravesando bosque altoandino, subpáramo, páramo, superpáramo y glaciar. Se accede caminando desde Salento (Quindío) por Valle del Cocora (14 km al límite), desde Ibagué (Tolima) por vereda Juntas (15 km) o desde Anzoátegui (Tolima) por vereda Palomar (11 km).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_brisas",
+      "titulo": "Horario del sector Brisas-Kumanday",
+      "texto": "Sector Brisas-Kumanday (ingreso por el centro de visitantes Brisas): abierto todos los días del año de 8:00 a. m. a 2:00 p. m. La última charla de inducción obligatoria se realiza a la 1:30 p. m.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_cisne",
+      "titulo": "Horario del sector Cisne-Poleka Kasue",
+      "texto": "Sector Cisne-Poleka Kasue (Nevado Santa Isabel y paramillo del Cisne): se puede llegar a los puntos de registro del Parque (cabaña Potosí y alto de Santa Bárbara) de 7:30 a. m. a 10:00 a. m. El sendero Laguna Verde tiene horario de 8:00 a. m. a 2:00 p. m. Para el sendero Conejeras (cumbre del Nevado Santa Isabel), el registro o paso por los sitios de control se hace el día anterior al ingreso programado a la cima.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_otun",
+      "titulo": "Horario del sector Laguna del Otún",
+      "texto": "Sector Laguna del Otún: el horario de atención en la cabaña Potosí es de 7:00 a. m. a 12:00 p. m.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_horario_quindio_dulima",
+      "titulo": "Horario del sector Quindío-Dulima",
+      "texto": "Sector Quindío-Dulima (Nevado del Tolima): en el punto de atención Valle del Cocora el horario es de 6:00 a. m. a 10:00 a. m.; en Juntas y Anzoátegui es de 6:00 a. m. a 11:00 a. m., bajo reserva previa.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_cierres_pico_placa",
+      "titulo": "Cierres anuales del Parque y Pico y Placa Ambiental",
+      "texto": "El Parque tiene tres cierres al año, de cinco días (de lunes a viernes), para liberar de carga los lugares naturales y hacer monitoreo: la semana posterior a Semana Santa, la semana del cuarto lunes de septiembre y la semana del cuarto lunes de noviembre. En noviembre, los fines de semana y festivos de 5:00 a. m. a 4:00 p. m., rige el Pico y Placa Ambiental en la vía a Brisas-Valle de las Tumbas (Resolución 1815 de 2026).",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_tarifas_ingreso",
+      "titulo": "Tarifas de ingreso 2026",
+      "texto": "Tarifas de ingreso 2026 a Brisas-Kumanday, Cisne-Poleka Kasue y Laguna del Otún (COP, sin incluir el seguro obligatorio de accidentes): nacionales, CAN y extranjeros residentes menores de 25 años pagan $12.500; mayores de 25 años pagan $24.500; extranjeros no residentes pagan $68.000. En Quindío-Dulima el ingreso cuesta $0.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_tarifas_brisas_servicios",
+      "titulo": "Brisas: guianza UTON y tarifas de vehículos",
+      "texto": "En Brisas-Kumanday, el servicio de interpretación y guianza de UTON cuesta $22.000. Ingreso de vehículos: automóvil $10.000, colectivo o microbús $27.500, bus o buseta $56.000 (máximo 30 pasajeros). Las motos están prohibidas.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_guia_seguro_reservas",
+      "titulo": "Guía obligatoria, seguro, reservas y contactos",
+      "texto": "Es obligatorio ingresar con guía o agencia registrada en REPSE y comprar póliza de seguro de accidentes. Reservas: Brisas en www.reservasnevados.com (mínimo 1 día antes en fines de semana y festivos); Cisne y Otún con 3 días hábiles de anticipación; Quindío-Dulima con 5 días hábiles. Contacto del Parque: nevados@parquesnacionales.gov.co. UTON Manizales: 321 506 6031 y 322 360 3637.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_salud_edades_equipamiento",
+      "titulo": "Requisitos de edad y equipamiento para alta montaña",
+      "texto": "Edades permitidas: mínimo 6 años para los atractivos del carreteable Brisas-Kumanday, el centro El Cisne y la Laguna del Otún por la cabaña Potosí; mínimo 15 años para el resto de rutas, travesías y cumbres. Todos los menores de edad van acompañados de adultos cuidadores. Edad máxima permitida: 69 años para todo el Parque. Equipamiento y cuidados: ropa y calzado apropiados para clima frío inferior a 0 °C y lluvioso; si acampas en zonas permitidas, carpa, sleeping, material de cocina y alimentación apropiada para bajas temperaturas; buena hidratación antes, durante y después de la actividad; alimentarse bien y llevar snacks energéticos; paradas periódicas de 10 minutos al ascender para lograr una aclimatación adecuada; bloqueador solar cada dos horas y gafas con protección UV. Evita ingresar si presentas alguna de las condiciones de salud indicadas por Parques Nacionales.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_salud_contraindicaciones",
+      "titulo": "Cuida tu salud: cuándo evitar subir al Parque",
+      "texto": "Parques Nacionales indica evitar subir al Parque si: tienes trastornos psiquiátricos médicamente determinados que comprometen tu capacidad de autocuidado y de cuidado hacia otras personas; tienes enfermedades cardiovasculares no controladas, incluidas hipertensión arterial, cardiopatía isquémica e insuficiencia cardíaca, entre otras; tienes desórdenes metabólicos o hematológicos no compensados, como diabetes mellitus, obesidad mórbida o anemia severa, entre otras; tienes enfermedades respiratorias crónicas descompensadas, tales como EPOC, asma o fibrosis pulmonar, entre otras; te encuentras en periodo postoperatorio que implica riesgo de complicaciones en altitud; o te encuentras en estado de gestación.",
+      "fuente": "Infografía oficial 'Cuida tu salud, evita subir si...' (Parques Nacionales)"
+    },
+    {
+      "id": "doc_rag_mal_altura_causas_riesgo",
+      "titulo": "Mal de altura: qué es y factores de riesgo",
+      "texto": "Al subir, la presión atmosférica baja y el aire se vuelve más liviano: el porcentaje de oxígeno es el mismo, pero está más disperso y el cuerpo recibe menos con cada respiración. A 5.000 m s. n. m. solo hay la mitad del oxígeno que se respira al nivel del mar. La mayoría de personas puede subir a 1.500-2.000 m s. n. m. en un día sin síntomas; quienes llegan a 2.500 m s. n. m. o más tienen mayor probabilidad de sufrirlos. Los síntomas suelen aparecer entre 6 y 10 horas después del ascenso. Factores de riesgo: antecedentes de mal de altura, vivir a nivel del mar o por debajo de 2.000 m s. n. m., y alcanzar rápidamente gran altitud. El bajo nivel de oxígeno puede empeorar los síntomas de enfermedades como asma, hipertensión, diabetes, arteriopatía coronaria y EPOC leve. El buen estado físico no disminuye el riesgo de que aparezcan síntomas.",
+      "fuente": "Infografía oficial '¿Qué es el mal de altura?' (Parques Nacionales)"
+    },
+    {
+      "id": "doc_rag_mal_altura_sintomas_accion",
+      "titulo": "Mal de altura: síntomas de alerta y qué hacer",
+      "texto": "No ignores los síntomas: dolor de cabeza, cansancio, náuseas o pérdida de apetito, irritabilidad, vómito, dificultad respiratoria, confusión, pérdida del conocimiento, sensación de desmayo, hinchazón en manos, pies o rostro; tos seca, ahogo, coloración azulada en uñas, piel y labios, secreciones y ruidos gorgoteantes al respirar; marcha inestable y descoordinada. El edema cerebral de las alturas es potencialmente mortal si no se trata en etapa temprana. Los síntomas del mal agudo de montaña se pueden confundir con una resaca, agotamiento físico, una migraña o una enfermedad viral. Si presentas alguno de estos síntomas: avisa inmediatamente al guía y busca descender de manera segura cuanto antes.",
+      "fuente": "Infografía oficial '¿Qué es el mal de altura?' (Parques Nacionales)"
+    },
+    {
+      "id": "doc_rag_riesgos_parque",
+      "titulo": "Principales riesgos del Parque (informe de necesidades de asistencia 2024)",
+      "texto": "Según el informe de 2024 del PNN Los Nevados, las principales situaciones de riesgo son: actividad y emisiones volcánicas del Nevado del Ruiz (nivel medio; es un volcán explosivo, referente mundial por la erupción de 1985); incendios forestales (medio; la mayoría son intencionales y el combate es difícil por la altitud); crecientes súbitas de ríos y quebradas por lluvias fuertes y deshielo (medio); sismos (medio); movimientos en masa (medio); tormentas de nieve (bajo); tormentas eléctricas (bajo); y emergencias de montaña, que el Parque es el único del país en contemplar como situación crítica porque sus sedes operativas están por encima de 3.800 m s. n. m. Las emergencias de montaña incluyen extraviados, enfermedades de montaña, ahogados, caídas de semovientes con personas lesionadas y lesionados en general.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024"
+    },
+    {
+      "id": "doc_rag_seguridad_guia_senderos",
+      "titulo": "Por qué la guía es obligatoria y solo se usan senderos autorizados",
+      "texto": "Según el informe de 2024, las emergencias de montaña en Los Nevados se presentan en general por negligencia, impericia, imprudencia y desconocimiento de los senderos autorizados, incluido el ingreso ilegal evadiendo los puestos de control. Solo se permite usar los senderos autorizados del Plan de Ordenamiento Ecoturístico; usar otros senderos conlleva procesos sancionatorios. Los guías y operadores registrados en REPSE deben usar equipos básicos de alta montaña, equipo médico de respuesta y radios con la frecuencia requerida.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024"
+    },
+    {
+      "id": "doc_rag_atencion_en_el_parque",
+      "titulo": "Atención y servicios dentro del Parque (según informe 2024)",
+      "texto": "Según el informe de 2024: en el sector norte la concesión UTON presta taquilla, seguro obligatorio de montaña, guianza y suministro de alimentos hasta el Valle de las Tumbas. Las cabañas de Brisas y Arenales prestan servicios de alimentos, baños y enfermería. El centro de visitantes El Cisne está pensado para alojamiento (32 personas), educación ambiental y primeros auxilios. En los puntos de atención de El Cedral, Valle del Cocora, Juntas, Anzoátegui, Santa Isabel y Murillo, el informe indica que el área protegida no cuenta con infraestructura para primeros auxilios y plantea construirla. La zona de camping de Arenales no está habilitada por la actividad volcánica y la cabaña El Refugio no está habilitada.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024"
+    },
+    {
+      "id": "doc_rag_senderos_autorizados",
+      "titulo": "Senderos autorizados del Parque y su longitud",
+      "texto": "Solo se permite usar estos 12 senderos (Plan de Ordenamiento Ecoturístico 2017-2022): 1) Refugio-borde glaciar del Ruiz, 1,2 km, restringido según el nivel de actividad del volcán; 2) Cisne-Mirador Laguna Verde, 2,1 km; 3) Cisne-Conejeras-borde del glaciar Santa Isabel, 3,2 km; 4) Cisne-objetos de conservación, 0,8 km; 5) Potosí-Asomadera-Mirador-Laguna de Víctor y Laguna de Mariposa, 6,5 km; 6) Potosí-Corraleja-Asomadera-Muelle Laguna del Otún, 11 km; 7) Laguna del Otún-Alsacia-borde glaciar Santa Isabel cara sur, 7,4 km; 8) Laguna del Otún-Azufrera-laguna El Mosquito-vereda El Bosque-Peña Bonita-La Pastora-Cedral, 22,2 km; 9) Laguna del Otún-Azufrera-laguna del Mosquito-Cuchilla de Berlín-Mojón de Cárdenas-Valle del Cocora, 36,7 km; 10) Juntas-Perlas-La Pradera-Estambul-Alto Nieves-Escuela El Salto-Termales Cañón-Laguna El Encanto-Valle de Placer-Aquilino-La Primavera-Estrella de Agua-Valle del Cocora, 50 km; 11) Los Chilcos, 7,2 km; 12) Arenales-Cumbre, 13,8 km.",
+      "fuente": "Informe de necesidades de asistencia PNN Los Nevados 2024 (POE 2017-2022)"
+    },
+    {
+      "id": "doc_rag_transporte_operadores",
+      "titulo": "Transporte y operadores de servicios por sector",
+      "texto": "El Parque no cuenta con servicio de transporte al interior. El transporte, el porteo y el acceso al área protegida deben gestionarse de manera propia o coordinada con guías o agencias operadoras registradas y autorizadas, según el sector de ingreso. En el sector Brisas-Kumanday el operador autorizado es la Unión Temporal Operación Nevados (UTON), que gestiona directamente reservas, ingreso, guianza, transporte, alojamiento y tienda (www.operacionnevados.co). En el sector Cisne-Poleka Kasue, UTON gestiona solo el alojamiento en el centro de visitantes El Cisne y el ingreso al área; la reserva, la guianza y el transporte se gestionan con la agencia operadora registrada que elijas.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "doc_rag_actividades_por_sector",
+      "titulo": "Actividades permitidas en cada sector del Parque",
+      "texto": "En el sector Brisas-Kumanday se puede hacer observación geológica, observación de fauna y flora y fotografía no comercial. En los sectores Cisne-Poleka Kasue y Laguna del Otún se puede hacer senderismo, montañismo, observación de aves, observación geológica y observación de fauna y flora. En el sector Quindío-Dulima se pueden hacer las actividades anteriores, pero el terreno es más exigente y la actividad principal es el montañismo. Para tomas audiovisuales o fotografías con fines comerciales, eventos, actividades deportivas, investigación o educación ambiental se debe solicitar autorización; el requisito aplica a todos los sectores.",
+      "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "g24_intro",
+      "titulo": "Qué es el guion ecoturístico y cómo está organizado",
+      "texto": "El Guion Ecoturístico de la UTON es para la zona norte del parque: Aguacerales, Arenales, Valle Lunar y Valle de las Tumbas. Tiene un guion base con lo esencial para los turistas, un glosario y un guion de profundización más técnico. Se apoya en 120 artículos y libros, de los cuales 31 se usaron directamente. Es un documento vivo: los guías pueden proponer modificaciones verificables a la UTON.",
+      "fuente": "Guion Ecoturístico UTON 2024, Introducción, p. 4"
+    },
+    {
+      "id": "g24_aguacerales_ficha",
+      "titulo": "Aguacerales: altura, ubicación, fauna, plantas y geología",
+      "texto": "Aguacerales está a unos 4.160 metros sobre el nivel del mar, en el flanco occidental del edificio volcánico, a unos 5,2 kilómetros del cráter Arenas. Es páramo propiamente dicho. Fauna característica: conejo, águila, cusumbos, taira, venados, colibríes, dantas, comadreja, guagua, zorro, puma y patos. Plantas: pajonal, romeros, frailejón, valeriana, senecios, mortiños y musgo. Geología: lavas con relieve invertido, depósitos de caída piroclástica, valle en U y paleosuelos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_parque_cifras",
+      "titulo": "El parque, el agua y los páramos: cifras",
+      "texto": "El Parque Nacional Natural Los Nevados tiene cerca de 62.000 hectáreas (62.142). Protege unas 53.532 hectáreas de páramos, el 86 % del área protegida. Abastece de agua a 37 municipios y beneficia a cerca de 3 millones de personas del Eje Cafetero. Los páramos actúan como esponjas gigantes que regulan el agua y capturan carbono, lo que ayuda a mitigar el cambio climático.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_aguacerales_condensacion",
+      "titulo": "Aguacerales: la condensación del agua y el nombre del sitio",
+      "texto": "En Aguacerales la vegetación captura el agua de las nubes por condensación. Se forman pequeñas gotas que llegan a los musgos sobre la roca, se juntan en hilos de agua y forman un riachuelo que va a la quebrada y alimenta la cuenca del río Chinchiná. La caída de agua no para, de ahí el nombre Aguacerales. Ocurre las 24 horas, todos los días del año. En las noches frías, sobre todo en temporada seca, los hilos de agua se congelan y forman carámbanos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_frailejon_adaptaciones",
+      "titulo": "El frailejón: adaptaciones y especies",
+      "texto": "Los frailejones tienen hojas gruesas y vellosidades, llamadas pubescencia, para sobrevivir en un clima extremo. Forman una chaqueta de materia muerta, la necromasa, que los protege del clima. Existen más de 100 especies de frailejones y en Colombia cerca de 60. En este parque solo está reportada una: Espeletia hartwegiana.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_aguacerales_origen",
+      "titulo": "Aguacerales: cómo se formó el paisaje",
+      "texto": "Todo el ecosistema de la estación creció sobre el sustrato que dejó el retroceso glaciar, depósitos eólicos y depósitos de caída, que a su vez están sobre las lavas del volcán. El glaciar, al retroceder, fue modelando las rocas como un cuchillo gigante: formó los escarpes que rodean la estación y dejó un valle en U al occidente.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6"
+    },
+    {
+      "id": "g24_aguacerales_curiosos_a",
+      "titulo": "Aguacerales: datos curiosos de nevadas, rocas y volcán",
+      "texto": "En esta estación ha nevado y granizado, a veces tanto que los vehículos no pueden seguir hacia la parte alta. Las rocas que rodean la estación tienen cerca de 100 mil años y se llaman andesitas, la roca más común de los Andes. Hacia el noroccidente, en Cerro Gualí, Cerro la Teta e Indígena acostado, están las rocas más antiguas del Ruiz, de 1,8 millones de años, de una versión anterior llamada Pre Ruiz. En África, Asia y Oceanía hay ecosistemas equivalentes por convergencia evolutiva.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6"
+    },
+    {
+      "id": "g24_aguacerales_curiosos_b",
+      "titulo": "Aguacerales: datos curiosos de agua, historia y palabras",
+      "texto": "El agua del parque abastece a 37 municipios de Tolima, Risaralda, Caldas, Quindío y norte del Valle del Cauca, cerca de 3 millones de personas. Los páramos han sido habitados por comunidades humanas desde hace unos 10.000 años. La palabra páramo viene del latín paramus y ya existía en España antes de los romanos: es un lugar yermo, desértico y árido. En España hay un paisaje similar, la paramera de Castilla. El nombre Espeletia honra a José Manuel de Ezpeleta, virrey del Nuevo Reino de Granada.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6"
+    },
+    {
+      "id": "g24_arenales_ficha",
+      "titulo": "Arenales: altura, ubicación, fauna, plantas y geología",
+      "texto": "Arenales está a unos 4.290 metros sobre el nivel del mar, en el flanco occidental, a unos 4,7 kilómetros del cráter Arenas. Es una transición de páramo a superpáramo. Fauna: conejos, huellas de tigrillo y águilas. Plantas: pajonal, loricarias y colchones de agua. Geología: dunas, flujos granulares, depósitos eólicos y lavas, till, estrías y lavas con relieve invertido.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 6"
+    },
+    {
+      "id": "g24_arenales_dunas",
+      "titulo": "Arenales: las dunas y de dónde sale la arena",
+      "texto": "En Arenales hay una gran acumulación de arena en forma de dunas, moldeadas por el viento. Están sobre andesitas de unos 100 mil años y se estima que las dunas tienen unos 200 a 400 años, porque se forman después del retroceso glaciar; el guion aclara que se requieren estudios. La arena viene del viento que erosiona las rocas con partículas, del transporte de partículas desde otros lugares, de la meteorización química y mecánica, y de la abundante ceniza del complejo volcánico. El viento la lleva hasta una barrera de rocas detrás de la cabaña de Arenales y allí se acumula.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_arenales_historia",
+      "titulo": "Arenales: historia del camping, el chalet y el esquí",
+      "texto": "Arenales ha sido zona de camping con varias construcciones, desde una bodega de papa en 1937 hasta el Chalet Arenales, diseñado por el arquitecto Simón Vélez, que se incendió en 2010. La cabaña actual exhibe pendones sobre la historia del esquí en el nevado del Ruiz en los años 50 y 60, cuando hubo campeonatos sudamericanos que llevaron a crear el Club de Ski de Manizales. El esquí se detuvo por el deshielo, que afectó las instalaciones. Hoy hay un camping en proceso de reglamentación y una zona de escalada llamada Gazaperas, donde en 2006 cayó el montañista Nelson Cardona, primer latinoamericano en escalar el Everest con una prótesis.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_arenales_curiosos",
+      "titulo": "Arenales: dunas intangibles, viento y rocas",
+      "texto": "Las dunas están en zonas de carácter intangible del parque y son patrimonio geológico. Como a veces tienen mucha humedad, si se pisan las huellas pueden durar meses; por eso no deben ser intervenidas. El viento a veces es tan fuerte que arrancó las escaleras de la cabaña, que hoy están en otra posición. En el suelo se ven piroclastos de la erupción del 89, que se desplazó al noroccidente del cráter y son comunes en Arenales, Lunares y Tumbas. Las rocas enormes detrás de la cabaña no las arrojó el volcán: las dejó el retroceso glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_arenales_nina",
+      "titulo": "Arenales: el mito de la niña fantasma",
+      "texto": "Es un relato popular, no un hecho científico: desde los años 80 se cuenta que una niña fantasma mora en el sector de Arenales, y que guías, guardaparques, montañistas y rescatistas la han visto.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_lunares_ficha",
+      "titulo": "Lunares (Valle Lunar): altura, ubicación, fauna, plantas y geología",
+      "texto": "Lunares, también llamado Valle Lunar, está a unos 4.350 metros sobre el nivel del mar, en el flanco occidental, a unos 4,8 kilómetros del cráter Arenas. Es superpáramo. Fauna: cóndor y águila, como zona de paso. Plantas: pajonales y el llamado coral de páramo. Geología: similar a la estación anterior, con meteorización por gelifracción y oxidación, y borbotones de lava.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "g24_lunares_paisaje",
+      "titulo": "Lunares: un paisaje desértico que parece otro planeta",
+      "texto": "Lunares ofrece un paisaje único y desértico que evoca la superficie de otros planetas. La erosión glaciar y la meteorización han esculpido rocas rojizas con fracturas profundas. Hay poca vegetación, salvo especies resistentes como la loricaria. Es un laboratorio natural para estudiar los efectos del cambio climático. La loricaria está restringida a estas condiciones y es un ejemplo de adaptación de la vida a entornos extremos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "g24_lunares_gelifraccion",
+      "titulo": "Gelifracción: por qué se fracturan las rocas",
+      "texto": "Las grietas de las rocas se producen por gelifracción, un tipo de meteorización física. El agua entra en poros y grietas de la roca; al congelarse aumenta su volumen y fractura la roca. Por eso las rocas de Lunares están llenas de grietas. Estas fracturas contribuyen a formar suelo arenoso y a que llegue la vegetación pionera.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, pp. 8-9"
+    },
+    {
+      "id": "g24_lunares_estrias_oxidacion",
+      "titulo": "Estrías glaciares y color rojizo de las rocas (oxidación)",
+      "texto": "Las marcas que parecen arañazos en las rocas son estrías glaciares: las dejó la acción abrasiva del movimiento del glaciar y sirven para saber hacia dónde se movía. El color rojizo es otro tipo de meteorización, de origen químico: el hierro de minerales como las hornblendas reacciona con el oxígeno, es decir, se oxida, y deja tonos rojizos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "g24_lunares_curiosos",
+      "titulo": "Lunares: datos curiosos de minerales y vegetación",
+      "texto": "Las andesitas del Ruiz muestran dos minerales fáciles de identificar: los claros o incoloros son plagioclasas y los negros son hornblendas; el resto solo se ve con microscopio. Las loricarias también se llaman cacho de venado o coral de páramo. Hace unos 100 años aquí no habría vegetación, y en unos 100 años probablemente habrá mucha más. Desde esta estación hasta el Valle de las Tumbas las rocas están en buena parte cubiertas por dunas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 9"
+    },
+    {
+      "id": "g24_tumbas_ficha",
+      "titulo": "Valle de las Tumbas: altura, ubicación, fauna, plantas y geología",
+      "texto": "El Valle de las Tumbas está a unos 4.460 metros sobre el nivel del mar, en el flanco occidental, a unos 4,1 kilómetros del cráter Arenas y a un costado del cañón del río Molinos. Es superpáramo con transición a zona nival. Fauna: cóndor y águila, como zona de paso. Plantas: algunos pastos colonizadores, musgo y líquenes. Geología: pequeños abanicos, lavas superpuestas, estrías, lavas con relieve invertido y circo glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 9"
+    },
+    {
+      "id": "g24_tumbas_nombre",
+      "titulo": "Por qué se llama Valle de las Tumbas",
+      "texto": "El nombre viene de rocas largas y planas, lajas, que se parecen a ataúdes. Algunas comunidades cercanas usaban rocas así para construir tumbas de cancel; el guion aclara que eso no significa que fueran extraídas del Ruiz, es solo una similitud. Hoy esas rocas están cubiertas por arena. El nombre, como el de las otras estaciones, se heredó por tradición oral y hay registros de que ya se usaba en los años 80. El sitio también se conoce como Desierto de la Soledad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, pp. 9-10"
+    },
+    {
+      "id": "g24_tumbas_sagrado",
+      "titulo": "Valle de las Tumbas: lugar sagrado indígena",
+      "texto": "En la época precolombina el área era un lugar sagrado para indígenas Quimbayas, Carrapas, Gualíes, Panches, Ansermas y Pijaos, que hacían peregrinaciones a la montaña sagrada Kumanday. Hoy algunas comunidades indígenas siguen haciendo rituales aquí. Para ellas las lagunas, los glaciares y los volcanes son sagrados. El conocimiento que se tiene de esas comunidades viene de las crónicas de Indias y de algunas investigaciones arqueológicas que no han aclarado mucho sus prácticas rituales.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_tumbas_restriccion",
+      "titulo": "Por qué el ascenso se restringe en el Valle de las Tumbas",
+      "texto": "Por seguridad, el ascenso a la parte alta del Nevado del Ruiz está restringido por el alto riesgo de lahares, flujos de lodo y escombros volcánicos que dificultarían una evacuación en caso de erupción. El Nevado del Ruiz es un complejo volcánico de cuatro estructuras: Nereidas, Olleta, Piraña y Arenas; comúnmente se llama Nevado del Ruiz al edificio que tiene el cráter Arenas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_erupcion_1985",
+      "titulo": "La erupción del 13 de noviembre de 1985",
+      "texto": "El 13 de noviembre de 1985 el Nevado del Ruiz entró en erupción. El calor derritió parte del glaciar y generó lahares, flujos de lodo volcánico, que bajaron por los cañones de los ríos Gualí, Azufrado, Lagunillas y Molinos. Devastaron Armero, en el Tolima, Villamaría y Chinchiná. El guion da más de 23.000 muertos en esta página y más de 25.000 en la página 26: las cifras difieren. Murió el 94 % de la población de Armero y el 6 % de la de los dos municipios de Caldas. Fue la segunda erupción más mortífera del siglo XX, tras el monte Pelée en 1902.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10 y p. 26"
+    },
+    {
+      "id": "g24_tumbas_curiosos",
+      "titulo": "Valle de las Tumbas: datos curiosos del volcán",
+      "texto": "La razón de la restricción para seguir es principalmente el riesgo de lahares. Las andesitas del Valle de las Tumbas son principalmente del volcán Nereidas. Las lavas de La Olleta y de Nereidas tienen más de 80 mil años. Nereidas no tiene cráter visible y La Olleta sí. El nombre del cráter Arenas honra al geógrafo que lo descubrió en 1950. El volcán también se llamó Volcán de Cartago en las crónicas de Indias. La de 1985 fue el cuarto evento volcánico más mortífero desde el año 1500.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_glo_duna",
+      "titulo": "Glosario: duna",
+      "texto": "Duna: elevación de arena producida por el viento.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 11"
+    },
+    {
+      "id": "g24_glo_erosion",
+      "titulo": "Glosario: erosión y transporte",
+      "texto": "Erosión: proceso de desgaste y modelado de la superficie terrestre producido por agentes externos como el agua, el viento y el hielo. Transporte: proceso mediante el cual los materiales erosionados son llevados de un lugar a otro.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11 y 13"
+    },
+    {
+      "id": "g24_glo_meteorizacion",
+      "titulo": "Glosario: meteorización",
+      "texto": "Meteorización: desintegración y descomposición de las rocas en la superficie terrestre.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 12"
+    },
+    {
+      "id": "g24_glo_glaciar",
+      "titulo": "Glosario: glaciar, glacial y glaciación",
+      "texto": "Glaciar: masa de hielo en movimiento, formada por la acumulación y compactación de nieve. Glacial: relativo a los glaciares. Glaciación: período geológico durante el cual grandes extensiones de la superficie terrestre están cubiertas por glaciares.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 12"
+    },
+    {
+      "id": "g24_glo_paramo",
+      "titulo": "Glosario: páramo",
+      "texto": "Páramo: según la Real Academia, la palabra viene del latín paramus, una voz que existía en España antes de la llegada de los romanos. Básicamente es un terreno pedregoso y desierto, una llanura árida.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 12-13"
+    },
+    {
+      "id": "g24_glo_ecosistema",
+      "titulo": "Glosario: ecosistema, ecotono, endémico y biodiversidad",
+      "texto": "Ecosistema: conjunto de seres vivos y el medio físico en el que se relacionan. Ecotono: zona de transición entre dos ecosistemas diferentes. Endémico: especie propia y exclusiva de un lugar determinado. Biodiversidad: variedad de vida en la Tierra, con todas las especies de plantas, animales, hongos y microorganismos y los ecosistemas de los que forman parte.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 11"
+    },
+    {
+      "id": "g24_glo_piroclasto",
+      "titulo": "Glosario: piroclasto, fumarola, volcán y erupción",
+      "texto": "Piroclasto: fragmento de roca volcánica expulsado durante una erupción. Fumarola: abertura en la superficie terrestre por la que se escapan gases volcánicos. Volcán: abertura en la corteza terrestre por la que salen materiales fundidos (lava) y gases. Erupción: expulsión violenta de materiales del interior de un volcán. Volcán monogenético: el que entra en erupción una sola vez.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_glo_roca_mineral",
+      "titulo": "Glosario: roca, mineral y basalto",
+      "texto": "Roca: material sólido compuesto por uno o más minerales. Mineral: elemento o compuesto químico natural, de origen inorgánico, de composición definida y normalmente de estructura cristalina. Basaltos: rocas volcánicas de color oscuro, ricas en hierro y magnesio.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_glo_hielo_nieve",
+      "titulo": "Glosario: nieve, granizo y carámbano",
+      "texto": "Nieve: precipitación atmosférica en forma de cristales de hielo. Granizo: precipitación atmosférica sólida en forma de bolas o pedazos de hielo. Carámbano: cono de hielo que se forma por congelación del agua que gotea de un objeto.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-12"
+    },
+    {
+      "id": "g24_glo_hipoxia",
+      "titulo": "Glosario: hipoxia, hipoxia hipobárica, mal agudo de montaña y presión atmosférica",
+      "texto": "Hipoxia: disminución del suministro de oxígeno a los tejidos del cuerpo. Hipoxia hipobárica: descenso del oxígeno que llega a los tejidos por una caída de su presión parcial, causada por exposición a una atmósfera de baja presión. MAM: mal agudo de montaña. Presión atmosférica: fuerza que ejerce el peso del aire sobre la superficie terrestre.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 12-13"
+    },
+    {
+      "id": "g24_glo_siglas",
+      "titulo": "Glosario: siglas POE, PMA, POMCA y COP16",
+      "texto": "POE: según el glosario del guion, Plan de Ordenamiento Territorial, y aclara que puede variar según la entidad. PMA: Plan de Manejo Ambiental. POMCA: Plan de Manejo y Conservación de cuencas hidrográficas. COP16: Conferencia de las Partes 16 de la Convención Marco de las Naciones Unidas sobre el Cambio Climático.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11 y 13"
+    },
+    {
+      "id": "g24_glo_cultura",
+      "titulo": "Glosario: guaca, crónicas de Indias, resguardo indígena y socioecosistema",
+      "texto": "Guaca (o huaca): entierro indígena; por lo general contiene oro, pero son difíciles de encontrar. Crónicas de Indias: narraciones históricas de los colonizadores españoles sobre el descubrimiento de América. Resguardo indígena: territorio reconocido con título de propiedad colectiva, regido por un estatuto autónomo y con tradiciones propias. Socioecosistema: el ser humano, la sociedad y su cultura tienen base en los ecosistemas y también cambian casi todos los ecosistemas. Pacificación: poner fin a un conflicto o establecer calma o dominio en un lugar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_cvnr",
+      "titulo": "El Complejo Volcánico Nevado del Ruiz: tamaño y ubicación",
+      "texto": "El Nevado del Ruiz es un volcán compuesto activo que alcanza 5.321 msnm. Lo corona el cráter Arenas, de unos 750 metros de diámetro y 200 de profundidad. Está en la cordillera Central, entre Caldas y Tolima, a unos 140 km al noroeste de Bogotá y 28 km al sureste de Manizales. Según Ceballos-Hernández y otros (2020), su cubierta glaciar era de 9,3 km².",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 15"
+    },
+    {
+      "id": "g24_placas",
+      "titulo": "Por qué hay volcanes aquí: subducción de la placa de Nazca",
+      "texto": "El complejo volcánico está en el extremo norte de la zona volcánica norte del cinturón volcánico andino. Tectónicamente corresponde a la subducción de la placa de Nazca bajo la placa Sudamericana, a unos 5,5 cm por año. Esa subducción crea un arco volcánico muy estrecho.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 16"
+    },
+    {
+      "id": "g24_periodos",
+      "titulo": "Las cuatro versiones del volcán Ruiz",
+      "texto": "La evolución del complejo se divide en cuatro períodos. Pre-Ruiz, de 1,8 a 0,97 millones de años: volcán Ancestral Ruiz, con lavas andesíticas. Primer período Ruiz, hasta unos 95 mil años: se construyó el Ruiz Antiguo y terminó con una caldera tras una fase explosiva. Período intermedio, de 95 mil a 66 mil años: surgieron La Olleta, Nereidas y Piraña. Segundo período, desde hace unos 66 mil años hasta hoy: el Ruiz actual, de actividad predominantemente explosiva.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 16-17 y 25-26"
+    },
+    {
+      "id": "g24_volcanes_vecinos",
+      "titulo": "La Olleta, Nereidas y Piraña",
+      "texto": "La Olleta comenzó a formarse hace unos 107.000 años. Nereidas está a 2 km al suroeste del Ruiz, a unos 5.000 msnm, y tiene unos 66.000 años. Piraña está a 3,8 km al este del cráter Arenas y también data de hace unos 66.000 años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 17"
+    },
+    {
+      "id": "g24_gases",
+      "titulo": "Gases volcánicos del Ruiz",
+      "texto": "Los gases volcánicos son una mezcla: dióxido de carbono, dióxido de azufre (que contribuye a la lluvia ácida), vapor de agua, monóxido de carbono, hidrocarburos, ácido clorhídrico, ácido fluorhídrico y metano. Sus cambios en volumen y composición son un indicador de la actividad volcánica. Los hallazgos indican que la actividad se debe a la acumulación de gases de magma antiguo y no a nuevos aportes de magma.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 17-18"
+    },
+    {
+      "id": "g24_domo",
+      "titulo": "El domo de lava del cráter Arenas",
+      "texto": "El crecimiento del domo de lava entre 2015 y 2021 se estimó en unos 1,7 millones de metros cúbicos. El domo alcanzó unos 130 metros de diámetro y unos 60 de altura. Según los datos recopilados, su volumen pasó de unos 0,1 millones de m³ en noviembre de 2015 a unos 1,1 millones en diciembre de 2019. Se clasificó como un domo de lava de tipo bajo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 19-21"
+    },
+    {
+      "id": "g24_monitoreo",
+      "titulo": "Cómo se monitorea el volcán",
+      "texto": "El monitoreo combina redes geodésicas (GNSS e inclinómetros) para medir la deformación del terreno, monitoreo sísmico, geoquímica de gases como el dióxido de azufre, cámaras web y fotogrametría, estaciones de infrasonido, modelos digitales de elevación y fotografías aéreas. Las imágenes de radar permiten vigilar aun con mal clima.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 19-21"
+    },
+    {
+      "id": "g24_erupciones_13mil",
+      "titulo": "Erupciones del Ruiz en los últimos 13.000 años",
+      "texto": "En los últimos 13.000 años hubo al menos catorce pulsos y fases eruptivas, en su mayoría explosivas. Entre las más recientes: la de 1595, con lahares por los ríos Chinchiná, Claro, Gualí, Azufrado y Lagunillas que afectaron el sector de Armero; la de 1845, en la que fenómenos no eruptivos generaron lahares por los ríos Gualí, Azufrado y Lagunillas; y la de 1985, con índice de explosividad volcánica 3.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 21 y 26"
+    },
+    {
+      "id": "g24_efectos_1985",
+      "titulo": "Efectos geológicos de la erupción de 1985: ceniza y gases",
+      "texto": "La erupción de 1985 comenzó a las 15:05 hora local y generó una nube de gases y ceniza que superó los 5.000 metros sobre el cráter. El material piroclástico se dispersó hacia el oriente por los vientos y cubrió extensas áreas del Tolima, incluidas Armero, Mariquita y Honda. Se estima que emitió cerca de 700.000 toneladas de dióxido de azufre, que llegó a la estratósfera, una de las mayores emisiones registradas en el mundo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 22"
+    },
+    {
+      "id": "g24_avalancha_libano",
+      "titulo": "La avalancha de escombros de El Líbano",
+      "texto": "El depósito de avalancha de escombros de El Líbano, en el flanco este, resultó del colapso del flanco del Ruiz Mayor. No fue eruptivo. Cubre 86 km², recorrió unos 28 km y tuvo un volumen estimado de 6 km³. Sobre sus montículos están hoy Murillo y El Líbano. Se interpreta como una avalancha de menos de 0,165 millones de años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 27"
+    },
+    {
+      "id": "g24_aguas_termales",
+      "titulo": "Aguas termales del Nevado del Ruiz",
+      "texto": "El volcán tiene manantiales y fumarolas. Un estudio geoquímico identificó dos sistemas de circulación independientes: uno al norte, con aguas sulfatadas, y otro al oeste, con aguas cloruradas neutras. Las aguas geotérmicas vienen de un yacimiento de al menos 235 °C que se mezcla con aguas superficiales y forma manantiales calientes, como los de Botero Londoño. No se recomienda explorar cerca del cráter por posibles componentes magmáticos volátiles.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 27-28"
+    },
+    {
+      "id": "g24_glaciar_area",
+      "titulo": "El glaciar del Nevado del Ruiz: área y ceniza",
+      "texto": "El glaciar del Ruiz es una sola masa de hielo y el más icónico de la región andina central. En 2022 su área se calculó en 7,68 km², frente a 7,96 km² en 2021: una reducción de 0,28 km², el 3,5 %. La ceniza volcánica sobre el glaciar acelera el derretimiento si es de pocos centímetros y lo aísla térmicamente si pasa de unos 15 cm. En La Niña la nieve suele cubrir la ceniza.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 29 (Informe del estado de los glaciares colombianos 2022)"
+    },
+    {
+      "id": "g24_glaciar_formacion",
+      "titulo": "Cómo se forma un glaciar y eras glaciales",
+      "texto": "Un glaciar se forma por precipitación constante de nieve o granizo durante mucho tiempo, que se compacta y forma una gran masa de hielo. El guion indica que un glaciar se considera una roca metamórfica y el hielo un mineral. La última era glacial duró unos 110.000 años, en tres fases, con el máximo glaciar hace unos 28.000 años. Los períodos interglaciares se asocian a los ciclos de Milankovitch.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 29"
+    },
+    {
+      "id": "g24_glaciar_perdida",
+      "titulo": "Retroceso de los glaciares colombianos",
+      "texto": "Los glaciares colombianos son restos de la última glaciación y tienden a la extinción. Desde 1850 han retrocedido más de un 84 %. Según los datos disponibles pierden de 1 a 3 % de su área al año y el borde inferior retrocede entre 15 y 20 metros por año. El Nevado del Ruiz perdió 55 % de su área entre 1850 y 1954-59 y 51 % entre 1954-59 y 2001-03. El derretimiento se ha intensificado en las últimas tres décadas y se asocia al calentamiento global.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 29-31 (Ceballos y Tobón, 2007)"
+    },
+    {
+      "id": "g24_glaciar_pequena_edad",
+      "titulo": "La Pequeña Edad de Hielo y la última glaciación en Colombia",
+      "texto": "La última glaciación en Colombia comenzó hace unos 70.000 años. Entre los siglos XV y XIX la Pequeña Edad de Hielo bajó la temperatura de la alta montaña y los glaciares llegaron a ocupar 374 km². El límite del hielo descendió a 4.200 m en el sur del país, 4.400 m en el centro y 4.600 m en la Sierra Nevada de Santa Marta.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 30-31"
+    },
+    {
+      "id": "g24_glaciar_vs_glacial",
+      "titulo": "Diferencia entre glaciar y glacial",
+      "texto": "Glaciar se refiere a los cuerpos de hielo. Glacial describe los períodos más fríos de la historia geológica y las formas y procesos que producen los glaciares. Usarlos como sinónimos es un error conceptual.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 32"
+    },
+    {
+      "id": "g24_geoformas_glaciales",
+      "titulo": "Geoformas glaciales: circo, morrena y valle en U",
+      "texto": "Circo glacial: depresión en forma de anfiteatro producida por la erosión glaciar, zona de acumulación del glaciar. Morrena: acumulación de sedimentos transportados por un glaciar; puede ser de fondo, lateral, central o frontal. Valle en U: de lados empinados y fondo redondeado o plano, resulta de la erosión glacial que ensancha valles en forma de V.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 32-33"
+    },
+    {
+      "id": "g24_paramo_socio",
+      "titulo": "El páramo como socioecosistema",
+      "texto": "Los páramos han sido habitados desde hace unos 10.000 años. Las comunidades prehispánicas se movían por la cordillera a buscar plantas medicinales, frutos y caza, y usaban las planicies para pastoreo, pero su principal significado era ritual: en lagunas, volcanes y nevados habitan seres. En el Páramo del Ruiz hay pocas investigaciones arqueológicas, probablemente porque eran lugares de tránsito.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 33"
+    },
+    {
+      "id": "g24_bachue",
+      "titulo": "El mito de Bachué (relato muisca)",
+      "texto": "Es un relato cultural, no un hecho científico, de los muiscas del altiplano cundiboyacense, el mito más cercano geográficamente. Una mujer, Bachué, salió de una laguna profunda con un niño. Él creció, se casaron y poblaron el mundo. Ya ancianos volvieron a la laguna, hablaron a sus hijos de la paz y se convirtieron en dos serpientes que se metieron en el agua.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 33-34"
+    },
+    {
+      "id": "g24_kumanday",
+      "titulo": "El nombre indígena Kumanday: lo que se sabe y lo que no",
+      "texto": "El nombre Kumandai, Kumanday o Cumanday designa al Nevado del Ruiz, pero no hay suficiente investigación para delimitar de dónde viene la palabra. Se ubica sobre todo en la comunidad Quimbaya, un término que además tiene debates. Se le atribuye el significado 'banco hermoso' (IDEAM) y 'gran padre de barbas blancas' (tradición oral de guías), entre muchos otros. Sobre la relación ritual de las comunidades con el volcán, el registro arqueológico actual no permite saber en qué consistía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 34"
+    },
+    {
+      "id": "g24_comunidades",
+      "titulo": "Comunidades prehispánicas cerca del Cumanday",
+      "texto": "Las comunidades que habitaron cerca del Cumanday fueron Quimbayas, Pijaos, Pantágoras y Ansermas, con relaciones de intercambio económico y cultural. Hacían piezas de tumbaga, una aleación de oro y cobre. Los canasteros eran de los más respetados: recorrían grandes distancias intercambiando objetos de alto valor simbólico, como plumas, conchas, sal y minerales. Quimbaya es en buena parte una denominación de los españoles para varias comunidades.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 34"
+    },
+    {
+      "id": "g24_espanoles",
+      "titulo": "Los españoles y el páramo",
+      "texto": "Para los indígenas el páramo era para plantas medicinales, pastoreo y uso ritual. Los españoles lo vieron como un territorio desolado, frío y hostil. Al pacificar a las comunidades de tierras más fértiles, las ubicaron en resguardos a más de 3.000 metros de altura. Los movía sobre todo la leyenda del oro de los indígenas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 34-35"
+    },
+    {
+      "id": "g24_juan_diaz",
+      "titulo": "Juan Díaz Jaramillo, el mohán y las guacas (relato popular)",
+      "texto": "Es un relato de la memoria popular, no un hecho científico. Juan Díaz Jaramillo, español que buscó oro en el cañón del río Lagunilla, perdió sus minas con la erupción de 1595. En el relato campesino del norte del Tolima, una avalancha se lleva su riqueza y él se convierte en un mohán, un encantado que gobierna las avalanchas y los volcanes. En ese conocimiento campesino las guacas, antiguos entierros indígenas con oro, alumbran de rojo o azul, sobre todo el Viernes Santo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 35-36"
+    },
+    {
+      "id": "g24_erupcion_1845",
+      "titulo": "La avalancha de 1845 en el río Lagunilla",
+      "texto": "El día 19, a las 9 de la mañana, de 1845 una avenida horrible del río Lagunilla inundó más de siete leguas por sus márgenes, según el informe del gobernador de la provincia de Mariquita. Murieron alrededor de 1.000 personas en San Lorenzo, hoy ruinas de Armero. El guion aclara que en esa época la palabra volcán se refería a un derrumbe o deslizamiento de tierra.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 36"
+    },
+    {
+      "id": "g24_armero_historia",
+      "titulo": "Historia de Armero antes de 1985",
+      "texto": "Armero nació a finales del siglo XIX como caserío para los trabajadores de grandes haciendas, primero con el nombre de San Lorenzo. Se levantó donde ya habían ocurrido dos avalanchas documentadas, la de 1595 y la de 1845, y nadie lo recordó. En 1930 se le dio el nombre de Armero, en honor a José León Armero. Creció con el algodón, el arroz y la ganadería, y atrajo migrantes de varios países. La fumigación aérea nació allí.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 36-37"
+    },
+    {
+      "id": "g24_armero_hoy",
+      "titulo": "Armero después de la tragedia",
+      "texto": "Armero sigue siendo una diáspora. Nunca hubo duelo porque los muertos quedaron sepultados. Muchos sobrevivientes viven en Guayabal, hoy casco urbano del municipio, y hacen ejercicios de memoria como los de la Fundación Armando Armero. Uno de ellos sigue el rastro de los niños sobrevivientes que fueron adoptados y dispersados por Colombia y el mundo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 37-38"
+    },
+    {
+      "id": "g24_biomas",
+      "titulo": "Biomas del parque en hectáreas",
+      "texto": "El bioma más representativo del parque es el páramo, con 53.532,7 hectáreas (85,9 %), seguido del bosque húmedo altoandino con 7.373,5 (11,9 %), los glaciares con 1.141,5 (1,8 %) y los humedales con 96,5 (0,4 %), sobre un total de 62.271,7 hectáreas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 38 (Tabla 18)"
+    },
+    {
+      "id": "g24_franjas",
+      "titulo": "Franjas de vegetación: altoandina, subpáramo, páramo y superpáramo",
+      "texto": "Franja altoandina: bosques altos de encenillos, mortiños, tibar y rodamonte; en el parque desde unos 2.600 msnm. Páramo bajo o subpáramo: arbustales de Diplostephium, Pentacalia, Gynoxys y Hypericum; desde unos 3.600 msnm. Páramo propiamente dicho: máxima diversidad, con frailejonales, pajonales de Calamagrostis y chuscales de Chusquea. Superpáramo: llega hasta el límite inferior de las nieves perpetuas, con vegetación discontinua y mucho suelo desnudo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 39 (según Rangel-Ch., 2000)"
+    },
+    {
+      "id": "g24_vegetacion",
+      "titulo": "Tipos de vegetación del páramo",
+      "texto": "Los tipos de vegetación son bosques achaparrados, matorrales, pastizales o pajonales, frailejonales o rosetales, prados y turberas con plantas en cojín, chuscales de bambú paramuno, rosetales de Puya y rosetales bajos en el superpáramo. Por encima de unos 4.200 msnm en el Ruiz y el Quindío predominan comunidades de Draba. En total se diferenciaron 19 tipos de vegetación: nueve de páramo y superpáramo y diez de bosques altoandinos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 39-40"
+    },
+    {
+      "id": "g24_fauna_cifras",
+      "titulo": "Biodiversidad del parque en cifras",
+      "texto": "Según el Plan de Manejo de 2002, el parque reúne el 27 % de las especies de mamíferos de Colombia, el 23 % de los quirópteros, el 50 % de los ratones del género Oryzomys, el 11 % de los primates y casi el 31 % de las aves. Se reportan 536 especies de aves en el parque y su zona amortiguadora, de ellas 30 endémicas o casi endémicas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 40-41 (Tabla 20)"
+    },
+    {
+      "id": "g24_endemismos",
+      "titulo": "Especies endémicas: aves, anfibios y mamíferos pequeños",
+      "texto": "Entre las aves, 8 son endémicas de Colombia y 22 más son compartidas con países vecinos. El periquito de los Nevados vive solo en páramos de las cordilleras Central y Oriental y se considera vulnerable, con una población de entre 2.000 y 4.000 individuos. En la cordillera Central hay cerca de 80 % de endemismos en anfibios. El pato andino (Oxyura jamaicensis) se describe como endémico de Colombia y restringido a humedales altoandinos. Hay pequeños mamíferos endémicos, sobre todo ratones.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 41-42"
+    },
+    {
+      "id": "g24_mamiferos",
+      "titulo": "Mamíferos grandes del parque",
+      "texto": "Entre las especies llamativas del parque están la danta de páramo, el venado colorado, el conejo de páramo, la boruga, el venado conejo, el puma o león de montaña y el tigrillo. Los grandes mamíferos son muy vulnerables por necesitar territorios extensos y por la cacería. El venado de cola blanca desapareció del parque.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 42-43"
+    },
+    {
+      "id": "g24_paramo_definiciones",
+      "titulo": "Páramo propiamente dicho, subpáramo y superpáramo: temperaturas",
+      "texto": "Páramo propiamente dicho: temperatura promedio de unos 5 °C, con frailejones y pajonales, turberas y pastizales. Subpáramo: unos 10 °C, justo sobre el bosque montano, con árboles pequeños y arbustos. Superpáramo: espacio más recientemente abandonado por el hielo, de 0 a 6 °C, con cambios diarios de -2 a 25 °C y fuertes vientos; llega hasta unos 5.200 msnm y tiene especies endémicas muy especializadas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 43 (El gran libro de los páramos)"
+    },
+    {
+      "id": "g24_loricarias",
+      "titulo": "Las loricarias",
+      "texto": "Las loricarias son arbustos de las zonas más húmedas del superpáramo alto de la cordillera Central. Se mencionan Loricaria colombiana y Loricaria complanata. Crecen en suelos bien drenados y arenosos entre unos 4.000 y 4.400 msnm.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 43 (El gran libro de los páramos)"
+    },
+    {
+      "id": "g24_precipitacion",
+      "titulo": "Lluvias del parque: régimen bimodal",
+      "texto": "El parque tiene un régimen de lluvias bimodal: dos períodos de lluvia (abril a mayo y octubre a noviembre) y dos períodos secos (diciembre a febrero y julio a agosto). En los meses más húmedos la zona norte y oriente tiene unos 200 mm al mes y el sur y occidente unos 400. En los meses más secos la zona norte y oriente recibe de 50 a 100 mm al mes.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 44"
+    },
+    {
+      "id": "g24_temperatura",
+      "titulo": "Temperatura en el parque",
+      "texto": "El parque va de los 2.600 a los 5.321 msnm; la temperatura promedio va de unos 13 °C a 2.600 msnm hasta unos -4 °C en lo más alto. En la estación Brisas, a 4.110 msnm, la media anual es de 2,24 °C, y en La Laguna, a 4.000 msnm, de 3 °C, con pocas horas de sol, humedad alta, niebla frecuente, vientos fuertes y lluvias de poca intensidad. Herd (1982) situó la isoterma de 0 °C a unos 4.705 msnm.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 44"
+    },
+    {
+      "id": "g24_brisas_datos",
+      "titulo": "Registros de la estación meteorológica de Brisas (IDEAM)",
+      "texto": "La estación de Brisas, del IDEAM, registró entre 2018 y 2023 vientos máximos de hasta 52,5 m/s (12 de abril de 2018), temperaturas máximas de 12,7 a 15,3 °C, mínimas de hasta -1,6 °C (2 de febrero de 2023) y humedad del aire de hasta 97 %. Son registros históricos, no las condiciones de hoy.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 45 (tabla IDEAM)"
+    },
+    {
+      "id": "g24_nino_nina",
+      "titulo": "Efecto de El Niño y La Niña en el parque",
+      "texto": "Con un evento El Niño fuerte, según el IDEAM, la precipitación media puede bajar entre 40 % y 80 % en varios sectores del parque y la temperatura media subir cerca de 1 °C. Con un evento La Niña fuerte, la precipitación puede aumentar entre 120 % y 160 % y la temperatura bajar cerca de 1 °C.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 45"
+    },
+    {
+      "id": "g24_cambio_climatico",
+      "titulo": "Cambio climático proyectado en el parque",
+      "texto": "Según el escenario pesimista A2 del IDEAM para 2040-2050, la zona occidental, en la cuenca del río Chinchiná, tendría la mayor exposición, con reducciones de lluvia de hasta 50 %. La temperatura aumentaría entre 2 y 3 °C en toda la región, y el fenómeno de El Niño lo agravaría.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, pp. 45-46"
+    },
+    {
+      "id": "g24_mam_turistas",
+      "titulo": "Estudio del mal agudo de montaña en turistas del Nevado del Ruiz",
+      "texto": "Un estudio con 129 turistas evaluó a 4.287 y 4.816 msnm. A 4.287 metros, el 1,6 % tuvo síntomas graves de mal agudo de montaña; a 4.816, el 16 %. Los síntomas más comunes fueron dolor de cabeza, fatiga y debilidad. Los turistas sedentarios (45,7 %) fueron más propensos. Otros factores de riesgo: ascender rápido, ser joven, ser mujer y el frío. Si sientes síntomas, avisa de inmediato a tu guía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 46-47 (Peña y otros, 2010)"
+    },
+    {
+      "id": "g24_mam_guias",
+      "titulo": "Estudio de actividad física de los guías del Nevado del Ruiz",
+      "texto": "Un estudio con 18 guías encontró que el 44 % eran sedentarios y el 55,6 % activos. El 88,9 % usa protección solar y el 61,1 % mantiene la hidratación, pero el 77,8 % no controla su frecuencia cardíaca. El estudio recomienda programas de actividad física, descanso y mejor infraestructura para los guías.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 48-49 (Peña Quimbaya, 2016)"
+    },
+    {
+      "id": "g24_hipoxia",
+      "titulo": "Qué le pasa al cuerpo con la altura: hipoxia hipobárica",
+      "texto": "A mayor altura la presión atmosférica baja. El aire sigue teniendo 21 % de oxígeno, pero la presión parcial de oxígeno disminuye y llega menos oxígeno a los tejidos. A eso se le llama hipoxia hipobárica. El cuerpo responde respirando más rápido y profundo, y con los días produce más glóbulos rojos y hemoglobina.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 49-51"
+    },
+    {
+      "id": "g24_enfermedades_hipobaria",
+      "titulo": "Enfermedades por altura: aguda de montaña y de Monge",
+      "texto": "La enfermedad aguda de montaña aparece al subir rápido a gran altura: dolor de cabeza, náuseas, vómito, fatiga y dificultad para dormir, entre las 6 horas y hasta 4 días. Puede complicarse con edema pulmonar o cerebral, que pueden ser mortales sin tratamiento. La enfermedad crónica de montaña, o de Monge, afecta a quienes viven siempre en altura. El diagnóstico se basa en la escala de Lake Louise. El tratamiento más efectivo es volver a presiones normales, es decir, bajar. Para prevenir síntomas agudos, el guion indica que se utilizan acetazolamida y oxígeno, aunque el oxígeno es costoso y difícil de implementar en algunos ambientes. Ante síntomas, avisa al guía o al personal del parque.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 53-54"
+    },
+    {
+      "id": "g24_bibliografia",
+      "titulo": "En qué fuentes se basa el guion ecoturístico",
+      "texto": "Entre las fuentes principales del guion están: Ceballos-Hernández y otros (2020), Geological evolution of the Nevado del Ruiz Volcanic Complex, del Servicio Geológico Colombiano; el Plan de Manejo 2017-2022 del PNN Los Nevados; el Guion de interpretación ambiental sector norte de Parques Nacionales (2018); El gran libro de los páramos (2011); el Informe del estado de los glaciares colombianos 2022 del IDEAM; y estudios de Eder Peña Quimbaya sobre aclimatación en altura.",
+      "fuente": "Guion Ecoturístico UTON 2024, Referencias bibliográficas, pp. 55-57"
+    },
+    {
+      "id": "gzn_proposito",
+      "titulo": "Para qué sirve el guion turístico de la zona norte",
+      "texto": "El guion turístico de la zona norte da a los guías de la Unión Temporal Operación Nevados elementos técnicos para un discurso con información validada y científicamente respaldada. Busca que cada guía sea un intérprete del patrimonio natural y cultural del sector norte del parque.",
+      "fuente": "Guion turístico zona norte, Introducción, p. 1"
+    },
+    {
+      "id": "gzn_kumanday",
+      "titulo": "Kumanday: significado atribuido (guion zona norte)",
+      "texto": "Antes de ser el Ruiz, las comunidades indígenas lo llamaron Kumanday. El guion turístico de la zona norte dice que significa 'Cerro Blanco', 'El de la Nariz Humeante' o 'Padre Blanco', y que para ellos la montaña era un ser vivo y sagrado. Ojo: el Guion Ecoturístico UTON 2024 (p. 34) advierte que no hay investigación suficiente para fijar el origen y el significado de la palabra, así que estos significados deben presentarse como atribuciones y tradición oral.",
+      "fuente": "Guion turístico zona norte, p. 1; contraste con Guion Ecoturístico UTON 2024, p. 34"
+    },
+    {
+      "id": "gzn_glaciar",
+      "titulo": "El glaciar de cumbre: qué es y por qué importa",
+      "texto": "El glaciar de cumbre es una masa de hielo de origen terrestre. Se forma en cientos de años: la nieve se acumula, se compacta bajo su propio peso, expulsa el aire y se recristaliza en hielo denso y azulado. Es una infraestructura hídrica natural: en las épocas secas libera agua poco a poco y así mantiene los ríos que abastecen a las ciudades. El guion lo llama la cuenta de ahorros de agua sólida.",
+      "fuente": "Guion turístico zona norte, p. 1"
+    },
+    {
+      "id": "gzn_retirada",
+      "titulo": "La retirada glaciar actual según el guion de zona norte",
+      "texto": "La retirada glaciar actual es el testimonio más claro del cambio climático en Colombia. Donde antes había campos de nieve perpetua hoy hay morrenas y rocas desnudas. El retroceso es acelerado y se ven cicatrices en la roca que muestran dónde estaba el hielo hace apenas diez años. Para el guion, somos testigos de la etapa final de estos glaciares tropicales.",
+      "fuente": "Guion turístico zona norte, pp. 1-2"
+    },
+    {
+      "id": "gzn_clima_suelo",
+      "titulo": "Clima del páramo y suelo esponja",
+      "texto": "El clima de la región es bimodal: dos períodos de lluvia y dos de sequía. El páramo es un ecosistema estratégico y una isla biogeográfica de alta montaña tropical, con presión atmosférica baja y radiación solar extrema. El suelo, de origen volcánico, funciona como una esponja y, según este guion, retiene hasta 40 veces su peso en agua. La niebla se transforma en agua líquida.",
+      "fuente": "Guion turístico zona norte, p. 2 (El gran libro de los páramos)"
+    },
+    {
+      "id": "gzn_frailejon_fauna",
+      "titulo": "El frailejón y la fauna: cóndor, danta y colibríes",
+      "texto": "El frailejón es el ingeniero de este lugar: sus hojas peludas atrapan la humedad y su necromasa, las hojas muertas que cubren el tallo, actúa como aislante térmico para que el agua en su interior no se congele. El cóndor de los Andes usa las corrientes térmicas del calor del volcán para planear sin esfuerzo. La danta de montaña es un mamífero lanudo y principal dispersor de semillas. Los colibríes entran en hibernación nocturna para sobrevivir.",
+      "fuente": "Guion turístico zona norte, p. 2"
+    },
+    {
+      "id": "gzn_discurso",
+      "titulo": "Discurso de bienvenida: Kumanday, el Centinela del Agua",
+      "texto": "Es el discurso sugerido para abrir el recorrido por el sector norte. Presenta al Ruiz como Kumanday, hoy un glaciar de cumbre que funciona como reserva de agua sólida para el Eje Cafetero y que retrocede aceleradamente por el calentamiento global. Anuncia un recorrido por el páramo, una esponja natural con el frailejón como planta clave, por un clima extremo y una fauna adaptada con el cóndor y la danta de montaña. Invita a hacerlo no como turistas, sino como testigos de la fragilidad y la fuerza del Kumanday.",
+      "fuente": "Guion turístico zona norte, pp. 2-3"
+    },
+    {
+      "id": "gzn_ficha",
+      "titulo": "Ficha técnica general del parque (guion zona norte)",
+      "texto": "El parque tiene 62.142 hectáreas, de las cuales 53.532 son páramos, el 86 %. Abastece a 37 municipios y beneficia a cerca de 3 millones de personas del Eje Cafetero. El Complejo Volcánico Nevado del Ruiz está compuesto por cuatro estructuras: Nereidas, Olleta, Piraña y Arenas. La roca predominante es la andesita, común en los volcanes de los Andes.",
+      "fuente": "Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gzn_estaciones",
+      "titulo": "Las cuatro estaciones de la zona norte: altura, bioma y elementos clave",
+      "texto": "Aguacerales, 4.160 msnm, páramo propiamente dicho: captación de agua por condensación y frailejones. Arenales, 4.290 msnm, transición de páramo a superpáramo: dunas de arena, patrimonio geológico intangible, historia del esquí y Chalet Arenales. Lunares, 4.350 msnm, superpáramo: gelifracción y oxidación. Valle de las Tumbas, 4.460 msnm, de superpáramo a zona nival: significado espiritual indígena, riesgo de lahares y límite de ascenso.",
+      "fuente": "Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gzn_nodos",
+      "titulo": "El recorrido en cuatro ideas: agua, memoria, roca y respeto",
+      "texto": "El diagrama del recorrido tiene tres zonas ecológicas: páramo propio, superpáramo y zona intangible o de riesgo. Cada parada tiene una idea central. Aguacerales: génesis hídrica, 'el agua que nutre la vida'. Arenales: memoria y cambio climático, 'deja paso a la roca desnuda'. Valle Lunar: fuerzas geológicas, 'donde la tierra respira fuego'. Valle de las Tumbas: respeto y riesgo, 'el límite del hombre frente al volcán'. El oxígeno disminuye a medida que se sube.",
+      "fuente": "Guion turístico zona norte, p. 4"
+    },
+    {
+      "id": "gzn_brisas",
+      "titulo": "Brisas: la puerta de entrada al sector norte",
+      "texto": "Brisas es la entrada al recorrido. El discurso sugerido recuerda que se ingresa a un área protegida de 62.142 hectáreas que abastece a más de 37 municipios, en el flanco norte del Complejo Volcánico Nevado del Ruiz, formado por Nereidas, Olleta, Piraña y el cráter activo Arenas. El páramo es un regulador hídrico vital para el Eje Cafetero.",
+      "fuente": "Guion turístico zona norte, Brisas, p. 5"
+    },
+    {
+      "id": "gzn_aguacerales",
+      "titulo": "Aguacerales según el guion de zona norte: el filtro de la montaña",
+      "texto": "En Aguacerales se ve la intercepción de niebla, o condensación por contacto: aquí el agua se atrapa en vez de caer como lluvia. Los frailejones son ingenieros hídricos; sus pelos blancos, la pubescencia, los protegen de la radiación UV y retienen calor. El suelo, de ceniza volcánica y materia orgánica, funciona como esponja y libera el agua lentamente hacia las cuencas de los ríos Chinchiná y Gualí. Presenta masivamente a Espeletia hartwegiana y musgos de turbera.",
+      "fuente": "Guion turístico zona norte, Aguacerales, p. 5"
+    },
+    {
+      "id": "gzn_arenales",
+      "titulo": "Arenales según el guion de zona norte: geología y memoria",
+      "texto": "Arenales es una ventana al pasado geológico: la arena es material piroclástico y ceniza de erupciones, retrabajado por el viento. Allí funcionó el antiguo Chalet Arenales, recuerdo del retroceso glaciar: donde hubo nieve permanente para esquiar hoy hay un desierto de altura. Las rocas predominantes son andesitas. Se destaca la vegetación pionera, plantas pequeñas que intentan colonizar un suelo muy pobre y ácido.",
+      "fuente": "Guion turístico zona norte, Arenales, pp. 5-6"
+    },
+    {
+      "id": "gzn_lunar",
+      "titulo": "Valle Lunar según el guion de zona norte: gelifracción y oxidación",
+      "texto": "El Valle Lunar se llama así por su aspecto estéril y desolado. El agua se filtra en las grietas, se congela de noche, aumenta de volumen y las estalla desde adentro como una cuña, rompiendo las rocas andesíticas en pedazos angulares: es la gelifracción. Los tonos rojizos vienen de la oxidación de minerales ferrosos, hierro y azufre presentes en la lava vieja, al contacto con el oxígeno y la humedad.",
+      "fuente": "Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gzn_tumbas",
+      "titulo": "Valle de las Tumbas según el guion de zona norte: espiritualidad y riesgo",
+      "texto": "A 4.460 msnm este lugar era sagrado para los pueblos indígenas, que lo llamaban Kumanday, lugar de pagamentos y respeto. Está en la zona de influencia directa de lahares. El cráter Arenas está cerca y emite gases constantemente. El ascenso más allá se restringe no solo por la actividad del volcán, sino por la fragilidad del superpáramo, donde las plantas resisten fluctuaciones de temperatura que las congelarían cada noche.",
+      "fuente": "Guion turístico zona norte, Valle de las Tumbas, p. 6"
+    },
+    {
+      "id": "gzn_volcan_activo",
+      "titulo": "El Nevado del Ruiz es un volcán activo",
+      "texto": "El Nevado del Ruiz es un volcán activo; nunca debe decirse que está apagado o extinto, porque da una falsa sensación de seguridad. Se habla de períodos de reposo o de actividad constante. El Servicio Geológico Colombiano lo vigila las 24 horas. El guion indicó una alerta amarilla al redactarse, pero el nivel cambia: confírmalo con el personal del parque o el Servicio Geológico Colombiano, esta guía no lo sabe en este momento.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gzn_ceniza_nieve",
+      "titulo": "Lo gris del sector norte es ceniza, no nieve",
+      "texto": "Muchos turistas esperan ver nieve blanca. Lo que cubre gran parte del sector norte es ceniza volcánica reciente y depósitos piroclásticos, no nieve escondida debajo. La nieve y el glaciar están en franco retroceso, y decir la verdad permite explicar el dinamismo del volcán y la crisis climática.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gzn_lenguaje",
+      "titulo": "Cómo se explica la actividad del volcán sin mitos",
+      "texto": "El parque es un aula ambiental. En lugar de decir que el volcán está enojado, se explica que hay un aumento en el flujo de dióxido de azufre o actividad sísmica interna. Los mitos y leyendas se cuentan como relatos culturales y no como hechos científicos. El hilo conductor es unir la desaparición del hielo con la importancia de la vegetación para retener el agua que el glaciar ya no puede dar.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    }
+  ]
+}

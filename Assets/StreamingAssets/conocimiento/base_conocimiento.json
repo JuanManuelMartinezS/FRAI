@@ -1,7 +1,7 @@
 {
-  "version": "1.0-fuentes-oficiales",
-  "fecha_actualizacion": "2026-11-22",
-  "nota": "Construida con la ficha oficial del PNN Los Nevados, el POE 2026-2030 (versión ejecutiva), la página institucional de Parques Nacionales y la Lista Roja UICN vía GBIF. Lo marcado [PENDIENTE] no tiene fuente oficial todavía. UTON/PNN deben validar antes de publicar.",
+  "version": "1.1-guiones-uton",
+  "fecha_actualizacion": "2026-11-26",
+  "nota": "Construida con la ficha oficial del PNN Los Nevados, el POE 2026-2030 (versión ejecutiva), la página institucional de Parques Nacionales y la Lista Roja UICN vía GBIF. Lo marcado [PENDIENTE] no tiene fuente oficial todavía. UTON/PNN deben validar antes de publicar. Se agregaron fragmentos del Guion Ecoturístico UTON 2024 y del Guion turístico zona norte, con guion y página en cada fuente.",
   "estaciones": [
     {
       "id": "estacion_1",
@@ -459,17 +459,6 @@
       "fuente": "Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
     },
     {
-      "id": "faq_banos",
-      "estacion": "*",
-      "preguntas": [
-        "donde hay banos",
-        "hay bano",
-        "servicios sanitarios"
-      ],
-      "respuesta": "En el recorrido de Brisas hay baños y cafetería en Arenales, en el sector de control.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
-    },
-    {
       "id": "faq_no_tocar",
       "estacion": "*",
       "preguntas": [
@@ -479,18 +468,6 @@
       ],
       "respuesta": "[PENDIENTE: norma oficial sobre no tocar ni extraer flora]",
       "fuente": ""
-    },
-    {
-      "id": "brisas_recorrido",
-      "estacion": "*",
-      "preguntas": [
-        "que recorrido es este",
-        "cuales son las estaciones",
-        "que estaciones hay",
-        "que voy a ver en el recorrido"
-      ],
-      "respuesta": "Este recorrido es el sector Brisas - Kumanday, por el carreteable del volcán Nevado del Ruiz. Tiene cuatro estaciones: Aguacerales, Arenales, Valle Lunar y Valle de las Tumbas, que es el punto límite autorizado para los visitantes.",
-      "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
     },
     {
       "id": "brisas_horario",
@@ -556,44 +533,6 @@
       "fuente": "Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21); Plan de Ordenamiento Ecoturístico PNN Los Nevados 2026-2030, versión ejecutiva (Parques Nacionales Naturales de Colombia - FONTUR)"
     },
     {
-      "id": "e1_que_ver",
-      "estacion": "estacion_1",
-      "preguntas": [
-        "que puedo ver aqui",
-        "que hay aqui",
-        "que hay en esta estacion",
-        "que es aguacerales",
-        "por que se llama aguacerales"
-      ],
-      "respuesta": "Aguacerales es una zona de páramo con mucha humedad. El agua baja por la montaña y se filtra entre los musgos y la vegetación altoandina. Así el páramo ayuda a regular el agua que llega a los ríos.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
-    },
-    {
-      "id": "e2_que_ver",
-      "estacion": "estacion_2",
-      "preguntas": [
-        "que puedo ver aqui",
-        "que hay aqui",
-        "que hay en esta estacion",
-        "que es arenales",
-        "por que hay tanta arena"
-      ],
-      "respuesta": "Arenales está a unos 4.225 metros de altura. Su paisaje de arena y ceniza volcánica muestra la actividad geológica del complejo volcánico.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
-    },
-    {
-      "id": "e2_servicios",
-      "estacion": "estacion_2",
-      "preguntas": [
-        "donde hay banos",
-        "hay bano",
-        "hay cafeteria",
-        "donde puedo comprar algo"
-      ],
-      "respuesta": "En Arenales, en el sector de control, hay baños y cafetería.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
-    },
-    {
       "id": "e2_camping",
       "estacion": "estacion_2",
       "preguntas": [
@@ -610,21 +549,8 @@
         "a que altura estamos",
         "cuantos metros de altura"
       ],
-      "respuesta": "Arenales está a unos 4.225 metros sobre el nivel del mar.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
-    },
-    {
-      "id": "e3_que_ver",
-      "estacion": "estacion_3",
-      "preguntas": [
-        "que puedo ver aqui",
-        "que hay aqui",
-        "que hay en esta estacion",
-        "que es el valle lunar",
-        "por que se llama valle lunar"
-      ],
-      "respuesta": "El Valle Lunar es un terreno rocoso, con piedra pómez y minerales, de aspecto árido y volcánico, por eso parece la superficie de la Luna. Aquí hay vientos fuertes y el clima cambia rápido.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+      "respuesta": "Arenales está a unos 4.290 metros sobre el nivel del mar, en la transición de páramo a superpáramo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 6; Guion turístico zona norte, p. 3"
     },
     {
       "id": "e3_altura",
@@ -633,44 +559,8 @@
         "a que altura estamos",
         "cuantos metros de altura"
       ],
-      "respuesta": "El Valle Lunar está a unos 4.350 metros sobre el nivel del mar.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
-    },
-    {
-      "id": "e3_viento",
-      "estacion": "estacion_3",
-      "preguntas": [
-        "hace mucho viento",
-        "por que cambia tanto el clima",
-        "va a llover"
-      ],
-      "respuesta": "En el Valle Lunar hay vientos fuertes y el clima cambia rápido. Por eso el Parque pide ir con ropa y calzado para temperaturas bajo 0 °C y para lluvia.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
-    },
-    {
-      "id": "e4_que_ver",
-      "estacion": "estacion_4",
-      "preguntas": [
-        "que puedo ver aqui",
-        "que hay aqui",
-        "que hay en esta estacion",
-        "que es el valle de las tumbas",
-        "por que se llama valle de las tumbas"
-      ],
-      "respuesta": "El Valle de las Tumbas, también llamado Valle del Silencio, tiene un paisaje de superpáramo, frío intenso y un vínculo cultural y espiritual. Es el punto límite autorizado para los visitantes en este sector.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
-    },
-    {
-      "id": "e4_limite",
-      "estacion": "estacion_4",
-      "preguntas": [
-        "puedo seguir subiendo",
-        "puedo ir mas alla",
-        "puedo ir al crater",
-        "puedo subir al volcan"
-      ],
-      "respuesta": "No. El Valle de las Tumbas es el punto límite autorizado para los visitantes en este sector. Desde aquí se regresa.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN); Ficha oficial PNN Los Nevados, parquesnacionales.gov.co (consultada 2026-11-21)"
+      "respuesta": "El Valle Lunar está a unos 4.350 metros sobre el nivel del mar, en el superpáramo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8; Guion turístico zona norte, p. 3"
     },
     {
       "id": "e4_altura",
@@ -679,8 +569,336 @@
         "a que altura estamos",
         "cuantos metros de altura"
       ],
-      "respuesta": "El Valle de las Tumbas está a unos 4.450 metros sobre el nivel del mar.",
-      "fuente": "Descripción del equipo del proyecto (pendiente de validación con UTON / PNN)"
+      "respuesta": "El Valle de las Tumbas está a unos 4.460 metros sobre el nivel del mar, entre el superpáramo y la zona nival.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 9; Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gq_nombre_aguacerales",
+      "estacion": "estacion_1",
+      "preguntas": [
+        "por que se llama aguacerales",
+        "de donde sale el agua",
+        "como se forma el agua aqui",
+        "que es la condensacion",
+        "por que cae agua todo el tiempo"
+      ],
+      "respuesta": "En Aguacerales la vegetación captura el agua de las nubes por condensación. Las gotas llegan a los musgos sobre la roca, se juntan en hilos de agua y forman un riachuelo que alimenta la cuenca del río Chinchiná. Esa caída de agua no para nunca, de ahí el nombre Aguacerales.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, Aguacerales, p. 5"
+    },
+    {
+      "id": "gq_papel_frailejon",
+      "estacion": "*",
+      "preguntas": [
+        "que papel cumple el frailejon",
+        "para que sirve el frailejon",
+        "por que es importante el frailejon",
+        "para que sirven los pelos del frailejon",
+        "por que el frailejon tiene hojas peludas",
+        "que es la necromasa"
+      ],
+      "respuesta": "El frailejón es como un ingeniero del agua. Sus hojas gruesas y peludas atrapan la humedad de la niebla y lo protegen de la radiación y del frío, y su chaqueta de hojas muertas, la necromasa, lo aísla para que no se congele. Así ayuda a captar y regular el agua que baja a los ríos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, pp. 2 y 5"
+    },
+    {
+      "id": "gq_especies_frailejon",
+      "estacion": "*",
+      "preguntas": [
+        "cuantas especies de frailejon hay",
+        "que especie de frailejon hay en el parque",
+        "como se llama este frailejon",
+        "por que se llama espeletia"
+      ],
+      "respuesta": "Existen más de 100 especies de frailejones y en Colombia cerca de 60. En este parque solo está reportada una, Espeletia hartwegiana. El nombre Espeletia honra a José Manuel de Ezpeleta, virrey del Nuevo Reino de Granada.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, pp. 5-6"
+    },
+    {
+      "id": "gq_pisar_dunas",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "por que debemos evitar pisar las dunas",
+        "puedo pisar las dunas",
+        "puedo caminar sobre las dunas",
+        "puedo subirme a las dunas",
+        "por que no se pueden pisar las dunas"
+      ],
+      "respuesta": "No se deben pisar. Las dunas están en zonas de carácter intangible del parque y son patrimonio geológico. Como a veces tienen mucha humedad, las huellas pueden durar meses, y por su forma particular de formación no deben ser intervenidas. Se contemplan sin caminar sobre ellas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "gq_origen_dunas",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "como se formaron las dunas",
+        "de donde sale tanta arena",
+        "de donde viene la arena",
+        "que edad tienen las dunas"
+      ],
+      "respuesta": "La arena viene del viento que desgasta las rocas, de partículas que el viento trae de otros lugares, de la meteorización de la roca y de la ceniza del complejo volcánico. El viento la lleva hasta una barrera de rocas detrás de la cabaña y allí se acumula. Se estima que las dunas tienen entre 200 y 400 años, aunque el guion aclara que se requieren estudios.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "gq_esqui_chalet",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "que paso con el chalet",
+        "habia esqui aqui",
+        "historia del esqui",
+        "que es la cabana de arenales",
+        "quien diseno el chalet"
+      ],
+      "respuesta": "En Arenales hubo desde una bodega de papa en 1937 hasta el Chalet Arenales, diseñado por Simón Vélez, que se incendió en 2010. En los años 50 y 60 se hicieron campeonatos sudamericanos de esquí que llevaron a crear el Club de Ski de Manizales. El esquí se detuvo por el deshielo del glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7; Guion turístico zona norte, p. 6"
+    },
+    {
+      "id": "gq_nina_fantasma",
+      "estacion": "estacion_2",
+      "preguntas": [
+        "quien es la nina fantasma",
+        "hay fantasmas",
+        "hay una leyenda aqui",
+        "hay algun mito de arenales"
+      ],
+      "respuesta": "Es un relato popular, no un hecho científico: desde los años 80 se cuenta que una niña fantasma vive en Arenales y que guías, guardaparques, montañistas y rescatistas la han visto.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "gq_fracturas_rocas",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "por que se fracturan las rocas",
+        "por que las rocas tienen grietas",
+        "que es la gelifraccion",
+        "por que hay tantas grietas en las rocas",
+        "que proceso explica las fracturas"
+      ],
+      "respuesta": "Por gelifracción. El agua entra en pequeñas grietas de la roca y, cuando se congela, aumenta de volumen y las ensancha hasta fracturarla. Es un cambio físico, un tipo de meteorización, y por eso las rocas de Lunares están llenas de grietas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8; Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gq_color_rocas",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "por que las rocas son rojas",
+        "por que hay rocas rojizas",
+        "que es la oxidacion",
+        "que proceso explica el color de las rocas",
+        "de donde viene el color rojo"
+      ],
+      "respuesta": "Por oxidación, que es un cambio químico. El hierro de minerales como las hornblendas reacciona con el oxígeno y la humedad y deja tonos rojizos en la roca.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8; Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gq_fisico_quimico",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "cual es la diferencia entre gelifraccion y oxidacion",
+        "que proceso explica las fracturas y cual explica el color",
+        "cambio fisico o quimico en las rocas"
+      ],
+      "respuesta": "Son dos procesos distintos. Las fracturas se deben a la gelifracción, un cambio físico: el agua se congela en las grietas y rompe la roca. El color rojizo se debe a la oxidación, un cambio químico: el hierro de los minerales reacciona con el oxígeno.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "gq_nombre_lunares",
+      "estacion": "estacion_3",
+      "preguntas": [
+        "por que se llama valle lunar",
+        "por que parece la luna",
+        "que son las estrias",
+        "que es una loricaria",
+        "que es el coral de paramo"
+      ],
+      "respuesta": "El Valle Lunar se llama así por su aspecto estéril y desolado, que evoca la superficie de otros planetas. Las marcas que parecen arañazos en las rocas son estrías glaciares, dejadas por el movimiento del glaciar. Y la loricaria, también llamada cacho de venado o coral de páramo, es de las pocas plantas que resisten aquí.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, pp. 8-9; Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gq_nombre_tumbas",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "por que se llama valle de las tumbas",
+        "que son las lajas",
+        "que es el desierto de la soledad",
+        "hay tumbas aqui"
+      ],
+      "respuesta": "Se llama así por rocas largas y planas, lajas, que se parecen a ataúdes. Algunas comunidades cercanas usaban rocas así para construir tumbas, pero el guion aclara que eso no significa que fueran extraídas del Ruiz: es solo una similitud. El nombre se heredó por tradición oral y ya se usaba en los años 80. También se conoce como Desierto de la Soledad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, pp. 9-10"
+    },
+    {
+      "id": "gq_limite_ascenso",
+      "estacion": "estacion_4",
+      "preguntas": [
+        "por que no se puede subir mas",
+        "por que hay un limite de ascenso",
+        "por que esta restringido el ascenso",
+        "por que no puedo seguir hacia el crater",
+        "que pasa si subo mas"
+      ],
+      "respuesta": "El ascenso a la parte alta del Nevado del Ruiz está restringido por seguridad, principalmente por el alto riesgo de lahares, flujos de lodo y escombros volcánicos que dificultarían una evacuación si hay una erupción. También se protege la fragilidad del superpáramo. Sigue siempre las indicaciones de tu guía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10; Guion turístico zona norte, p. 6"
+    },
+    {
+      "id": "gq_kumanday",
+      "estacion": "*",
+      "preguntas": [
+        "que significa kumanday",
+        "que es kumanday",
+        "como se llamaba el volcan antes",
+        "que significa cumanday",
+        "nombre indigena del nevado del ruiz"
+      ],
+      "respuesta": "Kumanday es el nombre indígena del Nevado del Ruiz. Sobre su significado los guiones no coinciden del todo: el guion turístico de la zona norte dice 'Cerro Blanco', 'El de la Nariz Humeante' o 'Padre Blanco'; el guion ecoturístico UTON 2024 menciona 'banco hermoso' (IDEAM) y 'gran padre de barbas blancas' (tradición oral de guías), y advierte que no hay investigación suficiente para saber de dónde viene la palabra. Son atribuciones y tradición oral, no un dato confirmado.",
+      "fuente": "Guion turístico zona norte, p. 1; Guion Ecoturístico UTON 2024, p. 34"
+    },
+    {
+      "id": "gq_1985",
+      "estacion": "*",
+      "preguntas": [
+        "que paso en 1985",
+        "que paso en armero",
+        "cuando fue la erupcion del ruiz",
+        "cuantos murieron en armero",
+        "tragedia de armero"
+      ],
+      "respuesta": "El 13 de noviembre de 1985 el Nevado del Ruiz entró en erupción y derritió parte de su glaciar. Los lahares, flujos de lodo volcánico, bajaron por los ríos Gualí, Azufrado, Lagunillas y Molinos y devastaron Armero, Villamaría y Chinchiná. El guion da más de 23.000 muertos en un lugar y más de 25.000 en otro, así que la cifra exacta no es consistente. Murió el 94 % de la población de Armero.",
+      "fuente": "Guion Ecoturístico UTON 2024, pp. 10 y 26"
+    },
+    {
+      "id": "gq_lahares",
+      "estacion": "*",
+      "preguntas": [
+        "que son los lahares",
+        "que es un lahar",
+        "por que hay riesgo de lahares"
+      ],
+      "respuesta": "Los lahares son flujos de lodo y escombros volcánicos. Se forman, por ejemplo, cuando el calor de una erupción derrite el glaciar y el agua baja arrastrando material por los cañones de los ríos. Por ese riesgo se restringe el ascenso desde el Valle de las Tumbas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "gq_volcan_activo",
+      "estacion": "*",
+      "preguntas": [
+        "el volcan esta apagado",
+        "el ruiz esta activo",
+        "esta dormido el volcan",
+        "puede hacer erupcion",
+        "el volcan esta muerto"
+      ],
+      "respuesta": "No, el Nevado del Ruiz es un volcán activo. No está apagado ni extinto: tiene períodos de reposo y de actividad constante, y el Servicio Geológico Colombiano lo vigila las 24 horas. No conozco el nivel de alerta de hoy: pregúntalo al personal del parque.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gq_glaciar_hoy",
+      "estacion": "*",
+      "preguntas": [
+        "cuanto glaciar queda",
+        "se esta derritiendo el glaciar",
+        "cuanto mide el glaciar",
+        "cuanto ha retrocedido el glaciar",
+        "por que se esta acabando el hielo"
+      ],
+      "respuesta": "Sí, retrocede. Según el informe del IDEAM citado en el guion, el glaciar del Ruiz pasó de 7,96 km² en 2021 a 7,68 km² en 2022, un 3,5 % menos. Los glaciares colombianos han retrocedido más de 84 % desde 1850 y hoy pierden entre 1 y 3 % de su área al año. Son datos con fecha: no son medidas de hoy.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 29-31"
+    },
+    {
+      "id": "gq_ceniza_nieve",
+      "estacion": "*",
+      "preguntas": [
+        "por que no hay nieve",
+        "eso gris es nieve",
+        "donde esta la nieve",
+        "por que el nevado es gris",
+        "eso blanco es hielo"
+      ],
+      "respuesta": "Lo gris que cubre gran parte del sector norte es ceniza volcánica reciente y depósitos piroclásticos, no nieve escondida debajo. La nieve y el glaciar están en franco retroceso.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gq_andesita",
+      "estacion": "*",
+      "preguntas": [
+        "que roca es esta",
+        "que es la andesita",
+        "de que son las rocas",
+        "que edad tienen las rocas",
+        "que minerales tienen las rocas"
+      ],
+      "respuesta": "Son andesitas, la roca volcánica más común de los Andes. Las que rodean Aguacerales tienen cerca de 100 mil años. En ellas se ven fácilmente dos minerales: las plagioclasas, claras o incoloras, y las hornblendas, negras.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6 y Lunares, p. 9"
+    },
+    {
+      "id": "gq_cuatro_volcanes",
+      "estacion": "*",
+      "preguntas": [
+        "de cuantos volcanes esta compuesto el ruiz",
+        "que es el complejo volcanico",
+        "que son nereidas olleta y pirana",
+        "cuantos volcanes hay"
+      ],
+      "respuesta": "El Nevado del Ruiz es un complejo volcánico de cuatro estructuras: Nereidas, La Olleta, Piraña y Arenas. Comúnmente se le llama Nevado del Ruiz al edificio que tiene el cráter Arenas, el cráter activo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10; Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gq_paramo_agua",
+      "estacion": "*",
+      "preguntas": [
+        "por que es importante el paramo",
+        "por que el paramo es una esponja",
+        "cuanta agua retiene el suelo",
+        "para que sirve el paramo",
+        "por que cuidar el paramo"
+      ],
+      "respuesta": "El páramo funciona como una esponja gigante: su suelo de ceniza volcánica y materia orgánica retiene el agua y la libera poco a poco hacia los ríos. El parque abastece a 37 municipios y a cerca de 3 millones de personas del Eje Cafetero, y los páramos además capturan carbono. El guion de zona norte dice que el suelo retiene hasta 40 veces su peso en agua.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, pp. 2 y 5"
+    },
+    {
+      "id": "gq_condor_danta",
+      "estacion": "*",
+      "preguntas": [
+        "que es el condor",
+        "hay condores",
+        "que es la danta",
+        "que hacen los colibries",
+        "que animales hay en lunares",
+        "que animales hay en el valle de las tumbas"
+      ],
+      "respuesta": "El cóndor de los Andes usa las corrientes térmicas del volcán para planear sin esfuerzo; en Lunares y el Valle de las Tumbas es zona de paso. La danta de montaña es un mamífero lanudo y gran dispersor de semillas. Los colibríes entran en hibernación nocturna para sobrevivir al frío.",
+      "fuente": "Guion turístico zona norte, p. 2; Guion Ecoturístico UTON 2024, Lunares, p. 8 y Valle de las Tumbas, p. 9"
+    },
+    {
+      "id": "gq_palabra_paramo",
+      "estacion": "*",
+      "preguntas": [
+        "de donde viene la palabra paramo",
+        "que significa paramo",
+        "que es un paramo"
+      ],
+      "respuesta": "La palabra páramo viene del latín paramus y ya existía en España antes de los romanos: un lugar yermo, desértico y árido. En Colombia es un ecosistema de alta montaña que actúa como esponja y regula el agua.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6 y Glosario, pp. 12-13"
+    },
+    {
+      "id": "gq_mohan_guacas",
+      "estacion": "*",
+      "preguntas": [
+        "que es un mohan",
+        "quien fue juan diaz",
+        "que son las guacas",
+        "hay tesoros aqui",
+        "que es el mohan"
+      ],
+      "respuesta": "Es un relato popular, no un hecho científico. En el conocimiento campesino del norte del Tolima el mohán es un encantado que gobierna ríos, avalanchas y volcanes; la historia cuenta a Juan Díaz Jaramillo, un español que buscó oro y perdió su riqueza en una avalancha. Las guacas son antiguos entierros indígenas, por lo general con oro, y se dice que alumbran de rojo o azul el Viernes Santo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 35-36"
+    },
+    {
+      "id": "gq_historia_indigena",
+      "estacion": "*",
+      "preguntas": [
+        "quienes vivian aqui antes",
+        "que comunidades indigenas habitaban",
+        "quienes eran los quimbayas",
+        "para quien era sagrado este lugar"
+      ],
+      "respuesta": "Cerca del Cumanday vivieron comunidades como los quimbayas, pijaos, pantágoras y ansermas, y el guion también nombra a carrapas, gualíes y panches. Para ellos el lugar era sagrado y hacían peregrinaciones. Hoy algunas comunidades indígenas siguen haciendo rituales. El registro arqueológico no permite saber en qué consistía su relación ritual con el volcán.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10 y Aspectos antropológicos, p. 34"
     }
   ],
   "documentos": [
@@ -965,6 +1183,594 @@
       "titulo": "Actividades permitidas en cada sector del Parque",
       "texto": "En el sector Brisas-Kumanday se puede hacer observación geológica, observación de fauna y flora y fotografía no comercial. En los sectores Cisne-Poleka Kasue y Laguna del Otún se puede hacer senderismo, montañismo, observación de aves, observación geológica y observación de fauna y flora. En el sector Quindío-Dulima se pueden hacer las actividades anteriores, pero el terreno es más exigente y la actividad principal es el montañismo. Para tomas audiovisuales o fotografías con fines comerciales, eventos, actividades deportivas, investigación o educación ambiental se debe solicitar autorización; el requisito aplica a todos los sectores.",
       "fuente": "Página oficial de Parques Nacionales Naturales, PNN Los Nevados"
+    },
+    {
+      "id": "g24_intro",
+      "titulo": "Qué es el guion ecoturístico y cómo está organizado",
+      "texto": "El Guion Ecoturístico de la UTON es para la zona norte del parque: Aguacerales, Arenales, Valle Lunar y Valle de las Tumbas. Tiene un guion base con lo esencial para los turistas, un glosario y un guion de profundización más técnico. Se apoya en 120 artículos y libros, de los cuales 31 se usaron directamente. Es un documento vivo: los guías pueden proponer modificaciones verificables a la UTON.",
+      "fuente": "Guion Ecoturístico UTON 2024, Introducción, p. 4"
+    },
+    {
+      "id": "g24_aguacerales_ficha",
+      "titulo": "Aguacerales: altura, ubicación, fauna, plantas y geología",
+      "texto": "Aguacerales está a unos 4.160 metros sobre el nivel del mar, en el flanco occidental del edificio volcánico, a unos 5,2 kilómetros del cráter Arenas. Es páramo propiamente dicho. Fauna característica: conejo, águila, cusumbos, taira, venados, colibríes, dantas, comadreja, guagua, zorro, puma y patos. Plantas: pajonal, romeros, frailejón, valeriana, senecios, mortiños y musgo. Geología: lavas con relieve invertido, depósitos de caída piroclástica, valle en U y paleosuelos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_parque_cifras",
+      "titulo": "El parque, el agua y los páramos: cifras",
+      "texto": "El Parque Nacional Natural Los Nevados tiene cerca de 62.000 hectáreas (62.142). Protege unas 53.532 hectáreas de páramos, el 86 % del área protegida. Abastece de agua a 37 municipios y beneficia a cerca de 3 millones de personas del Eje Cafetero. Los páramos actúan como esponjas gigantes que regulan el agua y capturan carbono, lo que ayuda a mitigar el cambio climático.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_aguacerales_condensacion",
+      "titulo": "Aguacerales: la condensación del agua y el nombre del sitio",
+      "texto": "En Aguacerales la vegetación captura el agua de las nubes por condensación. Se forman pequeñas gotas que llegan a los musgos sobre la roca, se juntan en hilos de agua y forman un riachuelo que va a la quebrada y alimenta la cuenca del río Chinchiná. La caída de agua no para, de ahí el nombre Aguacerales. Ocurre las 24 horas, todos los días del año. En las noches frías, sobre todo en temporada seca, los hilos de agua se congelan y forman carámbanos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_frailejon_adaptaciones",
+      "titulo": "El frailejón: adaptaciones y especies",
+      "texto": "Los frailejones tienen hojas gruesas y vellosidades, llamadas pubescencia, para sobrevivir en un clima extremo. Forman una chaqueta de materia muerta, la necromasa, que los protege del clima. Existen más de 100 especies de frailejones y en Colombia cerca de 60. En este parque solo está reportada una: Espeletia hartwegiana.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_aguacerales_origen",
+      "titulo": "Aguacerales: cómo se formó el paisaje",
+      "texto": "Todo el ecosistema de la estación creció sobre el sustrato que dejó el retroceso glaciar, depósitos eólicos y depósitos de caída, que a su vez están sobre las lavas del volcán. El glaciar, al retroceder, fue modelando las rocas como un cuchillo gigante: formó los escarpes que rodean la estación y dejó un valle en U al occidente.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6"
+    },
+    {
+      "id": "g24_aguacerales_curiosos_a",
+      "titulo": "Aguacerales: datos curiosos de nevadas, rocas y volcán",
+      "texto": "En esta estación ha nevado y granizado, a veces tanto que los vehículos no pueden seguir hacia la parte alta. Las rocas que rodean la estación tienen cerca de 100 mil años y se llaman andesitas, la roca más común de los Andes. Hacia el noroccidente, en Cerro Gualí, Cerro la Teta e Indígena acostado, están las rocas más antiguas del Ruiz, de 1,8 millones de años, de una versión anterior llamada Pre Ruiz. En África, Asia y Oceanía hay ecosistemas equivalentes por convergencia evolutiva.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6"
+    },
+    {
+      "id": "g24_aguacerales_curiosos_b",
+      "titulo": "Aguacerales: datos curiosos de agua, historia y palabras",
+      "texto": "El agua del parque abastece a 37 municipios de Tolima, Risaralda, Caldas, Quindío y norte del Valle del Cauca, cerca de 3 millones de personas. Los páramos han sido habitados por comunidades humanas desde hace unos 10.000 años. La palabra páramo viene del latín paramus y ya existía en España antes de los romanos: es un lugar yermo, desértico y árido. En España hay un paisaje similar, la paramera de Castilla. El nombre Espeletia honra a José Manuel de Ezpeleta, virrey del Nuevo Reino de Granada.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 6"
+    },
+    {
+      "id": "g24_arenales_ficha",
+      "titulo": "Arenales: altura, ubicación, fauna, plantas y geología",
+      "texto": "Arenales está a unos 4.290 metros sobre el nivel del mar, en el flanco occidental, a unos 4,7 kilómetros del cráter Arenas. Es una transición de páramo a superpáramo. Fauna: conejos, huellas de tigrillo y águilas. Plantas: pajonal, loricarias y colchones de agua. Geología: dunas, flujos granulares, depósitos eólicos y lavas, till, estrías y lavas con relieve invertido.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 6"
+    },
+    {
+      "id": "g24_arenales_dunas",
+      "titulo": "Arenales: las dunas y de dónde sale la arena",
+      "texto": "En Arenales hay una gran acumulación de arena en forma de dunas, moldeadas por el viento. Están sobre andesitas de unos 100 mil años y se estima que las dunas tienen unos 200 a 400 años, porque se forman después del retroceso glaciar; el guion aclara que se requieren estudios. La arena viene del viento que erosiona las rocas con partículas, del transporte de partículas desde otros lugares, de la meteorización química y mecánica, y de la abundante ceniza del complejo volcánico. El viento la lleva hasta una barrera de rocas detrás de la cabaña de Arenales y allí se acumula.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_arenales_historia",
+      "titulo": "Arenales: historia del camping, el chalet y el esquí",
+      "texto": "Arenales ha sido zona de camping con varias construcciones, desde una bodega de papa en 1937 hasta el Chalet Arenales, diseñado por el arquitecto Simón Vélez, que se incendió en 2010. La cabaña actual exhibe pendones sobre la historia del esquí en el nevado del Ruiz en los años 50 y 60, cuando hubo campeonatos sudamericanos que llevaron a crear el Club de Ski de Manizales. El esquí se detuvo por el deshielo, que afectó las instalaciones. Hoy hay un camping en proceso de reglamentación y una zona de escalada llamada Gazaperas, donde en 2006 cayó el montañista Nelson Cardona, primer latinoamericano en escalar el Everest con una prótesis.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_arenales_curiosos",
+      "titulo": "Arenales: dunas intangibles, viento y rocas",
+      "texto": "Las dunas están en zonas de carácter intangible del parque y son patrimonio geológico. Como a veces tienen mucha humedad, si se pisan las huellas pueden durar meses; por eso no deben ser intervenidas. El viento a veces es tan fuerte que arrancó las escaleras de la cabaña, que hoy están en otra posición. En el suelo se ven piroclastos de la erupción del 89, que se desplazó al noroccidente del cráter y son comunes en Arenales, Lunares y Tumbas. Las rocas enormes detrás de la cabaña no las arrojó el volcán: las dejó el retroceso glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_arenales_nina",
+      "titulo": "Arenales: el mito de la niña fantasma",
+      "texto": "Es un relato popular, no un hecho científico: desde los años 80 se cuenta que una niña fantasma mora en el sector de Arenales, y que guías, guardaparques, montañistas y rescatistas la han visto.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_lunares_ficha",
+      "titulo": "Lunares (Valle Lunar): altura, ubicación, fauna, plantas y geología",
+      "texto": "Lunares, también llamado Valle Lunar, está a unos 4.350 metros sobre el nivel del mar, en el flanco occidental, a unos 4,8 kilómetros del cráter Arenas. Es superpáramo. Fauna: cóndor y águila, como zona de paso. Plantas: pajonales y el llamado coral de páramo. Geología: similar a la estación anterior, con meteorización por gelifracción y oxidación, y borbotones de lava.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "g24_lunares_paisaje",
+      "titulo": "Lunares: un paisaje desértico que parece otro planeta",
+      "texto": "Lunares ofrece un paisaje único y desértico que evoca la superficie de otros planetas. La erosión glaciar y la meteorización han esculpido rocas rojizas con fracturas profundas. Hay poca vegetación, salvo especies resistentes como la loricaria. Es un laboratorio natural para estudiar los efectos del cambio climático. La loricaria está restringida a estas condiciones y es un ejemplo de adaptación de la vida a entornos extremos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "g24_lunares_gelifraccion",
+      "titulo": "Gelifracción: por qué se fracturan las rocas",
+      "texto": "Las grietas de las rocas se producen por gelifracción, un tipo de meteorización física. El agua entra en poros y grietas de la roca; al congelarse aumenta su volumen y fractura la roca. Por eso las rocas de Lunares están llenas de grietas. Estas fracturas contribuyen a formar suelo arenoso y a que llegue la vegetación pionera.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, pp. 8-9"
+    },
+    {
+      "id": "g24_lunares_estrias_oxidacion",
+      "titulo": "Estrías glaciares y color rojizo de las rocas (oxidación)",
+      "texto": "Las marcas que parecen arañazos en las rocas son estrías glaciares: las dejó la acción abrasiva del movimiento del glaciar y sirven para saber hacia dónde se movía. El color rojizo es otro tipo de meteorización, de origen químico: el hierro de minerales como las hornblendas reacciona con el oxígeno, es decir, se oxida, y deja tonos rojizos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 8"
+    },
+    {
+      "id": "g24_lunares_curiosos",
+      "titulo": "Lunares: datos curiosos de minerales y vegetación",
+      "texto": "Las andesitas del Ruiz muestran dos minerales fáciles de identificar: los claros o incoloros son plagioclasas y los negros son hornblendas; el resto solo se ve con microscopio. Las loricarias también se llaman cacho de venado o coral de páramo. Hace unos 100 años aquí no habría vegetación, y en unos 100 años probablemente habrá mucha más. Desde esta estación hasta el Valle de las Tumbas las rocas están en buena parte cubiertas por dunas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, p. 9"
+    },
+    {
+      "id": "g24_tumbas_ficha",
+      "titulo": "Valle de las Tumbas: altura, ubicación, fauna, plantas y geología",
+      "texto": "El Valle de las Tumbas está a unos 4.460 metros sobre el nivel del mar, en el flanco occidental, a unos 4,1 kilómetros del cráter Arenas y a un costado del cañón del río Molinos. Es superpáramo con transición a zona nival. Fauna: cóndor y águila, como zona de paso. Plantas: algunos pastos colonizadores, musgo y líquenes. Geología: pequeños abanicos, lavas superpuestas, estrías, lavas con relieve invertido y circo glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 9"
+    },
+    {
+      "id": "g24_tumbas_nombre",
+      "titulo": "Por qué se llama Valle de las Tumbas",
+      "texto": "El nombre viene de rocas largas y planas, lajas, que se parecen a ataúdes. Algunas comunidades cercanas usaban rocas así para construir tumbas de cancel; el guion aclara que eso no significa que fueran extraídas del Ruiz, es solo una similitud. Hoy esas rocas están cubiertas por arena. El nombre, como el de las otras estaciones, se heredó por tradición oral y hay registros de que ya se usaba en los años 80. El sitio también se conoce como Desierto de la Soledad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, pp. 9-10"
+    },
+    {
+      "id": "g24_tumbas_sagrado",
+      "titulo": "Valle de las Tumbas: lugar sagrado indígena",
+      "texto": "En la época precolombina el área era un lugar sagrado para indígenas Quimbayas, Carrapas, Gualíes, Panches, Ansermas y Pijaos, que hacían peregrinaciones a la montaña sagrada Kumanday. Hoy algunas comunidades indígenas siguen haciendo rituales aquí. Para ellas las lagunas, los glaciares y los volcanes son sagrados. El conocimiento que se tiene de esas comunidades viene de las crónicas de Indias y de algunas investigaciones arqueológicas que no han aclarado mucho sus prácticas rituales.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_tumbas_restriccion",
+      "titulo": "Por qué el ascenso se restringe en el Valle de las Tumbas",
+      "texto": "Por seguridad, el ascenso a la parte alta del Nevado del Ruiz está restringido por el alto riesgo de lahares, flujos de lodo y escombros volcánicos que dificultarían una evacuación en caso de erupción. El Nevado del Ruiz es un complejo volcánico de cuatro estructuras: Nereidas, Olleta, Piraña y Arenas; comúnmente se llama Nevado del Ruiz al edificio que tiene el cráter Arenas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_erupcion_1985",
+      "titulo": "La erupción del 13 de noviembre de 1985",
+      "texto": "El 13 de noviembre de 1985 el Nevado del Ruiz entró en erupción. El calor derritió parte del glaciar y generó lahares, flujos de lodo volcánico, que bajaron por los cañones de los ríos Gualí, Azufrado, Lagunillas y Molinos. Devastaron Armero, en el Tolima, Villamaría y Chinchiná. El guion da más de 23.000 muertos en esta página y más de 25.000 en la página 26: las cifras difieren. Murió el 94 % de la población de Armero y el 6 % de la de los dos municipios de Caldas. Fue la segunda erupción más mortífera del siglo XX, tras el monte Pelée en 1902.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10 y p. 26"
+    },
+    {
+      "id": "g24_tumbas_curiosos",
+      "titulo": "Valle de las Tumbas: datos curiosos del volcán",
+      "texto": "La razón de la restricción para seguir es principalmente el riesgo de lahares. Las andesitas del Valle de las Tumbas son principalmente del volcán Nereidas. Las lavas de La Olleta y de Nereidas tienen más de 80 mil años. Nereidas no tiene cráter visible y La Olleta sí. El nombre del cráter Arenas honra al geógrafo que lo descubrió en 1950. El volcán también se llamó Volcán de Cartago en las crónicas de Indias. La de 1985 fue el cuarto evento volcánico más mortífero desde el año 1500.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_glo_duna",
+      "titulo": "Glosario: duna",
+      "texto": "Duna: elevación de arena producida por el viento.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 11"
+    },
+    {
+      "id": "g24_glo_erosion",
+      "titulo": "Glosario: erosión y transporte",
+      "texto": "Erosión: proceso de desgaste y modelado de la superficie terrestre producido por agentes externos como el agua, el viento y el hielo. Transporte: proceso mediante el cual los materiales erosionados son llevados de un lugar a otro.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11 y 13"
+    },
+    {
+      "id": "g24_glo_meteorizacion",
+      "titulo": "Glosario: meteorización",
+      "texto": "Meteorización: desintegración y descomposición de las rocas en la superficie terrestre.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 12"
+    },
+    {
+      "id": "g24_glo_glaciar",
+      "titulo": "Glosario: glaciar, glacial y glaciación",
+      "texto": "Glaciar: masa de hielo en movimiento, formada por la acumulación y compactación de nieve. Glacial: relativo a los glaciares. Glaciación: período geológico durante el cual grandes extensiones de la superficie terrestre están cubiertas por glaciares.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 12"
+    },
+    {
+      "id": "g24_glo_paramo",
+      "titulo": "Glosario: páramo",
+      "texto": "Páramo: según la Real Academia, la palabra viene del latín paramus, una voz que existía en España antes de la llegada de los romanos. Básicamente es un terreno pedregoso y desierto, una llanura árida.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 12-13"
+    },
+    {
+      "id": "g24_glo_ecosistema",
+      "titulo": "Glosario: ecosistema, ecotono, endémico y biodiversidad",
+      "texto": "Ecosistema: conjunto de seres vivos y el medio físico en el que se relacionan. Ecotono: zona de transición entre dos ecosistemas diferentes. Endémico: especie propia y exclusiva de un lugar determinado. Biodiversidad: variedad de vida en la Tierra, con todas las especies de plantas, animales, hongos y microorganismos y los ecosistemas de los que forman parte.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 11"
+    },
+    {
+      "id": "g24_glo_piroclasto",
+      "titulo": "Glosario: piroclasto, fumarola, volcán y erupción",
+      "texto": "Piroclasto: fragmento de roca volcánica expulsado durante una erupción. Fumarola: abertura en la superficie terrestre por la que se escapan gases volcánicos. Volcán: abertura en la corteza terrestre por la que salen materiales fundidos (lava) y gases. Erupción: expulsión violenta de materiales del interior de un volcán. Volcán monogenético: el que entra en erupción una sola vez.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_glo_roca_mineral",
+      "titulo": "Glosario: roca, mineral y basalto",
+      "texto": "Roca: material sólido compuesto por uno o más minerales. Mineral: elemento o compuesto químico natural, de origen inorgánico, de composición definida y normalmente de estructura cristalina. Basaltos: rocas volcánicas de color oscuro, ricas en hierro y magnesio.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_glo_hielo_nieve",
+      "titulo": "Glosario: nieve, granizo y carámbano",
+      "texto": "Nieve: precipitación atmosférica en forma de cristales de hielo. Granizo: precipitación atmosférica sólida en forma de bolas o pedazos de hielo. Carámbano: cono de hielo que se forma por congelación del agua que gotea de un objeto.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-12"
+    },
+    {
+      "id": "g24_glo_hipoxia",
+      "titulo": "Glosario: hipoxia, hipoxia hipobárica, mal agudo de montaña y presión atmosférica",
+      "texto": "Hipoxia: disminución del suministro de oxígeno a los tejidos del cuerpo. Hipoxia hipobárica: descenso del oxígeno que llega a los tejidos por una caída de su presión parcial, causada por exposición a una atmósfera de baja presión. MAM: mal agudo de montaña. Presión atmosférica: fuerza que ejerce el peso del aire sobre la superficie terrestre.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 12-13"
+    },
+    {
+      "id": "g24_glo_siglas",
+      "titulo": "Glosario: siglas POE, PMA, POMCA y COP16",
+      "texto": "POE: según el glosario del guion, Plan de Ordenamiento Territorial, y aclara que puede variar según la entidad. PMA: Plan de Manejo Ambiental. POMCA: Plan de Manejo y Conservación de cuencas hidrográficas. COP16: Conferencia de las Partes 16 de la Convención Marco de las Naciones Unidas sobre el Cambio Climático.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11 y 13"
+    },
+    {
+      "id": "g24_glo_cultura",
+      "titulo": "Glosario: guaca, crónicas de Indias, resguardo indígena y socioecosistema",
+      "texto": "Guaca (o huaca): entierro indígena; por lo general contiene oro, pero son difíciles de encontrar. Crónicas de Indias: narraciones históricas de los colonizadores españoles sobre el descubrimiento de América. Resguardo indígena: territorio reconocido con título de propiedad colectiva, regido por un estatuto autónomo y con tradiciones propias. Socioecosistema: el ser humano, la sociedad y su cultura tienen base en los ecosistemas y también cambian casi todos los ecosistemas. Pacificación: poner fin a un conflicto o establecer calma o dominio en un lugar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_cvnr",
+      "titulo": "El Complejo Volcánico Nevado del Ruiz: tamaño y ubicación",
+      "texto": "El Nevado del Ruiz es un volcán compuesto activo que alcanza 5.321 msnm. Lo corona el cráter Arenas, de unos 750 metros de diámetro y 200 de profundidad. Está en la cordillera Central, entre Caldas y Tolima, a unos 140 km al noroeste de Bogotá y 28 km al sureste de Manizales. Según Ceballos-Hernández y otros (2020), su cubierta glaciar era de 9,3 km².",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 15"
+    },
+    {
+      "id": "g24_placas",
+      "titulo": "Por qué hay volcanes aquí: subducción de la placa de Nazca",
+      "texto": "El complejo volcánico está en el extremo norte de la zona volcánica norte del cinturón volcánico andino. Tectónicamente corresponde a la subducción de la placa de Nazca bajo la placa Sudamericana, a unos 5,5 cm por año. Esa subducción crea un arco volcánico muy estrecho.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 16"
+    },
+    {
+      "id": "g24_periodos",
+      "titulo": "Las cuatro versiones del volcán Ruiz",
+      "texto": "La evolución del complejo se divide en cuatro períodos. Pre-Ruiz, de 1,8 a 0,97 millones de años: volcán Ancestral Ruiz, con lavas andesíticas. Primer período Ruiz, hasta unos 95 mil años: se construyó el Ruiz Antiguo y terminó con una caldera tras una fase explosiva. Período intermedio, de 95 mil a 66 mil años: surgieron La Olleta, Nereidas y Piraña. Segundo período, desde hace unos 66 mil años hasta hoy: el Ruiz actual, de actividad predominantemente explosiva.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 16-17 y 25-26"
+    },
+    {
+      "id": "g24_volcanes_vecinos",
+      "titulo": "La Olleta, Nereidas y Piraña",
+      "texto": "La Olleta comenzó a formarse hace unos 107.000 años. Nereidas está a 2 km al suroeste del Ruiz, a unos 5.000 msnm, y tiene unos 66.000 años. Piraña está a 3,8 km al este del cráter Arenas y también data de hace unos 66.000 años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 17"
+    },
+    {
+      "id": "g24_gases",
+      "titulo": "Gases volcánicos del Ruiz",
+      "texto": "Los gases volcánicos son una mezcla: dióxido de carbono, dióxido de azufre (que contribuye a la lluvia ácida), vapor de agua, monóxido de carbono, hidrocarburos, ácido clorhídrico, ácido fluorhídrico y metano. Sus cambios en volumen y composición son un indicador de la actividad volcánica. Los hallazgos indican que la actividad se debe a la acumulación de gases de magma antiguo y no a nuevos aportes de magma.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 17-18"
+    },
+    {
+      "id": "g24_domo",
+      "titulo": "El domo de lava del cráter Arenas",
+      "texto": "El crecimiento del domo de lava entre 2015 y 2021 se estimó en unos 1,7 millones de metros cúbicos. El domo alcanzó unos 130 metros de diámetro y unos 60 de altura. Según los datos recopilados, su volumen pasó de unos 0,1 millones de m³ en noviembre de 2015 a unos 1,1 millones en diciembre de 2019. Se clasificó como un domo de lava de tipo bajo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 19-21"
+    },
+    {
+      "id": "g24_monitoreo",
+      "titulo": "Cómo se monitorea el volcán",
+      "texto": "El monitoreo combina redes geodésicas (GNSS e inclinómetros) para medir la deformación del terreno, monitoreo sísmico, geoquímica de gases como el dióxido de azufre, cámaras web y fotogrametría, estaciones de infrasonido, modelos digitales de elevación y fotografías aéreas. Las imágenes de radar permiten vigilar aun con mal clima.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 19-21"
+    },
+    {
+      "id": "g24_erupciones_13mil",
+      "titulo": "Erupciones del Ruiz en los últimos 13.000 años",
+      "texto": "En los últimos 13.000 años hubo al menos catorce pulsos y fases eruptivas, en su mayoría explosivas. Entre las más recientes: la de 1595, con lahares por los ríos Chinchiná, Claro, Gualí, Azufrado y Lagunillas que afectaron el sector de Armero; la de 1845, en la que fenómenos no eruptivos generaron lahares por los ríos Gualí, Azufrado y Lagunillas; y la de 1985, con índice de explosividad volcánica 3.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 21 y 26"
+    },
+    {
+      "id": "g24_efectos_1985",
+      "titulo": "Efectos geológicos de la erupción de 1985: ceniza y gases",
+      "texto": "La erupción de 1985 comenzó a las 15:05 hora local y generó una nube de gases y ceniza que superó los 5.000 metros sobre el cráter. El material piroclástico se dispersó hacia el oriente por los vientos y cubrió extensas áreas del Tolima, incluidas Armero, Mariquita y Honda. Se estima que emitió cerca de 700.000 toneladas de dióxido de azufre, que llegó a la estratósfera, una de las mayores emisiones registradas en el mundo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 22"
+    },
+    {
+      "id": "g24_avalancha_libano",
+      "titulo": "La avalancha de escombros de El Líbano",
+      "texto": "El depósito de avalancha de escombros de El Líbano, en el flanco este, resultó del colapso del flanco del Ruiz Mayor. No fue eruptivo. Cubre 86 km², recorrió unos 28 km y tuvo un volumen estimado de 6 km³. Sobre sus montículos están hoy Murillo y El Líbano. Se interpreta como una avalancha de menos de 0,165 millones de años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 27"
+    },
+    {
+      "id": "g24_aguas_termales",
+      "titulo": "Aguas termales del Nevado del Ruiz",
+      "texto": "El volcán tiene manantiales y fumarolas. Un estudio geoquímico identificó dos sistemas de circulación independientes: uno al norte, con aguas sulfatadas, y otro al oeste, con aguas cloruradas neutras. Las aguas geotérmicas vienen de un yacimiento de al menos 235 °C que se mezcla con aguas superficiales y forma manantiales calientes, como los de Botero Londoño. No se recomienda explorar cerca del cráter por posibles componentes magmáticos volátiles.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 27-28"
+    },
+    {
+      "id": "g24_glaciar_area",
+      "titulo": "El glaciar del Nevado del Ruiz: área y ceniza",
+      "texto": "El glaciar del Ruiz es una sola masa de hielo y el más icónico de la región andina central. En 2022 su área se calculó en 7,68 km², frente a 7,96 km² en 2021: una reducción de 0,28 km², el 3,5 %. La ceniza volcánica sobre el glaciar acelera el derretimiento si es de pocos centímetros y lo aísla térmicamente si pasa de unos 15 cm. En La Niña la nieve suele cubrir la ceniza.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 29 (Informe del estado de los glaciares colombianos 2022)"
+    },
+    {
+      "id": "g24_glaciar_formacion",
+      "titulo": "Cómo se forma un glaciar y eras glaciales",
+      "texto": "Un glaciar se forma por precipitación constante de nieve o granizo durante mucho tiempo, que se compacta y forma una gran masa de hielo. El guion indica que un glaciar se considera una roca metamórfica y el hielo un mineral. La última era glacial duró unos 110.000 años, en tres fases, con el máximo glaciar hace unos 28.000 años. Los períodos interglaciares se asocian a los ciclos de Milankovitch.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 29"
+    },
+    {
+      "id": "g24_glaciar_perdida",
+      "titulo": "Retroceso de los glaciares colombianos",
+      "texto": "Los glaciares colombianos son restos de la última glaciación y tienden a la extinción. Desde 1850 han retrocedido más de un 84 %. Según los datos disponibles pierden de 1 a 3 % de su área al año y el borde inferior retrocede entre 15 y 20 metros por año. El Nevado del Ruiz perdió 55 % de su área entre 1850 y 1954-59 y 51 % entre 1954-59 y 2001-03. El derretimiento se ha intensificado en las últimas tres décadas y se asocia al calentamiento global.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 29-31 (Ceballos y Tobón, 2007)"
+    },
+    {
+      "id": "g24_glaciar_pequena_edad",
+      "titulo": "La Pequeña Edad de Hielo y la última glaciación en Colombia",
+      "texto": "La última glaciación en Colombia comenzó hace unos 70.000 años. Entre los siglos XV y XIX la Pequeña Edad de Hielo bajó la temperatura de la alta montaña y los glaciares llegaron a ocupar 374 km². El límite del hielo descendió a 4.200 m en el sur del país, 4.400 m en el centro y 4.600 m en la Sierra Nevada de Santa Marta.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 30-31"
+    },
+    {
+      "id": "g24_glaciar_vs_glacial",
+      "titulo": "Diferencia entre glaciar y glacial",
+      "texto": "Glaciar se refiere a los cuerpos de hielo. Glacial describe los períodos más fríos de la historia geológica y las formas y procesos que producen los glaciares. Usarlos como sinónimos es un error conceptual.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 32"
+    },
+    {
+      "id": "g24_geoformas_glaciales",
+      "titulo": "Geoformas glaciales: circo, morrena y valle en U",
+      "texto": "Circo glacial: depresión en forma de anfiteatro producida por la erosión glaciar, zona de acumulación del glaciar. Morrena: acumulación de sedimentos transportados por un glaciar; puede ser de fondo, lateral, central o frontal. Valle en U: de lados empinados y fondo redondeado o plano, resulta de la erosión glacial que ensancha valles en forma de V.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 32-33"
+    },
+    {
+      "id": "g24_paramo_socio",
+      "titulo": "El páramo como socioecosistema",
+      "texto": "Los páramos han sido habitados desde hace unos 10.000 años. Las comunidades prehispánicas se movían por la cordillera a buscar plantas medicinales, frutos y caza, y usaban las planicies para pastoreo, pero su principal significado era ritual: en lagunas, volcanes y nevados habitan seres. En el Páramo del Ruiz hay pocas investigaciones arqueológicas, probablemente porque eran lugares de tránsito.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 33"
+    },
+    {
+      "id": "g24_bachue",
+      "titulo": "El mito de Bachué (relato muisca)",
+      "texto": "Es un relato cultural, no un hecho científico, de los muiscas del altiplano cundiboyacense, el mito más cercano geográficamente. Una mujer, Bachué, salió de una laguna profunda con un niño. Él creció, se casaron y poblaron el mundo. Ya ancianos volvieron a la laguna, hablaron a sus hijos de la paz y se convirtieron en dos serpientes que se metieron en el agua.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 33-34"
+    },
+    {
+      "id": "g24_kumanday",
+      "titulo": "El nombre indígena Kumanday: lo que se sabe y lo que no",
+      "texto": "El nombre Kumandai, Kumanday o Cumanday designa al Nevado del Ruiz, pero no hay suficiente investigación para delimitar de dónde viene la palabra. Se ubica sobre todo en la comunidad Quimbaya, un término que además tiene debates. Se le atribuye el significado 'banco hermoso' (IDEAM) y 'gran padre de barbas blancas' (tradición oral de guías), entre muchos otros. Sobre la relación ritual de las comunidades con el volcán, el registro arqueológico actual no permite saber en qué consistía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 34"
+    },
+    {
+      "id": "g24_comunidades",
+      "titulo": "Comunidades prehispánicas cerca del Cumanday",
+      "texto": "Las comunidades que habitaron cerca del Cumanday fueron Quimbayas, Pijaos, Pantágoras y Ansermas, con relaciones de intercambio económico y cultural. Hacían piezas de tumbaga, una aleación de oro y cobre. Los canasteros eran de los más respetados: recorrían grandes distancias intercambiando objetos de alto valor simbólico, como plumas, conchas, sal y minerales. Quimbaya es en buena parte una denominación de los españoles para varias comunidades.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 34"
+    },
+    {
+      "id": "g24_espanoles",
+      "titulo": "Los españoles y el páramo",
+      "texto": "Para los indígenas el páramo era para plantas medicinales, pastoreo y uso ritual. Los españoles lo vieron como un territorio desolado, frío y hostil. Al pacificar a las comunidades de tierras más fértiles, las ubicaron en resguardos a más de 3.000 metros de altura. Los movía sobre todo la leyenda del oro de los indígenas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 34-35"
+    },
+    {
+      "id": "g24_juan_diaz",
+      "titulo": "Juan Díaz Jaramillo, el mohán y las guacas (relato popular)",
+      "texto": "Es un relato de la memoria popular, no un hecho científico. Juan Díaz Jaramillo, español que buscó oro en el cañón del río Lagunilla, perdió sus minas con la erupción de 1595. En el relato campesino del norte del Tolima, una avalancha se lleva su riqueza y él se convierte en un mohán, un encantado que gobierna las avalanchas y los volcanes. En ese conocimiento campesino las guacas, antiguos entierros indígenas con oro, alumbran de rojo o azul, sobre todo el Viernes Santo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 35-36"
+    },
+    {
+      "id": "g24_erupcion_1845",
+      "titulo": "La avalancha de 1845 en el río Lagunilla",
+      "texto": "El día 19, a las 9 de la mañana, de 1845 una avenida horrible del río Lagunilla inundó más de siete leguas por sus márgenes, según el informe del gobernador de la provincia de Mariquita. Murieron alrededor de 1.000 personas en San Lorenzo, hoy ruinas de Armero. El guion aclara que en esa época la palabra volcán se refería a un derrumbe o deslizamiento de tierra.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 36"
+    },
+    {
+      "id": "g24_armero_historia",
+      "titulo": "Historia de Armero antes de 1985",
+      "texto": "Armero nació a finales del siglo XIX como caserío para los trabajadores de grandes haciendas, primero con el nombre de San Lorenzo. Se levantó donde ya habían ocurrido dos avalanchas documentadas, la de 1595 y la de 1845, y nadie lo recordó. En 1930 se le dio el nombre de Armero, en honor a José León Armero. Creció con el algodón, el arroz y la ganadería, y atrajo migrantes de varios países. La fumigación aérea nació allí.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 36-37"
+    },
+    {
+      "id": "g24_armero_hoy",
+      "titulo": "Armero después de la tragedia",
+      "texto": "Armero sigue siendo una diáspora. Nunca hubo duelo porque los muertos quedaron sepultados. Muchos sobrevivientes viven en Guayabal, hoy casco urbano del municipio, y hacen ejercicios de memoria como los de la Fundación Armando Armero. Uno de ellos sigue el rastro de los niños sobrevivientes que fueron adoptados y dispersados por Colombia y el mundo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 37-38"
+    },
+    {
+      "id": "g24_biomas",
+      "titulo": "Biomas del parque en hectáreas",
+      "texto": "El bioma más representativo del parque es el páramo, con 53.532,7 hectáreas (85,9 %), seguido del bosque húmedo altoandino con 7.373,5 (11,9 %), los glaciares con 1.141,5 (1,8 %) y los humedales con 96,5 (0,4 %), sobre un total de 62.271,7 hectáreas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 38 (Tabla 18)"
+    },
+    {
+      "id": "g24_franjas",
+      "titulo": "Franjas de vegetación: altoandina, subpáramo, páramo y superpáramo",
+      "texto": "Franja altoandina: bosques altos de encenillos, mortiños, tibar y rodamonte; en el parque desde unos 2.600 msnm. Páramo bajo o subpáramo: arbustales de Diplostephium, Pentacalia, Gynoxys y Hypericum; desde unos 3.600 msnm. Páramo propiamente dicho: máxima diversidad, con frailejonales, pajonales de Calamagrostis y chuscales de Chusquea. Superpáramo: llega hasta el límite inferior de las nieves perpetuas, con vegetación discontinua y mucho suelo desnudo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 39 (según Rangel-Ch., 2000)"
+    },
+    {
+      "id": "g24_vegetacion",
+      "titulo": "Tipos de vegetación del páramo",
+      "texto": "Los tipos de vegetación son bosques achaparrados, matorrales, pastizales o pajonales, frailejonales o rosetales, prados y turberas con plantas en cojín, chuscales de bambú paramuno, rosetales de Puya y rosetales bajos en el superpáramo. Por encima de unos 4.200 msnm en el Ruiz y el Quindío predominan comunidades de Draba. En total se diferenciaron 19 tipos de vegetación: nueve de páramo y superpáramo y diez de bosques altoandinos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 39-40"
+    },
+    {
+      "id": "g24_fauna_cifras",
+      "titulo": "Biodiversidad del parque en cifras",
+      "texto": "Según el Plan de Manejo de 2002, el parque reúne el 27 % de las especies de mamíferos de Colombia, el 23 % de los quirópteros, el 50 % de los ratones del género Oryzomys, el 11 % de los primates y casi el 31 % de las aves. Se reportan 536 especies de aves en el parque y su zona amortiguadora, de ellas 30 endémicas o casi endémicas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 40-41 (Tabla 20)"
+    },
+    {
+      "id": "g24_endemismos",
+      "titulo": "Especies endémicas: aves, anfibios y mamíferos pequeños",
+      "texto": "Entre las aves, 8 son endémicas de Colombia y 22 más son compartidas con países vecinos. El periquito de los Nevados vive solo en páramos de las cordilleras Central y Oriental y se considera vulnerable, con una población de entre 2.000 y 4.000 individuos. En la cordillera Central hay cerca de 80 % de endemismos en anfibios. El pato andino (Oxyura jamaicensis) se describe como endémico de Colombia y restringido a humedales altoandinos. Hay pequeños mamíferos endémicos, sobre todo ratones.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 41-42"
+    },
+    {
+      "id": "g24_mamiferos",
+      "titulo": "Mamíferos grandes del parque",
+      "texto": "Entre las especies llamativas del parque están la danta de páramo, el venado colorado, el conejo de páramo, la boruga, el venado conejo, el puma o león de montaña y el tigrillo. Los grandes mamíferos son muy vulnerables por necesitar territorios extensos y por la cacería. El venado de cola blanca desapareció del parque.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 42-43"
+    },
+    {
+      "id": "g24_paramo_definiciones",
+      "titulo": "Páramo propiamente dicho, subpáramo y superpáramo: temperaturas",
+      "texto": "Páramo propiamente dicho: temperatura promedio de unos 5 °C, con frailejones y pajonales, turberas y pastizales. Subpáramo: unos 10 °C, justo sobre el bosque montano, con árboles pequeños y arbustos. Superpáramo: espacio más recientemente abandonado por el hielo, de 0 a 6 °C, con cambios diarios de -2 a 25 °C y fuertes vientos; llega hasta unos 5.200 msnm y tiene especies endémicas muy especializadas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 43 (El gran libro de los páramos)"
+    },
+    {
+      "id": "g24_loricarias",
+      "titulo": "Las loricarias",
+      "texto": "Las loricarias son arbustos de las zonas más húmedas del superpáramo alto de la cordillera Central. Se mencionan Loricaria colombiana y Loricaria complanata. Crecen en suelos bien drenados y arenosos entre unos 4.000 y 4.400 msnm.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 43 (El gran libro de los páramos)"
+    },
+    {
+      "id": "g24_precipitacion",
+      "titulo": "Lluvias del parque: régimen bimodal",
+      "texto": "El parque tiene un régimen de lluvias bimodal: dos períodos de lluvia (abril a mayo y octubre a noviembre) y dos períodos secos (diciembre a febrero y julio a agosto). En los meses más húmedos la zona norte y oriente tiene unos 200 mm al mes y el sur y occidente unos 400. En los meses más secos la zona norte y oriente recibe de 50 a 100 mm al mes.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 44"
+    },
+    {
+      "id": "g24_temperatura",
+      "titulo": "Temperatura en el parque",
+      "texto": "El parque va de los 2.600 a los 5.321 msnm; la temperatura promedio va de unos 13 °C a 2.600 msnm hasta unos -4 °C en lo más alto. En la estación Brisas, a 4.110 msnm, la media anual es de 2,24 °C, y en La Laguna, a 4.000 msnm, de 3 °C, con pocas horas de sol, humedad alta, niebla frecuente, vientos fuertes y lluvias de poca intensidad. Herd (1982) situó la isoterma de 0 °C a unos 4.705 msnm.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 44"
+    },
+    {
+      "id": "g24_brisas_datos",
+      "titulo": "Registros de la estación meteorológica de Brisas (IDEAM)",
+      "texto": "La estación de Brisas, del IDEAM, registró entre 2018 y 2023 vientos máximos de hasta 52,5 m/s (12 de abril de 2018), temperaturas máximas de 12,7 a 15,3 °C, mínimas de hasta -1,6 °C (2 de febrero de 2023) y humedad del aire de hasta 97 %. Son registros históricos, no las condiciones de hoy.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 45 (tabla IDEAM)"
+    },
+    {
+      "id": "g24_nino_nina",
+      "titulo": "Efecto de El Niño y La Niña en el parque",
+      "texto": "Con un evento El Niño fuerte, según el IDEAM, la precipitación media puede bajar entre 40 % y 80 % en varios sectores del parque y la temperatura media subir cerca de 1 °C. Con un evento La Niña fuerte, la precipitación puede aumentar entre 120 % y 160 % y la temperatura bajar cerca de 1 °C.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 45"
+    },
+    {
+      "id": "g24_cambio_climatico",
+      "titulo": "Cambio climático proyectado en el parque",
+      "texto": "Según el escenario pesimista A2 del IDEAM para 2040-2050, la zona occidental, en la cuenca del río Chinchiná, tendría la mayor exposición, con reducciones de lluvia de hasta 50 %. La temperatura aumentaría entre 2 y 3 °C en toda la región, y el fenómeno de El Niño lo agravaría.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, pp. 45-46"
+    },
+    {
+      "id": "g24_mam_turistas",
+      "titulo": "Estudio del mal agudo de montaña en turistas del Nevado del Ruiz",
+      "texto": "Un estudio con 129 turistas evaluó a 4.287 y 4.816 msnm. A 4.287 metros, el 1,6 % tuvo síntomas graves de mal agudo de montaña; a 4.816, el 16 %. Los síntomas más comunes fueron dolor de cabeza, fatiga y debilidad. Los turistas sedentarios (45,7 %) fueron más propensos. Otros factores de riesgo: ascender rápido, ser joven, ser mujer y el frío. Si sientes síntomas, avisa de inmediato a tu guía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 46-47 (Peña y otros, 2010)"
+    },
+    {
+      "id": "g24_mam_guias",
+      "titulo": "Estudio de actividad física de los guías del Nevado del Ruiz",
+      "texto": "Un estudio con 18 guías encontró que el 44 % eran sedentarios y el 55,6 % activos. El 88,9 % usa protección solar y el 61,1 % mantiene la hidratación, pero el 77,8 % no controla su frecuencia cardíaca. El estudio recomienda programas de actividad física, descanso y mejor infraestructura para los guías.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 48-49 (Peña Quimbaya, 2016)"
+    },
+    {
+      "id": "g24_hipoxia",
+      "titulo": "Qué le pasa al cuerpo con la altura: hipoxia hipobárica",
+      "texto": "A mayor altura la presión atmosférica baja. El aire sigue teniendo 21 % de oxígeno, pero la presión parcial de oxígeno disminuye y llega menos oxígeno a los tejidos. A eso se le llama hipoxia hipobárica. El cuerpo responde respirando más rápido y profundo, y con los días produce más glóbulos rojos y hemoglobina.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 49-51"
+    },
+    {
+      "id": "g24_enfermedades_hipobaria",
+      "titulo": "Enfermedades por altura: aguda de montaña y de Monge",
+      "texto": "La enfermedad aguda de montaña aparece al subir rápido a gran altura: dolor de cabeza, náuseas, vómito, fatiga y dificultad para dormir, entre las 6 horas y hasta 4 días. Puede complicarse con edema pulmonar o cerebral, que pueden ser mortales sin tratamiento. La enfermedad crónica de montaña, o de Monge, afecta a quienes viven siempre en altura. El diagnóstico se basa en la escala de Lake Louise. El tratamiento más efectivo es volver a presiones normales, es decir, bajar. Para prevenir síntomas agudos, el guion indica que se utilizan acetazolamida y oxígeno, aunque el oxígeno es costoso y difícil de implementar en algunos ambientes. Ante síntomas, avisa al guía o al personal del parque.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 53-54"
+    },
+    {
+      "id": "g24_bibliografia",
+      "titulo": "En qué fuentes se basa el guion ecoturístico",
+      "texto": "Entre las fuentes principales del guion están: Ceballos-Hernández y otros (2020), Geological evolution of the Nevado del Ruiz Volcanic Complex, del Servicio Geológico Colombiano; el Plan de Manejo 2017-2022 del PNN Los Nevados; el Guion de interpretación ambiental sector norte de Parques Nacionales (2018); El gran libro de los páramos (2011); el Informe del estado de los glaciares colombianos 2022 del IDEAM; y estudios de Eder Peña Quimbaya sobre aclimatación en altura.",
+      "fuente": "Guion Ecoturístico UTON 2024, Referencias bibliográficas, pp. 55-57"
+    },
+    {
+      "id": "gzn_proposito",
+      "titulo": "Para qué sirve el guion turístico de la zona norte",
+      "texto": "El guion turístico de la zona norte da a los guías de la Unión Temporal Operación Nevados elementos técnicos para un discurso con información validada y científicamente respaldada. Busca que cada guía sea un intérprete del patrimonio natural y cultural del sector norte del parque.",
+      "fuente": "Guion turístico zona norte, Introducción, p. 1"
+    },
+    {
+      "id": "gzn_kumanday",
+      "titulo": "Kumanday: significado atribuido (guion zona norte)",
+      "texto": "Antes de ser el Ruiz, las comunidades indígenas lo llamaron Kumanday. El guion turístico de la zona norte dice que significa 'Cerro Blanco', 'El de la Nariz Humeante' o 'Padre Blanco', y que para ellos la montaña era un ser vivo y sagrado. Ojo: el Guion Ecoturístico UTON 2024 (p. 34) advierte que no hay investigación suficiente para fijar el origen y el significado de la palabra, así que estos significados deben presentarse como atribuciones y tradición oral.",
+      "fuente": "Guion turístico zona norte, p. 1; contraste con Guion Ecoturístico UTON 2024, p. 34"
+    },
+    {
+      "id": "gzn_glaciar",
+      "titulo": "El glaciar de cumbre: qué es y por qué importa",
+      "texto": "El glaciar de cumbre es una masa de hielo de origen terrestre. Se forma en cientos de años: la nieve se acumula, se compacta bajo su propio peso, expulsa el aire y se recristaliza en hielo denso y azulado. Es una infraestructura hídrica natural: en las épocas secas libera agua poco a poco y así mantiene los ríos que abastecen a las ciudades. El guion lo llama la cuenta de ahorros de agua sólida.",
+      "fuente": "Guion turístico zona norte, p. 1"
+    },
+    {
+      "id": "gzn_retirada",
+      "titulo": "La retirada glaciar actual según el guion de zona norte",
+      "texto": "La retirada glaciar actual es el testimonio más claro del cambio climático en Colombia. Donde antes había campos de nieve perpetua hoy hay morrenas y rocas desnudas. El retroceso es acelerado y se ven cicatrices en la roca que muestran dónde estaba el hielo hace apenas diez años. Para el guion, somos testigos de la etapa final de estos glaciares tropicales.",
+      "fuente": "Guion turístico zona norte, pp. 1-2"
+    },
+    {
+      "id": "gzn_clima_suelo",
+      "titulo": "Clima del páramo y suelo esponja",
+      "texto": "El clima de la región es bimodal: dos períodos de lluvia y dos de sequía. El páramo es un ecosistema estratégico y una isla biogeográfica de alta montaña tropical, con presión atmosférica baja y radiación solar extrema. El suelo, de origen volcánico, funciona como una esponja y, según este guion, retiene hasta 40 veces su peso en agua. La niebla se transforma en agua líquida.",
+      "fuente": "Guion turístico zona norte, p. 2 (El gran libro de los páramos)"
+    },
+    {
+      "id": "gzn_frailejon_fauna",
+      "titulo": "El frailejón y la fauna: cóndor, danta y colibríes",
+      "texto": "El frailejón es el ingeniero de este lugar: sus hojas peludas atrapan la humedad y su necromasa, las hojas muertas que cubren el tallo, actúa como aislante térmico para que el agua en su interior no se congele. El cóndor de los Andes usa las corrientes térmicas del calor del volcán para planear sin esfuerzo. La danta de montaña es un mamífero lanudo y principal dispersor de semillas. Los colibríes entran en hibernación nocturna para sobrevivir.",
+      "fuente": "Guion turístico zona norte, p. 2"
+    },
+    {
+      "id": "gzn_discurso",
+      "titulo": "Discurso de bienvenida: Kumanday, el Centinela del Agua",
+      "texto": "Es el discurso sugerido para abrir el recorrido por el sector norte. Presenta al Ruiz como Kumanday, hoy un glaciar de cumbre que funciona como reserva de agua sólida para el Eje Cafetero y que retrocede aceleradamente por el calentamiento global. Anuncia un recorrido por el páramo, una esponja natural con el frailejón como planta clave, por un clima extremo y una fauna adaptada con el cóndor y la danta de montaña. Invita a hacerlo no como turistas, sino como testigos de la fragilidad y la fuerza del Kumanday.",
+      "fuente": "Guion turístico zona norte, pp. 2-3"
+    },
+    {
+      "id": "gzn_ficha",
+      "titulo": "Ficha técnica general del parque (guion zona norte)",
+      "texto": "El parque tiene 62.142 hectáreas, de las cuales 53.532 son páramos, el 86 %. Abastece a 37 municipios y beneficia a cerca de 3 millones de personas del Eje Cafetero. El Complejo Volcánico Nevado del Ruiz está compuesto por cuatro estructuras: Nereidas, Olleta, Piraña y Arenas. La roca predominante es la andesita, común en los volcanes de los Andes.",
+      "fuente": "Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gzn_estaciones",
+      "titulo": "Las cuatro estaciones de la zona norte: altura, bioma y elementos clave",
+      "texto": "Aguacerales, 4.160 msnm, páramo propiamente dicho: captación de agua por condensación y frailejones. Arenales, 4.290 msnm, transición de páramo a superpáramo: dunas de arena, patrimonio geológico intangible, historia del esquí y Chalet Arenales. Lunares, 4.350 msnm, superpáramo: gelifracción y oxidación. Valle de las Tumbas, 4.460 msnm, de superpáramo a zona nival: significado espiritual indígena, riesgo de lahares y límite de ascenso.",
+      "fuente": "Guion turístico zona norte, p. 3"
+    },
+    {
+      "id": "gzn_nodos",
+      "titulo": "El recorrido en cuatro ideas: agua, memoria, roca y respeto",
+      "texto": "El diagrama del recorrido tiene tres zonas ecológicas: páramo propio, superpáramo y zona intangible o de riesgo. Cada parada tiene una idea central. Aguacerales: génesis hídrica, 'el agua que nutre la vida'. Arenales: memoria y cambio climático, 'deja paso a la roca desnuda'. Valle Lunar: fuerzas geológicas, 'donde la tierra respira fuego'. Valle de las Tumbas: respeto y riesgo, 'el límite del hombre frente al volcán'. El oxígeno disminuye a medida que se sube.",
+      "fuente": "Guion turístico zona norte, p. 4"
+    },
+    {
+      "id": "gzn_brisas",
+      "titulo": "Brisas: la puerta de entrada al sector norte",
+      "texto": "Brisas es la entrada al recorrido. El discurso sugerido recuerda que se ingresa a un área protegida de 62.142 hectáreas que abastece a más de 37 municipios, en el flanco norte del Complejo Volcánico Nevado del Ruiz, formado por Nereidas, Olleta, Piraña y el cráter activo Arenas. El páramo es un regulador hídrico vital para el Eje Cafetero.",
+      "fuente": "Guion turístico zona norte, Brisas, p. 5"
+    },
+    {
+      "id": "gzn_aguacerales",
+      "titulo": "Aguacerales según el guion de zona norte: el filtro de la montaña",
+      "texto": "En Aguacerales se ve la intercepción de niebla, o condensación por contacto: aquí el agua se atrapa en vez de caer como lluvia. Los frailejones son ingenieros hídricos; sus pelos blancos, la pubescencia, los protegen de la radiación UV y retienen calor. El suelo, de ceniza volcánica y materia orgánica, funciona como esponja y libera el agua lentamente hacia las cuencas de los ríos Chinchiná y Gualí. Presenta masivamente a Espeletia hartwegiana y musgos de turbera.",
+      "fuente": "Guion turístico zona norte, Aguacerales, p. 5"
+    },
+    {
+      "id": "gzn_arenales",
+      "titulo": "Arenales según el guion de zona norte: geología y memoria",
+      "texto": "Arenales es una ventana al pasado geológico: la arena es material piroclástico y ceniza de erupciones, retrabajado por el viento. Allí funcionó el antiguo Chalet Arenales, recuerdo del retroceso glaciar: donde hubo nieve permanente para esquiar hoy hay un desierto de altura. Las rocas predominantes son andesitas. Se destaca la vegetación pionera, plantas pequeñas que intentan colonizar un suelo muy pobre y ácido.",
+      "fuente": "Guion turístico zona norte, Arenales, pp. 5-6"
+    },
+    {
+      "id": "gzn_lunar",
+      "titulo": "Valle Lunar según el guion de zona norte: gelifracción y oxidación",
+      "texto": "El Valle Lunar se llama así por su aspecto estéril y desolado. El agua se filtra en las grietas, se congela de noche, aumenta de volumen y las estalla desde adentro como una cuña, rompiendo las rocas andesíticas en pedazos angulares: es la gelifracción. Los tonos rojizos vienen de la oxidación de minerales ferrosos, hierro y azufre presentes en la lava vieja, al contacto con el oxígeno y la humedad.",
+      "fuente": "Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gzn_tumbas",
+      "titulo": "Valle de las Tumbas según el guion de zona norte: espiritualidad y riesgo",
+      "texto": "A 4.460 msnm este lugar era sagrado para los pueblos indígenas, que lo llamaban Kumanday, lugar de pagamentos y respeto. Está en la zona de influencia directa de lahares. El cráter Arenas está cerca y emite gases constantemente. El ascenso más allá se restringe no solo por la actividad del volcán, sino por la fragilidad del superpáramo, donde las plantas resisten fluctuaciones de temperatura que las congelarían cada noche.",
+      "fuente": "Guion turístico zona norte, Valle de las Tumbas, p. 6"
+    },
+    {
+      "id": "gzn_volcan_activo",
+      "titulo": "El Nevado del Ruiz es un volcán activo",
+      "texto": "El Nevado del Ruiz es un volcán activo; nunca debe decirse que está apagado o extinto, porque da una falsa sensación de seguridad. Se habla de períodos de reposo o de actividad constante. El Servicio Geológico Colombiano lo vigila las 24 horas. El guion indicó una alerta amarilla al redactarse, pero el nivel cambia: confírmalo con el personal del parque o el Servicio Geológico Colombiano, esta guía no lo sabe en este momento.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gzn_ceniza_nieve",
+      "titulo": "Lo gris del sector norte es ceniza, no nieve",
+      "texto": "Muchos turistas esperan ver nieve blanca. Lo que cubre gran parte del sector norte es ceniza volcánica reciente y depósitos piroclásticos, no nieve escondida debajo. La nieve y el glaciar están en franco retroceso, y decir la verdad permite explicar el dinamismo del volcán y la crisis climática.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
+    },
+    {
+      "id": "gzn_lenguaje",
+      "titulo": "Cómo se explica la actividad del volcán sin mitos",
+      "texto": "El parque es un aula ambiental. En lugar de decir que el volcán está enojado, se explica que hay un aumento en el flujo de dióxido de azufre o actividad sísmica interna. Los mitos y leyendas se cuentan como relatos culturales y no como hechos científicos. El hilo conductor es unir la desaparición del hielo con la importancia de la vegetación para retener el agua que el glaciar ya no puede dar.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, p. 7"
     }
   ]
 }

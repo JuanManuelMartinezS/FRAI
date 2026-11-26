@@ -19,8 +19,33 @@ namespace GuiaFrailejon
         [Tooltip("Grados que gira la camara al inclinar el celular.")]
         public float inclinacionMax = 4f;
 
+        [Header("Personajes")]
+        [Tooltip("Frailejon que ya esta en la escena.")]
+        public GameObject frailejonFijo;
+        public GameObject prefabCondor;
+        [Tooltip("El condor real mide ~3 m de envergadura: en pantalla vertical no cabe a escala 1.")]
+        public float escalaCondor = 0.4f;
+
+        GameObject condorFijo;
         Quaternion rotBase;
         Material mat;
+
+        void OnEnable() { AvatarSeleccion.Cambio += AplicarAvatar; AplicarAvatar(); }
+        void OnDisable() => AvatarSeleccion.Cambio -= AplicarAvatar;
+
+        void AplicarAvatar()
+        {
+            bool condor = AvatarSeleccion.Actual == Avatar.Condor && prefabCondor != null;
+            if (condor && condorFijo == null)
+            {
+                condorFijo = Instantiate(prefabCondor, transform);
+                condorFijo.name = "CondorFijo";
+                condorFijo.transform.SetPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 180, 0));
+                condorFijo.transform.localScale = Vector3.one * escalaCondor;
+            }
+            if (condorFijo) condorFijo.SetActive(condor);
+            if (frailejonFijo) frailejonFijo.SetActive(!condor);
+        }
 
         void Start()
         {

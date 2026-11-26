@@ -20,6 +20,10 @@ namespace GuiaFrailejon
         [Tooltip("Desplazamiento sobre el letrero (metros).")]
         public Vector3 desplazamiento = new Vector3(0, 0.05f, 0);
         public float escala = 0.4f;
+        [Header("Condor")]
+        public GameObject prefabCondor;
+        [Tooltip("1 = tamano real del modelo (el prefab ya viene en metros). Ajustarlo aqui si queda muy grande en el letrero.")]
+        public float escalaCondor = 1f;
         [Tooltip("Opcional: texto en pantalla que muestra que marcador ve la camara (para pruebas).")]
         public TMP_Text textoDebug;
         [Tooltip("SOLO PRUEBAS: pone un cubo rosado de 10 cm sobre el letrero para ver si la deteccion funciona.")]
@@ -72,8 +76,17 @@ namespace GuiaFrailejon
             if (textoDebug) { textoDebug.gameObject.SetActive(mostrarDiagnostico); textoDebug.text = t; }
             if (t != ultimoLog) { ultimoLog = t; Debug.Log("[AR] " + t); }
         }
-        void OnEnable() => gestor.trackablesChanged.AddListener(AlCambiar);
-        void OnDisable() => gestor.trackablesChanged.RemoveListener(AlCambiar);
+        void OnEnable() { gestor.trackablesChanged.AddListener(AlCambiar); AvatarSeleccion.Cambio += AlCambiarAvatar; }
+        void OnDisable() { gestor.trackablesChanged.RemoveListener(AlCambiar); AvatarSeleccion.Cambio -= AlCambiarAvatar; }
+
+        bool EsCondor => AvatarSeleccion.Actual == Avatar.Condor && prefabCondor != null;
+
+        /// <summary>Al cambiar de personaje se borran los actuales; reaparecen con el nuevo en el siguiente cuadro del letrero.</summary>
+        void AlCambiarAvatar()
+        {
+            foreach (var go in instancias.Values) if (go) Destroy(go);
+            instancias.Clear();
+        }
 
         void AlCambiar(ARTrackablesChangedEventArgs<ARTrackedImage> args)
         {
@@ -104,10 +117,11 @@ namespace GuiaFrailejon
                 if (!instancias.TryGetValue(marcador, out var go))
                 {
                     if (!visible) return;
-                    if (prefabFrailejon == null) { Debug_("ERROR: Frailejon Spawner no tiene Prefab Frailejon"); return; }
-                    go = Instantiate(prefabFrailejon, img.transform);
+                    var prefab = EsCondor ? prefabCondor : prefabFrailejon;
+                    if (prefab == null) { Debug_("ERROR: Frailejon Spawner no tiene Prefab Frailejon"); return; }
+                    go = Instantiate(prefab, img.transform);
                     go.transform.localPosition = desplazamiento;
-                    go.transform.localScale = Vector3.one * escala;
+                    go.transform.localScale = Vector3.one * (EsCondor ? escalaCondor : escala);
                     instancias[marcador] = go;
 
                     if (cuboDePrueba)

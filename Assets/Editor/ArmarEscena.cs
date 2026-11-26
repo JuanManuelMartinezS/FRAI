@@ -64,6 +64,7 @@ namespace GuiaFrailejon.EditorTools
                 CrearCarpeta(EstiloUI.Carpeta);
 
                 GameObject prefabFrailejon = CrearPrefabFrailejon();
+                GameObject prefabCondor = CrearPrefabCondor();
                 Button prefabChip = CrearPrefabChip();
 
                 EditorUtility.DisplayProgressBar("Guia Frailejon", "Creando marcadores...", 0.3f);
@@ -90,11 +91,11 @@ namespace GuiaFrailejon.EditorTools
 
                 // ---- AR ----
                 var raizAR = new GameObject("RaizAR");
-                bool arOk = CrearObjetosAR(raizAR.transform, libreria, prefabFrailejon, kb, out FrailejonSpawner spawner, out FraiAcompanante acompanante);
+                bool arOk = CrearObjetosAR(raizAR.transform, libreria, prefabFrailejon, prefabCondor, kb, out FrailejonSpawner spawner, out FraiAcompanante acompanante);
 
                 // ---- Modo sin AR ----
                 var raizSinAR = new GameObject("RaizSinAR");
-                var modoSinAR = CrearModoSinAR(raizSinAR, prefabFrailejon, kb, fotos);
+                var modoSinAR = CrearModoSinAR(raizSinAR, prefabFrailejon, prefabCondor, kb, fotos);
                 disponibilidad.raizAR = raizAR;
                 disponibilidad.raizSinAR = raizSinAR;
 
@@ -174,6 +175,29 @@ namespace GuiaFrailejon.EditorTools
 
             var prefab = PrefabUtility.SaveAsPrefabAsset(raiz, RutaPrefabFrailejon);
             UnityEngine.Object.DestroyImmediate(raiz);
+            return prefab;
+        }
+
+        /// <summary>Condor desde Assets/Condor (.glb). Sin normalizar: el modelo se usa a su tamano original (metros).</summary>
+        static GameObject CrearPrefabCondor()
+        {
+            if (!AssetDatabase.IsValidFolder("Assets/Condor")) return null;
+            string ruta = AssetDatabase.FindAssets("", new[] { "Assets/Condor" })
+                .Select(AssetDatabase.GUIDToAssetPath)
+                .FirstOrDefault(p => new[] { ".glb", ".gltf", ".fbx" }.Contains(Path.GetExtension(p).ToLowerInvariant()));
+            if (ruta == null) return null;
+            var asset = AssetDatabase.LoadAssetAtPath<GameObject>(ruta);
+            if (asset == null) { Debug.LogWarning("[ArmarEscena] No se pudo cargar el condor " + ruta); return null; }
+
+            var raiz = new GameObject("CondorGuia");
+            var cuerpo = (GameObject)PrefabUtility.InstantiatePrefab(asset);
+            cuerpo.name = "Modelo";
+            cuerpo.transform.SetParent(raiz.transform, false);
+            var anim = raiz.AddComponent<FrailejonAnimator>();
+            anim.roseta = cuerpo.transform;
+            var prefab = PrefabUtility.SaveAsPrefabAsset(raiz, CarpetaPrefabs + "/CondorGuia.prefab");
+            UnityEngine.Object.DestroyImmediate(raiz);
+            Debug.Log("[ArmarEscena] Condor listo: " + ruta);
             return prefab;
         }
 
@@ -288,7 +312,7 @@ namespace GuiaFrailejon.EditorTools
         // =====================================================================
         // AR Session + XR Origin
         // =====================================================================
-        static bool CrearObjetosAR(Transform raizAR, XRReferenceImageLibrary lib, GameObject prefab, KnowledgeBase kb,
+        static bool CrearObjetosAR(Transform raizAR, XRReferenceImageLibrary lib, GameObject prefab, GameObject prefabCondor, KnowledgeBase kb,
                                    out FrailejonSpawner spawner, out FraiAcompanante acompanante)
         {
             spawner = null;
@@ -330,6 +354,7 @@ namespace GuiaFrailejon.EditorTools
             spawner = origen.gameObject.AddComponent<FrailejonSpawner>();
             spawner.libreria = lib;
             spawner.prefabFrailejon = prefab;
+            spawner.prefabCondor = prefabCondor;
             spawner.kb = kb;
 
             // Deteccion del piso (para que Frai camine al lado del visitante).
@@ -338,6 +363,7 @@ namespace GuiaFrailejon.EditorTools
             origen.gameObject.AddComponent<ARRaycastManager>();
             acompanante = origen.gameObject.AddComponent<FraiAcompanante>();
             acompanante.prefabFrailejon = prefab;
+            acompanante.prefabCondor = prefabCondor;
             spawner.acompanante = acompanante;
             return true;
         }
@@ -620,7 +646,7 @@ namespace GuiaFrailejon.EditorTools
 
             // ---- Botones flotantes (columna derecha; los ocultos no dejan hueco) ----
             var flot = Nodo("Flotantes", g);
-            Ubicar(flot, Ancla.ArribaDer, -16, -300, 152, 560);
+            Ubicar(flot, Ancla.ArribaDer, -16, -300, 152, 740);
             var vf = flot.AddComponent<VerticalLayoutGroup>();
             vf.spacing = 14; vf.childAlignment = TextAnchor.UpperCenter;
             vf.childControlWidth = false; vf.childControlHeight = false;
@@ -628,6 +654,9 @@ namespace GuiaFrailejon.EditorTools
             var silenciar = Fab(flot.transform, "BtnSilenciar", "silencio", "Silenciar", EstiloUI.Noche, out _);
             var acompanar = Fab(flot.transform, "BtnAcompanar", "huella", "Acompáñame", EstiloUI.Turquesa, out var textoAcompanar);
             var venAqui = Fab(flot.transform, "BtnVenAqui", "objetivo", "Ven aquí", EstiloUI.Noche, out _);
+            var cambiar = Fab(flot.transform, "BtnCambiarAvatar", "hoja", "Ser Cóndor", EstiloUI.Ambar, out var textoCambiar);
+            var selector = cambiar.gameObject.AddComponent<SelectorAvatar>();
+            selector.etiqueta = textoCambiar;
 
             // ---- Panel de conversacion (plegable) ----
             var panel = Tarjeta("PanelInferior", g, EstiloUI.Noche);
@@ -1101,7 +1130,7 @@ namespace GuiaFrailejon.EditorTools
         // =====================================================================
         // Modo sin AR: camara normal, foto de la estacion de fondo y Frai en 3D
         // =====================================================================
-        static ModoSinAR CrearModoSinAR(GameObject raiz, GameObject prefabFrailejon, KnowledgeBase kb, Texture2D[] fotos)
+        static ModoSinAR CrearModoSinAR(GameObject raiz, GameObject prefabFrailejon, GameObject prefabCondor, KnowledgeBase kb, Texture2D[] fotos)
         {
             var camGo = new GameObject("CamaraSinAR", typeof(Camera), typeof(AudioListener));
             camGo.tag = "MainCamera";
@@ -1141,6 +1170,8 @@ namespace GuiaFrailejon.EditorTools
 
             var modo = raiz.AddComponent<ModoSinAR>();
             modo.kb = kb;
+            modo.frailejonFijo = fijo;
+            modo.prefabCondor = prefabCondor;
             modo.camara = cam;
             modo.fondo = r;
             modo.fotos = fotos;

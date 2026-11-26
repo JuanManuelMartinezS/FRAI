@@ -25,6 +25,18 @@ namespace GuiaFrailejon
         public GameObject prefabFrailejon;
         [Tooltip("Altura de Frai en modo acompanante (el prefab mide 1 m).")]
         public float escala = 0.8f;
+        [Header("Condor")]
+        public GameObject prefabCondor;
+        [Tooltip("1 = tamano real del modelo (el prefab ya viene en metros).")]
+        public float escalaCondor = 1f;
+        [Tooltip("El condor es enorme (3 m de alas): se queda mas lejos para que quepa en pantalla.")]
+        public float ladoCondor = 2.2f;
+        public float adelanteCondor = 2.2f;
+        [Tooltip("Cuanto debe caminar el visitante para que el condor cambie de lugar (mayor = se acerca menos).")]
+        public float pasoMinimoCondor = 1.6f;
+        [Tooltip("Distancia a la que 'Ven aqui' pone al condor.")]
+        public float distanciaVenAquiCondor = 3.2f;
+        public float distanciaTeletransporteCondor = 12f;
         [Tooltip("Metros a un lado del camino del visitante.")]
         public float lado = 0.8f;
         [Tooltip("Metros hacia adelante (en la direccion en que camina el visitante).")]
@@ -74,12 +86,7 @@ namespace GuiaFrailejon
         {
             var cam = Camera.main;
             if (cam == null || prefabFrailejon == null) return;
-            if (frai == null)
-            {
-                frai = Instantiate(prefabFrailejon).transform;
-                frai.name = "FraiAcompanante";
-                frai.localScale = Vector3.one * escala;
-            }
+            if (frai == null) CrearFrai();
             frai.gameObject.SetActive(true);
             haySuelo = false;
             sueloY = cam.transform.position.y - alturaCelular;
@@ -94,6 +101,34 @@ namespace GuiaFrailejon
             inicio.y = Suelo(inicio);
             frai.position = inicio;
             Activo = true;
+        }
+
+        bool EsCondor => AvatarSeleccion.Actual == Avatar.Condor && prefabCondor != null;
+        float Lado => EsCondor ? ladoCondor : lado;
+        float Adelante => EsCondor ? adelanteCondor : adelante;
+        float PasoMinimo => EsCondor ? pasoMinimoCondor : pasoMinimo;
+        float DistTele => EsCondor ? distanciaTeletransporteCondor : distanciaTeletransporte;
+        float EscalaActual => EsCondor ? escalaCondor : escala;
+
+        void CrearFrai()
+        {
+            frai = Instantiate(EsCondor ? prefabCondor : prefabFrailejon).transform;
+            frai.name = "FraiAcompanante";
+            frai.localScale = Vector3.one * EscalaActual;
+        }
+
+        void OnEnable() => AvatarSeleccion.Cambio += AlCambiarAvatar;
+        void OnDisable() => AvatarSeleccion.Cambio -= AlCambiarAvatar;
+
+        /// <summary>Cambia el modelo del acompanante conservando su posicion y orientacion.</summary>
+        void AlCambiarAvatar()
+        {
+            if (frai == null) return;
+            Vector3 pos = frai.position; Quaternion rot = frai.rotation;
+            Destroy(frai.gameObject);
+            CrearFrai();
+            frai.SetPositionAndRotation(pos, rot);
+            frai.gameObject.SetActive(Activo);
         }
 
         public void Desactivar()
@@ -121,7 +156,7 @@ namespace GuiaFrailejon
             if (f.sqrMagnitude < 0.01f) f = rumbo;
             f.Normalize();
             anclaUsuario = u;
-            objetivo = u + f * 1.3f;
+            objetivo = u + f * (EsCondor ? distanciaVenAquiCondor : 1.3f);
             objetivo.y = Suelo(objetivo);
         }
 
@@ -137,7 +172,7 @@ namespace GuiaFrailejon
             // 1) Solo se reubica cuando el visitante CAMINA (no cuando gira el celular).
             Vector3 usuario = Plano(cam.transform.position);
             Vector3 mov = usuario - anclaUsuario;
-            if (mov.magnitude > pasoMinimo)
+            if (mov.magnitude > PasoMinimo)
             {
                 rumbo = Vector3.Slerp(rumbo, mov.normalized, 0.6f).normalized;
                 anclaUsuario = usuario;
@@ -147,7 +182,7 @@ namespace GuiaFrailejon
             // 2) Si el visitante se fue lejos, Frai reaparece a su lado.
             Vector3 delta = objetivo - frai.position; delta.y = 0;
             float d = delta.magnitude;
-            if (Plano(frai.position - cam.transform.position).magnitude > distanciaTeletransporte)
+            if (Plano(frai.position - cam.transform.position).magnitude > DistTele)
             {
                 frai.position = objetivo;
                 return;
@@ -182,10 +217,10 @@ namespace GuiaFrailejon
             Vector3 derecha = Vector3.Cross(Vector3.up, dir).normalized;
             Vector3[] candidatos =
             {
-                usuario + derecha * lado + dir * adelante,
-                usuario - derecha * lado + dir * adelante,
-                usuario + derecha * lado - dir * 0.6f,
-                usuario - derecha * lado - dir * 0.6f,
+                usuario + derecha * Lado + dir * Adelante,
+                usuario - derecha * Lado + dir * Adelante,
+                usuario + derecha * Lado - dir * 0.6f,
+                usuario - derecha * Lado - dir * 0.6f,
             };
 
             Vector3 ojos = cam.transform.position;
@@ -245,7 +280,7 @@ namespace GuiaFrailejon
             var cam = Camera.main;
             if (!Activo || frai == null || cam == null) { indicador.gameObject.SetActive(false); return; }
 
-            Vector3 vp = cam.WorldToViewportPoint(frai.position + Vector3.up * escala * 0.5f);
+            Vector3 vp = cam.WorldToViewportPoint(frai.position + Vector3.up * EscalaActual * 0.5f);
             bool visible = vp.z > 0 && vp.x > 0.03f && vp.x < 0.97f && vp.y > 0.03f && vp.y < 0.97f;
             indicador.gameObject.SetActive(!visible);
             if (visible) return;

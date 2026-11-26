@@ -662,6 +662,7 @@ namespace GuiaFrailejon.EditorTools
             var panel = Tarjeta("PanelInferior", g, EstiloUI.Noche);
             Rect(panel, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 168), new Vector2(-40, 780));
             var pt = panel.transform;
+            panel.AddComponent<SubirConTeclado>();   // sube el panel sobre el teclado al escribir
 
             var plegarImg = Img("BtnPlegar", pt, null, new Color(0, 0, 0, 0), true);
             Ubicar(plegarImg.gameObject, Ancla.ArribaCentro, 0, 0, 260, 56);

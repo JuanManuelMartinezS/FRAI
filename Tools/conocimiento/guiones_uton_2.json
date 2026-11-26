@@ -1,0 +1,502 @@
+{
+  "_nota": "Segunda pasada de revision: completa lo que faltaba de Guion Ecoturistico UTON 2024 y Guion turistico zona norte. Mismos prefijos que guiones_uton.json.",
+  "actualizar": {
+    "g24_efectos_1985": {
+      "texto": "La erupción de 1985 comenzó a las 15:05 hora local y generó una nube de gases y ceniza que superó los 5.000 metros sobre el cráter. El material piroclástico se dispersó hacia el oriente por los vientos y cubrió extensas áreas del Tolima, incluidas Armero, Mariquita y Honda; la ceniza y el lapilli cayeron rápido por gravedad y se acumularon en las zonas afectadas. Se estima que emitió cerca de 700.000 toneladas de dióxido de azufre, que llegó a la estratósfera y se dispersó a largas distancias, incluso hasta la Sierra Nevada del Cocuy y Cali: una de las mayores emisiones registradas en el mundo."
+    },
+    "g24_aguas_termales": {
+      "texto": "El Nevado del Ruiz, cerca de Manizales, es un volcán activo con manifestaciones termales: manantiales y fumarolas. Un estudio geoquímico identificó dos sistemas de circulación independientes: uno al norte, con aguas sulfatadas, y otro al oeste, con aguas cloruradas neutras. Las aguas geotérmicas vienen de un yacimiento de al menos 235 °C que se mezcla con aguas superficiales y forma manantiales de alta temperatura, como los de Botero Londoño. El estudio sugiere buen potencial geotérmico en Botero Londoño y Las Nereidas, pero no recomienda explorar cerca del cráter por posibles componentes magmáticos volátiles."
+    },
+    "g24_gases": {
+      "texto": "Los gases volcánicos son una mezcla: dióxido de carbono (mayoritario en muchas erupciones), dióxido de azufre (que contribuye a la lluvia ácida), vapor de agua (uno de los más abundantes), monóxido de carbono, hidrocarburos, ácido clorhídrico, ácido fluorhídrico y metano. Son esenciales para entender y predecir la actividad del volcán y gestionar el riesgo. Hallazgos: aumento de componentes hidrotermales en los vapores, gases ricos en azufre que indican un sistema magmático estancado, y aguas ácidas y cloruro-bicarbonato que sugieren dos sistemas de circulación. La conclusión es que la actividad se debe a la acumulación de gases de magma antiguo y no a nuevos aportes de magma."
+    }
+  },
+  "documentos": [
+    {
+      "id": "g24_autoria",
+      "titulo": "Quién hizo el guion ecoturístico y cuándo",
+      "texto": "El Guion Ecoturístico del recorrido Brisas – Valle de las Tumbas lo realizó la Unión Temporal Operación Nevados. Responsable: Cristian Camilo Zamorano García. Colaborador: Daniel Fernando Aguirre Valencia. Se presentó en Manizales el 9 de septiembre de 2024. En los agradecimientos se menciona a David López, a Jorge Mario Manrique y Jaime Benavides por sus entrevistas, a Daniel Aguirre por su experiencia en antropología, a la Universidad de Caldas, a Julián Ceballos del Servicio Geológico Colombiano, a Jorge Luis Ceballos del IDEAM y a los guías de la UT Nevados que participaron en las encuestas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Portada y Agradecimientos, pp. 1-3"
+    },
+    {
+      "id": "g24_enfoque",
+      "titulo": "Enfoque del guion: una obra viva",
+      "texto": "El guion tiene un enfoque multidimensional que incluye geología, geomorfología, biología, ecosistemas, fisiopatología y componentes socioculturales, antropológicos y folclóricos. No es una camisa de fuerza: cada guía puede seleccionar y adaptar la información que considere más apropiada. Es una obra en constante evolución y los guías pueden proponer modificaciones verificables a la UTON. Su meta es ser un recurso vivo que informe, inspire y promueva la conservación del ecosistema.",
+      "fuente": "Guion Ecoturístico UTON 2024, Introducción, p. 4"
+    },
+    {
+      "id": "g24_aguacerales_mensajes",
+      "titulo": "Aguacerales: ideas centrales de la estación",
+      "texto": "Las ideas centrales de Aguacerales son la conexión entre los páramos y el agua, la importancia de la conservación, la belleza y fragilidad de estos ecosistemas y la adaptación de la flora y la fauna. Los páramos son ecosistemas únicos y vitales para Colombia y el planeta.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5"
+    },
+    {
+      "id": "g24_arenales_mensajes",
+      "titulo": "Arenales: ideas centrales y tipo de paisaje",
+      "texto": "Las ideas centrales de Arenales son: un legado de la naturaleza y la aventura, historia entre cabañas, de las pistas de esquí a la conservación, las dunas y la importancia de preservar nuestro patrimonio natural. El paisaje es típico de superpáramo; en la parte baja del sector, cerca del paso de la quebrada Arenales sobre la carretera, todavía se aprecia el páramo propiamente dicho.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7"
+    },
+    {
+      "id": "g24_lunares_mensajes",
+      "titulo": "Lunares: ideas centrales de la estación",
+      "texto": "Las ideas centrales de Lunares son la vegetación pionera, la erosión y meteorización, y el modelado glaciar. Los visitantes pueden observar de cerca los procesos geológicos que dieron forma al paisaje, apreciar la flora adaptada a condiciones extremas y aprender sobre la importancia de conservar este frágil ecosistema.",
+      "fuente": "Guion Ecoturístico UTON 2024, Lunares, pp. 8-9"
+    },
+    {
+      "id": "g24_tumbas_simbolos",
+      "titulo": "Nombres, tradición y lugares sagrados en el Valle de las Tumbas",
+      "texto": "Los nombres Valle de las Tumbas y Desierto de la Soledad reflejan tanto el tranquilo paisaje como su significado místico y cultural, y simbolizan el respeto por la tradición y la historia del área, que ha sido un lugar sagrado y de importancia espiritual. Como ejemplos de que lagunas, glaciares y volcanes son sagrados para las comunidades indígenas, el guion cita el mito de la diosa Bachué del altiplano cundiboyacense y la balsa muisca.",
+      "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10"
+    },
+    {
+      "id": "g24_glo_ciencias",
+      "titulo": "Glosario: biología, geología, geomorfología y antropología",
+      "texto": "Biología: ciencia que estudia la vida y los seres vivos (del griego bios, vida, y logos, estudio). Geología: ciencia que estudia la Tierra, su composición, estructura, historia y los procesos que la han formado. Geomorfología: parte de la geología que estudia las formas de la superficie terrestre y los procesos que las originan. Antropología: del griego anthropos, hombre, y logos, conocimiento; estudio del ser humano desde una mirada histórica y actual, para comprender sus patrones de organización social y comportamiento.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-12"
+    },
+    {
+      "id": "g24_glo_cultura_popular",
+      "titulo": "Glosario: cultura y cultura popular",
+      "texto": "Cultura, según la Real Academia Española: conjunto de modos de vida y costumbres, conocimientos y grado de desarrollo artístico, científico e industrial en una época o grupo social. Cultura popular: conjunto de manifestaciones en las que se expresa la vida tradicional de un pueblo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 11"
+    },
+    {
+      "id": "g24_glo_fauna_flora",
+      "titulo": "Glosario: fauna y flora",
+      "texto": "Fauna: conjunto de especies animales de una región geográfica, de un período geológico o de un ecosistema determinado. Flora: conjunto de especies vegetales de una región geográfica, de un período geológico o de un ecosistema determinado.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-12"
+    },
+    {
+      "id": "g24_glo_agua",
+      "titulo": "Glosario: laguna, río y aguas duras",
+      "texto": "Laguna: depresión del terreno en la que se acumula agua de lluvia o procedente de otros cuerpos de agua. Río: corriente natural de agua que fluye por un cauce. Aguas duras: aguas que contienen una cantidad significativa de minerales disueltos, principalmente calcio y magnesio. Volumen: medida de la extensión de un cuerpo en tres dimensiones.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, pp. 11-13"
+    },
+    {
+      "id": "g24_unidades_eruptivas",
+      "titulo": "Pulso, fase, erupción, época y período eruptivo",
+      "texto": "Los depósitos volcánicos se agrupan con significado temporal. Un pulso eruptivo dura de segundos a minutos; una fase eruptiva, de minutos u horas a días, y consta de varios pulsos; una erupción, de varios días a meses (y en algunos volcanes basálticos, unos pocos años), se compone de varias fases; varias erupciones forman una época eruptiva, de decenas, cientos o miles de años; y varias épocas forman un período eruptivo, de miles a millones de años. Según Simkin y otros (1981), una erupción que sigue a la anterior en menos de 3 meses se considera una fase de esa erupción.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 16 y 27"
+    },
+    {
+      "id": "g24_datacion",
+      "titulo": "Cómo se fechan las erupciones del Ruiz",
+      "texto": "Para calibrar el tiempo de los episodios eruptivos más recientes se dataron con el método del carbono 14 muestras de material orgánico, como carbones y paleosuelos, en el laboratorio de geocronología de la Universidad de Zurich, Suiza, y en Beta Analytic, en Miami. También se usaron edades radiométricas potasio-argón y carbono 14 medidas por Herd (1974), Lescinsky (1990) y Thouret y otros (1990).",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 16"
+    },
+    {
+      "id": "g24_pre_ruiz",
+      "titulo": "El período Pre-Ruiz o Ancestral Ruiz",
+      "texto": "El período Pre-Ruiz va de 1,8 a 0,97 millones de años atrás. Dominó el volcanismo efusivo y se construyó el volcán Ancestral Ruiz, con etapas como Gualí, Tesorito y El Líbano. Dejó flujos de lava andesítica extensos y homogéneos que forman colinas alargadas y erosionadas de hasta 200 m de altura y 30 km de largo, de andesitas porfiríticas con plagioclasa, piroxenos, minerales opacos, anfíbol y biotita. Se formaron las colinas de Gualí y Recreo, al norte del volcán actual.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 16 y 25"
+    },
+    {
+      "id": "g24_primer_periodo",
+      "titulo": "Primer período eruptivo Ruiz: el Ruiz Antiguo y su caldera",
+      "texto": "El primer período, de menos de 0,97 millones de años hasta unos 95 mil años atrás, construyó el Ruiz Antiguo (Older Ruiz) con lavas andesíticas que cubren unos 120 km². Luego vino una fase destructiva explosiva, con corrientes de densidad piroclástica y caídas piroclásticas. Las ignimbritas del Río Claro indican la caldera que se formó por la destrucción del Ruiz Antiguo. También hubo un colapso del flanco que generó avalanchas de escombros, como la de El Líbano. La construcción del volcán La Olleta empezó al final de este período, hace unos 107 mil años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 17 y 26"
+    },
+    {
+      "id": "g24_gases_impacto",
+      "titulo": "Impacto del volumen de gases volcánicos",
+      "texto": "El dióxido de carbono y el de azufre pueden influir en el clima local y global. La emisión de dióxido de azufre puede contribuir a problemas de salud pública por la formación de partículas finas. Cambios en el volumen y la composición de los gases pueden predecir erupciones inminentes. Los gases también pueden afectar la vegetación y los ecosistemas locales.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 18"
+    },
+    {
+      "id": "g24_gases_mediciones80",
+      "titulo": "Mediciones de gases en el borde del cráter en los años 80",
+      "texto": "Las mediciones de los años 80 en el borde del cráter dieron, en el punto 1, temperatura de 82 °C, vapor de agua 957.000, dióxido de carbono 21.500, dióxido de azufre 20.300, ácido sulfhídrico 980 y ácido clorhídrico 200 micromoles por mol. En el punto 2, 82 °C, vapor de agua 961.000 y dióxido de carbono 20.300, sin especificar azufre ni cloruro.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 18"
+    },
+    {
+      "id": "g24_efusivas_explosivas",
+      "titulo": "Erupciones efusivas y explosivas del Ruiz",
+      "texto": "Las erupciones del Nevado del Ruiz resultan de interacciones complejas entre procesos efusivos (salida de lava) y explosivos (emisiones piroclásticas). La formación del domo de lava ha estado acompañada de episodios explosivos menores que ayudaron a liberar presión del sistema. Los aumentos de actividad sísmica han precedido y coincidido con ambos tipos de erupciones e indican movimiento de magma. La dinámica del glaciar de la cumbre también influye, porque afecta la presión y la temperatura del magma.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 19"
+    },
+    {
+      "id": "g24_domo_extrusion",
+      "titulo": "Crecimiento del domo de lava: detalles",
+      "texto": "El crecimiento del domo de lava entre 2015 y 2021 mostró dos picos en la tasa de extrusión: un pulso breve en noviembre de unos 0,19 metros cúbicos por segundo y un segundo pulso que duró la mayor parte de 2016. Después la tasa bajó abruptamente a unos 0,02 metros cúbicos por segundo, el inicio del final de la erupción que formó el domo. El domo llegó a unos 130 m de diámetro y unos 60 m de altura, y se clasificó como domo de tipo bajo. Hubo una correlación fuerte con la deformación de la cumbre. Las imágenes de radar TanDEM-X y TerraSAR-X permitieron monitorear aun con poca visibilidad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 19"
+    },
+    {
+      "id": "g24_datos_2015_2021",
+      "titulo": "Qué se midió en el volcán entre 2015 y 2021",
+      "texto": "Entre 2015 y 2021 se registraron flujos de dióxido de azufre en toneladas por día, que indican actividad magmática; distintos tipos de eventos sísmicos, como tectónicos y de período largo; el crecimiento del volumen del domo, de unos 0,1 millones de m³ en noviembre de 2015 a unos 1,1 millones en diciembre de 2019; desplazamientos geodésicos verticales y horizontales que indican deformación del terreno; y correlaciones entre datos sísmicos, de gas y de deformación. También se usaron fotografías aéreas para documentar cambios en el cráter y el domo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 20-21"
+    },
+    {
+      "id": "g24_glaciar_cumbre_importancia",
+      "titulo": "Por qué el glaciar de la cumbre es importante para estudiar el volcán",
+      "texto": "El glaciar de la cumbre es crucial por cuatro razones. Es un indicador de cambios climáticos y de actividad volcánica. Su interacción con el magma puede influir en la presión y la temperatura y afectar el tipo e intensidad de las erupciones. Su monitoreo es vital para entender los riesgos de lahares y flujos de escombros durante erupciones. Y proporciona agua a las comunidades cercanas, un recurso importante en la región.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 20"
+    },
+    {
+      "id": "g24_erupciones_cronologia",
+      "titulo": "Cronología de las erupciones del Ruiz en los últimos 13.000 años",
+      "texto": "La tabla de unidades eruptivas de los últimos 13.000 años incluye erupciones freatomagmáticas de unos 13.400, 10.400, 8.500, 6.000, 3.300, 2.100, 1.500, 1.200, 1.000, 800 y 600 años antes del presente, con pulsos eruptivos, caídas piroclásticas y corrientes de densidad piroclástica por colapso de columnas. Siguen la de 1595 d. C., con dos pulsos, estilo subpliniano y lahares por los ríos Chinchiná, Claro, Gualí, Azufrado y Lagunillas que afectaron el sector de Armero; la de 1800 d. C., con lahares por fenómenos no eruptivos en 1845 en los ríos Gualí, Azufrado y Lagunillas que afectaron Armero; y la de 1985 d. C., subpliniana, con lahares por los ríos Chinchiná, Claro, Gualí y Lagunillas que afectaron Armero y Chinchiná.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 21 (Tabla 2, Ceballos-Hernández y otros, 2020)"
+    },
+    {
+      "id": "g24_scvtp",
+      "titulo": "El Ruiz dentro de la provincia volcano-tectónica San Diego–Cerro Machín",
+      "texto": "El Complejo Volcánico Nevado del Ruiz está en el centro de la provincia volcano-tectónica San Diego–Cerro Machín y es parte del segmento norte de volcanes activos de Colombia. Esa provincia incluye, de norte a sur, San Diego Maar, los volcanes El Escondido, Romeral y Cerro Bravo, el campo monogenético Villamaría–Termales, el Ruiz, el domo Cisne–Morro Negro, el complejo Santa Isabel, el Paramillo de Santa Rosa, el Cerro España, el Paramillo del Quindío, el Nevado del Tolima, el Cerro Machín y los centros Guacharacos y Tabor. Sus estructuras están formadas por flujos de lava, corrientes de densidad piroclástica, caídas piroclásticas, depósitos volcanoclásticos secundarios (avalanchas de escombros y lahares) y depósitos glaciares y fluviales.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 23-24"
+    },
+    {
+      "id": "g24_volcanes_vecinos_edades",
+      "titulo": "Edades de volcanes cercanos al Ruiz",
+      "texto": "El guion da edades de volcanes cercanos: el Pre-Paramillo de Santa Rosa, de unos 2,5 a 0,8 millones de años; Cerro Bravo, Paramillo del Quindío y Nevado del Tolima, con edades potasio-argón de 1,4, 1,3 y 1,29 millones de años según Thouret y otros (1990); el volcán Paramillo de Santa Rosa, de 0,568 a 0,26 millones de años. La actividad efusiva que precede al complejo del Domo de Santa Isabel y a los volcanes Paramillo del Quindío y Nevado del Tolima se fecha en 0,76, 0,68, 0,37 y 0,33 millones de años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 26-27"
+    },
+    {
+      "id": "g24_termales_composicion",
+      "titulo": "Composición química de las aguas termales del Ruiz",
+      "texto": "Las aguas sulfatadas, al norte del volcán, tienen un pH ligeramente ácido y son sulfatadas y bicarbonatadas cálcicas, con mucha sílice: unos 408 mg/kg en las muestras de Botero Londoño. Las aguas cloruradas neutras, al oeste, son cloruradas sódicas, de características geotérmicas netas y circulación restringida. En general las aguas termales son de baja salinidad, con un máximo de 4.700 mg/l en Thermal La Gruta, bajo pH y alto sulfato. La salinidad depende de la cantidad de vapor condensado.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 28"
+    },
+    {
+      "id": "g24_gases_muestreo",
+      "titulo": "Gases y aguas: lugares de muestreo en el Ruiz",
+      "texto": "En Nereidas hay una fumarola a 80 °C con gases de 70 % de vapor de agua, 25 % de dióxido de carbono y 30.200 micromoles por mol de metano, lo que indica alta actividad. En Aguas Calientes y Botero Londoño hay concentraciones significativas de monóxido de carbono comparables a las de metano. Los ríos Azufral, Gualí, Lagunillas y Molinos están casi saturados de gases atmosféricos, lo que indica una fuerte influencia volcánica en la calidad del agua. La composición de los gases varía con la temperatura y la ubicación.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, p. 28"
+    },
+    {
+      "id": "g24_glaciares_otros",
+      "titulo": "Pérdida de área de los glaciares colombianos por período",
+      "texto": "La pérdida de área glaciar entre 1850 y 1954-59 (unos 106 años) y entre 1954-59 y 2001-03 (unos 45 años) fue: Sierra Nevada de Santa Marta 76 % y 60 %; Sierra Nevada del Cocuy 76 % y 49 %; volcán Nevado del Ruiz 55 % y 51 %; Nevado Santa Isabel 66 % y 65 %; Nevado del Tolima 71 % y 62 %; Nevado del Huila 53 % y 25 %.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 29 (Tabla 1, Ceballos y Tobón, 2007)"
+    },
+    {
+      "id": "g24_pleniglacial",
+      "titulo": "Etapas de la última glaciación en Colombia",
+      "texto": "El Pleniglacial, de máxima extensión glaciar, fue de unos 48.000 a 14.000 años antes del presente. En el Pleniglacial Medio (48.000 a 30.000) los glaciares ocuparon áreas sobre 3.000 m y cubrieron 17.109 km², y el altiplano de Bogotá tenía vegetación de páramo. El Pleniglacial Máximo (24.500 a 20.400) fue frío y seco, con condiciones de superpáramo a 3.100 m en Sumapaz. Entre 21.000 y 14.000 los glaciares se redujeron mucho. En el Tardiglacial (11.000 a 10.000) subieron la humedad y la temperatura y comenzó la retirada glaciar, fin de la última glaciación; el ascenso llegó a un óptimo térmico entre 6.000 y 7.000 años.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 29-31"
+    },
+    {
+      "id": "g24_glaciar_periodos_perdida",
+      "titulo": "Tres etapas de pérdida glaciar desde el siglo XX",
+      "texto": "Desde el final de la Pequeña Edad de Hielo los glaciares pierden área de forma constante, con tres períodos marcados: entre las décadas de 1940 y 1950 hubo una rápida pérdida; entre 1960 y 1980 la pérdida disminuyó; y desde la década de 1980 hasta hoy la fusión aumentó otra vez. Esto se relaciona con el clima global: aumento de temperatura en los años 40, período estable en los 60 y 70, y fuerte aumento desde los 80. A finales del siglo XIX Colombia tenía unos 19 nevados, cuatro de ellos temporales, con nieve solo en la época de lluvias.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 30 (Ceballos y Tobón, 2007)"
+    },
+    {
+      "id": "g24_glaciar_brillo_solar",
+      "titulo": "Qué más influye en el retroceso glaciar",
+      "texto": "El retroceso glaciar depende de muchas variables, y las climáticas son las más importantes. El sustrato rocoso, la topografía y la ubicación geográfica y altitudinal actúan de forma secundaria. Por ahora se establece que el brillo solar incide en alto porcentaje en la fusión del glaciar en la vertiente occidental del Nevado Santa Isabel, y se presume que los flujos de energía entre la radiación y el glaciar explican gran parte de la dinámica glaciar. La actual pérdida es alarmante y se relaciona con el calentamiento global; hay que tomar medidas para mitigar y adaptarse al cambio climático.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, p. 31"
+    },
+    {
+      "id": "g24_dorado",
+      "titulo": "La leyenda del Dorado y la balsa muisca",
+      "texto": "Lo que más movilizó a los españoles fueron las leyendas sobre el oro indígena. La leyenda del Dorado habla de caciques bañados en polvo de oro antes de entrar en las aguas heladas de las lagunas paramunas. La balsa muisca muestra a un cacique sentado en una balsa guiado por sus súbditos, y simboliza también el encuentro entre españoles e indígenas. El guion cita la película El camino hacia El Dorado y la laguna de Guatavita como posible escenario de la ofrenda de oro a los dioses.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 35"
+    },
+    {
+      "id": "g24_juan_diaz_detalle",
+      "titulo": "Relato de Juan Díaz Jaramillo en la memoria campesina",
+      "texto": "Es un relato oral, no un hecho comprobado. Juan Díaz Jaramillo, español venido de Ecuador, se asentó en Tocaima en la segunda mitad del siglo XVI y exploró el cañón del río Lagunilla en el norte del Tolima. En 1581 una avalancha arrasó su casa y en 1595 la erupción del volcán de Cartago arrasó sus minas; la memoria colectiva unió las dos avalanchas. En los relatos orales, por su ambición negó compartir con un cura vestido de mendigo y sus padres lo maldijeron: todo el oro que tenía sería arrasado. Vino un diluvio, se formaron lagunas que reventaron en avalanchas y una se llevó su casa. Él no murió: se volvió un mohán que propicia las avenidas torrenciales, y es a la vez quien guarda la riqueza y quien la propicia.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 35-36 (Suárez Guava, 2008)"
+    },
+    {
+      "id": "g24_guacas_detalle",
+      "titulo": "Las guacas en el conocimiento campesino",
+      "texto": "En el conocimiento campesino del norte del Tolima los mohanes habitan ríos y montañas y a veces se mezclan con la población. Las guacas son antiguos entierros que dejaron los indígenas antes de ser atacados por los españoles; algunos indígenas se enterraron vivos con el oro. Alumbran de rojo o azul, sobre todo el Viernes Santo, cuando los campesinos hacen guardia para verlas. Son huidizas y escapan de la ambición. Se presentan como tunjos (niños de oro), ollas con oro, entierros, toros de oro, cuevas, patos de oro y lagunas con el oro que los indígenas ofrecían a los dioses. Se dice que son acumulaciones de riqueza que se desbordan y generan movimientos en masa por las vertientes de los ríos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 35-36"
+    },
+    {
+      "id": "g24_armero_maldicion",
+      "titulo": "Memoria popular sobre Armero: el cura Pedro María Ramírez y los avalancheros",
+      "texto": "Es memoria popular, no un hecho científico. El guion cuenta que el 10 de abril de 1948 fue asesinado y arrastrado por Armero el cura Pedro María Ramírez, quien supuestamente lanzó una maldición al pueblo; la maldición se habría cumplido el 13 de noviembre de 1985. También se habla de la riqueza acumulada y derrochada en Armero, y de que la avalancha fue una forma de arrasarla; luego llegaron los avalancheros, personajes ambiguos que ayudaron a buscar sobrevivientes y cuerpos y también riquezas enterradas. En la memoria popular de Murillo y del corregimiento de San Pedro, en Guayabal-Armero, se dice que esa avalancha la generó Juan Díaz, en la noche más oscura, luego iluminada por la erupción.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 36"
+    },
+    {
+      "id": "g24_armero_fundacion",
+      "titulo": "Fundación y nombre de Armero",
+      "texto": "A finales del siglo XIX las grandes haciendas cercanas necesitaban trabajadores cerca y se pensó en un caserío. Familias como las de Raimundo Melo, Sinforoso Chacón y Dominga Cano de Rada llegaron en 1895 y trazaron las primeras calles. Se dice que el general Reyes firmó sobre la espalda de un trabajador el Decreto 1049 del 29 de septiembre de 1908 que bautizó al municipio como San Lorenzo. Nadie sabe por qué se fundó donde ya habían ocurrido dos avalanchas documentadas, la de 1595 por Fray Pedro Simón y la de 1845 por viajeros. En 1930 la Asamblea del Tolima cambió el nombre a Armero, en honor a José León Armero, prócer nacido en Mariquita en 1775. El Decreto 106 del 11 de noviembre de 1930 nombró al primer alcalde, el liberal Jorge Ferreira.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, pp. 36-37"
+    },
+    {
+      "id": "g24_armero_economia",
+      "titulo": "Armero: algodón, arroz, ganadería y migrantes",
+      "texto": "Por el comercio, sobre todo de algodón y arroz, la ganadería y la fertilidad de la tierra a orillas de varios ríos, Armero fue un foco de migración muy importante. Según un informe de la Cámara de Comercio de Honda citado por Hugo Viana Castro, más de 50 extranjeros llegaron al pueblo apenas cinco años después de fundado, de Rumania, Siria, Alemania, Inglaterra, España, Francia, Estados Unidos y México.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 37"
+    },
+    {
+      "id": "g24_armero_aviacion",
+      "titulo": "Armero: la fumigación aérea y la capital blanca de Colombia",
+      "texto": "Armero era famoso por su Granja Experimental Agrícola, instalada en 1934. Los pilotos alemanes llegaron después de la Segunda Guerra Mundial. Cuenta la historia que el capitán Hans Hoffman, en un Piper J3-CUB de 65 caballos de fuerza, inició la fumigación animado por don Martín Delgado, cuyo cultivo devoraba el gusano de Alabama. La fumigación aérea nació en Armero, la capital blanca de Colombia por el algodón. En los años cincuenta llegaron oficiales retirados de la Fuerza Aérea, como el mayor Rafael Millán, y pilotos como Jorge Montealegre. Se instalaron empresas de aviación como Cofa, EFA, Cayta, Helicol y AR.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 37"
+    },
+    {
+      "id": "g24_orobiomas",
+      "titulo": "Orobiomas del parque: bosque andino, páramo y nival",
+      "texto": "Según la clasificación de Hernández Camacho y Sánchez Páez (1992), el parque tiene biomas zonales de montaña sobre los 1.500 msnm: el orobioma de bosque andino, de unos 3.000 a 4.000 msnm; el orobioma de páramo en las cimas; y el orobioma nival, de 4.700 a 5.100 msnm. Dentro del páramo están el subpáramo, el páramo propiamente dicho y el superpáramo. Por efectos humanos el límite original del páramo ha descendido y hay un efecto de paramización. Según la clasificación de Parques Nacionales de 2013, el parque tiene bosque húmedo altoandino, humedales y cuerpos de agua, vegetación de páramo altoandino y glaciar; el bioma más representativo es el páramo, luego el bosque altoandino y por último el glaciar.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 38"
+    },
+    {
+      "id": "g24_vegetacion_tipos_a",
+      "titulo": "Vegetación: bosques achaparrados, matorrales y pajonales",
+      "texto": "Bosques achaparrados: arbolitos de 8 a 10 m dominados por una o dos especies, como tibar o rodamonte (Escallonia myrtilloides), mortiño (Hesperomeles) y palo colorado o coloradito (Polylepis, con Polylepis sericea hasta Quindío y Caldas). Matorrales: vegetación arbustiva desde el páramo bajo hasta el superpáramo, dominada por Diplostephium, Pentacalia, Castilleja e Hypericum. Pastizales o pajonales: gramíneas en macolla, del páramo propiamente dicho al superpáramo, con comunidades de Calamagrostis effusa y C. recta.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 39"
+    },
+    {
+      "id": "g24_vegetacion_tipos_b",
+      "titulo": "Vegetación: frailejonales, turberas, chuscales, Puya y rosetales bajos",
+      "texto": "Frailejonales-rosetales: rosetas de Espeletia, Espeletiopsis y Libanothamnus, con mayor representatividad en el páramo propiamente dicho. Prados, turberas y plantas en cojín: colchones de Distichia muscoides, cojines de Oreobolus, Azorella y Arenaria. Chuscales: bambú paramuno Chusquea tessellata, de sitios húmedos a pantanosos. Rosetales de Puya: rosetas gigantes en páramos húmedos. Rosetales bajos: en el superpáramo sobre unos 4.200 msnm, con Draba pennell-hazenii y D. pachythyrsa; suelos sueltos y pedregosos y poca cobertura.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 39-40"
+    },
+    {
+      "id": "g24_fauna_tabla",
+      "titulo": "Especies del parque frente a las de Colombia (tabla de fauna)",
+      "texto": "Según la tabla del guion, el parque y su zona amortiguadora reportan 778 especies de vertebrados de 5.277 en Colombia (14,74 %); mamíferos 124 de 454 (27,31 %); quirópteros 35 de 151; roedores 39 de 94; el género Oryzomys 9 de 18; primates 3 de 27; dantas 1 de 3; aves 536 de 1.765 (30,36 %); reptiles 9 de 506; anfibios 42 de 583; y peces 63 de unos 2.000. Las especies endémicas o casi endémicas son 38 vertebrados, 30 de aves, 7 de roedores y 5 de anfibios.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 41 (Tabla 20)"
+    },
+    {
+      "id": "g24_aves_endemicas_lista",
+      "titulo": "Aves endémicas y casi endémicas del parque",
+      "texto": "Las ocho aves endémicas de Colombia que reporta el guion son Cyclarhis nigrirostris, Cinclodes excelsior, Saltator atripennis, Oxipogon stubelli, Metallura williami, Malacoptila mystacalis, Heliangelus exortis y Buteo albicaudatus. Otras 22 son compartidas con países vecinos, entre ellas el periquito de los Nevados (Bolborhynchus ferrugineifrons), Hapalopsittaca fuertesi, Penelope perspicax, varias del género Grallaria y Leptotila conoveri.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 42 (Tabla 21)"
+    },
+    {
+      "id": "g24_anfibios_reptiles_mariposas",
+      "titulo": "Mariposas, anfibios y reptiles del parque",
+      "texto": "Se identificaron 11 especies de mariposas endémicas en el parque Ucumarí (Andrade, 1994). En la cordillera Central cerca del 80 % de los anfibios son endémicos. Los reptiles son el grupo de vertebrados con menos riqueza en el páramo: de 15 especies, 5 tienen distribución muy restringida. Entre los anfibios endémicos reportados están Atelopus carauta y varias Eleutherodactylus. Se conoce poco de la herpetofauna del parque, algunos anfibios están en declive por el cambio climático y la zona tiene una de las tasas de deforestación y densidad poblacional humana más altas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 41"
+    },
+    {
+      "id": "g24_mamiferos_endemicos",
+      "titulo": "Mamíferos pequeños endémicos del parque",
+      "texto": "El parque y su zona amortiguadora tienen unos 8 endemismos de mamíferos. Los pequeños mamíferos endémicos confirmados son Microsciurus pucheranii, Microsciurus santanderensis, Aepeomys fuscatus, Akodon affinis y Cryptotis colombiana. Otros tres roedores, Oryzomys munchiquensis, Akodon tolimae y Thrinacodus albicauda, podrían ser endémicos. Todos los mamíferos endémicos de los páramos colombianos son ratones, uno de los grupos peor estudiados, y su gran tamaño poblacional les ayuda a resistir la extinción.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 42"
+    },
+    {
+      "id": "g24_mesofauna",
+      "titulo": "Fauna del suelo del páramo: lo que aún se desconoce",
+      "texto": "Gran parte de la mesofauna del suelo paramuno es desconocida para la ciencia. Se desconoce el efecto de las quemas y el pisoteo sobre la fauna que vive en el follaje seco de los frailejones, en el suelo y en la hojarasca. Tampoco se conocen las especies e individuos de macroinvertebrados acuáticos del páramo, cuyo estudio ayudaría a caracterizar hábitats y su estado de conservación. Las islas de superpáramo, sobre 4.000-4.200 m, son escasas, pequeñas y están muy separadas, por eso tienen un endemismo elevado.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 42 (Van der Hammen, 1998)"
+    },
+    {
+      "id": "g24_mamiferos_paramo_cifras",
+      "titulo": "Mamíferos de los páramos colombianos y su conservación",
+      "texto": "En los páramos de Colombia hay unas 21 familias de mamíferos, 46 géneros y 70 especies. Los grandes mamíferos no son exclusivos del páramo, pero este es un hábitat esencial y un refugio para algunas poblaciones. El parque es un área prioritaria para su conservación por su gran extensión, su larga historia de conservación y su ubicación en los Andes centrales. Se considera importante incentivar investigaciones que generen una línea base de la biodiversidad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 42-43 (Plan de manejo 2017)"
+    },
+    {
+      "id": "g24_brisas_por_anio",
+      "titulo": "Estación Brisas: registros del IDEAM año por año",
+      "texto": "Registros de la estación de Brisas (IDEAM). 2018: viento máximo 52,5 m/s el 12 de abril, temperatura máxima 14,4 °C el 1 de octubre, mínima -1,4 °C el 29 de diciembre, humedad 95,2 %. 2019: viento 48,0 m/s el 26 de junio, máxima 14,7 °C, mínima -0,7 °C, humedad 95,3 %. 2020: viento 23,1 m/s el 7 de agosto, máxima 15,3 °C, mínima -1,5 °C, humedad 81,8 %. 2021: viento 18,9 m/s el 30 de marzo, sin datos de temperatura. 2022: viento 16,8 m/s, máxima 12,7 °C, mínima -1,2 °C, humedad 97 %. 2023: viento 20,0 m/s el 7 de febrero, máxima 13,1 °C, mínima -1,6 °C el 2 de febrero, humedad 95,1 %.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 45 (tabla IDEAM)"
+    },
+    {
+      "id": "g24_hipoxia_alpinistas",
+      "titulo": "Hipoxia en alpinistas y en pacientes críticos: introducción",
+      "texto": "Un artículo resumido en el guion compara la hipoxia de los alpinistas a gran altura con la de pacientes críticos en cuidados intensivos. Los alpinistas son una población homogénea y saludable, lo que ofrece ventajas para estudiar la hipoxia. En ambos casos la hipoxia afecta la biogénesis mitocondrial, importante para la energía celular. El alelo II de la enzima convertidora de angiotensina es más común tanto en alpinistas que llegan a cimas sin oxígeno como en pacientes críticos que sobreviven. Se cita la conquista del Everest sin oxígeno por Reinhold Messner y Peter Habeler en 1978.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 49-50"
+    },
+    {
+      "id": "g24_aclimatacion_cuerpo",
+      "titulo": "Cómo se aclimata el cuerpo a la altura",
+      "texto": "Con la altura, aunque el oxígeno sigue siendo el 21 % del aire, baja su presión parcial. El cuerpo responde con hiperventilación (respirar más rápido y profundo), un proceso rápido de los primeros días; con más glóbulos rojos y hemoglobina, que toma más tiempo; y con más capacidad de extraer oxígeno en los tejidos. Con una exposición prolongada mejora el gasto cardíaco y la dilatación de los vasos, y aumentan los glóbulos rojos (policitemia), lo que transporta más oxígeno pero puede aumentar la viscosidad de la sangre y sobrecargar el corazón.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 50-51"
+    },
+    {
+      "id": "g24_hipoxia_celular",
+      "titulo": "Respuesta de las células a la falta de oxígeno",
+      "texto": "El factor inducible por la hipoxia, HIF-1, es el regulador maestro de la respuesta celular. Pasa a la glucólisis anaeróbica para obtener energía sin oxígeno, induce el factor VEGF que promueve nuevos vasos sanguíneos y estimula la eritropoyetina, que aumenta los glóbulos rojos. Las mitocondrias, que producen energía con oxígeno, reducen su actividad para disminuir los radicales libres; en la hipoxia sostenida algunas se destruyen por autofagia para que las restantes funcionen con más eficiencia.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, p. 51"
+    },
+    {
+      "id": "g24_hipoxia_criticos_edema",
+      "titulo": "Hipoxia en pacientes críticos y edema en casos severos",
+      "texto": "En cuidados intensivos la hipoxia tisular se debe a fallas en la entrega de oxígeno por condiciones como el síndrome de dificultad respiratoria aguda, la sepsis o la insuficiencia cardíaca o pulmonar. A diferencia de los alpinistas, cuya hipoxia viene del ambiente, a menudo se complica con inflamación sistémica grave. En casos severos de hipoxia, como el mal agudo de montaña, puede haber edema pulmonar y cerebral por acumulación de líquido en los pulmones o el cerebro, porque los capilares no manejan el aumento de presión y permeabilidad.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, p. 52"
+    },
+    {
+      "id": "g24_hipobaria_intermitente",
+      "titulo": "Hipoxia hipobárica intermitente, enfermedad de Monge y diagnóstico",
+      "texto": "La hipoxia hipobárica intermitente afecta a trabajadores en turnos rotativos en altura, como mineros en Chile, que alternan exposición a hipoxia con retorno al nivel del mar; pueden tener mal agudo de montaña en cada turno y algunos desarrollan poliglobulia. La enfermedad crónica de montaña o de Monge afecta a quienes viven siempre en altura: poliglobulia, hipertensión pulmonar y síntomas neurológicos, y en casos severos cor pulmonale y muerte; se diagnostica con hemogramas y pruebas cardíacas. La enfermedad aguda de montaña se diagnostica con la escala de Lake Louise.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, pp. 53-54"
+    },
+    {
+      "id": "g24_mam_prevencion_estudio",
+      "titulo": "Conclusiones del estudio de turistas sobre actividad física y mal de altura",
+      "texto": "Las conclusiones del estudio con turistas del Nevado del Ruiz son que los sedentarios son más propensos al mal agudo de montaña y que la actividad física regular mejora el consumo máximo de oxígeno y ayuda al cuerpo a responder a la altura. Se recomienda estar en un nivel activo o muy activo antes de subir a grandes altitudes, lo que podría prevenir síntomas y evitar evacuaciones. Factores adicionales de riesgo: la rapidez del ascenso, ser joven, ser mujer y el frío. Se recomienda que guías y operadores incluyan recomendaciones de preparación física y fomenten el autocuidado y la ayuda mutua para identificar rápido los síntomas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, p. 47 (Peña y otros, 2010)"
+    },
+    {
+      "id": "g24_mam_guias_discusion",
+      "titulo": "Riesgos para los guías en altura (estudio de Peña Quimbaya)",
+      "texto": "El estudio con guías concluye que los guías sedentarios tienen mayor riesgo de efectos de la hipoxia, que falta controlar la frecuencia cardíaca y otros signos vitales durante el esfuerzo en altura, y que enfrentan riesgos por temperaturas bajas, alta radiación solar y viento; deben usar protección solar e hidratarse. Recomienda que la Asociación de Guías de Caldas implemente un programa de actividad física, sobre todo para quienes están en la etapa de precontemplación, y mejore el entorno laboral con áreas de descanso e infraestructura.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos fisiopatológicos, p. 49"
+    },
+    {
+      "id": "g24_bibliografia_2",
+      "titulo": "Más fuentes del guion: aguas termales, glaciares y páramos",
+      "texto": "El guion también cita el Catálogo de fuentes termales del PNN Los Nevados (INGEOMINAS, 2001); Giggenbach y otros (1990) sobre vapores fumarólicos y aguas termales; Federico y otros (2017) sobre las descargas de vapor del Ruiz; Sturchio y Williams (1990) sobre aguas ácidas sulfato-cloruradas; Los glaciares de Colombia (Ceballos, 2008) y Glaciares, más que montañas con hielo (IDEAM, 2012); el artículo de Suárez Guava (2008) sobre Juan Díaz; La aclimatación del turista a la altitud alta (Peña Quimbaya, 2011); y Ambientes glaciares y periglaciares (Yermolin, 2015).",
+      "fuente": "Guion Ecoturístico UTON 2024, Referencias bibliográficas, pp. 55-57"
+    },
+    {
+      "id": "gzn_discurso_completo",
+      "titulo": "Discurso de bienvenida (versión completa): Kumanday, el Centinela del Agua",
+      "texto": "Bienvenidos a una de las aulas ambientales más importantes de los Andes colombianos. Este gigante no siempre se llamó Ruiz: las comunidades indígenas lo bautizaron Kumanday, que según este guion significa Cerro Blanco, El de la Nariz Humeante o Padre Blanco, una deidad blanca que marcaba el límite de lo sagrado. Hoy ese blanco es un glaciar de cumbre, una masa de hielo formada por compactación y recristalización de la nieve, una reserva de agua sólida que regula los caudales de los ríos del Eje Cafetero y que retrocede aceleradamente por el calentamiento global. Caminaremos por el páramo, una esponja natural donde el frailejón captura la humedad de la niebla; pasaremos de la humedad de los bosques altos a la alta radiación solar y los vientos helados, con un clima bimodal. La fauna se adapta: el cóndor de los Andes planea sobre las térmicas y la danta de montaña es la jardinera lanuda que dispersa vida. Los invito a recorrerlo no como turistas, sino como testigos de la fragilidad y la fuerza del Kumanday, el corazón del agua de Colombia.",
+      "fuente": "Guion turístico zona norte, Discurso, pp. 2-3"
+    },
+    {
+      "id": "gzn_nodos_iconos",
+      "titulo": "Nodos del diagrama: íconos y conceptos por estación",
+      "texto": "Cada parada es un nodo con tres elementos. Aguacerales (4.160 msnm): ícono de una gota de agua sobre un frailejón, concepto génesis hídrica; capacidad de interceptación de niebla, Espeletia hartwegiana y suelo esponja. Arenales (4.290): ícono de un termómetro bajando o un reloj de arena, concepto memoria y cambio climático; retroceso glaciar, vestigios del Chalet Arenales y vegetación pionera. Valle Lunar (4.350): ícono de una roca fracturada con martillo geológico, concepto fuerzas geológicas; gelifracción (crioclastia), oxidación de minerales y andesita. Valle de las Tumbas (4.460): ícono de un pictograma indígena y un triángulo de advertencia volcánica, concepto respeto y riesgo; límite de ascenso, cosmovisión Kumanday y amenaza por lahares.",
+      "fuente": "Guion turístico zona norte, Nodos del diagrama, p. 4"
+    },
+    {
+      "id": "gzn_aguacerales_importancia",
+      "titulo": "Aguacerales: por qué es importante (guion de zona norte)",
+      "texto": "Aguacerales es el filtro de la montaña. Su concepto clave es la captación hídrica y la flora pionera. Es el punto de transición donde el turista comprende que el páramo no es un desierto frío sino una esponja hídrica; aquí se justifica la existencia de las ciudades del valle. A diferencia de una selva donde llueve, aquí el agua se atrapa. Sin este proceso microscópico no habría agua potable en las ciudades de abajo.",
+      "fuente": "Guion turístico zona norte, Aguacerales, p. 5"
+    },
+    {
+      "id": "gzn_arenales_importancia",
+      "titulo": "Arenales: por qué es importante (guion de zona norte)",
+      "texto": "Arenales es la parada de geología y memoria. Su concepto clave es el patrimonio geológico y el retroceso glaciar. Es el lugar para hablar del cambio climático y la dinámica volcánica, y el punto donde el paisaje cambia drásticamente de verde a gris. Sus rasgos únicos son los depósitos de arena volcánica y los vestigios del retroceso glaciar del siglo XX.",
+      "fuente": "Guion turístico zona norte, Arenales, p. 5"
+    },
+    {
+      "id": "gzn_lunar_importancia",
+      "titulo": "Valle Lunar: por qué es importante (guion de zona norte)",
+      "texto": "El Valle Lunar es la fuerza de los elementos y la estación técnica por excelencia, donde se explica cómo se descompone la montaña. Su concepto clave es la gelifracción y la oxidación. Sus rasgos únicos son formaciones rocosas angulares, ausencia casi total de vegetación y colores minerales intensos. Se camina sobre flujos de lava antiguos que la atmósfera va transformando.",
+      "fuente": "Guion turístico zona norte, Valle Lunar, p. 6"
+    },
+    {
+      "id": "gzn_tumbas_importancia",
+      "titulo": "Valle de las Tumbas: por qué es importante (guion de zona norte)",
+      "texto": "El Valle de las Tumbas es la parada final y el cierre del recorrido: espiritualidad y riesgo. Su concepto clave es la geografía sagrada y la seguridad volcánica. Combina la cosmovisión indígena, la gestión del riesgo volcánico y la ecología del superpáramo. Sus rasgos únicos son el límite de ascenso permitido, la vista al cráter si el clima lo permite y su significado antropológico. Para los pueblos indígenas era un lugar de pagamentos y respeto, no de conquista.",
+      "fuente": "Guion turístico zona norte, Valle de las Tumbas, p. 6"
+    },
+    {
+      "id": "gzn_recomendaciones",
+      "titulo": "Recomendaciones del guion de zona norte para el discurso del guía",
+      "texto": "Rigor técnico: evitar el uso de mitos o información no comprobada; el documento es la base de la autoridad del guía. Hilo conductor: conectar siempre la desaparición del hielo (glaciología) con la importancia de la vegetación (biomasa) para retener la poca agua que el glaciar ya no puede dar. Sensibilización: usar la información de la retirada glaciar para generar un compromiso ambiental real en el turista y no un discurso solo contemplativo. Otras verdades: el Ruiz es un volcán activo, lo gris es ceniza y no nieve, y no se antropomorfiza la naturaleza.",
+      "fuente": "Guion turístico zona norte, Recomendaciones, pp. 6-7"
+    },
+    {
+      "id": "gzn_memorizacion",
+      "titulo": "Técnica de memorización: palabras gancho con el cuerpo",
+      "texto": "El guion propone asociar cada tema con una parte del cuerpo para memorizarlo. Cabeza, el nombre Kumanday: el pensamiento y la historia. Hombros, el glaciar: el peso y la importancia del hielo que sostiene la vida. Pulmones, clima y oxígeno: el aire frío y los ciclos de lluvia. Piel, biomasa y frailejón: los pelos de la planta y la protección de la necromasa. Pies, suelo y Libro de los Páramos: la esponja de agua que pisamos.",
+      "fuente": "Guion turístico zona norte, Técnica de memorización, p. 7"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "gq_autor_guion",
+      "estacion": "*",
+      "preguntas": ["quien hizo el guion", "quien escribio el guion", "quien es el autor del guion", "cuando se hizo el guion", "quien creo esta informacion"],
+      "respuesta": "El Guion Ecoturístico lo realizó la Unión Temporal Operación Nevados. El responsable es Cristian Camilo Zamorano García, con Daniel Fernando Aguirre Valencia como colaborador, y se presentó en Manizales el 9 de septiembre de 2024. Se apoya en 120 artículos y libros, de los cuales 31 se usaron directamente.",
+      "fuente": "Guion Ecoturístico UTON 2024, Portada y Introducción, pp. 1-4"
+    },
+    {
+      "id": "gq_estaciones_resumen",
+      "estacion": "*",
+      "preguntas": ["cuales son las estaciones", "que estaciones hay", "cuantas paradas tiene el recorrido", "que paradas hay en la zona norte", "cual es el recorrido"],
+      "respuesta": "La zona norte tiene cuatro estaciones, además de Brisas como puerta de entrada: Aguacerales (4.160 msnm, el agua y los frailejones), Arenales (4.290, dunas, viento y memoria del esquí), Valle Lunar (4.350, gelifracción y oxidación) y Valle de las Tumbas (4.460, memoria cultural, riesgo de lahares y límite de ascenso).",
+      "fuente": "Guion turístico zona norte, pp. 3-6"
+    },
+    {
+      "id": "gq_importancia_glaciar",
+      "estacion": "*",
+      "preguntas": ["por que es importante el glaciar", "para que sirve el glaciar", "que importancia tiene el glaciar de la cumbre", "que es el glaciar de cumbre"],
+      "respuesta": "El glaciar de cumbre es una reserva de agua sólida: en las épocas secas libera agua poco a poco y mantiene los ríos que abastecen a las ciudades. También es un indicador del clima y de la actividad del volcán, su monitoreo es vital para entender el riesgo de lahares, y proporciona agua a las comunidades cercanas.",
+      "fuente": "Guion turístico zona norte, p. 1; Guion Ecoturístico UTON 2024, Profundización, p. 20"
+    },
+    {
+      "id": "gq_gases_volcan",
+      "estacion": "*",
+      "preguntas": ["que gases emite el volcan", "que gases salen del ruiz", "por que huele a azufre", "que es el dioxido de azufre", "que son las fumarolas"],
+      "respuesta": "El volcán libera una mezcla de gases: dióxido de carbono, dióxido de azufre, vapor de agua, monóxido de carbono, hidrocarburos, ácido clorhídrico, ácido fluorhídrico y metano. El cambio en el volumen y la composición de los gases ayuda a vigilar la actividad. Las fumarolas son aberturas por las que escapan gases volcánicos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 17-18 y Glosario, p. 12"
+    },
+    {
+      "id": "gq_domo_lava",
+      "estacion": "*",
+      "preguntas": ["que es el domo de lava", "cuanto mide el domo", "hay lava en el crater", "como es el crater arenas"],
+      "respuesta": "El cráter Arenas mide unos 750 metros de diámetro y 200 de profundidad. Entre 2015 y 2021 creció un domo de lava de unos 130 metros de diámetro y 60 de altura, con un volumen estimado de 1,7 millones de metros cúbicos, clasificado como domo de tipo bajo.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 15 y 19"
+    },
+    {
+      "id": "gq_vigilancia_volcan",
+      "estacion": "*",
+      "preguntas": ["como vigilan el volcan", "como monitorean el volcan", "quien vigila el volcan", "como saben si va a hacer erupcion"],
+      "respuesta": "El Servicio Geológico Colombiano lo vigila las 24 horas, porque es un sistema vivo. El monitoreo combina redes geodésicas para medir la deformación, monitoreo sísmico, análisis de gases como el dióxido de azufre, cámaras web, estaciones de infrasonido, imágenes de radar y modelos digitales de elevación.",
+      "fuente": "Guion turístico zona norte, p. 7; Guion Ecoturístico UTON 2024, Profundización, pp. 19-20"
+    },
+    {
+      "id": "gq_aguas_termales",
+      "estacion": "*",
+      "preguntas": ["hay aguas termales", "que son las aguas termales del ruiz", "de donde vienen las aguas termales", "que es botero londono"],
+      "respuesta": "El Ruiz tiene manantiales y fumarolas. Hay dos sistemas de aguas independientes: uno al norte, con aguas sulfatadas, y otro al oeste, con aguas cloruradas neutras. Vienen de un yacimiento de al menos 235 °C que se mezcla con agua superficial y forma manantiales calientes, como los de Botero Londoño.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 27-28"
+    },
+    {
+      "id": "gq_otros_glaciares",
+      "estacion": "*",
+      "preguntas": ["que otros glaciares hay en colombia", "cuantos nevados hay en colombia", "cuanto han perdido los otros glaciares", "que paso con los nevados"],
+      "respuesta": "A finales del siglo XIX Colombia tenía unos 19 nevados, cuatro de ellos temporales. Hoy quedan seis glaciares. Entre 1850 y 2001-03 todos perdieron mucha área: por ejemplo la Sierra Nevada de Santa Marta 76 % y luego 60 %, el Cocuy 76 % y 49 %, el Ruiz 55 % y 51 %, Santa Isabel 66 % y 65 %, el Tolima 71 % y 62 % y el Huila 53 % y 25 %.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos glaciológicos, pp. 29-30"
+    },
+    {
+      "id": "gq_biomas_parque",
+      "estacion": "*",
+      "preguntas": ["que biomas hay en el parque", "cuanto del parque es paramo", "cuantas hectareas tiene el parque", "que porcentaje es glaciar"],
+      "respuesta": "El parque tiene unas 62.142 hectáreas. El páramo es el bioma más representativo, con 53.532,7 hectáreas (85,9 %), seguido del bosque húmedo altoandino con 7.373,5 (11,9 %), los glaciares con 1.141,5 (1,8 %) y los humedales con 96,5 (0,4 %).",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, p. 38 (Tabla 18)"
+    },
+    {
+      "id": "gq_aves_endemicas",
+      "estacion": "*",
+      "preguntas": ["que aves hay en el parque", "cuantas aves hay", "que es el periquito de los nevados", "hay aves endemicas", "cuantas especies de aves hay"],
+      "respuesta": "El parque y su zona amortiguadora reportan 536 especies de aves, cerca del 30 % de las de Colombia, de las cuales 30 son endémicas o casi endémicas: 8 solo viven en Colombia y 22 se comparten con países vecinos. El periquito de los Nevados vive solo en páramos de las cordilleras Central y Oriental y es considerado vulnerable, con 2.000 a 4.000 individuos.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos biológicos, pp. 40-42"
+    },
+    {
+      "id": "gq_clima_parque",
+      "estacion": "*",
+      "preguntas": ["cuando llueve en el parque", "que temperatura hace", "cuando hay epoca seca", "hace mucho frio", "cual es el clima del parque"],
+      "respuesta": "El parque tiene lluvias bimodales: dos períodos de lluvia (abril a mayo y octubre a noviembre) y dos secos (diciembre a febrero y julio a agosto). En Brisas, a 4.110 msnm, la temperatura media anual es de 2,24 °C, con pocas horas de sol, humedad alta, niebla frecuente, vientos fuertes y lluvias de poca intensidad. La isoterma de 0 °C está a unos 4.705 msnm. Para el estado del tiempo de hoy, consulta al personal.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos climáticos, p. 44"
+    },
+    {
+      "id": "gq_viento",
+      "estacion": "*",
+      "preguntas": ["hace mucho viento", "que tan fuerte es el viento", "cual fue el viento maximo", "hay vientos fuertes"],
+      "respuesta": "Sí, el viento puede ser muy fuerte. En Arenales a veces arrancó las escaleras de la cabaña. La estación de Brisas del IDEAM registró vientos máximos de hasta 52,5 metros por segundo el 12 de abril de 2018. Son registros históricos, no las condiciones de hoy.",
+      "fuente": "Guion Ecoturístico UTON 2024, Arenales, p. 7 y Aspectos climáticos, p. 45"
+    },
+    {
+      "id": "gq_edad_volcan",
+      "estacion": "*",
+      "preguntas": ["cuantos anos tiene el volcan", "que edad tiene el ruiz", "cuando se formo el volcan", "cuales son las versiones del ruiz"],
+      "respuesta": "El complejo volcánico lleva unos 1,8 millones de años de actividad, en cuatro períodos: Pre-Ruiz (1,8 a 0,97 millones de años), primer período Ruiz (hasta unos 95 mil años), período intermedio (95 a 66 mil años) y segundo período, desde hace unos 66 mil años hasta hoy, que corresponde al Ruiz actual.",
+      "fuente": "Guion Ecoturístico UTON 2024, Profundización, pp. 16-17 y 25-26"
+    },
+    {
+      "id": "gq_hipoxia_altura",
+      "estacion": "*",
+      "preguntas": ["que es la hipoxia", "por que falta el oxigeno en la altura", "como se aclimata el cuerpo", "por que cuesta respirar arriba", "que es la hipoxia hipobarica"],
+      "respuesta": "En la altura la presión atmosférica baja. El aire sigue teniendo 21 % de oxígeno, pero llega menos oxígeno a los tejidos: es la hipoxia hipobárica. El cuerpo responde respirando más rápido y profundo, y con los días produce más glóbulos rojos. Si sientes síntomas como dolor de cabeza, mareo o falta de aire, avisa a tu guía.",
+      "fuente": "Guion Ecoturístico UTON 2024, Glosario, p. 12 y Aspectos fisiopatológicos, pp. 50-51"
+    },
+    {
+      "id": "gq_armero_relato_cura",
+      "estacion": "*",
+      "preguntas": ["que es la maldicion de armero", "quien fue el cura pedro maria ramirez", "que son los avalancheros", "hay una leyenda de armero"],
+      "respuesta": "Es memoria popular, no un hecho científico. El guion cuenta que el cura Pedro María Ramírez fue asesinado y arrastrado por Armero el 10 de abril de 1948 y que supuestamente lanzó una maldición que la gente asoció con la tragedia de 1985. Los avalancheros fueron personas que llegaron a ayudar a buscar sobrevivientes y cuerpos y también riquezas enterradas.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aspectos antropológicos, p. 36"
+    },
+    {
+      "id": "gq_necromasa_chaqueta",
+      "estacion": "estacion_1",
+      "preguntas": ["que es la chaqueta del frailejon", "para que sirven las hojas muertas del frailejon", "por que no se congela el frailejon", "que es la pubescencia"],
+      "respuesta": "La pubescencia son los pelos blancos de las hojas del frailejón, una adaptación para protegerse de la radiación y retener calor y humedad. La necromasa es su chaqueta de hojas muertas que cubre el tallo y lo aísla del frío, para que el agua en su interior no se congele.",
+      "fuente": "Guion Ecoturístico UTON 2024, Aguacerales, p. 5; Guion turístico zona norte, pp. 2 y 5"
+    }
+  ]
+}

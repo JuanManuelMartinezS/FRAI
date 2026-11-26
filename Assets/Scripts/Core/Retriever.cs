@@ -73,7 +73,11 @@ namespace GuiaFrailejon
                     float idf = Idf(t, N);
                     s += idf * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * p.tokens.Count / largoPromedio));
                 }
-                if (s > 0) res.Add(new Resultado { pasaje = p, puntaje = maxPosible > 0 ? Math.Min(1f, s / maxPosible) : 0 });
+                if (s <= 0) continue;
+                float puntaje = maxPosible > 0 ? Math.Min(1f, s / maxPosible) : 0;
+                // Lo propio de la estacion donde esta el visitante pesa un poco mas que lo general ("*").
+                if (p.estacion != "*" && p.estacion == estacionId) puntaje = Math.Min(1f, puntaje * 1.15f);
+                res.Add(new Resultado { pasaje = p, puntaje = puntaje });
             }
             return res.OrderByDescending(r => r.puntaje).Take(top).ToList();
         }

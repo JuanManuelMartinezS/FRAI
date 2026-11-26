@@ -692,7 +692,7 @@
     {
       "id": "gq_limite_ascenso",
       "estacion": "estacion_4",
-      "preguntas": ["por que no se puede subir mas", "por que hay un limite de ascenso", "por que esta restringido el ascenso", "por que no puedo seguir hacia el crater", "que pasa si subo mas"],
+      "preguntas": ["por que no se puede subir mas", "por que no puedo subir mas", "no puedo subir mas arriba", "puedo subir mas alla del valle", "hasta donde se puede subir", "por que hay un limite de ascenso", "por que esta restringido el ascenso", "por que no puedo seguir hacia el crater", "que pasa si subo mas", "puedo seguir subiendo", "puedo ir mas arriba"],
       "respuesta": "El ascenso a la parte alta del Nevado del Ruiz está restringido por seguridad, principalmente por el alto riesgo de lahares, flujos de lodo y escombros volcánicos que dificultarían una evacuación si hay una erupción. También se protege la fragilidad del superpáramo. Sigue siempre las indicaciones de tu guía.",
       "fuente": "Guion Ecoturístico UTON 2024, Valle de las Tumbas, p. 10; Guion turístico zona norte, p. 6"
     },

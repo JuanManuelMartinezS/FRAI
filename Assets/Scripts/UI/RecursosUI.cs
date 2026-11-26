@@ -459,12 +459,146 @@ namespace GuiaFrailejon
             txConsumoMedio = Linea(acu, "Consumo medio de batería");
             txAutonomia = Linea(acu, "Autonomía estimada");
 
+            ConstruirAlimentacion();
+
             var nota = Texto(contenedorLista, "Nota", 22, Suave, FontStyles.Normal, TextAlignmentOptions.Center);
             nota.margin = new Vector4(24, 6, 24, 0);
             nota.text = $"{SystemInfo.deviceModel} · {SystemInfo.operatingSystem}\n" +
                         $"Modo de la guía: {DeviceTier.Detectar(true)}\n" +
                         "El consumo de batería incluye pantalla, cámara y GPS mientras usas la app; solo se cuenta cuando el celular no está cargando. " +
                         "Es una estimación: mejora cuantos más minutos de uso acumule.";
+        }
+
+        // ------------------------------------------------------------------
+        // Alimentacion de la guia (DEMOSTRACION: aun no hay servidor conectado)
+        //  1) se entra con un token  2) se elige un documento  3) se "envia".
+        // ------------------------------------------------------------------
+        GameObject tarjetaToken, tarjetaDocumento;
+        TMP_InputField campoToken;
+        TMP_Text txSesionToken, txDocumento, txEnvio, txErrorClave;
+        const string ClaveDemo = "frailejon2026";
+        string documento;
+        Coroutine envio;
+
+        void ConstruirAlimentacion()
+        {
+            Seccion("Alimentación de la guía");
+
+            // --- Paso 1: token ---
+            tarjetaToken = CrearTarjeta("Ingresar clave");
+            Texto(tarjetaToken.transform, "Ingresa la clave de administrador para enviar documentos a la guía.",
+                  24, Suave, FontStyles.Normal, TextAlignmentOptions.Left);
+            campoToken = CrearCampo(tarjetaToken, "Clave");
+            campoToken.contentType = TMP_InputField.ContentType.Password;
+            campoToken.ForceLabelUpdate();
+            txErrorClave = Texto(tarjetaToken.transform, "", 24, Rojo, FontStyles.Bold, TextAlignmentOptions.Left);
+            Boton(tarjetaToken, "Entrar", Azul, EntrarConToken);
+
+            // --- Paso 2: documento (aparece al entrar) ---
+            tarjetaDocumento = CrearTarjeta("Enviar documento");
+            txSesionToken = Texto(tarjetaDocumento.transform, "", 24, Verde, FontStyles.Bold, TextAlignmentOptions.Left);
+            txDocumento = Texto(tarjetaDocumento.transform, "Ningún documento seleccionado", 26, Color.white, FontStyles.Normal, TextAlignmentOptions.Left);
+            Boton(tarjetaDocumento, "Elegir documento", new Color(1, 1, 1, 0.18f), ElegirDocumento);
+            Boton(tarjetaDocumento, "Enviar a la guía", Verde, EnviarDocumento);
+            txEnvio = Texto(tarjetaDocumento.transform, "", 24, Suave, FontStyles.Italic, TextAlignmentOptions.Left);
+            Boton(tarjetaDocumento, "Cerrar sesión", new Color(1, 1, 1, 0.10f), SalirDelToken);
+
+            tarjetaDocumento.SetActive(false);
+        }
+
+        void EntrarConToken()
+        {
+            string token = campoToken ? campoToken.text.Trim() : "";
+            // Demostracion: clave fija. Aqui se validara contra el servidor.
+            if (token != ClaveDemo)
+            {
+                txErrorClave.text = token.Length == 0 ? "Ingresa la clave." : "Clave incorrecta, intenta de nuevo.";
+                return;
+            }
+            txErrorClave.text = "";
+            txSesionToken.text = "✔ Sesión iniciada";
+            campoToken.text = "";
+            tarjetaToken.SetActive(false);
+            tarjetaDocumento.SetActive(true);
+            documento = null;
+            txDocumento.text = "Ningún documento seleccionado";
+            txEnvio.text = "";
+        }
+
+        void SalirDelToken()
+        {
+            if (envio != null) { StopCoroutine(envio); envio = null; }
+            tarjetaDocumento.SetActive(false);
+            tarjetaToken.SetActive(true);
+        }
+
+        void ElegirDocumento()
+        {
+            // Demostracion: aqui ira el selector de archivos del celular.
+            documento = "guia_frailejones_2026.pdf";
+            txDocumento.text = "📄 " + documento;
+            txEnvio.text = "";
+        }
+
+        void EnviarDocumento()
+        {
+            if (string.IsNullOrEmpty(documento)) { txEnvio.text = "Primero elige un documento."; return; }
+            if (envio != null) StopCoroutine(envio);
+            envio = StartCoroutine(SimularEnvio());
+        }
+
+        System.Collections.IEnumerator SimularEnvio()
+        {
+            txEnvio.text = "Enviando…";
+            yield return new WaitForSecondsRealtime(1.5f);
+            txEnvio.text = $"✔ “{documento}” enviado. (Demostración: el servidor aún no está conectado.)";
+            documento = null;
+            txDocumento.text = "Ningún documento seleccionado";
+            envio = null;
+        }
+
+        void Boton(GameObject padre, string etiqueta, Color color, UnityEngine.Events.UnityAction accion)
+        {
+            var go = new GameObject("Boton_" + etiqueta, typeof(RectTransform), typeof(Image), typeof(Button), typeof(LayoutElement));
+            go.transform.SetParent(padre.transform, false);
+            var img = go.GetComponent<Image>();
+            img.sprite = spritePildora; img.type = Image.Type.Sliced; img.color = color;
+            var le = go.GetComponent<LayoutElement>(); le.minHeight = le.preferredHeight = 84;
+            go.GetComponent<Button>().onClick.AddListener(accion);
+            var t = Texto(go.transform, etiqueta, 30, Color.white, FontStyles.Bold, TextAlignmentOptions.Center);
+            var rt = (RectTransform)t.transform;
+            rt.anchorMin = Vector2.zero; rt.anchorMax = Vector2.one; rt.offsetMin = rt.offsetMax = Vector2.zero;
+        }
+
+        TMP_InputField CrearCampo(GameObject padre, string sugerencia)
+        {
+            var go = new GameObject("Campo", typeof(RectTransform), typeof(Image), typeof(TMP_InputField), typeof(LayoutElement));
+            go.transform.SetParent(padre.transform, false);
+            var img = go.GetComponent<Image>();
+            img.sprite = spritePildora; img.type = Image.Type.Sliced; img.color = new Color(1, 1, 1, 0.14f);
+            var le = go.GetComponent<LayoutElement>(); le.minHeight = le.preferredHeight = 84;
+
+            var area = new GameObject("Area", typeof(RectTransform), typeof(RectMask2D));
+            area.transform.SetParent(go.transform, false);
+            var art = (RectTransform)area.transform;
+            art.anchorMin = Vector2.zero; art.anchorMax = Vector2.one; art.offsetMin = new Vector2(28, 8); art.offsetMax = new Vector2(-28, -8);
+
+            var texto = Texto(area.transform, "", 28, Color.white, FontStyles.Normal, TextAlignmentOptions.Left);
+            texto.raycastTarget = true;
+            var placeholder = Texto(area.transform, sugerencia, 28, new Color(1, 1, 1, 0.45f), FontStyles.Italic, TextAlignmentOptions.Left);
+            foreach (var t in new[] { texto, placeholder })
+            {
+                var r = (RectTransform)t.transform;
+                r.anchorMin = Vector2.zero; r.anchorMax = Vector2.one; r.offsetMin = r.offsetMax = Vector2.zero;
+                t.textWrappingMode = TextWrappingModes.NoWrap;
+            }
+
+            var campo = go.GetComponent<TMP_InputField>();
+            campo.textViewport = art;
+            campo.textComponent = texto;
+            campo.placeholder = placeholder;
+            campo.targetGraphic = img;
+            return campo;
         }
 
         void Seccion(string titulo)

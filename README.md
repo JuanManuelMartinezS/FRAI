@@ -5,8 +5,16 @@ App móvil (Unity / Android) que acompaña a los visitantes del **Parque Naciona
 (o un cóndor) en realidad aumentada, responde preguntas, identifica especies con la cámara y alerta sobre el
 clima. **Todo corre en el celular, sin internet**, porque en el páramo no hay señal.
 
+## Probar la app
+
+Para probarla **no hace falta compilar nada**: descarga el APK desde la sección
+**[Releases](../../releases)** del repositorio, cópialo a un celular Android (ARM64) e instálalo
+(habilita "Instalar apps de orígenes desconocidos" si el celular lo pide). Para compilarla tú mismo, mira
+[Instalación en un PC nuevo](#instalación-en-un-pc-nuevo).
+
 ## Contenido
 
+0. [Probar la app](#probar-la-app)
 1. [Qué hace](#qué-hace)
 2. [Principios de diseño](#principios-de-diseño)
 3. [Arquitectura](#arquitectura)
@@ -120,7 +128,7 @@ Tools/
 4. Descargar el modelo de IA: objeto **Sistema** → componente **LLM** → **Download model** →
    *Llama 3.2 1B Instruct (Q4_K_M)* (~770 MB, no cabe en GitHub).
 5. Repetir **Armar escena completa**: el modelo queda asignado (`[ActivarIA] Modelo asignado: …`).
-6. Compilar para Android (perfil en `Assets/Settings/Build Profiles`). Un APK de demo está en *Releases*.
+6. Compilar para Android (perfil en `Assets/Settings/Build Profiles`). Para solo probar la app, descarga el APK desde *Releases* (ver [Probar la app](#probar-la-app)).
 
 Sin el modelo la app funciona igual, solo con respuestas oficiales directas.
 

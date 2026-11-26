@@ -61,6 +61,11 @@ namespace GuiaFrailejon
         float fase;
         bool procesando;
         Button botonFoto, botonSubir;
+        const int NTop = 3;
+        GameObject panelTop;
+        readonly TMP_Text[] topNombre = new TMP_Text[NTop], topPct = new TMP_Text[NTop];
+        readonly RectTransform[] topRelleno = new RectTransform[NTop];
+        readonly Image[] topImgRelleno = new Image[NTop];
 
         void Start()
         {
@@ -86,7 +91,7 @@ namespace GuiaFrailejon
                 if (t) t.text = texto;
                 var rt = (RectTransform)b.transform;
                 rt.anchorMin = rt.anchorMax = rt.pivot = new Vector2(0.5f, 0);
-                rt.anchoredPosition = new Vector2(x, 620);
+                rt.anchoredPosition = new Vector2(x, 600);
                 rt.sizeDelta = new Vector2(400, 96);
                 b.gameObject.SetActive(true);
                 return b;
@@ -95,12 +100,109 @@ namespace GuiaFrailejon
             botonSubir = Clonar("BtnSubirFoto", "Subir foto", 215);
             botonFoto.onClick.AddListener(TomarFoto);
             botonSubir.onClick.AddListener(SubirFoto);
+            CrearTop3(padre);
+        }
+
+        /// <summary>Panel con las 3 especies mas probables (nombre, barra y porcentaje), encima de los botones.</summary>
+        void CrearTop3(Transform padre)
+        {
+            var sprite = botonPreguntar.GetComponent<Image>()?.sprite;
+            var fuente = textoNombre ? textoNombre.font : null;
+            const float AltoFila = 36f, Margen = 8f;
+
+            panelTop = new GameObject("Top3", typeof(RectTransform), typeof(Image));
+            panelTop.transform.SetParent(padre, false);
+            var prt = (RectTransform)panelTop.transform;
+            prt.anchorMin = prt.anchorMax = prt.pivot = new Vector2(0.5f, 0);
+            prt.anchoredPosition = new Vector2(0, 706);
+            prt.sizeDelta = new Vector2(940, NTop * AltoFila + 2 * Margen);
+            var fondo = panelTop.GetComponent<Image>();
+            fondo.sprite = sprite; fondo.type = sprite ? Image.Type.Sliced : Image.Type.Simple;
+            fondo.color = new Color(0.04f, 0.09f, 0.18f, 0.82f);
+            fondo.raycastTarget = false;
+
+            for (int i = 0; i < NTop; i++)
+            {
+                var fila = new GameObject("Fila" + (i + 1), typeof(RectTransform));
+                fila.transform.SetParent(panelTop.transform, false);
+                var frt = (RectTransform)fila.transform;
+                frt.anchorMin = new Vector2(0, 1); frt.anchorMax = new Vector2(1, 1); frt.pivot = new Vector2(0.5f, 1);
+                frt.anchoredPosition = new Vector2(0, -(Margen + i * AltoFila));
+                frt.sizeDelta = new Vector2(-32, AltoFila - 4);
+
+                var pista = new GameObject("Pista", typeof(RectTransform), typeof(Image));
+                pista.transform.SetParent(fila.transform, false);
+                Estirar(pista);
+                var ip = pista.GetComponent<Image>();
+                ip.sprite = sprite; ip.type = sprite ? Image.Type.Sliced : Image.Type.Simple;
+                ip.color = new Color(1, 1, 1, 0.10f); ip.raycastTarget = false;
+
+                var relleno = new GameObject("Relleno", typeof(RectTransform), typeof(Image));
+                relleno.transform.SetParent(pista.transform, false);
+                topRelleno[i] = Estirar(relleno);
+                topImgRelleno[i] = relleno.GetComponent<Image>();
+                topImgRelleno[i].sprite = sprite; topImgRelleno[i].type = sprite ? Image.Type.Sliced : Image.Type.Simple;
+                topImgRelleno[i].raycastTarget = false;
+
+                topNombre[i] = CrearTexto(fila.transform, "Nombre", fuente, TextAlignmentOptions.Left, 22, 20, 120);
+                topPct[i] = CrearTexto(fila.transform, "Pct", fuente, TextAlignmentOptions.Right, 22, 0, 20);
+                var prt2 = (RectTransform)topPct[i].transform;
+                prt2.anchorMin = new Vector2(1, 0); prt2.anchorMax = new Vector2(1, 1); prt2.pivot = new Vector2(1, 0.5f);
+                prt2.sizeDelta = new Vector2(100, 0); prt2.anchoredPosition = new Vector2(-20, 0);
+                topPct[i].fontStyle = FontStyles.Bold;
+            }
+            panelTop.SetActive(false);
+        }
+
+        static RectTransform Estirar(GameObject go)
+        {
+            var r = go.GetComponent<RectTransform>();
+            r.anchorMin = Vector2.zero; r.anchorMax = Vector2.one;
+            r.offsetMin = r.offsetMax = Vector2.zero;
+            return r;
+        }
+
+        static TMP_Text CrearTexto(Transform padre, string nombre, TMP_FontAsset fuente, TextAlignmentOptions alineacion,
+                                   float tam, float izq, float der)
+        {
+            var go = new GameObject(nombre, typeof(RectTransform), typeof(TextMeshProUGUI));
+            go.transform.SetParent(padre, false);
+            var r = Estirar(go);
+            r.offsetMin = new Vector2(izq, 0); r.offsetMax = new Vector2(-der, 0);
+            var t = go.GetComponent<TextMeshProUGUI>();
+            if (fuente) t.font = fuente;
+            t.fontSize = tam; t.color = Color.white; t.alignment = alineacion;
+            t.textWrappingMode = TextWrappingModes.NoWrap; t.overflowMode = TextOverflowModes.Ellipsis;
+            t.raycastTarget = false;
+            return t;
+        }
+
+        void MostrarTop3(DecisionVision d, Color principal)
+        {
+            if (panelTop == null) return;
+            panelTop.SetActive(d != null && d.candidatas.Count > 0);
+            if (d == null) return;
+            for (int i = 0; i < NTop; i++)
+            {
+                bool hay = i < d.candidatas.Count;
+                topNombre[i].transform.parent.gameObject.SetActive(hay);
+                if (!hay) continue;
+                var c = d.candidatas[i];
+                string nombre = c.ficha != null && !string.IsNullOrEmpty(c.ficha.comun) ? c.ficha.comun : c.etiqueta.scientificName;
+                topNombre[i].text = $"{i + 1}.  {nombre}";
+                topPct[i].text = c.prob < 0.01f ? "<1 %" : $"{Mathf.RoundToInt(c.prob * 100)} %";
+                topRelleno[i].anchorMax = new Vector2(Mathf.Clamp(c.prob, 0.02f, 1f), 1);
+                var col = i == 0 ? principal : new Color(0.16f, 0.52f, 1f);
+                col.a = i == 0 ? 0.55f : 0.35f;
+                topImgRelleno[i].color = col;
+            }
         }
 
         void Abrir()
         {
             ultima = null;
             procesando = false;
+            MostrarTop3(null, colorNormal);
             MostrarBuscando();
             if (clasificador == null || !clasificador.Disponible)
             {
@@ -203,6 +305,7 @@ namespace GuiaFrailejon
         {
             procesando = true;
             FijarBotones(false);
+            MostrarTop3(null, colorNormal);
             if (textoTipo) textoTipo.text = "ANALIZANDO";
             if (textoNombre) textoNombre.text = "Analizando…";
             if (textoCientifico) textoCientifico.text = "";
@@ -255,6 +358,7 @@ namespace GuiaFrailejon
             bool ok = d.tipo == TipoDecision.Identificada;
             Color c = ok ? colorIdentificado : d.tipo == TipoDecision.Incierta && m.prob > 0.35f ? colorDuda : colorNormal;
             foreach (var e in esquinas) if (e) e.color = Color.Lerp(e.color, c, 0.6f);
+            MostrarTop3(d, c == colorNormal ? new Color(0.16f, 0.52f, 1f) : c);
 
             if (d.tipo == TipoDecision.Incierta && m.prob < 0.35f)
             {

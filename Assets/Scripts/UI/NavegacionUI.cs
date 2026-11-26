@@ -6,12 +6,12 @@ using UnityEngine.UI;
 namespace GuiaFrailejon
 {
     /// <summary>
-    /// Barra de navegacion inferior (Guia / Explorar / Clima).
+    /// Barra de navegacion inferior (Guia / Explorar / Clima / Recursos).
     /// Cada pestana muestra sus objetos y oculta los de las demas.
     /// </summary>
     public class NavegacionUI : MonoBehaviour
     {
-        public const int Guia = 0, Explorar = 1, Clima = 2;
+        public const int Guia = 0, Explorar = 1, Clima = 2, Recursos = 3;
 
         [Serializable]
         public class Pestana

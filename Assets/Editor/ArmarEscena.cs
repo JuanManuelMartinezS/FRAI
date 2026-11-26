@@ -603,6 +603,7 @@ namespace GuiaFrailejon.EditorTools
             var pGuia = Nodo("PestanaGuia", s); Estirar(pGuia);
             var pExplorar = Nodo("PestanaExplorar", s); Estirar(pExplorar);
             var pClima = Nodo("PestanaClima", s); Estirar(pClima);
+            var pRecursos = Nodo("PestanaRecursos", s); Estirar(pRecursos);
 
             // =================================================================
             // PESTANA GUIA
@@ -967,6 +968,35 @@ namespace GuiaFrailejon.EditorTools
             nota.margin = new Vector4(24, 0, 24, 0);
 
             // =================================================================
+            // PESTANA RECURSOS (consumo de la app en el celular)
+            // =================================================================
+            var rc = pRecursos.transform;
+            var oscuroR = Img("Oscurecer", rc, null, new Color(0.02f, 0.06f, 0.14f, 0.74f), true);
+            Estirar(oscuroR.gameObject, -400, -400, -400, -400);
+            var volverR = BotonCircular(rc, "BtnVolver", "atras", null, EstiloUI.Noche, blanco, 96);
+            Ubicar(volverR.gameObject, Ancla.ArribaIzq, 26, -22, 96, 96);
+            var tituloR = Texto(rc, "Titulo", "Recursos de la app", 42, Ancla.ArribaCentro, 0, -22, 640, 96);
+            tituloR.fontStyle = FontStyles.Bold;
+
+            var scrollR = new GameObject("Contenido", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
+            scrollR.transform.SetParent(rc, false);
+            var srRt = Estirar(scrollR, 20, 168, 20, 136);
+            scrollR.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            var listaR = new GameObject("Lista", typeof(RectTransform), typeof(VerticalLayoutGroup), typeof(ContentSizeFitter));
+            listaR.transform.SetParent(scrollR.transform, false);
+            var lrRt = (RectTransform)listaR.transform;
+            lrRt.anchorMin = new Vector2(0, 1); lrRt.anchorMax = new Vector2(1, 1); lrRt.pivot = new Vector2(0.5f, 1);
+            lrRt.anchoredPosition = Vector2.zero; lrRt.sizeDelta = Vector2.zero;
+            var vlr = listaR.GetComponent<VerticalLayoutGroup>();
+            vlr.padding = new RectOffset(0, 0, 6, 30); vlr.spacing = 22;
+            vlr.childControlWidth = true; vlr.childControlHeight = true;
+            vlr.childForceExpandWidth = true; vlr.childForceExpandHeight = false;
+            listaR.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            var scR = scrollR.GetComponent<ScrollRect>();
+            scR.content = lrRt; scR.viewport = srRt; scR.horizontal = false; scR.vertical = true;
+            scR.movementType = ScrollRect.MovementType.Elastic; scR.scrollSensitivity = 30;
+
+            // =================================================================
             // ELEMENTOS COMUNES
             // =================================================================
             // Diagnostico de AR (texto amarillo)
@@ -987,7 +1017,7 @@ namespace GuiaFrailejon.EditorTools
             var nav = Tarjeta("Navegacion", s, EstiloUI.NocheSolida);
             Rect(nav, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0.5f, 0), new Vector2(0, 14), new Vector2(-40, 140));
             var tabs = Nodo("Pestanas", nav.transform);
-            Estirar(tabs, 10, 0, 10, 0);
+            Estirar(tabs, 10, 0, 90, 0);   // deja sitio al botoncito de Recursos a la derecha
             var ht = tabs.AddComponent<HorizontalLayoutGroup>();
             ht.childControlWidth = true; ht.childControlHeight = true;
             ht.childForceExpandWidth = true; ht.childForceExpandHeight = true;
@@ -1010,10 +1040,15 @@ namespace GuiaFrailejon.EditorTools
                 Tab("Guía", "chat", pGuia),
                 Tab("Explorar", "camara", pExplorar),
                 Tab("Clima", "nube", pClima),
+                // Sin boton en la barra: se abre con el botoncito de la esquina (BtnRecursos)
+                new NavegacionUI.Pestana { nombre = "Recursos", contenido = new[] { pRecursos } },
             };
+            var btnRecursos = BotonCircular(nav.transform, "BtnRecursos", "termometro", null, new Color(1, 1, 1, 0.10f), new Color(0.76f, 0.86f, 1f, 0.8f), 64);
+            Ubicar(btnRecursos.gameObject, Ancla.AbajoDer, -14, 38, 64, 64);
             navUI.colorInactivo = new Color(0.76f, 0.86f, 1f, 0.6f);
             pExplorar.SetActive(false);
             pClima.SetActive(false);
+            pRecursos.SetActive(false);
 
             // ---------------- Conexiones ----------------
             var ui = canvas.gameObject.AddComponent<GuideUI>();
@@ -1092,6 +1127,14 @@ namespace GuiaFrailejon.EditorTools
             cli.spriteTarjeta = SpRed;
             cli.spritePildora = SpPil;
             cli.iconos = NombresIconos.Select(Ico).ToArray();
+
+            var rec = canvas.gameObject.AddComponent<RecursosUI>();
+            rec.navegacion = navUI;
+            rec.contenedorLista = lrRt;
+            rec.botonVolver = volverR;
+            rec.botonAbrir = btnRecursos;
+            rec.spriteTarjeta = SpRed;
+            rec.spritePildora = SpPil;
 
             EditorUtility.SetDirty(ui);
             return ui;

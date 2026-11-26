@@ -9124,8 +9124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4966719baa26e4b0e8231a24d9bd491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.ARFoundation::UnityEngine.XR.ARFoundation.ARCameraManager
-  m_FocusMode: 1
-  m_LightEstimationMode: 0
+  m_FocusMode: -1
+  m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_ImageStabilization: 0
   m_LightEstimation: 0
@@ -12078,6 +12078,7 @@ MonoBehaviour:
   spriteTarjeta: {fileID: 21300000, guid: 97d2ddd1814810948b32548f2e4576ff, type: 3}
   spritePildora: {fileID: 21300000, guid: 6ae3439df1475314d89cd4cbc92cc009, type: 3}
   intervalo: 1
+  intervaloEstadisticas: 5
 --- !u!114 &1404747724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12210,7 +12211,7 @@ MonoBehaviour:
   botonEmergencia: {fileID: 147392580}
   chat: {fileID: 531197193}
   contenedorChips: {fileID: 602197887}
-  prefabChip: {fileID: 6947651406895528704, guid: ad0ca293d64aed145815438fc783084d, type: 3}
+  prefabChip: {fileID: 0}
   maxSugeridas: 6
   campoPregunta: {fileID: 1194098428}
   botonEnviar: {fileID: 260803892}
@@ -13663,7 +13664,7 @@ GameObject:
   - component: {fileID: 1523362331}
   - component: {fileID: 1523362333}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: XR Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

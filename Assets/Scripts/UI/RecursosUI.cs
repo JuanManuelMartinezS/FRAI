@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -9,8 +8,10 @@ using UnityEngine.UI;
 namespace GuiaFrailejon
 {
     /// <summary>
-    /// Pestana "Recursos": muestra cuanto consume la app en el celular (FPS, CPU, memoria, graficos, bateria).
-    /// Solo mide mientras la pestana esta visible, asi que no gasta nada el resto del tiempo.
+    /// Pestana "Recursos": consumo de la app en el celular.
+    ///  - Ahora: FPS, CPU, memoria, graficos y bateria (se actualiza cada segundo mientras la pestana esta abierta).
+    ///  - Estadisticas: historial de los ultimos 5 min, resumen de la sesion y acumulado entre sesiones.
+    /// Las estadisticas se muestrean siempre, cada 5 s (es muy barato), aunque la pestana este cerrada.
     /// Las tarjetas se crean por codigo a partir de contenedorLista.
     /// </summary>
     public class RecursosUI : MonoBehaviour
@@ -25,27 +26,50 @@ namespace GuiaFrailejon
         public Button botonAbrir;
         public Sprite spriteTarjeta;
         public Sprite spritePildora;
-        [Tooltip("Cada cuantos segundos se actualizan los numeros.")]
+        [Tooltip("Cada cuantos segundos se actualizan los numeros 'en vivo'.")]
         public float intervalo = 1f;
+        [Tooltip("Cada cuantos segundos se toma una muestra para las estadisticas.")]
+        public float intervaloEstadisticas = 5f;
+
+        const int Muestras = 60;   // 60 muestras x 5 s = 5 min de historial
 
         static readonly Color Fondo = new Color(0.035f, 0.10f, 0.22f, 0.86f);
         static readonly Color Suave = new Color(0.76f, 0.86f, 1f, 0.75f);
         static readonly Color Verde = new Color(0.22f, 0.78f, 0.42f);
         static readonly Color Ambar = new Color(1f, 0.79f, 0.16f);
         static readonly Color Rojo = new Color(0.90f, 0.20f, 0.22f);
+        static readonly Color Azul = new Color(0.16f, 0.52f, 1f);
 
         class Fila { public TMP_Text valor, detalle; public Image relleno; }
+        class Grafica { public Image[] barras; public TMP_Text valor; public Color color; public float[] datos = new float[Muestras]; }
 
         Fila fps, cpu, ram, sistema, graficos, bateria;
-        TMP_Text infoDispositivo;
+        Grafica gFps, gCpu, gRam;
+        TMP_Text txTiempo, txFps, txCpu, txRam, txTemp, txBateria;
+        TMP_Text txSesiones, txTiempoTotal, txConsumoMedio, txAutonomia;
         bool activa;
 
-        // Medicion de FPS
+        // ---- Medicion "en vivo" ----
         float acumTiempo, peorCuadro; int cuadros;
         float proximo;
+        double cpuTicksLive; float cpuTiempoLive = -1;
 
-        // Medicion de CPU (Android: /proc/self/stat)
-        double cpuTicksPrev; float cpuTiempoPrev = -1;
+        // ---- Muestreo para estadisticas ----
+        float sAcumTiempo, sPeor; int sCuadros;
+        float proximoStat;
+        double cpuTicksStat; float cpuTiempoStat = -1;
+        float inicio;
+
+        // Resumen de la sesion
+        double fpsSuma, cpuSuma, ramSuma; int fpsN, cpuN, ramN;
+        float fpsMin = float.MaxValue, cpuPico, ramPico, tempPico = float.MinValue;
+        float nivelInicial = -1, nivelPrevio = -1, nivelActual = -1;
+        float drenado, segDescarga;   // drenado en fraccion (0..1); segundos descargando
+
+        // Acumulado de sesiones anteriores
+        int sesionesPrev; float segPrev, drenadoPrev, segDescargaPrev;
+        float proximoGuardado;
+        const string K = "recursos_";
 
 #if UNITY_ANDROID && !UNITY_EDITOR
         AndroidJavaObject actividad, gestorMemoria;
@@ -53,29 +77,50 @@ namespace GuiaFrailejon
 
         void Start()
         {
+            inicio = Time.realtimeSinceStartup;
+            sesionesPrev = PlayerPrefs.GetInt(K + "sesiones", 0);
+            segPrev = PlayerPrefs.GetFloat(K + "seg", 0);
+            drenadoPrev = PlayerPrefs.GetFloat(K + "drenado", 0);
+            segDescargaPrev = PlayerPrefs.GetFloat(K + "segDescarga", 0);
+            PlayerPrefs.SetInt(K + "sesiones", sesionesPrev + 1);   // cuenta esta sesion
+
             Construir();
+            proximoStat = Time.unscaledTime + intervaloEstadisticas;
+            proximoGuardado = Time.unscaledTime + 60f;
+
             if (botonVolver) botonVolver.onClick.AddListener(() => navegacion.Ir(NavegacionUI.Guia));
             if (botonAbrir) botonAbrir.onClick.AddListener(() => navegacion.Ir(NavegacionUI.Recursos));
             if (navegacion) navegacion.AlCambiar += i =>
             {
                 activa = i == NavegacionUI.Recursos;
-                if (activa) { Reiniciar(); Medir(); }
+                if (activa) { Reiniciar(); Medir(); PintarEstadisticas(); }
             };
         }
 
-        void Reiniciar() { acumTiempo = 0; cuadros = 0; peorCuadro = 0; cpuTiempoPrev = -1; proximo = Time.unscaledTime + intervalo; }
+        void Reiniciar() { acumTiempo = 0; cuadros = 0; peorCuadro = 0; cpuTiempoLive = -1; proximo = Time.unscaledTime + intervalo; }
 
         void Update()
         {
-            if (!activa) return;
             float dt = Time.unscaledDeltaTime;
+            // Ventana para estadisticas (siempre)
+            sAcumTiempo += dt; sCuadros++;
+            if (dt > sPeor) sPeor = dt;
+            if (Time.unscaledTime >= proximoStat) { proximoStat = Time.unscaledTime + intervaloEstadisticas; Muestrear(); }
+
+            if (Time.unscaledTime >= proximoGuardado) { proximoGuardado = Time.unscaledTime + 60f; Guardar(); }
+
+            // Ventana "en vivo" (solo con la pestana abierta)
+            if (!activa) return;
             acumTiempo += dt; cuadros++;
             if (dt > peorCuadro) peorCuadro = dt;
             if (Time.unscaledTime >= proximo) { proximo = Time.unscaledTime + intervalo; Medir(); }
         }
 
+        void OnApplicationPause(bool pausa) { if (pausa) Guardar(); }
+        void OnApplicationQuit() { Guardar(); }
+
         // ------------------------------------------------------------------
-        // Mediciones
+        // Mediciones en vivo
         // ------------------------------------------------------------------
         void Medir()
         {
@@ -90,7 +135,7 @@ namespace GuiaFrailejon
             acumTiempo = 0; cuadros = 0; peorCuadro = 0;
 
             // ---- CPU ----
-            float? uso = UsoCpu();
+            float? uso = UsoCpu(ref cpuTicksLive, ref cpuTiempoLive);
             if (uso.HasValue)
                 Poner(cpu, $"{uso.Value * 100f:0} %", $"{SystemInfo.processorCount} núcleos · {SystemInfo.processorFrequency} MHz",
                       uso.Value, uso.Value < 0.5f ? Verde : uso.Value < 0.8f ? Ambar : Rojo);
@@ -138,11 +183,146 @@ namespace GuiaFrailejon
                 Poner(bateria, $"{nivel * 100f:0} %", detalle, nivel,
                       nivel > 0.4f ? Verde : nivel > 0.2f ? Ambar : Rojo);
             else Poner(bateria, "--", "Batería no disponible", 0, Suave);
-            if (t.HasValue && t.Value >= 42f && bateria.valor) bateria.detalle.color = Rojo;
-            else if (bateria.detalle) bateria.detalle.color = Suave;
+            if (bateria.detalle) bateria.detalle.color = t.HasValue && t.Value >= 42f ? Rojo : Suave;
         }
 
-        float? UsoCpu()
+        // ------------------------------------------------------------------
+        // Muestreo para estadisticas (cada ~5 s, siempre)
+        // ------------------------------------------------------------------
+        void Muestrear()
+        {
+            float ventana = sAcumTiempo;
+            float f = ventana > 0 ? sCuadros / ventana : 0;
+            sAcumTiempo = 0; sCuadros = 0; sPeor = 0;
+
+            if (f > 0) { fpsSuma += f; fpsN++; if (f < fpsMin) fpsMin = f; }
+
+            float? uso = UsoCpu(ref cpuTicksStat, ref cpuTiempoStat);
+            if (uso.HasValue) { cpuSuma += uso.Value; cpuN++; if (uso.Value > cpuPico) cpuPico = uso.Value; }
+
+            float appMB = MemoriaAppMB();
+            ramSuma += appMB; ramN++;
+            if (appMB > ramPico) ramPico = appMB;
+
+            float? t = TemperaturaBateria();
+            if (t.HasValue && t.Value > tempPico) tempPico = t.Value;
+
+            // Bateria: solo cuenta el consumo cuando va descargando
+            float nivel = SystemInfo.batteryLevel;
+            nivelActual = nivel;
+            if (nivel >= 0)
+            {
+                if (nivelInicial < 0) nivelInicial = nivel;
+                if (SystemInfo.batteryStatus == BatteryStatus.Discharging)
+                {
+                    segDescarga += ventana;
+                    if (nivelPrevio >= 0 && nivel < nivelPrevio) drenado += nivelPrevio - nivel;
+                }
+                nivelPrevio = nivel;
+            }
+
+            Empujar(gFps, f);
+            if (uso.HasValue) Empujar(gCpu, uso.Value); else Empujar(gCpu, 0);
+            Empujar(gRam, appMB);
+
+            if (activa) PintarEstadisticas();
+        }
+
+        static void Empujar(Grafica g, float v)
+        {
+            if (g == null) return;
+            Array.Copy(g.datos, 1, g.datos, 0, Muestras - 1);
+            g.datos[Muestras - 1] = v;
+        }
+
+        // ------------------------------------------------------------------
+        // Pintado de estadisticas
+        // ------------------------------------------------------------------
+        void PintarEstadisticas()
+        {
+            float seg = Time.realtimeSinceStartup - inicio;
+            if (txTiempo) txTiempo.text = Duracion(seg);
+            if (txFps) txFps.text = fpsN > 0 ? $"{fpsSuma / fpsN:0} prom · {fpsMin:0} mín" : "--";
+            if (txCpu) txCpu.text = cpuN > 0 ? $"{cpuSuma / cpuN * 100:0} % prom · {cpuPico * 100:0} % pico" : "No disponible";
+            if (txRam) txRam.text = ramN > 0 ? $"{ramSuma / ramN:0} prom · {ramPico:0} MB pico" : "--";
+            if (txTemp) txTemp.text = tempPico > float.MinValue ? $"{tempPico:0.0} °C" : "No disponible";
+
+            if (txBateria)
+            {
+                if (nivelInicial < 0) txBateria.text = "No disponible";
+                else
+                {
+                    float gastado = Mathf.Max(0, drenado) * 100f;
+                    string ritmo = Ritmo(drenado, segDescarga, out float porHora) ? $" · {porHora:0.0} %/h" : "";
+                    txBateria.text = $"{gastado:0.#} %{ritmo}";
+                }
+            }
+
+            // Acumulado (sesiones anteriores + esta)
+            if (txSesiones) txSesiones.text = (sesionesPrev + 1).ToString();
+            if (txTiempoTotal) txTiempoTotal.text = Duracion(segPrev + seg);
+            float dTot = drenadoPrev + drenado, sTot = segDescargaPrev + segDescarga;
+            if (Ritmo(dTot, sTot, out float rTot))
+            {
+                if (txConsumoMedio) txConsumoMedio.text = $"{rTot:0.0} % por hora";
+                if (txAutonomia) txAutonomia.text = nivelActual >= 0 ? Duracion(nivelActual * 100f / rTot * 3600f) : "--";
+            }
+            else
+            {
+                if (txConsumoMedio) txConsumoMedio.text = "Midiendo…";
+                if (txAutonomia) txAutonomia.text = "Midiendo…";
+            }
+
+            // Graficas
+            float meta = Application.targetFrameRate > 0 ? Application.targetFrameRate : 60f;
+            DibujarGrafica(gFps, $"{gFps.datos[Muestras - 1]:0} FPS", meta);
+            DibujarGrafica(gCpu, $"{gCpu.datos[Muestras - 1] * 100:0} %", 1f);
+            DibujarGrafica(gRam, $"{gRam.datos[Muestras - 1]:0} MB", Mathf.Max(1f, Maximo(gRam.datos) * 1.15f));
+        }
+
+        // Ritmo de consumo en %/hora. Hace falta un minimo de datos para que no salga ruido (la bateria baja de 1 % en 1 %).
+        static bool Ritmo(float drenadoFrac, float segundos, out float porHora)
+        {
+            porHora = 0;
+            if (segundos < 180f || drenadoFrac <= 0f) return false;
+            porHora = drenadoFrac * 100f / (segundos / 3600f);
+            return porHora > 0.01f;
+        }
+
+        static float Maximo(float[] d) { float m = 0; foreach (var v in d) if (v > m) m = v; return m; }
+
+        static void DibujarGrafica(Grafica g, string valor, float tope)
+        {
+            if (g == null || g.barras == null) return;
+            if (g.valor) g.valor.text = valor;
+            for (int i = 0; i < Muestras; i++)
+            {
+                var rt = (RectTransform)g.barras[i].transform;
+                rt.anchorMax = new Vector2(rt.anchorMax.x, Mathf.Clamp(g.datos[i] / tope, 0.02f, 1f));
+            }
+        }
+
+        static string Duracion(float seg)
+        {
+            var t = TimeSpan.FromSeconds(Mathf.Max(0, seg));
+            if (t.TotalHours >= 1) return $"{(int)t.TotalHours} h {t.Minutes:00} min";
+            if (t.TotalMinutes >= 1) return $"{t.Minutes} min {t.Seconds:00} s";
+            return $"{t.Seconds} s";
+        }
+
+        void Guardar()
+        {
+            float seg = Time.realtimeSinceStartup - inicio;
+            PlayerPrefs.SetFloat(K + "seg", segPrev + seg);
+            PlayerPrefs.SetFloat(K + "drenado", drenadoPrev + drenado);
+            PlayerPrefs.SetFloat(K + "segDescarga", segDescargaPrev + segDescarga);
+            PlayerPrefs.Save();
+        }
+
+        // ------------------------------------------------------------------
+        // Lecturas del sistema
+        // ------------------------------------------------------------------
+        static float? UsoCpu(ref double ticksPrev, ref float tiempoPrev)
         {
             try
             {
@@ -152,12 +332,12 @@ namespace GuiaFrailejon
                 double ticks = double.Parse(p[11]) + double.Parse(p[12]);   // utime + stime, en 1/100 s
                 float ahora = Time.realtimeSinceStartup;
                 float? r = null;
-                if (cpuTiempoPrev >= 0 && ahora > cpuTiempoPrev)
+                if (tiempoPrev >= 0 && ahora > tiempoPrev)
                 {
-                    double seg = (ticks - cpuTicksPrev) / 100.0;
-                    r = Mathf.Clamp01((float)(seg / ((ahora - cpuTiempoPrev) * Mathf.Max(1, SystemInfo.processorCount))));
+                    double seg = (ticks - ticksPrev) / 100.0;
+                    r = Mathf.Clamp01((float)(seg / ((ahora - tiempoPrev) * Mathf.Max(1, SystemInfo.processorCount))));
                 }
-                cpuTicksPrev = ticks; cpuTiempoPrev = ahora;
+                ticksPrev = ticks; tiempoPrev = ahora;
                 return r;
             }
             catch { return null; }
@@ -245,11 +425,13 @@ namespace GuiaFrailejon
 #endif
 
         // ------------------------------------------------------------------
-        // Tarjetas
+        // Construccion de tarjetas
         // ------------------------------------------------------------------
         void Construir()
         {
             if (!contenedorLista) return;
+
+            Seccion("Ahora mismo");
             fps = Tarjeta("Rendimiento", "Fotogramas por segundo");
             cpu = Tarjeta("Procesador", "Uso de CPU de la app");
             ram = Tarjeta("Memoria de la app", "RAM que ocupa Frai");
@@ -257,24 +439,110 @@ namespace GuiaFrailejon
             graficos = Tarjeta("Gráficos", "Memoria de video");
             bateria = Tarjeta("Batería", "Nivel y temperatura");
 
-            var cab = Texto(contenedorLista, "Dispositivo", 22, Suave, FontStyles.Normal, TextAlignmentOptions.Center);
-            cab.margin = new Vector4(24, 6, 24, 0);
-            cab.text = $"{SystemInfo.deviceModel}\n{SystemInfo.operatingSystem}\n" +
-                       $"Modo de la guía: {DeviceTier.Detectar(true)}" +
-                       "  ·  los valores se actualizan cada segundo mientras esta pestaña está abierta.";
-            infoDispositivo = cab;
+            Seccion("Estadísticas");
+            var hist = CrearTarjeta("Historial · últimos 5 min");
+            gFps = CrearGrafica(hist, "FPS", Verde);
+            gCpu = CrearGrafica(hist, "CPU de la app", Azul);
+            gRam = CrearGrafica(hist, "Memoria de la app", Ambar);
+
+            var ses = CrearTarjeta("Esta sesión");
+            txTiempo = Linea(ses, "Tiempo de uso");
+            txFps = Linea(ses, "FPS");
+            txCpu = Linea(ses, "CPU");
+            txRam = Linea(ses, "Memoria");
+            txTemp = Linea(ses, "Temp. máxima batería");
+            txBateria = Linea(ses, "Batería gastada");
+
+            var acu = CrearTarjeta("Acumulado · todas las sesiones");
+            txSesiones = Linea(acu, "Sesiones");
+            txTiempoTotal = Linea(acu, "Tiempo total de uso");
+            txConsumoMedio = Linea(acu, "Consumo medio de batería");
+            txAutonomia = Linea(acu, "Autonomía estimada");
+
+            var nota = Texto(contenedorLista, "Nota", 22, Suave, FontStyles.Normal, TextAlignmentOptions.Center);
+            nota.margin = new Vector4(24, 6, 24, 0);
+            nota.text = $"{SystemInfo.deviceModel} · {SystemInfo.operatingSystem}\n" +
+                        $"Modo de la guía: {DeviceTier.Detectar(true)}\n" +
+                        "El consumo de batería incluye pantalla, cámara y GPS mientras usas la app; solo se cuenta cuando el celular no está cargando. " +
+                        "Es una estimación: mejora cuantos más minutos de uso acumule.";
         }
 
-        Fila Tarjeta(string titulo, string subtitulo)
+        void Seccion(string titulo)
         {
-            var go = new GameObject("Recurso_" + titulo, typeof(RectTransform), typeof(Image), typeof(VerticalLayoutGroup));
+            var t = Texto(contenedorLista, titulo, 34, Color.white, FontStyles.Bold, TextAlignmentOptions.BottomLeft);
+            t.margin = new Vector4(8, 6, 0, 0);
+        }
+
+        GameObject CrearTarjeta(string titulo)
+        {
+            var go = new GameObject("Tarjeta_" + titulo, typeof(RectTransform), typeof(Image), typeof(VerticalLayoutGroup));
             go.transform.SetParent(contenedorLista, false);
             var img = go.GetComponent<Image>();
             img.sprite = spriteTarjeta; img.type = Image.Type.Sliced; img.color = Fondo; img.raycastTarget = false;
             var v = go.GetComponent<VerticalLayoutGroup>();
-            v.padding = new RectOffset(32, 32, 24, 26); v.spacing = 10;
+            v.padding = new RectOffset(32, 32, 24, 26); v.spacing = 12;
             v.childControlWidth = true; v.childControlHeight = true;
             v.childForceExpandWidth = true; v.childForceExpandHeight = false;
+            if (!string.IsNullOrEmpty(titulo)) Texto(go.transform, titulo, 30, Color.white, FontStyles.Bold, TextAlignmentOptions.Left);
+            return go;
+        }
+
+        // Linea "etiqueta ........ valor" dentro de una tarjeta
+        TMP_Text Linea(GameObject tarjeta, string etiqueta)
+        {
+            var fila = new GameObject("Linea", typeof(RectTransform), typeof(HorizontalLayoutGroup));
+            fila.transform.SetParent(tarjeta.transform, false);
+            var h = fila.GetComponent<HorizontalLayoutGroup>();
+            h.spacing = 16; h.childAlignment = TextAnchor.MiddleLeft;
+            h.childControlWidth = true; h.childControlHeight = true;
+            h.childForceExpandWidth = false; h.childForceExpandHeight = false;
+            var e = Texto(fila.transform, etiqueta, 26, Suave, FontStyles.Normal, TextAlignmentOptions.Left);
+            e.gameObject.AddComponent<LayoutElement>().flexibleWidth = 1;
+            var v = Texto(fila.transform, "--", 26, Color.white, FontStyles.Bold, TextAlignmentOptions.Right);
+            v.textWrappingMode = TextWrappingModes.NoWrap;
+            return v;
+        }
+
+        Grafica CrearGrafica(GameObject tarjeta, string nombre, Color color)
+        {
+            var g = new Grafica { color = color, barras = new Image[Muestras] };
+
+            var cab = new GameObject("Cabecera", typeof(RectTransform), typeof(HorizontalLayoutGroup));
+            cab.transform.SetParent(tarjeta.transform, false);
+            var h = cab.GetComponent<HorizontalLayoutGroup>();
+            h.childControlWidth = true; h.childControlHeight = true;
+            h.childForceExpandWidth = false; h.childForceExpandHeight = false;
+            var n = Texto(cab.transform, nombre, 24, Suave, FontStyles.Normal, TextAlignmentOptions.Left);
+            n.gameObject.AddComponent<LayoutElement>().flexibleWidth = 1;
+            g.valor = Texto(cab.transform, "--", 24, Color.white, FontStyles.Bold, TextAlignmentOptions.Right);
+            g.valor.textWrappingMode = TextWrappingModes.NoWrap;
+
+            var area = new GameObject("Grafica", typeof(RectTransform), typeof(Image), typeof(LayoutElement));
+            area.transform.SetParent(tarjeta.transform, false);
+            var ai = area.GetComponent<Image>();
+            ai.color = new Color(1, 1, 1, 0.06f); ai.raycastTarget = false;
+            var le = area.GetComponent<LayoutElement>(); le.minHeight = le.preferredHeight = 96;
+
+            for (int i = 0; i < Muestras; i++)
+            {
+                var b = new GameObject("b" + i, typeof(RectTransform), typeof(Image));
+                b.transform.SetParent(area.transform, false);
+                var bi = b.GetComponent<Image>();
+                bi.color = new Color(color.r, color.g, color.b, 0.9f); bi.raycastTarget = false;
+                var rt = (RectTransform)b.transform;
+                rt.anchorMin = new Vector2(i / (float)Muestras + 0.002f, 0);
+                rt.anchorMax = new Vector2((i + 1) / (float)Muestras - 0.002f, 0.02f);
+                rt.offsetMin = rt.offsetMax = Vector2.zero;
+                g.barras[i] = bi;
+            }
+            return g;
+        }
+
+        Fila Tarjeta(string titulo, string subtitulo)
+        {
+            var go = CrearTarjeta(null);
+            go.name = "Recurso_" + titulo;
+            go.GetComponent<VerticalLayoutGroup>().spacing = 10;
 
             // Titulo + valor en una fila
             var fila = new GameObject("Fila", typeof(RectTransform), typeof(HorizontalLayoutGroup));
